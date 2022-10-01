@@ -7,8 +7,12 @@
     "skipLibCheck": true,
     "declaration": true,
     "rootDir": "src",
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "baseUrl": "src",
+    "paths": {
+      "@domain/*": ["./domain/*"]
+    }
   },
   "exclude": ["node_modules", "build-*"],
+  "references": [{ "path": "../utils/" }]
 }
-  
