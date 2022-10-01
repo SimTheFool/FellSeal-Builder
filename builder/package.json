@@ -5,7 +5,7 @@
   "scripts": {
     "build:test": "yarn tsc --project tsconfig.test.json",
     "test:all": "yarn build:test && yarn ava --watch ./**/*.spec.js",
-    "test:watch-all": "nodemon --watch '**/*.spec.ts' -e ts --exec 'yarn test:all'"
+    "test:watch-all": "nodemon --watch 'src/**/*.ts' -e ts --exec 'yarn test:all'"
   },
   "dependencies": {
     "utils": "*"

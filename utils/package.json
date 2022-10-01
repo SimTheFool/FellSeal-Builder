@@ -8,6 +8,7 @@
       "types": "./build/types/index.d.ts"
     }
   },
+  "private": true,
   "version": "1.0.0",
   "scripts": {
     "build:watch": "tsc -w"
