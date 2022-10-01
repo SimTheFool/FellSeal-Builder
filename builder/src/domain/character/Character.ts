@@ -1,13 +1,20 @@
-import { Brand } from "utils/Types";
+import { NominalString, Nominal } from "utils/Types";
 
 export type Character = {
   name?: Name;
-  main: Class;
+  main: Main;
   active: Active;
   passives: [Passive, Passive];
 };
 
-type Name = Brand<string, "character_name">;
-type Class = Brand<unknown, "character_class">;
-type Active = Brand<unknown, "character_active">;
-type Passive = Brand<unknown, "character_passive">;
+export type UnvalidatedCharacter = {
+  name?: string;
+  main?: unknown;
+  active?: unknown;
+  passives?: [unknown, unknown];
+};
+
+type Name = NominalString<"character_name">;
+type Main = Nominal<number, "character_main">;
+type Active = Nominal<unknown, "character_active">;
+type Passive = Nominal<unknown, "character_passive">;

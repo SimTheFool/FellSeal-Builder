@@ -1,1 +1,1 @@
-export { Brand } from "./Brand";
+export { NominalNumber, NominalString, Nominal } from "./Nominal";
