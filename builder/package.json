@@ -1,0 +1,16 @@
+{
+  "name": "builder",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "build:test": "yarn tsc --project tsconfig.test.json",
+    "test:all": "yarn build:test && yarn ava --watch ./**/*.spec.js",
+    "test:watch-all": "nodemon --watch '**/*.spec.ts' -e ts --exec 'yarn test:all'"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.23",
+    "ava": "^4.3.3",
+    "nodemon": "^2.0.20",
+    "typescript": "^4.8.4"
+  }
+}

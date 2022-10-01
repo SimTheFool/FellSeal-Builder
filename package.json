@@ -1,0 +1,13 @@
+{
+  "name": "FellSeal-Builder",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:SimTheFool/FellSeal-Builder.git",
+  "author": "SimTheFool <simon.sauzede@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "builder",
+    "frontend"
+  ]
+}

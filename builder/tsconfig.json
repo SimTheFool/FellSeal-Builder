@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "ES2020",
+    "moduleResolution": "node16",
+    "target": "ES6",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "rootDir": "src",
+    "noImplicitAny": true
+  },
+  "exclude": ["node_modules", "build-*"],
+}
+  
