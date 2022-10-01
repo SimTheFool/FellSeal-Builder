@@ -1,0 +1,18 @@
+{
+  "name": "utils",
+  "type": "module",
+  "exports": {
+    "./Types": {
+      "import": "./build/types/index",
+      "require": "./build/types/index",
+      "types": "./build/types/index.d.ts"
+    }
+  },
+  "version": "1.0.0",
+  "scripts": {
+    "build:watch": "tsc -w"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
+}

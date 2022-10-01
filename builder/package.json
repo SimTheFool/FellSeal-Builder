@@ -7,6 +7,9 @@
     "test:all": "yarn build:test && yarn ava --watch ./**/*.spec.js",
     "test:watch-all": "nodemon --watch '**/*.spec.ts' -e ts --exec 'yarn test:all'"
   },
+  "dependencies": {
+    "utils": "*"
+  },
   "devDependencies": {
     "@types/node": "^18.7.23",
     "ava": "^4.3.3",

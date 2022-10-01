@@ -8,6 +8,11 @@
   "private": true,
   "workspaces": [
     "builder",
-    "frontend"
-  ]
+    "frontend",
+    "utils"
+  ],
+  "scripts": {
+    "ut": "yarn workspace utils",
+    "watch:libs": "yarn ut build:watch"
+  }
 }
