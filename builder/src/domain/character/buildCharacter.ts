@@ -1,5 +1,5 @@
 import { Character } from "./Character.js";
 
-export const createCharacter = (character: Character) => {
+export const buildCharacter = (character: Character) => {
   return character;
 };
