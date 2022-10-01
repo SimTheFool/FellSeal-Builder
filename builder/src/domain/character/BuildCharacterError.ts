@@ -1,5 +1,5 @@
-import { DomainError, isDomainError } from "@domain/DomainError.js";
 import { NominalString } from "utils/Types";
+import { DomainError, isDomainError } from "@domain/DomainError.js";
 
 export type CharacterBuildingError<A extends string = string> = DomainError<
   string & { __error: A },
