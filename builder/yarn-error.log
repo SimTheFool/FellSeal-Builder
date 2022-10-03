@@ -2,7 +2,7 @@ Arguments:
   /home/simthefool/.nvm/versions/node/v16.13.1/bin/node /home/simthefool/.yvm/versions/v1.22.18/bin/yarn.js test:all
 
 PATH: 
-  /var/www/html/FellSeal-Builder/builder/node_modules/.bin:/tmp/yarn--1664634389694-0.2613587738621954:/var/www/html/FellSeal-Builder/builder/node_modules/.bin:/home/simthefool/.config/yarn/link/node_modules/.bin:/var/www/html/FellSeal-Builder/node_modules/.bin:/home/simthefool/.nvm/versions/node/v16.13.1/libexec/lib/node_modules/npm/bin/node-gyp-bin:/home/simthefool/.nvm/versions/node/v16.13.1/lib/node_modules/npm/bin/node-gyp-bin:/home/simthefool/.nvm/versions/node/v16.13.1/bin/node_modules/npm/bin/node-gyp-bin:/home/simthefool/.yvm/shim:/home/simthefool/.yarn/bin:/home/simthefool/.config/yarn/global/node_modules/.bin:/home/simthefool/.jbang/bin:/home/simthefool/.nvm/versions/node/v16.13.1/bin:/home/simthefool/.nvm/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/mssql-tools/bin:/opt/mssql-tools/bin:/opt/mssql-tools/bin
+  /var/www/html/FellSeal-Builder/builder/node_modules/.bin:/tmp/yarn--1664657913354-0.345569836849809:/var/www/html/FellSeal-Builder/builder/node_modules/.bin:/home/simthefool/.config/yarn/link/node_modules/.bin:/var/www/html/FellSeal-Builder/node_modules/.bin:/home/simthefool/.nvm/versions/node/v16.13.1/libexec/lib/node_modules/npm/bin/node-gyp-bin:/home/simthefool/.nvm/versions/node/v16.13.1/lib/node_modules/npm/bin/node-gyp-bin:/home/simthefool/.nvm/versions/node/v16.13.1/bin/node_modules/npm/bin/node-gyp-bin:/home/simthefool/.yvm/shim:/home/simthefool/.yarn/bin:/home/simthefool/.config/yarn/global/node_modules/.bin:/home/simthefool/.jbang/bin:/home/simthefool/.nvm/versions/node/v16.13.1/bin:/home/simthefool/.nvm/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/mssql-tools/bin:/opt/mssql-tools/bin:/opt/mssql-tools/bin
 
 Yarn version: 
   1.22.18
@@ -32,7 +32,7 @@ npm manifest:
     "type": "module",
     "version": "1.0.0",
     "scripts": {
-      "build:test": "yarn tsc --project tsconfig.test.json",
+      "build:test": "yarn tsc --project tsconfig.test.json && yarn tsc-alias -p tsconfig.test.json",
       "test:all": "yarn build:test && yarn ava --watch ./**/*.spec.js",
       "test:watch-all": "nodemon --watch 'src/**/*.ts' -e ts --exec 'yarn test:all'"
     },
@@ -43,6 +43,7 @@ npm manifest:
       "@types/node": "^18.7.23",
       "ava": "^4.3.3",
       "nodemon": "^2.0.20",
+      "tsc-alias": "^1.7.0",
       "typescript": "^4.8.4"
     }
   }

@@ -4,14 +4,14 @@ export type Character = {
   name?: Name;
   main: Main;
   active: Active;
-  passives: [Passive, Passive];
+  passives: readonly [Passive, Passive];
 };
 
 export type UnvalidatedCharacter = {
   name?: string;
   main?: unknown;
   active?: unknown;
-  passives?: [unknown, unknown];
+  passives?: readonly [unknown, unknown];
 };
 
 type Name = NominalString<"character_name">;
