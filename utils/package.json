@@ -1,13 +1,8 @@
 {
   "name": "utils",
   "type": "module",
-  "exports": {
-    "./Types": {
-      "import": "./build/types/index",
-      "require": "./build/types/index",
-      "types": "./build/types/index.d.ts"
-    }
-  },
+  "main": "./build/index",
+  "types": "./build/index.d.ts",
   "private": true,
   "version": "1.0.0",
   "scripts": {

@@ -1,4 +1,4 @@
-import { NominalString, Nominal } from "utils/Types";
+import { NominalString, Nominal } from "utils";
 
 export type Character = {
   name?: Name;
