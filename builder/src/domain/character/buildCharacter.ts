@@ -1,7 +1,7 @@
-import { DomainError, newDomainError } from "@domain/utils/DomainError.js";
 import { newDomainResult } from "@domain/utils/DomainResult.js";
 import { entries } from "utils";
 import { Character, UnvalidatedCharacter } from "./Character.js";
+import { CharacterBuildError, CHARACTER_BUILD_ERRORS } from "./Errors.js";
 
 export const buildCharacter = (unvalidatedCharacter: UnvalidatedCharacter) => {
   const errors = entries(unvalidatedCharacter).reduce(
@@ -11,11 +11,11 @@ export const buildCharacter = (unvalidatedCharacter: UnvalidatedCharacter) => {
 
       const newErrors = validators
         .map((v) => v(value as any))
-        .filter((e): e is DomainError => e !== undefined);
+        .filter((e): e is CharacterBuildError => e !== undefined);
 
       return [...errors, ...newErrors];
     },
-    [] as DomainError[]
+    [] as CharacterBuildError[]
   );
 
   if (errors.length > 0) return newDomainResult(errors);
@@ -24,7 +24,7 @@ export const buildCharacter = (unvalidatedCharacter: UnvalidatedCharacter) => {
 
 type Validator<K extends keyof UnvalidatedCharacter> = (
   value: UnvalidatedCharacter[K]
-) => DomainError | undefined;
+) => CharacterBuildError | undefined;
 
 type ValidatorMap = {
   [K in keyof UnvalidatedCharacter]: Validator<K>[];
@@ -33,7 +33,18 @@ type ValidatorMap = {
 const validatorMap: ValidatorMap = {
   main: [
     (v) => {
-      if (!v) return newDomainError("character_no_main");
+      if (!v) return CHARACTER_BUILD_ERRORS.MISSING_MAIN;
+    },
+  ],
+  active: [
+    (v) => {
+      if (!v) return CHARACTER_BUILD_ERRORS.MISSING_ACTIVE;
+    },
+  ],
+  passives: [
+    (v) => {
+      if (!v || v.some((passive) => !passive))
+        return CHARACTER_BUILD_ERRORS.MISSING_PASSIVE;
     },
   ],
 };
