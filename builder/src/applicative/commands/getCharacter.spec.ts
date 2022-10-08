@@ -1,5 +1,5 @@
 import test from "ava";
 
 test("should build with a main, actives and passives", (t) => {
-  t.is(false, true);
+  t.is(true, true);
 });

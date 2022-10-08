@@ -1,11 +1,23 @@
 version: "3"
 
 tasks:
+  yarn:
+    internal: true
+    cmds:
+      - yarn run --silent {{.BIN}}
+    vars:
+      BIN: "{{.BIN}}"
+
   build:
     internal: true
     cmds:
       - outDir=$(node -e 'const a = require("./{{.TSCONFIG}}"); console.log(a.compilerOptions.outDir);') && rm -rf "$outDir"
-      - yarn tsc --project {{.TSCONFIG}} && yarn tsc-alias -p {{.TSCONFIG}}
+      - task: yarn
+        vars:
+          BIN: tsc --project {{.TSCONFIG}}
+      - task: yarn
+        vars:
+          BIN: tsc-alias -p {{.TSCONFIG}}
     vars:
       TSCONFIG: tsconfig.{{.BUILD_TARGET}}.json
 
@@ -18,8 +30,9 @@ tasks:
 
   test:
     cmds:
+      - clear
       - task: build-test
-      - yarn ava ./**/*{{.PATTERN}}*.spec.js
+      - yarn --silent ava ./**/*{{.PATTERN}}*.spec.js
     vars:
       PATTERN: '{{default "*" .PATTERN}}'
     sources:
