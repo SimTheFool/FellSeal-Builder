@@ -1,0 +1,29 @@
+version: "3"
+
+tasks:
+  build:
+    internal: true
+    cmds:
+      - outDir=$(node -e 'const a = require("./{{.TSCONFIG}}"); console.log(a.compilerOptions.outDir);') && rm -rf "$outDir"
+      - yarn tsc --project {{.TSCONFIG}} && yarn tsc-alias -p {{.TSCONFIG}}
+    vars:
+      TSCONFIG: tsconfig.{{.BUILD_TARGET}}.json
+
+  build-test:
+    internal: true
+    cmds:
+      - task: build
+        vars:
+          BUILD_TARGET: test
+
+  test:
+    cmds:
+      - task: build-test
+      - yarn ava ./**/*{{.PATTERN}}*.spec.js
+    vars:
+      PATTERN: '{{default "*" .PATTERN}}'
+    sources:
+      - src/**/*.ts
+    generates:
+      - ./build-test/**/*
+    method: timestamp
