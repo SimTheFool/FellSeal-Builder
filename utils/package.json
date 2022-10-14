@@ -1,7 +1,7 @@
 {
   "name": "utils",
   "type": "module",
-  "main": "./build/index",
+  "main": "./build/index.js",
   "types": "./build/index.d.ts",
   "private": true,
   "version": "1.0.0",

@@ -7,11 +7,13 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "declaration": true,
-    "rootDir": "src",
+    "rootDir": ".",
     "noImplicitAny": true,
     "baseUrl": "src",
     "paths": {
-      "@domain/*": ["./domain/*"]
+      "@domain/*": ["./domain/*"],
+      "@services/*": ["./applicative/services/test/*"],
+      "@fixtures/*": ["../fixtures/*"]
     }
   },
   "exclude": ["node_modules", "build-*"],

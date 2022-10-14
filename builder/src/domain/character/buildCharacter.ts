@@ -1,9 +1,11 @@
-import { newDomainResult } from "@domain/utils/DomainResult.js";
+import { AppResult, newAppResult } from "@utils/Result.js";
 import { entries } from "utils";
 import { Character, UnvalidatedCharacter } from "./Character.js";
 import { CharacterBuildError, CHARACTER_BUILD_ERRORS } from "./Errors.js";
 
-export const buildCharacter = (unvalidatedCharacter: UnvalidatedCharacter) => {
+export const buildCharacter = (
+  unvalidatedCharacter: UnvalidatedCharacter
+): AppResult<Character, CharacterBuildError[]> => {
   const errors = entries(unvalidatedCharacter).reduce(
     (errors, [key, value]) => {
       const validators = validatorMap[key];
@@ -18,8 +20,11 @@ export const buildCharacter = (unvalidatedCharacter: UnvalidatedCharacter) => {
     [] as CharacterBuildError[]
   );
 
-  if (errors.length > 0) return newDomainResult(errors);
-  return newDomainResult(unvalidatedCharacter as Character);
+  if (errors.length > 0)
+    return newAppResult<Character, CharacterBuildError[]>(errors);
+  return newAppResult<Character, CharacterBuildError[]>(
+    unvalidatedCharacter as Character
+  );
 };
 
 type Validator<K extends keyof UnvalidatedCharacter> = (

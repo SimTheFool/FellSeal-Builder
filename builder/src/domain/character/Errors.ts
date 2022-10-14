@@ -1,9 +1,9 @@
-import { DomainError, newDomainError } from "@domain/utils/DomainError.js";
+import { newAppError } from "utils/Error.js";
 
 export const CHARACTER_BUILD_ERRORS = {
-  MISSING_MAIN: newDomainError("character_missing_main"),
-  MISSING_ACTIVE: newDomainError("character_missing_active"),
-  MISSING_PASSIVE: newDomainError("character_missing_passive"),
+  MISSING_MAIN: newAppError("character_missing_main"),
+  MISSING_ACTIVE: newAppError("character_missing_active"),
+  MISSING_PASSIVE: newAppError("character_missing_passive"),
 };
 
 export type CharacterBuildError =
