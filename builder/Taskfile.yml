@@ -39,8 +39,8 @@ tasks:
       - yarn ava ./**/*{{.PATTERN}}*.spec.js
     vars:
       PATTERN: '{{default "*" .PATTERN}}'
-    sources:
-      - src/**/*.ts
-    generates:
-      - ./build-test/**/*
-    method: timestamp
+    #sources:
+    #  - src/**/*.ts
+    #generates:
+    #  - ./build-test/**/*
+    #method: timestamp
