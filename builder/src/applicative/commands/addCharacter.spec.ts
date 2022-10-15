@@ -5,6 +5,7 @@ import { persistCharacter } from "@services/persistCharacter.js";
 import { addCharacter } from "./addCharacter.js";
 
 test("should add character and return an identifier", (t) => {
-  const characterId = addCharacter(newUnvalidatedCharacter(), persistCharacter);
-  assert.strictEqual(typeof characterId, "string");
+  const result = addCharacter(newUnvalidatedCharacter(), persistCharacter);
+  if (result.isErrors()) assert.fail();
+  assert.strictEqual(typeof result.getOk(), "string");
 });
