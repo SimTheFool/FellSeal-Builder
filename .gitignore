@@ -3,3 +3,4 @@ build
 build-*
 tsconfig.tsbuildinfo
 .task
+!builder/cli/build
