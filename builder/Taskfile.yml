@@ -21,7 +21,7 @@ tasks:
       - outDir=$(node -e 'const a = require("./{{.TSCONFIG}}"); console.log(a.compilerOptions.outDir);') && rm -rf "$outDir"
       - task: cli
         vars:
-          SCRIPT: ./cli/build --tsconfig {{.TSCONFIG}}
+          SCRIPT: ./cli/build -t {{.TSCONFIG}}
     vars:
       TSCONFIG: tsconfig.{{.BUILD_TARGET}}.json
 
@@ -36,11 +36,13 @@ tasks:
     cmds:
       - clear
       - task: build-test
-      - yarn ava ./**/*{{.PATTERN}}*.spec.js
+      - task: cli
+        vars:
+          SCRIPT: ./cli/unitTest -p ./**/*{{.PATTERN}}*.spec.js
     vars:
       PATTERN: '{{default "*" .PATTERN}}'
-    #sources:
-    #  - src/**/*.ts
-    #generates:
-    #  - ./build-test/**/*
-    #method: timestamp
+    sources:
+      - src/**/*.ts
+    generates:
+      - ./build-test/**/*
+    method: timestamp
