@@ -19,8 +19,12 @@ const getBuildConfig = async () => {
     entryPoints: await getEntryPoints(include),
     outdir: compilerOptions.outDir,
     outbase: "./src",
-    bundle: false,
+    bundle: true,
     platform: "node",
+    outExtension: { ".js": ".cjs" },
+    /* banner: {
+      js: "import { createRequire as topLevelCreateRequire } from 'module';\n const require = topLevelCreateRequire(import.meta.url);",
+    }, */
   };
 };
 
