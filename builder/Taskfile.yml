@@ -36,11 +36,11 @@ tasks:
     cmds:
       - clear
       - task: build-test
-      - yarn ava ./**/*{{.PATTERN}}*.spec.js
+      - yarn ava ./**/*{{.PATTERN}}*.spec.cjs
     vars:
       PATTERN: '{{default "*" .PATTERN}}'
-    sources:
-      - src/**/*.ts
-    generates:
-      - ./build-test/**/*
-    method: timestamp
+    #sources:
+    #  - src/**/*.ts
+    #generates:
+    #  - ./build-test/**/*
+    #method: timestamp
