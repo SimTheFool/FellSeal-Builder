@@ -8,16 +8,20 @@ tasks:
     vars:
       BIN: "{{.BIN}}"
 
+  cli:
+    internal: true
+    cmds:
+      - node {{.SCRIPT}}
+    vars:
+      SCRIPT: "{{.SCRIPT}}"
+
   build:
     internal: true
     cmds:
       - outDir=$(node -e 'const a = require("./{{.TSCONFIG}}"); console.log(a.compilerOptions.outDir);') && rm -rf "$outDir"
-      - task: yarn
+      - task: cli
         vars:
-          BIN: tsc --project {{.TSCONFIG}}
-      - task: yarn
-        vars:
-          BIN: tsc-alias -p {{.TSCONFIG}}
+          SCRIPT: ./cli/build --tsconfig {{.TSCONFIG}}
     vars:
       TSCONFIG: tsconfig.{{.BUILD_TARGET}}.json
 
@@ -32,7 +36,7 @@ tasks:
     cmds:
       - clear
       - task: build-test
-      - yarn --silent ava ./**/*{{.PATTERN}}*.spec.js
+      - yarn ava ./**/*{{.PATTERN}}*.spec.js
     vars:
       PATTERN: '{{default "*" .PATTERN}}'
     sources:

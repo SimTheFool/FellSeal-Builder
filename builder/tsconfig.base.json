@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "module": "ES2020",
+    "moduleResolution": "node16",
+    "target": "ES6",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "noImplicitAny": true,
+    "rootDir": ".",
+    "baseUrl": "src",
+    "paths": {
+      "@utils/*": ["./utils/*"],
+      "@domain/*": ["./domain/*"],
+      "@services/*": ["./applicative/services/test/*"],
+      "@fixtures/*": ["../fixtures/*"]
+    }
+  },
+  "exclude": ["node_modules", "build-*"],
+  "references": [{ "path": "../utils/" }]
+}
