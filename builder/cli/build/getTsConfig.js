@@ -2,7 +2,7 @@ import { readFile } from "fs/promises";
 import metaPath from "../utils/metaPath.js";
 import lodash from "lodash";
 import path from "path";
-const { merge } = lodash;
+const { merge, mergeWith } = lodash;
 
 const getJson = async (name) => {
   const __dirname = metaPath.__dirname;
@@ -11,11 +11,17 @@ const getJson = async (name) => {
   return json;
 };
 
+const mergeProcess = (objValue, srcValue) => {
+  if (Array.isArray(objValue)) {
+    return objValue.concat(srcValue);
+  }
+};
+
 const getTsConfig = async (name) => {
   const tsConfig = await getJson(name);
   if (!tsConfig.extends) return tsConfig;
   const baseTsConfig = await getJson(tsConfig.extends);
-  return merge(baseTsConfig, tsConfig);
+  return mergeWith(baseTsConfig, tsConfig, mergeProcess);
 };
 
 export default getTsConfig;
