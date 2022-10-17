@@ -1,10 +1,10 @@
-import { buildCharacter } from "@domain/character/buildCharacter.js";
-import { UnvalidatedCharacter } from "@domain/character/Character.js";
-import { PersistCharacterService } from "applicative/services/persistCharacter.js";
+import { buildCharacter } from "@domain/character/buildCharacter";
+import { UnvalidatedCharacter } from "@domain/character/Character";
+import { WriteService } from "../services/writeService";
 
 export const addCharacter = (
   unvalidatedCharacter: UnvalidatedCharacter,
-  persistCharacter: PersistCharacterService
+  persistCharacter: WriteService
 ) => {
   const characterId =
     buildCharacter(unvalidatedCharacter).pipe(persistCharacter);

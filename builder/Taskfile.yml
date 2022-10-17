@@ -19,6 +19,7 @@ tasks:
     internal: true
     cmds:
       - outDir=$(node -e 'const a = require("./{{.TSCONFIG}}"); console.log(a.compilerOptions.outDir);') && rm -rf "$outDir"
+      - tsc --noEmit --project {{.TSCONFIG}}
       - task: cli
         vars:
           SCRIPT: ./cli/build -t {{.TSCONFIG}}

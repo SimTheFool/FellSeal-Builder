@@ -5,6 +5,7 @@ import {
 
 export const characters = [
   {
+    id: "001",
     name: "Julian",
     main: "lich",
     active: "druid",

@@ -11,10 +11,9 @@ export const buildCharacter = (
       const validators = validatorMap[key];
       if (!validators) return [...errors];
 
-      const newErrors = validators
+      const newErrors = (validators as any[])
         .map((v) => v(value as any))
         .filter((e): e is CharacterBuildError => e !== undefined);
-
       return [...errors, ...newErrors];
     },
     [] as CharacterBuildError[]
