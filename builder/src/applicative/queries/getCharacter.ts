@@ -1,5 +1,5 @@
 import { CharacterId } from "@domain/character/Character";
-import { ReadService } from "applicative/services/readService";
+import { ReadService } from "adapters/readService";
 
 export const getCharacter = (
   characterId: CharacterId,

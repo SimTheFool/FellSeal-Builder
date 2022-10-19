@@ -1,8 +1,8 @@
 import test from "node:test";
 import assert from "node:assert";
 import { characters } from "@fixtures/characters.js";
-import { readService } from "@services/readService";
 import { getCharacter } from "./getCharacter";
+import { readService } from "@adapters/readService";
 
 test("should get character from identifier", (t) => {
   const dbCharacter = characters[0];

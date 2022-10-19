@@ -13,7 +13,7 @@
     "paths": {
       "@utils/*": ["./utils/*"],
       "@domain/*": ["./domain/*"],
-      "@services/*": ["./applicative/services/test/*"],
+      "@adapters/*": ["./adapters/test/*"],
       "@fixtures/*": ["../fixtures/*"]
     }
   },
