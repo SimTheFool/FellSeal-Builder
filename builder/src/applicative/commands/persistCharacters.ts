@@ -1,6 +1,6 @@
 import { buildCharacter } from "@domain/character/buildCharacter";
-import { UnvalidatedCharacter } from "@domain/character/Character";
-import { newAppResult } from "@utils/Result";
+import { Character, UnvalidatedCharacter } from "@domain/character/Character";
+import { newAppResult } from "@utils/result/Result";
 import { WriteService } from "adapters/writeService";
 
 export const persistCharacters = (
@@ -8,6 +8,6 @@ export const persistCharacters = (
   writeService: WriteService
 ) => {
   return newAppResult(unvalidatedCharacter)
-    .foreach((u) => buildCharacter(u))
-    .pipe(writeService.persistCharacters);
+    .foreachResult((u) => buildCharacter(u))
+    .pipeResult((x) => writeService.persistCharacters(x));
 };

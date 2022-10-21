@@ -1,4 +1,4 @@
-import { AppResult, newAppResult } from "@utils/Result.js";
+import { AppResult, newAppResult } from "@utils/result/Result.js";
 import { entries } from "utils";
 import { Character, UnvalidatedCharacter } from "./Character.js";
 import { CharacterBuildError, CHARACTER_BUILD_ERRORS } from "./Errors.js";

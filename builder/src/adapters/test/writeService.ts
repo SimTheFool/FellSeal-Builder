@@ -1,18 +1,17 @@
 import { Character } from "@domain/character/Character.js";
-import { newAppResult } from "@utils/Result.js";
-import { v4 as uuid } from "uuid";
+import { newAppResult } from "@utils/result/Result.js";
 import { characters as fakeCharacters } from "../../../fixtures/characters.js";
 import { WriteService } from "../writeService.js";
 
-const characters = fakeCharacters.map(
+const charactersDB = fakeCharacters.map(
   (c): Character => ({
     ...c,
   })
 );
 
 const persistCharacters = (characters: Character[]) => {
-  characters.push(...characters);
-  return newAppResult<void>();
+  charactersDB.push(...characters);
+  return newAppResult(undefined);
 };
 
 export const writeService: WriteService = {

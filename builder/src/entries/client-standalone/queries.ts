@@ -1,7 +1,7 @@
 import { readService } from "@adapters/readService";
 import { Character, CharacterId } from "@domain/character/Character";
 import { AppErrors } from "@utils/Error";
-import { AppResult } from "@utils/Result";
+import { AppResult } from "@utils/result/Result";
 import { getAllCharacters as getAllCharactersApplicative } from "applicative/queries/getAllCharacters";
 
 type Query<O, E extends AppErrors = AppErrors> = {
