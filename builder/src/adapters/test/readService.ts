@@ -10,7 +10,10 @@ const characters = fakeCharacters.map(
   })
 );
 
-export const readService: ReadService = (characterId: CharacterId) => {
-  const character = characters.find((c) => c.id === characterId);
-  return newAppResult(character);
+const getAllCharacters = () => {
+  return newAppResult(characters);
+};
+
+export const readService: ReadService = {
+  getAllCharacters,
 };

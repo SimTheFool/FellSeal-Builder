@@ -10,8 +10,11 @@ const characters = fakeCharacters.map(
   })
 );
 
-export const writeService: WriteService = (character) => {
-  const newId = uuid();
-  characters.push({ ...character });
-  return newAppResult(newId);
+const persistCharacters = (characters: Character[]) => {
+  characters.push(...characters);
+  return newAppResult<void>();
+};
+
+export const writeService: WriteService = {
+  persistCharacters,
 };

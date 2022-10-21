@@ -1,5 +1,5 @@
 import { AppError, AppErrors, isAppError, newAppError } from "./Error.js";
-
+//@TODO refacto in several files + test
 const NO_ERROR = newAppError("app_result_can_not_access_error");
 const NO_OK = newAppError("app_result_can_not_access_ok");
 
@@ -12,10 +12,20 @@ export type AppResult<Input, InputErrors extends AppErrors> = {
   pipe: <Output, OutputError extends AppErrors>(
     pipeable: (value: Input) => AppResult<Output, OutputError>
   ) => AppResult<Output, InputErrors | OutputError>;
+  /* foreach: Input extends Array<infer R>
+    ? <Output, OutputError extends AppErrors>(
+        pipeable: (value: R) => AppResult<Output, OutputError>
+      ) => AppResult<Output[], InputErrors | OutputError>
+    : never; */
+  foreach: <Output, OutputErrors extends AppErrors>(
+    pipeable: (
+      value: Input extends Array<infer R> ? R : never
+    ) => AppResult<Output, OutputErrors>
+  ) => AppResult<Output[], InputErrors | OutputErrors>;
 };
 
-export const newAppResult = <Input, InputErrors extends AppErrors>(
-  input: Input | InputErrors
+export const newAppResult = <Input, InputErrors extends AppErrors = AppErrors>(
+  input?: Input | InputErrors
 ): AppResult<Input, InputErrors> => {
   const isOk = () => {
     if (Array.isArray(input) && input.length > 0 && isAppError(input[0]))
@@ -59,6 +69,36 @@ export const newAppResult = <Input, InputErrors extends AppErrors>(
     return piper(newAppResult(input));
   };
 
+  const foreach = <Output, OutputErrors extends AppErrors>(
+    pipeable: (
+      value: Input extends Array<infer R> ? R : never
+    ) => AppResult<Output, OutputErrors>
+  ) => {
+    const result = newAppResult(input);
+    if (result.isErrors()) {
+      const errors = result.getErrors();
+      return newAppResult<Output[], InputErrors | OutputErrors>(errors);
+    }
+
+    const elems = result.getOk();
+    if (!Array.isArray(elems))
+      throw "result is not an array, you can't use foreach";
+
+    const outputs = elems.map((e) => pipeable(e));
+    const outputErrors = outputs.filter((o) => o.isErrors());
+
+    if (outputErrors.length) {
+      const errors = outputErrors.flatMap((o) => o.getErrors()) as OutputErrors;
+      return newAppResult<Output[], InputErrors | OutputErrors>(errors);
+    }
+
+    return newAppResult<Output[], InputErrors | OutputErrors>(
+      outputs.map((o) => o.getOk())
+    );
+  };
+
+  const neverForeach = Array.isArray(input) ? {} : foreach;
+
   return {
     isOk,
     getOk,
@@ -66,5 +106,6 @@ export const newAppResult = <Input, InputErrors extends AppErrors>(
     getErrors,
     hasError,
     pipe,
+    foreach,
   };
 };

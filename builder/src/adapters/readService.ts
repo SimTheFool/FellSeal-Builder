@@ -4,6 +4,6 @@ import { AppResult } from "utils/Result.js";
 
 export { readService } from "@adapters/readService";
 
-export type ReadService = (
-  characterId: CharacterId
-) => AppResult<Character | undefined, AppErrors<string>>;
+export type ReadService = {
+  getAllCharacters: () => AppResult<Character[], AppErrors<string>>;
+};

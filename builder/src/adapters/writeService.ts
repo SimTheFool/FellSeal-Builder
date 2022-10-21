@@ -4,6 +4,8 @@ import { AppResult } from "utils/Result.js";
 
 export { writeService } from "@adapters/writeService";
 
-export type WriteService = (
-  character: Character
-) => AppResult<string, AppErrors<string>>;
+export type WriteService = {
+  persistCharacters: (
+    characters: Character[]
+  ) => AppResult<void, AppErrors<string>>;
+};
