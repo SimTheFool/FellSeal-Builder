@@ -8,8 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       withNormalizeCSS
       theme={{
         colors: {
-          "back-hard": ["#AA7739"],
-          "back-light": ["#FFD9AA"],
+          back_grey: ["#26262688"],
         },
       }}
     >
