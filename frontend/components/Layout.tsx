@@ -1,4 +1,4 @@
-import { Box } from "@mantine/core";
+import { Box, Paper } from "@mantine/core";
 import { mediaQuery } from "./style";
 
 type LayoutProps = {
@@ -37,8 +37,9 @@ export const Layout = ({ title, placeholder, characterList }: LayoutProps) => {
         })}
       />
 
-      <Box
+      <Paper
         component="main"
+        shadow="xs"
         sx={(t) => ({
           [mediaQuery.enoughHeight]: {
             maxWidth: "900px",
@@ -69,7 +70,7 @@ export const Layout = ({ title, placeholder, characterList }: LayoutProps) => {
         </Box>
 
         {characterList}
-      </Box>
+      </Paper>
     </>
   );
 };
