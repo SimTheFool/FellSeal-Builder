@@ -3,21 +3,31 @@ import Image from "next/image";
 import portrait1 from "../assets/portraits/3-Large.png";
 import { mediaQuery, portraitHeight, portraitWidth } from "../components/style";
 import { Title } from "@mantine/core";
+import { useDOMRef } from "../utils/hooks/useDOMRef";
+import { useBoundingClientRect } from "../utils/hooks/useBoundingClientRect";
 
 type CharacterListProps = {};
 
 export const CharacterList = ({}: CharacterListProps) => {
+  const [list, queryList] = useDOMRef<HTMLElement>();
+  const { width: listWidth = 0 } = useBoundingClientRect(list) || {};
+
+  const itemBaseWidth = portraitWidth + 20;
+  const capacity = Math.floor(listWidth / itemBaseWidth);
+  const length = 7;
+  const present = length % capacity;
+  const missing = present ? capacity - present : present;
+
+  console.log(missing, new Array(missing || 0));
+
   return (
     <Box
+      {...queryList()}
       component="ul"
       sx={(t) => ({
         [mediaQuery.enoughHeight]: {
           flexWrap: "wrap",
           justifyContent: "space-evenly",
-          ":after": {
-            content: "'aa'",
-            flexBasis: "228px",
-          },
           paddingLeft: 0,
         },
         display: "flex",
@@ -38,14 +48,14 @@ export const CharacterList = ({}: CharacterListProps) => {
       <Portrait />
       <Portrait />
       <Portrait />
-      <Portrait />
-      <Portrait />
-      <Portrait />
-      <Portrait />
-      <Portrait />
-      <Portrait />
-      <Portrait />
-      <Portrait />
+      {new Array(missing || 0).fill(1).map(() => (
+        <Box
+          sx={(t) => ({
+            width: itemBaseWidth,
+            visibility: "hidden",
+          })}
+        ></Box>
+      ))}
     </Box>
   );
 };
