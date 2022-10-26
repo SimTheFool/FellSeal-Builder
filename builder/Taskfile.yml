@@ -1,8 +1,8 @@
 version: "3"
 
 vars:
-  ENTRY: "{{.ENTRY}}"
-  TARGET: '{{default "test" .TARGET}}'
+  E: "{{.E}}"
+  T: '{{default "test" .T}}'
 
 tasks:
   yarn:
@@ -22,7 +22,7 @@ tasks:
   outDir:
     internal: true
     cmds:
-      - outDir=$(node -e 'const conf = require("./tsconfig.{{.TARGET}}.json"); console.log(conf.compilerOptions.outDir);') && {{.OPER}}
+      - outDir=$(node -e 'const conf = require("./tsconfig.{{.T}}.json"); console.log(conf.compilerOptions.outDir);') && {{.OPER}}
     vars:
       OPER: "{{.OPER }}"
 
@@ -34,10 +34,10 @@ tasks:
           OPER: rm -rf "$outDir"
       - task: yarn
         vars:
-          BIN: tsc --noEmit --project tsconfig.{{.TARGET}}.json
+          BIN: tsc --noEmit --project tsconfig.{{.T}}.json
       - task: cli
         vars:
-          SCRIPT: ./cli/build -t tsconfig.{{.TARGET}}.json
+          SCRIPT: ./cli/build -t tsconfig.{{.T}}.json
 
   test:
     cmds:
@@ -45,18 +45,20 @@ tasks:
       - task: build
       - task: cli
         vars:
-          SCRIPT: ./cli/unitTest -p ./**/*{{default "*" .ENTRY}}*.spec.js
+          SCRIPT: ./cli/unitTest -p ./**/*{{default "*" .E}}*.spec.js
     sources:
       - src/**/*.ts
     generates:
       - ./build-test/**/*
     method: timestamp
 
-  dev:
+  dist:
     cmds:
-      - clear
+      - rm -rf ./dist
       - task: build
+      - task: yarn
+        vars:
+          BIN: tsc ./src/entries/{{.E}}/index.ts --emitDeclarationOnly --declaration --skipLibCheck --outfile ./dist/index.d.ts
       - task: outDir
         vars:
-          OPER: echo "$outDir"
-      - node ./build-test/entries/{{default "express" .ENTRY}}/index.js
+          OPER: cp "$outDir/entries/{{.E}}/index.js" ./dist/index.js
