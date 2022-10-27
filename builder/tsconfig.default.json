@@ -17,7 +17,7 @@
       "@fixtures/*": ["./fixtures/*"]
     }
   },
-  "include": ["./src/entries/**/index.ts"],
+  "include": ["./src/**/*.ts"],
   "exclude": ["node_modules", "build-*"],
   "references": [{ "path": "../utils/" }]
 }

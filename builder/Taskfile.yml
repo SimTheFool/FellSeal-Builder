@@ -54,14 +54,14 @@ tasks:
 
   dist:
     cmds:
-      - rm -rf ./dist
+      #- rm -rf ./dist
       - task: build
-      - task: yarn
-        vars:
-          BIN: tsc --project tsconfig.{{.T}}.json --emitDeclarationOnly --outDir ./dist
       #- task: yarn
       #  vars:
-      #    BIN: tsc-alias -p tsconfig.{{.T}}.json --outDir ./dist
-      - task: outDir
-        vars:
-          OPER: cp "$outDir/entries/{{.E}}/index.js" ./dist/index.js
+      #    BIN: tsc --project tsconfig.{{.T}}.json --emitDeclarationOnly
+      #- task: yarn
+      #  vars:
+      #    BIN: tsc-alias -p tsconfig.{{.T}}.json
+      #- task: outDir
+      #  vars:
+      #    OPER: cp "$outDir/entries/{{.E}}/index.js" ./dist/index.js

@@ -5,5 +5,5 @@ dist
 tsconfig.tsbuildinfo
 .task
 .next
-
+memo.txt
 !builder/cli/build
