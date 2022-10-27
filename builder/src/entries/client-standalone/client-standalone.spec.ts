@@ -3,7 +3,7 @@ import assert from "node:assert";
 import {
   characters as fakeCharacters,
   newUnvalidatedCharacter,
-} from "@fixtures/characters";
+} from "fixtures/characters";
 
 import { commands, queries } from "./index.js";
 

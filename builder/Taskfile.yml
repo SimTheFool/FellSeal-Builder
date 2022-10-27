@@ -58,7 +58,10 @@ tasks:
       - task: build
       - task: yarn
         vars:
-          BIN: tsc ./src/entries/{{.E}}/index.ts --emitDeclarationOnly --declaration --skipLibCheck --outfile ./dist/index.d.ts
+          BIN: tsc --project tsconfig.{{.T}}.json --emitDeclarationOnly --outDir ./dist
+      #- task: yarn
+      #  vars:
+      #    BIN: tsc-alias -p tsconfig.{{.T}}.json --outDir ./dist
       - task: outDir
         vars:
           OPER: cp "$outDir/entries/{{.E}}/index.js" ./dist/index.js
