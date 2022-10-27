@@ -1,4 +1,4 @@
-import { newAppError } from "utils/Error.js";
+import { newAppError } from "@utils/Error.js";
 
 export const CHARACTER_BUILD_ERRORS = {
   MISSING_MAIN: newAppError("character_missing_main"),

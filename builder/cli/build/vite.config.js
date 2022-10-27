@@ -1,5 +1,5 @@
 import { defineConfig, loadEnv } from "vite";
-import tsconfigPaths from "vite-tsconfig-paths";
+import tsConfigPaths from "rollup-plugin-tsconfig-paths";
 import getTsConfig from "./getTsConfig";
 import metaPath from "../utils/metaPath.js";
 import path from "path";
@@ -20,13 +20,19 @@ export default defineConfig(async ({ command, mode }) => {
     build: {
       rollupOptions: {
         input: await getEntryPoints(include),
+        plugins: [
+          tsConfigPaths({
+            tsConfigPath: path.resolve(__dirname, `../../${targetedTsConfig}`),
+          }),
+        ],
+        external: "node:test",
       },
     },
-    plugins: [
+    /* plugins: [
       tsconfigPaths({
         root: path.resolve(__dirname, `../..`),
         projects: [`${targetedTsConfig}`],
       }),
-    ],
+    ], */
   };
 });

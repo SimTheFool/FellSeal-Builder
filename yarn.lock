@@ -2530,6 +2530,13 @@ rimraf@^3.0.2:
   dependencies:
     glob "^7.1.3"
 
+rollup-plugin-tsconfig-paths@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-tsconfig-paths/-/rollup-plugin-tsconfig-paths-1.4.0.tgz#390faf03223ff765ae21c967f967dcfb7f4d4abf"
+  integrity sha512-mZm3up1di2s6aveD05WViY3IYnY6aAerKAq3XVUyxfE+So8dUUHSZ++7LOLUe5De4zsR46mxV/A3lMg81CRuPw==
+  dependencies:
+    typescript-paths "^1.4.0"
+
 rollup@^2.79.1:
   version "2.79.1"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.79.1.tgz#bedee8faef7c9f93a2647ac0108748f497f081c7"
@@ -2860,6 +2867,11 @@ type-is@~1.6.18:
   dependencies:
     media-typer "0.3.0"
     mime-types "~2.1.24"
+
+typescript-paths@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/typescript-paths/-/typescript-paths-1.4.0.tgz#c63bb69e821d0a10c6d0099de8dd7b83dd2d4d9e"
+  integrity sha512-olt3yKj5d4ON5MpQgxvqpiN24ApsrdlRnIQFwqlbzuTjRZFQNoTOzzTJ13vyDRt7VW0cuO+g8HA+eoYfBLWWMA==
 
 typescript@4.8.4, typescript@^4.8.4:
   version "4.8.4"
