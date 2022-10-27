@@ -1,7 +1,7 @@
-import { AppResult, newAppResult } from "@utils/result/Result.js";
+import { AppResult, newAppResult } from "@utils/result/Result";
 import { entries } from "utils";
-import { Character, UnvalidatedCharacter } from "./Character.js";
-import { CharacterBuildError, CHARACTER_BUILD_ERRORS } from "./Errors.js";
+import { Character, UnvalidatedCharacter } from "./Character";
+import { CharacterBuildError, CHARACTER_BUILD_ERRORS } from "./Errors";
 
 export const buildCharacter = (
   unvalidatedCharacter: UnvalidatedCharacter

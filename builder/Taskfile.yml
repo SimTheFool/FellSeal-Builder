@@ -8,55 +8,45 @@ tasks:
   yarn:
     internal: true
     cmds:
-      - yarn run --silent {{.BIN}}
+      - yarn run --silent {{.CMD}}
     vars:
-      BIN: "{{.BIN}}"
+      CMD: "{{.CMD}}"
 
-  cli:
+  node:
     internal: true
     cmds:
-      - node {{.SCRIPT}}
+      - node {{.CMD}}
     vars:
-      SCRIPT: "{{.SCRIPT}}"
+      CMD: "{{.CMD}}"
 
-  outDir:
-    internal: true
-    cmds:
-      - outDir=$(node -e 'const conf = require("./tsconfig.{{.TARGET}}.json"); console.log(conf.compilerOptions.outDir);') && {{.OPER}}
-    vars:
-      OPER: "{{.OPER }}"
+  #outDir:
+  #  internal: true
+  #  cmds:
+  #    - outDir=$(node -e 'const conf = require("./tsconfig.{{.TARGET}}.json"); console.log(conf.compilerOptions.outDir);') && {{.OPER}}
+  #  vars:
+  #    OPER: "{{.OPER }}"
 
   build:
-    internal: true
     cmds:
-      - task: outDir
+      #  - task: outDir
+      #    vars:
+      #      OPER: rm -rf "$outDir"
+      #  - task: yarn
+      #    vars:
+      #      BIN: tsc --noEmit --project tsconfig.{{.TARGET}}.json
+      - task: node
         vars:
-          OPER: rm -rf "$outDir"
-      - task: yarn
-        vars:
-          BIN: tsc --noEmit --project tsconfig.{{.TARGET}}.json
-      - task: cli
-        vars:
-          SCRIPT: ./cli/build -t tsconfig.{{.TARGET}}.json
+          CMD: ./cli/build -t tsconfig.{{.TARGET}}.json
 
   test:
     cmds:
       - clear
       - task: build
-      - task: cli
+      - task: node
         vars:
-          SCRIPT: ./cli/unitTest -p ./**/*{{default "*" .ENTRY}}*.spec.js
+          CMD: ./cli/unitTest -p ./**/*{{default "*" .ENTRY}}*.spec.js
     sources:
       - src/**/*.ts
     generates:
       - ./build-test/**/*
     method: timestamp
-
-  dev:
-    cmds:
-      - clear
-      - task: build
-      - task: outDir
-        vars:
-          OPER: echo "$outDir"
-      - node ./build-test/entries/{{default "express" .ENTRY}}/index.js

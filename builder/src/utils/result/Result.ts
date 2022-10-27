@@ -1,9 +1,9 @@
-import { AppError, AppErrors } from "../Error.js";
-import { foreach } from "./foreach.js";
-import { getErrors, getOk } from "./get.js";
-import { hasError, isErrors, isOk } from "./is.js";
-import { map } from "./map.js";
-import { pipe } from "./pipe.js";
+import { AppError, AppErrors } from "../Error";
+import { foreach } from "./foreach";
+import { getErrors, getOk } from "./get";
+import { hasError, isErrors, isOk } from "./is";
+import { map } from "./map";
+import { pipe } from "./pipe";
 //@TODO refacto in several files + test
 
 export type AppResult<Input, InputErrors extends AppErrors> = {

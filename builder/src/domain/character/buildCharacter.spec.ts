@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert";
-import { buildCharacter } from "./buildCharacter.js";
-import { CHARACTER_BUILD_ERRORS } from "./Errors.js";
+import { buildCharacter } from "./buildCharacter";
+import { CHARACTER_BUILD_ERRORS } from "./Errors";
 
 const fakeCharacter = {
   main: "lich",

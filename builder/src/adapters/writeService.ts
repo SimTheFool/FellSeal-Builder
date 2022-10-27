@@ -1,6 +1,6 @@
-import { Character } from "@domain/character/Character.js";
-import { AppErrors } from "utils/Error.js";
-import { AppResult } from "@utils/result/Result.js";
+import { Character } from "@domain/character/Character";
+import { AppErrors } from "utils/Error";
+import { AppResult } from "@utils/result/Result";
 
 export { writeService } from "@adapters/writeService";
 

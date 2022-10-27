@@ -1,7 +1,4 @@
-import {
-  Character,
-  UnvalidatedCharacter,
-} from "@domain/character/Character.js";
+import { Character, UnvalidatedCharacter } from "@domain/character/Character";
 
 export const characters = [
   {
