@@ -1,0 +1,7 @@
+{
+  "extends": "./tsconfig.default.json",
+  "compilerOptions": {
+    "outDir": "build-testset"
+  },
+  "include": ["./src/**/*.spec.ts"]
+}

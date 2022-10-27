@@ -2,42 +2,57 @@ version: "3"
 
 vars:
   E: "{{.E}}"
-  T: '{{default "test" .T}}'
+  T: '{{default "testset" .T}}'
+
+env:
+  VITE_TARGET: "{{.T}}"
 
 tasks:
   yarn:
     internal: true
     cmds:
-      - yarn run --silent {{.BIN}}
+      - yarn run --silent {{.CMD}}
     vars:
-      BIN: "{{.BIN}}"
+      CMD: "{{.CMD}}"
 
-  cli:
+  vite:
     internal: true
     cmds:
-      - node {{.SCRIPT}}
-    vars:
-      SCRIPT: "{{.SCRIPT}}"
-
-  outDir:
-    internal: true
-    cmds:
-      - outDir=$(node -e 'const conf = require("./tsconfig.{{.T}}.json"); console.log(conf.compilerOptions.outDir);') && {{.OPER}}
-    vars:
-      OPER: "{{.OPER }}"
-
-  build:
-    internal: true
-    cmds:
-      - task: outDir
-        vars:
-          OPER: rm -rf "$outDir"
       - task: yarn
         vars:
-          BIN: tsc --noEmit --project tsconfig.{{.T}}.json
-      - task: cli
+          CMD: vite -c ./cli/build/vite.config.js {{.CMD}}
+    vars:
+      CMD: "{{.CMD}}"
+
+  #cli:
+  #  internal: true
+  #  cmds:
+  #    - node {{.SCRIPT}}
+  #  vars:
+  #    SCRIPT: "{{.SCRIPT}}"
+
+  #outDir:
+  #  internal: true
+  #  cmds:
+  #    - outDir=$(node -e 'const conf = require("./tsconfig.{{.T}}.json"); console.log(conf.compilerOptions.outDir);') && {{.OPER}}
+  #  vars:
+  #    OPER: "{{.OPER }}"
+
+  build:
+    #internal: true
+    cmds:
+      - task: vite
         vars:
-          SCRIPT: ./cli/build -t tsconfig.{{.T}}.json
+          CMD: build
+      #- task: outDir
+      #  vars:
+      #    OPER: rm -rf "$outDir"
+      #- task: yarn
+      #  vars:
+      #    BIN: tsc --noEmit --project tsconfig.{{.T}}.json
+      #- task: cli
+      #  vars:
+      #    SCRIPT: ./cli/build -t tsconfig.{{.T}}.json
 
   test:
     cmds:
