@@ -1,7 +1,17 @@
 {
   "extends": "./tsconfig.default.json",
   "compilerOptions": {
-    "outDir": "build-test"
+    "outDir": "build-test",
+    "paths": {
+      "@utils/*": ["./utils/*"],
+      "@domain/*": ["./domain/*"],
+      "@adapters/*": ["./adapters/test/*"],
+      "@fixtures/*": ["../fixtures/*"]
+    }
   },
-  "include": ["./src/**/*.spec.ts"]
+  "include": ["./src/**/*.spec.ts"],
+  "tsc-alias": {
+    "verbose": true,
+    "resolveFullPaths": true
+  }
 }

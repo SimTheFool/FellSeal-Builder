@@ -27,17 +27,20 @@ tasks:
       OPER: "{{.OPER }}"
 
   build:
-    internal: true
     cmds:
-      - task: outDir
-        vars:
-          OPER: rm -rf "$outDir"
-      - task: yarn
-        vars:
-          BIN: tsc --noEmit --project tsconfig.{{.TARGET}}.json
-      - task: cli
-        vars:
-          SCRIPT: ./cli/build -t tsconfig.{{.TARGET}}.json
+      #- task: outDir
+      #  vars:
+      #    OPER: rm -rf "$outDir"
+      - yarn tsc --project tsconfig.{{.TARGET}}.json && yarn tsc-alias -p tsconfig.{{.TARGET}}.json
+      #- task: yarn
+      #  vars:
+      #    BIN: tsc --project tsconfig.{{.TARGET}}.json
+      #- task: yarn
+      #  vars:
+      #    BIN: tsc-alias -p tsconfig.{{.TARGET}}.json
+      #- task: cli
+      #  vars:
+      #    SCRIPT: ./cli/build -t tsconfig.{{.TARGET}}.json
 
   test:
     cmds:
@@ -51,12 +54,3 @@ tasks:
     generates:
       - ./build-test/**/*
     method: timestamp
-
-  dev:
-    cmds:
-      - clear
-      - task: build
-      - task: outDir
-        vars:
-          OPER: echo "$outDir"
-      - node ./build-test/entries/{{default "express" .ENTRY}}/index.js

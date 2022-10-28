@@ -4,17 +4,18 @@
     "moduleResolution": "Node",
     "target": "ES6",
     "strict": true,
+    "outDir": "build-test",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "declaration": true,
     "noImplicitAny": true,
-    "rootDir": ".",
+    "rootDir": "./src",
     "baseUrl": "./src",
     "paths": {
       "@utils/*": ["./utils/*"],
       "@domain/*": ["./domain/*"],
       "@adapters/*": ["./adapters/test/*"],
-      "@fixtures/*": ["../fixtures/*"]
+      "@fixtures/*": ["./fixtures/*"]
     }
   },
   "include": ["./src/entries/**/*.ts"],
