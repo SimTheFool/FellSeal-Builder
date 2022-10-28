@@ -14,43 +14,43 @@ const args = yargs(hideBin(process.argv))
   })
   .parse();
 
-const tsConfigAliases = (aliases) => {
-  const changeAliases = Object.entries(aliases).map(
+const allExternal = () => {
+  /* const changeAliases = Object.entries(aliases).map(
     ([alias, dest]) =>
       (build) => {
         const regex = new RegExp(alias.replace(/\*+/, "(.*)"));
         build.onResolve({ filter: regex }, changeAlias(regex, dest));
       }
-  );
+  ); */
 
-  const changeAlias = (regex, dest) => (args) => {
+  /* const changeAlias = (regex, dest) => (args) => {
     const endpoint = args.path.match(regex)[1];
     const newPath = dest[0].replace("*", endpoint);
     console.log("***", newPath);
     args.path = newPath;
-  };
+  }; */
 
   return {
-    name: "tsConfigAliases",
+    name: "allExternal",
     setup: (build) => {
       //changeAliases.forEach((change) => change(build));
-      //build.onResolve({ filter: /.*/ }, async (args) => {
-      //  console.log("resolve", args);
-      //});
-      build.onLoad({ filter: /.*/, namespace: "file" }, async (args) => {
-        console.log("onload", args);
+      build.onResolve({ filter: /.*/ }, async (args) => {
+        console.log("resolve", args.kind, args.path);
+        if (args.kind !== "import-statement") return;
+        return { external: true };
       });
     },
   };
 };
 
 const getBuildConfig = async () => {
+  const shouldBundle = false;
+
   const {
-    compilerOptions: { outDir, paths },
+    compilerOptions: { outDir },
     include,
   } = await getTsConfig(args.tsconfig);
 
-  console.log("aaa", await getEntryPoints(include));
   return {
     tsconfig: args.tsconfig,
     entryPoints: await getEntryPoints(include),
@@ -61,7 +61,7 @@ const getBuildConfig = async () => {
     banner: {
       js: "import { createRequire as topLevelCreateRequire } from 'module';\n const require = topLevelCreateRequire(import.meta.url);",
     },
-    plugins: [tsConfigAliases(paths)],
+    plugins: [allExternal()],
   };
 };
 
