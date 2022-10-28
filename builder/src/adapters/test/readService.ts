@@ -1,8 +1,8 @@
-import { Character, CharacterId } from "@domain/character/Character.js";
-import { newAppResult } from "@utils/result/Result.js";
+import { Character, CharacterId } from "@domain/character/Character";
+import { newAppResult } from "@utils/result/Result";
 import { v4 as uuid } from "uuid";
-import { characters as fakeCharacters } from "../../fixtures/characters.js";
-import { ReadService } from "../readService.js";
+import { characters as fakeCharacters } from "../../fixtures/characters";
+import { ReadService } from "../readService";
 
 const characters = fakeCharacters.map(
   (c): Character => ({

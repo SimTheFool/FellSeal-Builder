@@ -5,7 +5,7 @@ import {
   newUnvalidatedCharacter,
 } from "fixtures/characters";
 
-import { commands, queries } from "./index.js";
+import { commands, queries } from "./index";
 
 const domi = newUnvalidatedCharacter();
 

@@ -15,7 +15,8 @@
       "@utils/*": ["./utils/*"],
       "@domain/*": ["./domain/*"],
       "@adapters/*": ["./adapters/test/*"],
-      "@fixtures/*": ["./fixtures/*"]
+      "@fixtures/*": ["./fixtures/*"],
+      "@applicative/*": ["./applicative/*"]
     }
   },
   "include": ["./src/**/*.ts"],

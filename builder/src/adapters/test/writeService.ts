@@ -1,7 +1,7 @@
-import { Character } from "@domain/character/Character.js";
-import { newAppResult } from "@utils/result/Result.js";
-import { characters as fakeCharacters } from "../../fixtures/characters.js";
-import { WriteService } from "../writeService.js";
+import { Character } from "@domain/character/Character";
+import { newAppResult } from "@utils/result/Result";
+import { characters as fakeCharacters } from "../../fixtures/characters";
+import { WriteService } from "../writeService";
 
 const charactersDB = fakeCharacters.map(
   (c): Character => ({
