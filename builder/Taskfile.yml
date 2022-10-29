@@ -1,7 +1,7 @@
 version: "3"
 
 vars:
-  E: "{{.E}}"
+  F: "{{.F}}"
   T: '{{default "test" .T}}'
 
 tasks:
@@ -27,34 +27,48 @@ tasks:
       CMD: "{{.CMD }}"
 
   build:
-    cmds:
+    internal: true
+    deps:
       - task: outDir
         vars:
           CMD: rm -rf "$outDir"
       - task: yarn
         vars:
           CMD: tsc --noEmit --project tsconfig.{{.T}}.json
+    cmds:
       - task: cli
         vars:
           CMD: ./cli/build -t tsconfig.{{.T}}.json
     vars:
       T: "{{.T}}"
 
-  #declare:
-  #  cmds:
-  #    - tsc --emitDeclarationOnly --project tsconfig.{{.T}}.json
+  declare:
+    internal: true
+    cmds:
+      - task: yarn
+        vars:
+          CMD: tsc --emitDeclarationOnly --project tsconfig.{{.T}}.json
+      - task: yarn
+        vars:
+          CMD: tsc-alias -p tsconfig.{{.T}}.json
 
-  #test:
-  #  cmds:
-  #    - clear
-  #    - task: build
-  #      vars:
-  #        T: testset
-  #    - task: cli
-  #      vars:
-  #        CMD: ./cli/unitTest -p ./**/*{{default "*" .E}}*.spec.js
-  #  sources:
-  #    - src/**/*.ts
-  #  generates:
-  #    - ./build-test/**/*
-  #  method: timestamp
+  dist:
+    deps: [build, declare]
+    cmds:
+      - echo 'export * from "./entries/{{.F}}"' > ./dist/index.js
+      - echo 'export * from "./entries/{{.F}}"' > ./dist/index.d.ts
+
+  test:
+    cmds:
+      - clear
+      - task: build
+        vars:
+          T: testset
+      - task: cli
+        vars:
+          CMD: ./cli/unitTest -p ./**/*{{default "*" .F}}*.spec.js
+    sources:
+      - src/**/*.ts
+    generates:
+      - ./build-test/**/*
+    method: timestamp
