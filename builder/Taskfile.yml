@@ -1,62 +1,60 @@
 version: "3"
 
 vars:
-  ENTRY: "{{.ENTRY}}"
-  TARGET: '{{default "test" .TARGET}}'
+  E: "{{.E}}"
+  T: '{{default "test" .T}}'
 
 tasks:
   yarn:
     internal: true
     cmds:
-      - yarn run --silent {{.BIN}}
+      - yarn run --silent {{.CMD}}
     vars:
-      BIN: "{{.BIN}}"
+      CMD: "{{.CMD}}"
 
   cli:
     internal: true
     cmds:
-      - node {{.SCRIPT}}
+      - node {{.CMD}}
     vars:
-      SCRIPT: "{{.SCRIPT}}"
+      CMD: "{{.CMD}}"
 
   outDir:
     internal: true
     cmds:
-      - outDir=$(node -e 'const conf = require("./tsconfig.{{.TARGET}}.json"); console.log(conf.compilerOptions.outDir);') && {{.OPER}}
+      - outDir=$(node -e 'const conf = require("./tsconfig.default.json"); console.log(conf.compilerOptions.outDir);') && {{.CMD}}
     vars:
-      OPER: "{{.OPER }}"
+      CMD: "{{.CMD }}"
 
   build:
-    internal: true
     cmds:
       - task: outDir
         vars:
-          OPER: rm -rf "$outDir"
+          CMD: rm -rf "$outDir"
       - task: yarn
         vars:
-          BIN: tsc --noEmit --project tsconfig.{{.TARGET}}.json
+          CMD: tsc --noEmit --project tsconfig.{{.T}}.json
       - task: cli
         vars:
-          SCRIPT: ./cli/build -t tsconfig.{{.TARGET}}.json
+          CMD: ./cli/build -t tsconfig.{{.T}}.json
+    vars:
+      T: "{{.T}}"
 
-  test:
-    cmds:
-      - clear
-      - task: build
-      - task: cli
-        vars:
-          SCRIPT: ./cli/unitTest -p ./**/*{{default "*" .ENTRY}}*.spec.js
-    sources:
-      - src/**/*.ts
-    generates:
-      - ./build-test/**/*
-    method: timestamp
+  #declare:
+  #  cmds:
+  #    - tsc --emitDeclarationOnly --project tsconfig.{{.T}}.json
 
-  dev:
-    cmds:
-      - clear
-      - task: build
-      - task: outDir
-        vars:
-          OPER: echo "$outDir"
-      - node ./build-test/entries/{{default "express" .ENTRY}}/index.js
+  #test:
+  #  cmds:
+  #    - clear
+  #    - task: build
+  #      vars:
+  #        T: testset
+  #    - task: cli
+  #      vars:
+  #        CMD: ./cli/unitTest -p ./**/*{{default "*" .E}}*.spec.js
+  #  sources:
+  #    - src/**/*.ts
+  #  generates:
+  #    - ./build-test/**/*
+  #  method: timestamp

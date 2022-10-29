@@ -1,0 +1,5 @@
+- gerer les paths sans bundle
+- job bundle + job dist + job dev avec prise en compte des entry point
+- passer les tests avec ava
+- revoir le champ BIN dans taskfile
+- nettoyer CLI et package json

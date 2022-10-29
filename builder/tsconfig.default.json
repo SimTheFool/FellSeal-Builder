@@ -8,13 +8,14 @@
     "skipLibCheck": true,
     "declaration": true,
     "noImplicitAny": true,
-    "rootDir": ".",
+    "outDir": "dist",
+    "rootDir": "./src",
     "baseUrl": "./src",
     "paths": {
       "@utils/*": ["./utils/*"],
       "@domain/*": ["./domain/*"],
       "@adapters/*": ["./adapters/test/*"],
-      "@fixtures/*": ["../fixtures/*"]
+      "@fixtures/*": ["./fixtures/*"]
     }
   },
   "include": ["./src/entries/**/*.ts"],
