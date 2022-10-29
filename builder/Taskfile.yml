@@ -38,9 +38,10 @@ tasks:
     cmds:
       - task: cli
         vars:
-          CMD: ./cli/build -t tsconfig.{{.T}}.json
+          CMD: ./cli/build -t tsconfig.{{.T}}.json -p {{.PLATFORM}}
     vars:
       T: "{{.T}}"
+      PLATFORM: "{{.PLATFORM}}"
 
   declare:
     internal: true
@@ -53,7 +54,11 @@ tasks:
           CMD: tsc-alias -p tsconfig.{{.T}}.json
 
   dist:
-    deps: [build, declare]
+    deps:
+      - task: build
+        vars:
+          PLATFORM: browser
+      - task: declare
     cmds:
       - echo 'export * from "./entries/{{.F}}"' > ./dist/index.js
       - echo 'export * from "./entries/{{.F}}"' > ./dist/index.d.ts
@@ -64,6 +69,7 @@ tasks:
       - task: build
         vars:
           T: testset
+          PLATFORM: node
       - task: cli
         vars:
           CMD: ./cli/unitTest -p ./**/*{{default "*" .F}}*.spec.js

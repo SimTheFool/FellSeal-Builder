@@ -10,6 +10,11 @@ const args = yargs(hideBin(process.argv))
     type: "string",
     description: "tsconfig name",
   })
+  .option("platform", {
+    alias: "p",
+    type: "string",
+    description: "targeted platform",
+  })
   .parse();
 
 const getBuildConfig = async () => {
@@ -21,9 +26,11 @@ const getBuildConfig = async () => {
     outdir: compilerOptions.outDir,
     outbase: "./src",
     bundle: true,
-    platform: "node",
+    platform: args.platform,
     banner: {
-      js: "import { createRequire as topLevelCreateRequire } from 'module';\n const require = topLevelCreateRequire(import.meta.url);",
+      js:
+        args.platform === "node" &&
+        "import { createRequire as topLevelCreateRequire } from 'module';\n const require = topLevelCreateRequire(import.meta.url);",
     },
   };
 };
