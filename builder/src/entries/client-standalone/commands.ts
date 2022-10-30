@@ -1,9 +1,8 @@
-import { writeService } from "@adapters/writeService";
-import { UnvalidatedCharacter } from "@domain/character/Character";
+import { ServiceContainer } from "adapters";
 import { persistCharacters as persistCharactersApplicative } from "applicative/commands/persistCharacters";
 
-export const newCommands = () => {
+export const newCommands = (container: ServiceContainer) => {
   return {
-    persistCharacters: persistCharactersApplicative(writeService),
+    persistCharacters: persistCharactersApplicative(container.writeService),
   };
 };

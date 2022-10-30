@@ -9,10 +9,8 @@ const characters = fakeCharacters.map(
   })
 );
 
-const getAllCharacters = () => {
-  return newAppResult(characters);
-};
-
-export const readService: ReadService = {
-  getAllCharacters,
+export const newReadService = (): ReadService => {
+  return {
+    getAllCharacters: () => newAppResult(characters),
+  };
 };

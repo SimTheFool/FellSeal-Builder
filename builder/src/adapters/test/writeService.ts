@@ -9,11 +9,11 @@ const charactersDB = fakeCharacters.map(
   })
 );
 
-const persistCharacters = (characters: Character[]) => {
-  charactersDB.push(...characters);
-  return newAppResult(undefined);
-};
-
-export const writeService: WriteService = {
-  persistCharacters,
+export const newWriteService = (): WriteService => {
+  return {
+    persistCharacters: (characters: Character[]) => {
+      charactersDB.push(...characters);
+      return newAppResult(undefined);
+    },
+  };
 };

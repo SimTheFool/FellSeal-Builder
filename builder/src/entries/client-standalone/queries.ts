@@ -1,10 +1,11 @@
-import { newCacheService } from "@adapters/cacheService";
-import { readService } from "@adapters/readService";
+import { ServiceContainer } from "adapters";
 import { getAllCharacters } from "applicative/queries/getAllCharacters";
 
-export const newQueries = () => {
-  const cacheService = newCacheService();
+export const newQueries = (container: ServiceContainer) => {
   return {
-    getAllCharacters: getAllCharacters(readService, cacheService),
+    getAllCharacters: getAllCharacters(
+      container.readService,
+      container.cacheService
+    ),
   };
 };

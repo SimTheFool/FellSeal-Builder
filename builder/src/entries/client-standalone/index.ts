@@ -1,10 +1,13 @@
+import { newServiceContainer } from "adapters";
 import { newCommands } from "./commands";
 import { newQueries } from "./queries";
 export { newCommands } from "./commands";
 
 export const newClient = () => {
+  const container = newServiceContainer();
+
   return {
-    queries: newQueries(),
-    commands: newCommands(),
+    queries: newQueries(container),
+    commands: newCommands(container),
   };
 };
