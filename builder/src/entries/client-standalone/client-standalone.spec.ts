@@ -1,48 +1,78 @@
-import test from "node:test";
+import { newUnvalidatedCharacter } from "@fixtures/characters";
 import assert from "node:assert";
-import {
-  characters as fakeCharacters,
-  newUnvalidatedCharacter,
-} from "@fixtures/characters";
+import test from "node:test";
 
 import { commands, queries } from "./index.js";
 
-const domi = newUnvalidatedCharacter();
+const domi = newUnvalidatedCharacter("Domi");
+const julian = newUnvalidatedCharacter("Julian");
+const maga = newUnvalidatedCharacter("Maga");
+const este = newUnvalidatedCharacter("Este");
+const davad = newUnvalidatedCharacter("Davad");
+const artie = newUnvalidatedCharacter("Artie");
 
-test("should get all characters", (t) => {
-  const charactersResult = queries.getAllCharacters().get();
-
-  if (!charactersResult.isOk()) assert.fail();
-
-  const characters = charactersResult.getOk();
-  characters.forEach((c) => {
-    const fakeCharacter = fakeCharacters.find((f) => f.id === c.id);
-    assert.deepStrictEqual(c, fakeCharacter);
-  });
-});
-
-test("should save character and return id", (t) => {
+test("should save character", (t) => {
   const result = commands.persistCharacters([domi]);
   if (!result.isOk()) assert.fail();
   assert.strictEqual(result.getOk(), undefined);
 });
 
-/* 
-
-test("should listen to character change", async (t) => {
+test("should get characters at subscribe", async (t) => {
   const characterRefetchPromise = new Promise((res, rej) =>
-    queries.getCharacter([julian.id]).listen((val) => res(val))
+    queries.getAllCharacters.on(
+      (characters) => res(characters),
+      (err) => assert.fail("could not get characters")
+    )
   );
 
-  const updatedJulian = {
-    ...julian,
-    active: "druid",
-  };
-  Character.persist([updatedJulian]);
-  const character = await characterRefetchPromise;
-  if (!character.isOk()) {
-    assert.fail();
-  }
+  await characterRefetchPromise;
+});
 
-  assert.deepStrictEqual(character.isOk(), updatedJulian);
-}); */
+/* 
+test("should trigger third times query when characters change twice", async (t) => {
+  const tracker = new assert.CallTracker();
+  const handleCharacterChange = () => {};
+  const trackedCharacterChange = tracker.calls(handleCharacterChange, 3);
+
+  const query = queries.getAllCharacters.on(trackedCharacterChange);
+  commands.persistCharacters([maga]);
+  commands.persistCharacters([julian]);
+
+  tracker.verify();
+});
+
+test("should not trigger when unsusbribed", async (t) => {
+  const tracker = new assert.CallTracker();
+  const handleCharacterChange = () => {};
+  const trackedCharacterChange = tracker.calls(handleCharacterChange, 2);
+
+  const { unsusbribe } = queries.getAllCharacters.on(trackedCharacterChange);
+
+  commands.persistCharacters([este]);
+  unsusbribe();
+  commands.persistCharacters([davad]);
+
+  tracker.verify();
+});
+
+
+
+test("should get characters at save", async (t) => {
+  const characterRefetchPromise = new Promise((res, rej) =>
+    queries.getAllCharacters.on((characters) => {
+      if (!characters.isOk()) assert.fail();
+
+      const savedArtie = characters.pipe((chars) =>
+        chars.find((c) => c.name === artie.name)
+      );
+
+      if (!savedArtie.isOk()) assert.fail();
+      if (!savedArtie.getOk()) return;
+
+      assert.deepStrictEqual(savedArtie, artie);
+    })
+  );
+
+  await characterRefetchPromise;
+});
+ */

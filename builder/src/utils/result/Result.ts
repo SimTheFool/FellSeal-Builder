@@ -17,7 +17,7 @@ export type AppResult<Input, InputErrors extends AppErrors> = {
     onError: (value: InputErrors) => U
   ) => T | U;
   pipe: <Output>(
-    pipeable: (value?: Input) => Output
+    pipeable: (value: Input) => Output
   ) => AppResult<Output, InputErrors>;
   pipeResult: <T, U extends InputErrors, OutputResult extends AppResult<T, U>>(
     piper: (x: Input) => OutputResult

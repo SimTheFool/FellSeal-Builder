@@ -1,21 +1,9 @@
+import { newCacheService } from "@adapters/cacheService";
 import { readService } from "@adapters/readService";
-import { Character, CharacterId } from "@domain/character/Character";
-import { AppErrors } from "@utils/Error";
-import { AppResult } from "@utils/result/Result";
-import { getAllCharacters as getAllCharactersApplicative } from "applicative/queries/getAllCharacters";
+import { getAllCharacters } from "applicative/queries/getAllCharacters";
 
-type Query<O, E extends AppErrors = AppErrors> = {
-  get: () => AppResult<O, E>;
-};
-
-const getAllCharacters = (): Query<Character[]> => {
-  const get = () => getAllCharactersApplicative(readService);
-
-  return {
-    get,
-  };
-};
+const cacheService = newCacheService();
 
 export const queries = {
-  getAllCharacters,
+  getAllCharacters: getAllCharacters(readService, cacheService),
 };

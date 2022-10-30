@@ -1,6 +1,5 @@
-import { Character, CharacterId } from "@domain/character/Character.js";
+import { Character } from "@domain/character/Character.js";
 import { newAppResult } from "@utils/result/Result.js";
-import { v4 as uuid } from "uuid";
 import { characters as fakeCharacters } from "../../fixtures/characters.js";
 import { ReadService } from "../readService.js";
 

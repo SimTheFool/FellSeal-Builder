@@ -20,8 +20,10 @@ export const characters = [
   },
 ] as unknown as Character[];
 
-export const newUnvalidatedCharacter = (): UnvalidatedCharacter => ({
-  name: "Domi",
+export const newUnvalidatedCharacter = (
+  name: string
+): UnvalidatedCharacter => ({
+  name: name,
   main: "thief",
   active: "mercenary",
   passives: ["03", "04"] as const,
