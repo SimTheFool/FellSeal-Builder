@@ -1,18 +1,17 @@
 import { Character } from "@domain/character/Character.js";
+import { testDb } from "@utils/infra/testDb.js";
 import { newAppResult } from "@utils/result/Result.js";
-import { characters as fakeCharacters } from "../../fixtures/characters.js";
 import { WriteService } from "../writeService.js";
-
-const charactersDB = fakeCharacters.map(
-  (c): Character => ({
-    ...c,
-  })
-);
+import { characters as fakeCharacters } from "@fixtures/characters";
 
 export const newWriteService = (): WriteService => {
+  testDb.characters = fakeCharacters.map((c) => ({
+    ...c,
+  }));
+
   return {
-    persistCharacters: (characters: Character[]) => {
-      charactersDB.push(...characters);
+    persistCharacters: (newCharacters: Character[]) => {
+      testDb.characters.push(...newCharacters);
       return newAppResult(undefined);
     },
   };
