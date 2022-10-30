@@ -1,8 +1,7 @@
 import { newUnvalidatedCharacter } from "@fixtures/characters";
 import assert from "node:assert";
 import test from "node:test";
-
-import { commands, queries } from "./index.js";
+import { newClient } from "./index.js";
 
 const domi = newUnvalidatedCharacter("Domi");
 const julian = newUnvalidatedCharacter("Julian");
@@ -12,12 +11,14 @@ const davad = newUnvalidatedCharacter("Davad");
 const artie = newUnvalidatedCharacter("Artie");
 
 test("should save character", (t) => {
+  const { commands } = newClient();
   const result = commands.persistCharacters([domi]);
   if (!result.isOk()) assert.fail();
   assert.strictEqual(result.getOk(), undefined);
 });
 
 test("should get characters at subscribe", async (t) => {
+  const { queries } = newClient();
   const characterRefetchPromise = new Promise((res, rej) =>
     queries.getAllCharacters.on(
       (characters) => res(characters),

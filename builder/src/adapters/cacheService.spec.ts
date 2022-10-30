@@ -39,3 +39,16 @@ test("should not trigger cache query if query has unsubscribed", (t) => {
 
   tracker.verify();
 });
+
+test("should not trigger cache query if invalidation some invalidation keys are different", (t) => {
+  const tracker = new assert.CallTracker();
+  const query = () => {};
+  const trackedQuery = tracker.calls(query, 2);
+
+  const cacheService = newCacheService();
+  cacheService.cache(["queryA1", "queryA2"], trackedQuery);
+  cacheService.invalidate(["queryA1", "queryA2"]);
+  cacheService.invalidate(["queryA1", "queryA3"]);
+
+  tracker.verify();
+});
