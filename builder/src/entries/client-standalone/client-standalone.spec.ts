@@ -20,7 +20,7 @@ test("should save character", (t) => {
 test("should get characters at subscribe", async (t) => {
   const { queries } = newClient();
   const characterRefetchPromise = new Promise((res, rej) =>
-    queries.getAllCharacters.on(
+    queries.getAllCharacters().on(
       (characters) => res(characters),
       (err) => assert.fail("could not get characters")
     )
@@ -35,9 +35,11 @@ test("should trigger query third times when characters change twice", async (t) 
 
   const trackedCharacterChange = tracker.calls(() => {}, 3);
 
-  queries.getAllCharacters.on(trackedCharacterChange, (err) =>
-    assert.fail("could not get characters")
-  );
+  queries
+    .getAllCharacters()
+    .on(trackedCharacterChange, (err) =>
+      assert.fail("could not get characters")
+    );
   commands.persistCharacters([maga]);
   commands.persistCharacters([julian]);
 
@@ -50,10 +52,11 @@ test("should not trigger when unsusbribed", async (t) => {
 
   const trackedCharacterChange = tracker.calls(() => {}, 2);
 
-  const unsusbribe = queries.getAllCharacters.on(
-    trackedCharacterChange,
-    (err) => assert.fail("could not get characters")
-  );
+  const unsusbribe = queries
+    .getAllCharacters()
+    .on(trackedCharacterChange, (err) =>
+      assert.fail("could not get characters")
+    );
 
   commands.persistCharacters([este]);
   unsusbribe();
@@ -65,7 +68,7 @@ test("should not trigger when unsusbribed", async (t) => {
 test("should get characters at save", async (t) => {
   const { queries, commands } = newClient();
   const waitForArtie = new Promise((res, rej) =>
-    queries.getAllCharacters.on(
+    queries.getAllCharacters().on(
       (characters) => {
         const savedArtie = characters.find((c) => c.name === artie.name);
         if (!savedArtie) return;
