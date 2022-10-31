@@ -3,8 +3,6 @@ import { CharacterList } from "../components/CharacterList";
 import { Layout } from "../components/Layout";
 import { Title } from "../components/Title";
 
-/* backgroundImage: 'url("./background.png")' */
-
 const Home: NextPage = () => {
   return (
     <Layout
