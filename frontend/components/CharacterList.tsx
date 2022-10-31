@@ -5,6 +5,9 @@ import { mediaQuery, portraitHeight, portraitWidth } from "../components/style";
 import { Title } from "@mantine/core";
 import { useDOMRef } from "../utils/hooks/useDOMRef";
 import { useBoundingClientRect } from "../utils/hooks/useBoundingClientRect";
+import { useBuilderQuery } from "../utils/store/useQuery";
+import { commands, queries } from "../utils/store/builder";
+import { useEffect } from "react";
 
 type CharacterListProps = {};
 

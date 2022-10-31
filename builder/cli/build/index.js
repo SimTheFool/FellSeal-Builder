@@ -27,6 +27,7 @@ const getBuildConfig = async () => {
     outbase: "./src",
     bundle: true,
     platform: args.platform,
+    format: "esm",
     banner: {
       js:
         args.platform === "node" &&
