@@ -1,8 +1,10 @@
 import { ServiceContainer } from "adapters";
-import { persistCharacters as persistCharactersApplicative } from "applicative/commands/persistCharacters";
+import { persistCharacters } from "applicative/commands/persistCharacters";
 
 export const newCommands = (container: ServiceContainer) => {
   return {
-    persistCharacters: persistCharactersApplicative(container.writeService),
+    persistCharacters: persistCharacters(container.cacheService)(
+      container.writeService
+    ),
   };
 };

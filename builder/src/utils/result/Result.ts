@@ -12,16 +12,19 @@ export type AppResult<Input, InputErrors extends AppErrors> = {
   isErrors: () => boolean;
   getErrors: () => InputErrors;
   hasError: (error: AppError) => boolean;
-  map: <T, U>(
-    onOk: (value: Input) => T,
-    onError: (value: InputErrors) => U
-  ) => T | U;
+  map: (
+    onOk: (value: Input) => void,
+    onError?: (value: InputErrors) => void
+  ) => AppResult<Input, InputErrors>;
   pipe: <Output>(
     pipeable: (value: Input) => Output
   ) => AppResult<Output, InputErrors>;
-  pipeResult: <T, U extends InputErrors, OutputResult extends AppResult<T, U>>(
+  pipeResult: <OutputResult extends AppResult<any, any>>(
     piper: (x: Input) => OutputResult
-  ) => AppResult<T, U | InputErrors>;
+  ) => AppResult<
+    OutputResult extends AppResult<infer T, infer U> ? T : never,
+    (OutputResult extends AppResult<infer T, infer U> ? U : never) | InputErrors
+  >;
   foreach: <Output>(
     piper: Input extends Array<infer R> ? (x: R) => Output : never
   ) => AppResult<Output[], InputErrors>;
@@ -88,7 +91,8 @@ export const newAppResult = <Input, InputErrors extends AppErrors = AppErrors>(
     isErrors: () => isErrors<Input, InputErrors>(input),
     getErrors: () => getErrors<Input, InputErrors>(input),
     hasError: (e: AppError) => hasError(input)(e),
-    map: map<Input, InputErrors>(input),
+    map: (onOk, onError) =>
+      newAppResult(map<Input, InputErrors>(input)(onOk, onError)),
     pipe: pipeFlat,
     pipeResult: pipeResult as any,
     foreachResult: foreachResult as any,

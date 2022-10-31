@@ -3,24 +3,18 @@ import assert from "node:assert";
 import { newAppError } from "@utils/Error";
 import { map } from "./map";
 
-test("should return true if no errors", (t) => {
+test("should be a success", (t) => {
   const input = "test input";
-  assert.strictEqual(
-    map(input)(
-      () => true,
-      () => false
-    ),
-    true
+  map(input)(
+    () => assert.ok(true),
+    () => assert.fail()
   );
 });
 
-test("should return 2 if errors", (t) => {
+test("should be an error", (t) => {
   const error = newAppError("test error");
-  assert.strictEqual(
-    map([error])(
-      () => 1,
-      () => 2
-    ),
-    2
+  map([error])(
+    () => assert.fail(),
+    () => assert.ok(true)
   );
 });

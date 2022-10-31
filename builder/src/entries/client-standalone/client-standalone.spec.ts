@@ -29,13 +29,15 @@ test("should get characters at subscribe", async (t) => {
   await characterRefetchPromise;
 });
 
-/* 
-test("should trigger third times query when characters change twice", async (t) => {
+test("should trigger query third times when characters change twice", async (t) => {
   const tracker = new assert.CallTracker();
-  const handleCharacterChange = () => {};
-  const trackedCharacterChange = tracker.calls(handleCharacterChange, 3);
+  const { queries, commands } = newClient();
 
-  const query = queries.getAllCharacters.on(trackedCharacterChange);
+  const trackedCharacterChange = tracker.calls(() => {}, 3);
+
+  queries.getAllCharacters.on(trackedCharacterChange, (err) =>
+    assert.fail("could not get characters")
+  );
   commands.persistCharacters([maga]);
   commands.persistCharacters([julian]);
 
@@ -44,10 +46,14 @@ test("should trigger third times query when characters change twice", async (t) 
 
 test("should not trigger when unsusbribed", async (t) => {
   const tracker = new assert.CallTracker();
-  const handleCharacterChange = () => {};
-  const trackedCharacterChange = tracker.calls(handleCharacterChange, 2);
+  const { queries, commands } = newClient();
 
-  const { unsusbribe } = queries.getAllCharacters.on(trackedCharacterChange);
+  const trackedCharacterChange = tracker.calls(() => {}, 2);
+
+  const unsusbribe = queries.getAllCharacters.on(
+    trackedCharacterChange,
+    (err) => assert.fail("could not get characters")
+  );
 
   commands.persistCharacters([este]);
   unsusbribe();
@@ -56,24 +62,19 @@ test("should not trigger when unsusbribed", async (t) => {
   tracker.verify();
 });
 
-
-
 test("should get characters at save", async (t) => {
-  const characterRefetchPromise = new Promise((res, rej) =>
-    queries.getAllCharacters.on((characters) => {
-      if (!characters.isOk()) assert.fail();
-
-      const savedArtie = characters.pipe((chars) =>
-        chars.find((c) => c.name === artie.name)
-      );
-
-      if (!savedArtie.isOk()) assert.fail();
-      if (!savedArtie.getOk()) return;
-
-      assert.deepStrictEqual(savedArtie, artie);
-    })
+  const { queries, commands } = newClient();
+  const waitForArtie = new Promise((res, rej) =>
+    queries.getAllCharacters.on(
+      (characters) => {
+        const savedArtie = characters.find((c) => c.name === artie.name);
+        if (!savedArtie) return;
+        res(savedArtie);
+      },
+      (err) => assert.fail("could not get characters")
+    )
   );
-
-  await characterRefetchPromise;
+  commands.persistCharacters([artie]);
+  const savedArtie = await waitForArtie;
+  assert.deepStrictEqual(savedArtie, artie);
 });
- */

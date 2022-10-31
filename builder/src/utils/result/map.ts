@@ -5,7 +5,8 @@ export const map =
   <Input, InputErrors extends AppErrors, T = any, U = any>(
     input: Input | InputErrors
   ) =>
-  (onOk: (value: Input) => T, onError: (value: InputErrors) => U) => {
-    if (isErrors(input)) return onError(input);
-    return onOk(input);
+  (onOk: (value: Input) => void, onError?: (value: InputErrors) => void) => {
+    if (isErrors(input)) onError?.(input);
+    if (isOk(input)) onOk(input as Input);
+    return input;
   };
