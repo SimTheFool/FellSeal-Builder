@@ -21,5 +21,5 @@ export const useBuilderQuery =
       return unsubscribe;
     }, [...params]);
 
-    return { result, errors };
+    return [result, errors] as const;
   };
