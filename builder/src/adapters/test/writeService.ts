@@ -1,20 +1,21 @@
 import { Character } from "@domain/character/Character.js";
+import { Job, JobType, newJob } from "@domain/Job.js";
+import {
+  ActiveSkill,
+  CounterSkill,
+  newActiveSkill,
+  newCounterSkill,
+  newPassiveSkill,
+  PassiveSkill,
+} from "@domain/Skill.js";
+import { characters, characters as fakeCharacters } from "@fixtures/characters";
 import { testDb } from "@utils/infra/testDb.js";
 import { newAppResult } from "@utils/result/Result.js";
-import { WriteService } from "../writeService.js";
-import { characters, characters as fakeCharacters } from "@fixtures/characters";
 import { XMLParser } from "fast-xml-parser";
-import jobsXmlBase64 from "../../assets/jobs.xml";
-import { newJob } from "@domain/job/Job.js";
-
-const xmlParser = new XMLParser({
-  ignoreAttributes: false,
-  attributeNamePrefix: "",
-  attributesGroupName: "",
-  ignoreDeclaration: true,
-  parseTagValue: true,
-  parseAttributeValue: true,
-});
+import { keyBy } from "lodash";
+import xmlJobs from "../../assets/jobs.xml";
+import xmlSkills from "../../assets/skills.xml";
+import { WriteService } from "../writeService.js";
 
 export const newWriteService = (): WriteService => {
   migrate();
@@ -27,22 +28,84 @@ export const newWriteService = (): WriteService => {
   };
 };
 
-const migrate = async () => {
+const migrate = () => {
   testDb.characters = fakeCharacters.map((c) => ({
     ...c,
   }));
 
-  const jobsXmlString = Buffer.from(jobsXmlBase64, "base64").toString();
-  const jobsXml = xmlParser.parse(jobsXmlString);
-  const jobs = jobsXml.XMLJobs.jobs.Job.map((jxml: any) => {
-    const skillIds = jxml?.learnables
-      ? jxml?.learnables.Tier.flatMap((t: any) => t.SkillTile).map(
+  testDb.jobs = importJobAndSkills(xmlJobs, xmlSkills);
+};
+
+const importJobAndSkills = (xmlJobs: string, xmlSkills: string): Job[] => {
+  const xmlParser = new XMLParser({
+    ignoreAttributes: false,
+    attributeNamePrefix: "",
+    attributesGroupName: "",
+    ignoreDeclaration: true,
+    parseTagValue: true,
+    parseAttributeValue: true,
+  });
+
+  const parseXml = (xmlBase64: string) =>
+    xmlParser.parse(Buffer.from(xmlBase64, "base64").toString());
+
+  const parsedSkills = Object.values(parseXml(xmlSkills).XMLAbilities).flatMap(
+    ({ Ability }: any) => Ability
+  );
+  const parsedSkillsByHashname = keyBy(parsedSkills, "HashName");
+
+  const jobs: Job[] = parseXml(xmlJobs).XMLJobs.jobs.Job.map((xmlJob: any) => {
+    const skillIds: string[] = xmlJob?.learnables
+      ? xmlJob?.learnables.Tier.flatMap((t: any) => t.SkillTile).flatMap(
           (t: any) => t.AbilityHash
         )
       : [];
 
-    return newJob(jxml.ClassName, jxml.PlayerJob ?? true, skillIds);
+    const { actives, passives, counters } = skillIds.reduce(
+      ({ actives, passives, counters }, id) => {
+        const { HashName, Name, SpellType } = parsedSkillsByHashname[id];
+        const match = id.match(/^.*([A | P | C])\d+$/);
+        const skillType = match?.[1] || "N/A";
+
+        if (!["A", "P", "C"].includes(skillType))
+          throw new Error(`unable to parse skill ${id}`);
+
+        return {
+          actives: [
+            ...actives,
+            ...(skillType === "A"
+              ? [newActiveSkill(HashName, Name, SpellType)]
+              : []),
+          ],
+          passives: [
+            ...passives,
+            ...(skillType === "P" ? [newPassiveSkill(HashName, Name)] : []),
+          ],
+          counters: [
+            ...counters,
+            ...(skillType === "C" ? [newCounterSkill(HashName, Name)] : []),
+          ],
+        };
+      },
+      { actives: [], passives: [], counters: [] } as {
+        actives: ActiveSkill[];
+        passives: PassiveSkill[];
+        counters: CounterSkill[];
+      }
+    );
+
+    const jobType: JobType =
+      xmlJob.PlayerJob === false
+        ? "monster"
+        : xmlJob.ClassName.match(/^.*-99$/)
+        ? "bzil"
+        : xmlJob.noVicariousGiven === true && xmlJob.OnlyForNonStory === true
+        ? "badge"
+        : xmlJob.noVicariousGiven === true
+        ? "story"
+        : "character";
+    return newJob(xmlJob.ClassName, actives, passives, counters, jobType);
   });
 
-  testDb.jobs = jobs;
+  return jobs;
 };

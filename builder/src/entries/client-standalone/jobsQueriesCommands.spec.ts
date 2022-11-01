@@ -1,10 +1,10 @@
-import { Job, isJob } from "@domain/job/Job.js";
-import assert from "node:assert";
+import { Job } from "@domain/Job.js";
 import test from "node:test";
+import assert from "node:assert";
 import { newClient } from "./index.js";
 //type Queries = ReturnType<typeof newClient>["queries"];
 
-test("should get jobs", async (t) => {
+test("should get all 52 base game jobs", async (t) => {
   const { queries } = newClient();
 
   const jobsPromise = new Promise<Job[]>((res, rej) =>
@@ -15,4 +15,5 @@ test("should get jobs", async (t) => {
   );
 
   const jobs = await jobsPromise;
+  assert.equal(jobs.filter((j) => j.type !== "monster").length, 52);
 });

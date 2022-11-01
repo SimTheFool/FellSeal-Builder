@@ -1,5 +1,5 @@
 import { Character } from "@domain/character/Character";
-import { Job } from "@domain/job/Job";
+import { Job } from "@domain/Job";
 
 const newTestDb = () => {
   return {
