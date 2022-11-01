@@ -7,16 +7,22 @@ export const characters = [
   {
     id: "001",
     name: "Julian",
-    main: "lich",
-    active: "druid",
-    passives: ["01", "02"] as const,
+    main: "LICH",
+    active: "DRUI",
+    passives: [
+      ["KNIG", "KNIG-P1"],
+      ["BLAD", "BLAD-P1"],
+    ] as const,
   },
   {
     id: "002",
     name: "Axel",
-    main: "templar",
-    active: "sorcerer",
-    passives: ["03", "04"] as const,
+    main: "TEMP",
+    active: "SORC",
+    passives: [
+      ["LICH", "LICH-P1"],
+      ["DRUI", "DRUI-P1"],
+    ] as const,
   },
 ] as unknown as Character[];
 
@@ -24,7 +30,10 @@ export const newUnvalidatedCharacter = (
   name: string
 ): UnvalidatedCharacter => ({
   name: name,
-  main: "thief",
-  active: "mercenary",
-  passives: ["03", "04"] as const,
+  main: "ALCH",
+  active: "DRUI",
+  passives: [
+    ["WIZA", "WIZA-P2"],
+    ["KNIG", "KNIG-P1"],
+  ] as const,
 });

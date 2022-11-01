@@ -2,12 +2,9 @@ import test from "node:test";
 import assert from "node:assert";
 import { buildCharacter } from "./buildCharacter.js";
 import { CHARACTER_BUILD_ERRORS } from "./Errors.js";
+import { newUnvalidatedCharacter } from "@fixtures/characters.js";
 
-const fakeCharacter = {
-  main: "lich",
-  active: "druid",
-  passives: ["01", "02"] as const,
-};
+const fakeCharacter = newUnvalidatedCharacter("arost");
 
 const fakeCharacterWithoutMain = {
   ...fakeCharacter,
@@ -26,7 +23,7 @@ const fakeCharacterWithoutPassives = {
 
 const fakeCharacterMissingOnePassive = {
   ...fakeCharacter,
-  passives: ["01", undefined] as const,
+  passives: [fakeCharacter?.passives?.[0], undefined] as const,
 };
 
 test("should build with a main, actives and passives", (t) => {

@@ -1,24 +1,24 @@
-import { NominalString, Nominal } from "utils";
+import { Job } from "@domain/Job";
+import { PassiveSkill } from "@domain/Skill";
+import { NominalString } from "utils";
 
 type Id = NominalString<"character_id">;
 type Name = NominalString<"character_name">;
-type Main = Nominal<number, "character_main">;
-type Active = Nominal<unknown, "character_active">;
-type Passive = Nominal<unknown, "character_passive">;
+type Passive = readonly [job: Job["name"], skill: PassiveSkill["name"]];
 
 export type Character = {
   id: Id;
   name?: Name;
-  main: Main;
-  active: Active;
+  main: Job["name"];
+  active: Job["name"];
   passives: readonly [Passive, Passive];
 };
 
 export type UnvalidatedCharacter = {
   name?: string;
-  main?: unknown;
-  active?: unknown;
-  passives?: readonly [unknown, unknown];
+  main?: Job["name"];
+  active?: Job["name"];
+  passives?: readonly [Passive | undefined, Passive | undefined];
 };
 
 export type CharacterId = Id;
