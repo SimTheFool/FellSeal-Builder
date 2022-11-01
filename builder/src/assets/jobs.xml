@@ -1,0 +1,3321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<XMLJobs>
+  <jobs>
+    <Job ClassName="MERC" WeaponsType="kfMaul kfSword kfAxe" ArmorType="kfLightArmor kfHeavyArmor kfLightHelmet kfHeavyHelmet kfShield" BonusCrit="2" BaseMove="4" SpeedGrowth="0.83" BaseSpeed="96.67" Hat="mercenary" OutfitM="lightarmor" OutfitF="lightarmor">
+      <StatsGrowth Values="4.5 4 3 3.5" />
+      <HealthGrowth Values="8 1.5" />
+      <BaseStats Values="44 41 31 35" />
+      <HealthBase Values="88 11" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>MERC-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>MERC-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>MERC-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>MERC-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>MERC-C1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>MERC-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>MERC-A5</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>MERC-A6</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>MERC-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>MERC-A7</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="6" def="5" />
+    </Job>
+    <Job ClassName="KNIG" WeaponsType="kfSword kfSpear" ArmorType="kfRobes kfHeavyArmor kfClothHelmet kfHeavyHelmet kfShield" BaseMove="4" BaseJump="2" CanSwim="false" SpeedGrowth="0.75" BaseSpeed="93.33" Hat="knight" OutfitM="heavy" OutfitF="heavy">
+      <StatsGrowth Values="4 5 3 4" />
+      <HealthGrowth Values="7.5 1.5" />
+      <BaseStats Values="40 47 36 45" />
+      <HealthBase Values="86 14" />
+      <requirements>
+        <UnlockingRequirement ClassHash="MERC" Level="3" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>KNIG-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>KNIG-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>KNIG-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>KNIG-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>KNIG-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>KNIG-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>KNIG-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>KNIG-A5</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="225">
+            <AbilityHash>KNIG-A6</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>KNIG-A7</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="6" def="5" res="3" />
+    </Job>
+    <Job ClassName="BLAD" WeaponsType="kfScythe kfSword kfMace" ArmorType="kfHeavyArmor kfHeavyHelmet kfShield" BonusEvasion="2" BonusCrit="2" BaseMove="4" BaseJump="2" CanSwim="false" SpeedGrowth="0.88" BaseSpeed="93.33" casterClass="2" Hat="paragon" OutfitM="paragon" OutfitF="paragon">
+      <StatsGrowth Values="4.5 3.5 3.5 4.5" />
+      <HealthGrowth Values="7 2" />
+      <BaseStats Values="44 39 35 41" />
+      <HealthBase Values="80 18" />
+      <requirements>
+        <UnlockingRequirement ClassHash="KNIG" Level="4" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>BLAD-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>BLAD-P2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>BLAD-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>BLAD-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>BLAD-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>BLAD-C1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>BLAD-A7</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>BLAD-A4</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="300">
+            <AbilityHash>BLAD-A6</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="350">
+            <AbilityHash>BLAD-A5</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery def="5" res="5" holy="5" />
+    </Job>
+    <Job ClassName="TEMP" WeaponsType="kfDagger kfRapier" ArmorType="kfLight" BonusEvasion="3" BonusCrit="3" BaseMove="4" BaseJump="2" SpeedGrowth="1.05" BaseSpeed="100" Hat="tempest" OutfitM="arabian" OutfitF="arabian">
+      <StatsGrowth Values="5 3.5 3 3" />
+      <HealthGrowth Values="7 1" />
+      <BaseStats Values="46 38 33 32" />
+      <HealthBase Values="80 10" />
+      <requirements>
+        <UnlockingRequirement ClassHash="PEDD" Level="3" />
+        <UnlockingRequirement ClassHash="REAV" Level="3" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>TEMP-A5</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>TEMP-A6</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>TEMP-A7</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>TEMP-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>TEMP-P2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>TEMP-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="275">
+            <AbilityHash>TEMP-A1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="275">
+            <AbilityHash>TEMP-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="275">
+            <AbilityHash>TEMP-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="275">
+            <AbilityHash>TEMP-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery atk="5" def="5" elem="5" />
+    </Job>
+    <Job ClassName="REAV" WeaponsType="kfMaul kfAxe" ArmorType="kfLight" BonusCrit="5" BaseMove="4" BaseJump="2" SpeedGrowth="0.83" BaseSpeed="98.33" Hat="reaver" OutfitM="reaver" OutfitF="reaver">
+      <StatsGrowth Values="5.5 2.75 2.5 2.75" />
+      <HealthGrowth Values="8 1" />
+      <BaseStats Values="45 38.5 29 34" />
+      <HealthBase Values="90 11" />
+      <requirements>
+        <UnlockingRequirement ClassHash="BLAD" Level="5" />
+        <UnlockingRequirement ClassHash="ROGU" Level="4" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>REAV-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>REAV-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>REAV-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>REAV-A7</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>REAV-A5</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="220">
+            <AbilityHash>REAV-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>REAV-A4</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>REAV-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="275">
+            <AbilityHash>REAV-A6</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>REAV-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="6" atk="5" crit="2" />
+    </Job>
+    <Job ClassName="ASSA" WeaponsType="kfDagger kfBow" ArmorType="kfRobes kfLightArmor kfClothHelmet kfLightHelmet" BonusEvasion="5" BonusCrit="2" BaseMove="4" BaseJump="3" SpeedGrowth="1.47" BaseSpeed="106.67" Hat="assassin" OutfitM="assassin" OutfitF="assassin">
+      <StatsGrowth Values="4.25 3 3.5 3.25" />
+      <HealthGrowth Values="6 2" />
+      <BaseStats Values="44 35 35 37" />
+      <HealthBase Values="78 16" />
+      <requirements>
+        <UnlockingRequirement ClassHash="GUNN" Level="4" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>ASSA-A6</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>ASSA-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="100">
+            <AbilityHash>ASSA-A7</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>ASSA-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>ASSA-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>ASSA-A5</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>ASSA-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>ASSA-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="350">
+            <AbilityHash>ASSA-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="450">
+            <AbilityHash>ASSA-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery atk="5" spd="6" crit="2" />
+    </Job>
+    <Job ClassName="RANG" WeaponsType="kfAxe kfBow kfCrossbow" ArmorType="kfLight" BonusEvasion="4" BonusCrit="2" BaseMove="4" SpeedGrowth="1.25" BaseSpeed="103.33" Hat="ranger" OutfitM="assassin" OutfitF="assassin">
+      <StatsGrowth Values="4 3.25 3.5 3.75" />
+      <HealthGrowth Values="6.5 2" />
+      <BaseStats Values="42 34.5 34 36" />
+      <HealthBase Values="78 16" />
+      <requirements>
+        <UnlockingRequirement ClassHash="ROGU" Level="4" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>RANG-A5</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="100">
+            <AbilityHash>RANG-A6</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="100">
+            <AbilityHash>RANG-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>RANG-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>RANG-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>RANG-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>RANG-P2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="300">
+            <AbilityHash>RANG-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>RANG-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="400">
+            <AbilityHash>RANG-A7</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="5" atk="5" eva="1" />
+    </Job>
+    <Job ClassName="ROGU" WeaponsType="kfDagger kfCrossbow" ArmorType="kfLight" BonusEvasion="5" BonusCrit="2" BaseMove="4" BaseJump="3" SpeedGrowth="1.38" BaseSpeed="106.67" Hat="rogue" OutfitM="pirate" OutfitF="pirate">
+      <StatsGrowth Values="3.5 3.5 3.5 3.5" />
+      <HealthGrowth Values="6.5 2.5" />
+      <BaseStats Values="39 36.5 39 34" />
+      <HealthBase Values="82 18" />
+      <requirements>
+        <UnlockingRequirement ClassHash="MERC" Level="2" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>ROGU-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>ROGU-A7</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>ROGU-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>ROGU-A5</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>ROGU-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>ROGU-A8</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>ROGU-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>ROGU-C1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>ROGU-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>ROGU-P2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>ROGU-A6</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery spd="3" eva="1" crit="2" />
+    </Job>
+    <Job ClassName="GUNN" WeaponsType="kfGun" ArmorType="kfLight" SpeedGrowth="0.93" BaseSpeed="100" Hat="gunner" OutfitM="pirate" OutfitF="gothdress">
+      <StatsGrowth Values="4.5 4.25 3 3.5" />
+      <HealthGrowth Values="6.5 1" />
+      <BaseStats Values="41 37.5 37.5 36" />
+      <HealthBase Values="78 12" />
+      <requirements>
+        <UnlockingRequirement ClassHash="MERC" Level="4" />
+        <UnlockingRequirement ClassHash="KNIG" Level="4" />
+        <UnlockingRequirement ClassHash="RANG" Level="4" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>GUNN-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>GUNN-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>GUNN-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>GUNN-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>GUNN-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>GUNN-P2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>GUNN-A5</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>GUNN-A6</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>GUNN-A7</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>GUNN-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery atk="5" def="5" res="2" />
+    </Job>
+    <Job ClassName="PEDD" WeaponsType="kfDagger kfAxe kfCrossbow" ArmorType="kfLightArmor kfLightHelmet kfShield" BonusEvasion="2" BonusCrit="1" SpeedGrowth="1.13" BaseSpeed="103.33" Hat="peddler" OutfitM="irdred" OutfitF="irdra">
+      <StatsGrowth Values="3.75 4 3.5 4" />
+      <HealthGrowth Values="7 3" />
+      <BaseStats Values="39 39.5 37 42.5" />
+      <HealthBase Values="80 17" />
+      <requirements>
+        <UnlockingRequirement ClassHash="RANG" Level="5" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>PEDD-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>PEDD-A1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>PEDD-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>PEDD-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>PEDD-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>PEDD-A4</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="225">
+            <AbilityHash>PEDD-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>PEDD-A6</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>PEDD-A7</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="400">
+            <AbilityHash>PEDD-A5</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="5" mp="5" spd="3" />
+    </Job>
+    <Job ClassName="HEAL" WeaponsType="kfStaff" ArmorType="kfRobes kfLightArmor kfClothHelmet kfLightHelmet" BaseJump="2" CanSwim="false" SpeedGrowth="1" BaseSpeed="96.67" casterClass="1" Hat="healer" OutfitM="healer2" OutfitF="healer2">
+      <StatsGrowth Values="3.25 3.5 4.5 4" />
+      <HealthGrowth Values="6.5 4" />
+      <BaseStats Values="33 36 42 41" />
+      <HealthBase Values="80 24" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>HEAL-A6</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>HEAL-A1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>HEAL-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>HEAL-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>HEAL-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>HEAL-C1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>HEAL-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>HEAL-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="300">
+            <AbilityHash>HEAL-A5</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="350">
+            <AbilityHash>HEAL-A7</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="5" mnd="5" res="2" />
+    </Job>
+    <Job ClassName="ALCH" WeaponsType="kfStaff kfCrossbow" ArmorType="kfRobes kfLightArmor kfClothHelmet kfLightHelmet" BaseJump="2" SpeedGrowth="1.33" BaseSpeed="105" casterClass="1" Hat="alchemystic" OutfitM="mage2" OutfitF="mage2">
+      <StatsGrowth Values="3.5 3.25 4.25 4.5" />
+      <HealthGrowth Values="6 3.5" />
+      <BaseStats Values="36 34.5 42 47" />
+      <HealthBase Values="78 22" />
+      <requirements>
+        <UnlockingRequirement ClassHash="WIZA" Level="4" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>ALCH-A2</AbilityHash>
+            <AbilityHash>ALCH-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>ALCH-A1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>ALCH-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>ALCH-P2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>ALCH-A5</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>ALCH-A8</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>ALCH-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>ALCH-A7</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>ALCH-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="350">
+            <AbilityHash>ALCH-A6</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>ALCH-A9</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery mp="5" res="5" spd="3" />
+    </Job>
+    <Job ClassName="SORC" WeaponsType="kfRod" ArmorType="kfCloth" BaseJump="2" CanSwim="false" SpeedGrowth="0.75" BaseSpeed="91.67" casterClass="1" Hat="sage" OutfitM="mage1" OutfitF="mage1">
+      <StatsGrowth Values="3.25 3.5 5.5 4.25" />
+      <HealthGrowth Values="5 5.5" />
+      <BaseStats Values="30 33 45 42.5" />
+      <HealthBase Values="74 32" />
+      <requirements>
+        <UnlockingRequirement ClassHash="DRUI" Level="5" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>SORC-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>SORC-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>SORC-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>SORC-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>SORC-P2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>SORC-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>SORC-A5</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>SORC-A6</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>SORC-A7</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="450">
+            <AbilityHash>SORC-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery mp="10" def="5" res="3" />
+    </Job>
+    <Job ClassName="UTIL" WeaponsType="kfMace kfRod kfStaff" ArmorType="kfAll" BaseMove="4" BaseJump="2" CanSwim="false" SpeedGrowth="0.9" BaseSpeed="93.33" casterClass="1" Hat="plaguedoc" OutfitM="healer1" OutfitF="healer1">
+      <StatsGrowth Values="3.75 4 4.25 4" />
+      <HealthGrowth Values="7.5 3" />
+      <BaseStats Values="39 41 43 40" />
+      <HealthBase Values="78 21" />
+      <requirements>
+        <UnlockingRequirement ClassHash="HEAL" Level="4" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>UTIL-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>UTIL-A5</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>UTIL-A7</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>UTIL-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>UTIL-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>UTIL-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>UTIL-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>UTIL-A6</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>UTIL-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>UTIL-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="5" mnd="5" def="5" />
+    </Job>
+    <Job ClassName="WIZA" WeaponsType="kfRod" ArmorType="kfRobes kfLightArmor kfClothHelmet kfLightHelmet" BaseJump="2" CanSwim="false" SpeedGrowth="0.78" BaseSpeed="93.33" casterClass="1" Hat="wizard" OutfitM="mage1" OutfitF="mage1">
+      <StatsGrowth Values="3 3 5 5" />
+      <HealthGrowth Values="5.5 4.5" />
+      <BaseStats Values="31 34 44 47.5" />
+      <HealthBase Values="76 26" />
+      <requirements>
+        <UnlockingRequirement ClassHash="HEAL" Level="2" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>WIZA-A1</AbilityHash>
+            <AbilityHash>WIZA-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>WIZA-A3</AbilityHash>
+            <AbilityHash>WIZA-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>WIZA-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>WIZA-A5</AbilityHash>
+            <AbilityHash>WIZA-A6</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>WIZA-C1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>WIZA-A7</AbilityHash>
+            <AbilityHash>WIZA-A8</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>WIZA-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>WIZA-A9</AbilityHash>
+            <AbilityHash>WIZA-A10</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>WIZA-A11</AbilityHash>
+            <AbilityHash>WIZA-A12</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery mp="5" mnd="5" res="5" />
+    </Job>
+    <Job ClassName="DRUI" WeaponsType="kfRapier kfRod kfStaff" ArmorType="kfRobes kfLightArmor kfClothHelmet kfLightHelmet kfShield" BonusEvasion="2" BonusCrit="2" BaseJump="2" SpeedGrowth="1.08" BaseSpeed="98.33" casterClass="1" Hat="shaman" OutfitM="robes" OutfitF="robes">
+      <StatsGrowth Values="4 3.5 4.5 4" />
+      <HealthGrowth Values="6 3" />
+      <BaseStats Values="40 36 43 45" />
+      <HealthBase Values="78 24" />
+      <requirements>
+        <UnlockingRequirement ClassHash="HEAL" Level="3" />
+        <UnlockingRequirement ClassHash="WIZA" Level="5" />
+        <UnlockingRequirement ClassHash="ALCH" Level="3" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>DRUI-A5</AbilityHash>
+            <AbilityHash>DRUI-A9</AbilityHash>
+            <AbilityHash>DRUI-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>DRUI-A6</AbilityHash>
+            <AbilityHash>DRUI-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>DRUI-A1</AbilityHash>
+            <AbilityHash>DRUI-A8</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>DRUI-A2</AbilityHash>
+            <AbilityHash>DRUI-A7</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>DRUI-C1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="225">
+            <AbilityHash>DRUI-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="550">
+            <AbilityHash>DRUI-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery mnd="5" res="5" elem="5" />
+    </Job>
+    <Job ClassName="FELL" WeaponsType="kfSword kfDagger kfRapier" ArmorType="kfRobes kfLightArmor kfClothHelmet kfLightHelmet kfShield" BonusCrit="5" BaseMove="4" SpeedGrowth="0.92" BaseSpeed="103.33" casterClass="2" Hat="fellblade" OutfitM="arabian" OutfitF="arabian">
+      <StatsGrowth Values="4.75 3.5 4.5 3.5" />
+      <HealthGrowth Values="7 2.5" />
+      <BaseStats Values="42.5 37.5 42 37.5" />
+      <HealthBase Values="82 21" />
+      <requirements>
+        <UnlockingRequirement ClassHash="KNIG" Level="3" />
+        <UnlockingRequirement ClassHash="WIZA" Level="3" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>FELL-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>FELL-A4</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>FELL-A5</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>FELL-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="225">
+            <AbilityHash>FELL-A6</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>FELL-C1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>FELL-A7</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>FELL-P2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>FELL-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>FELL-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery atk="5" mnd="5" crit="2" />
+    </Job>
+    <Job ClassName="WARM" WeaponsType="kfScythe kfMace kfRod" ArmorType="kfRobes kfLightArmor kfClothHelmet kfLightHelmet" BonusEvasion="2" BonusCrit="2" BaseMove="4" BaseJump="2" SpeedGrowth="1.13" BaseSpeed="96.67" casterClass="2" Hat="warmage" OutfitM="medarmor" OutfitF="medarmor">
+      <StatsGrowth Values="4.5 3.5 4.75 3.25" />
+      <HealthGrowth Values="6 3" />
+      <BaseStats Values="44 36 45 39" />
+      <HealthBase Values="78 26" />
+      <requirements>
+        <UnlockingRequirement ClassHash="UTIL" Level="3" />
+        <UnlockingRequirement ClassHash="FELL" Level="4" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>WARM-A1</AbilityHash>
+            <AbilityHash>WARM-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>WARM-A5</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>WARM-A3</AbilityHash>
+            <AbilityHash>WARM-A4</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>WARM-A6</AbilityHash>
+            <AbilityHash>WARM-A7</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>WARM-A8</AbilityHash>
+            <AbilityHash>WARM-A9</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>WARM-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>WARM-A10</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>WARM-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="350">
+            <AbilityHash>WARM-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="5" atk="5" mnd="5" />
+    </Job>
+    <Job ClassName="GAMB" WeaponsType="kfDagger kfSpear" ArmorType="kfLightArmor kfLightHelmet kfShield" BonusEvasion="3" BonusCrit="5" BaseMove="4" BaseJump="3" SpeedGrowth="1.2" BaseSpeed="103.33" Hat="gambler" OutfitM="pirate" OutfitF="pirate">
+      <StatsGrowth Values="4.5 3.5 3.5 3" />
+      <HealthGrowth Values="6.5 1.75" />
+      <BaseStats Values="43.5 37 38.5 35" />
+      <HealthBase Values="79 21" />
+      <requirements>
+        <UnlockingRequirement ClassHash="ROGU" Level="3" />
+        <UnlockingRequirement ClassHash="HEAL" Level="3" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>GAMB-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>GAMB-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>GAMB-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>GAMB-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>GAMB-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>GAMB-A5</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>GAMB-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>GAMB-P2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>GAMB-A7</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="350">
+            <AbilityHash>GAMB-A6</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="5" eva="2" crit="2" />
+    </Job>
+    <Job ClassName="GADG" WeaponsType="kfMaul kfMace" ArmorType="kfLightArmor kfLightHelmet kfShield" BonusEvasion="2" BonusCrit="2" BaseJump="2" CanSwim="false" SpeedGrowth="1" BaseSpeed="98.33" casterClass="2" Hat="gadgeteer" OutfitM="lightarmor" OutfitF="lightarmor">
+      <StatsGrowth Values="4 4 4 4" />
+      <HealthGrowth Values="7 2.5" />
+      <BaseStats Values="41 37.5 41 39" />
+      <HealthBase Values="81 23" />
+      <requirements>
+        <UnlockingRequirement ClassHash="ROGU" Level="3" />
+        <UnlockingRequirement ClassHash="WIZA" Level="3" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>GADG-A0</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>GADG-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>GADG-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="500">
+            <AbilityHash>GADG-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="2" def="5" res="5" />
+    </Job>
+    <Job ClassName="ANAT" WeaponsType="kfRod kfStaff" ArmorType="kfCloth" BonusCrit="4" BaseJump="2" CanSwim="false" SpeedGrowth="1" BaseSpeed="98.33" StoryClass="true" casterClass="1" Hat="none" OutfitM="healer2" OutfitF="healer2">
+      <StatsGrowth Values="3.75 3.5 5 4" />
+      <HealthGrowth Values="5.5 4.5" />
+      <BaseStats Values="38 37.5 45.5 43" />
+      <HealthBase Values="77 27" />
+      <noVicariousGiven>true</noVicariousGiven>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>ANAT-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>ANAT-A5</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>ANAT-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>ANAT-P2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="225">
+            <AbilityHash>ANAT-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>ANAT-A7</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="300">
+            <AbilityHash>ANAT-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="325">
+            <AbilityHash>ANAT-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="350">
+            <AbilityHash>ANAT-A6</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="375">
+            <AbilityHash>ANAT-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="5" mp="5" mnd="15" res="5" crit="2" dark="5" />
+    </Job>
+    <Job ClassName="MARK" WeaponsType="kfMaul kfSword kfSpear kfRod" ArmorType="kfAll" BaseMove="4" SpeedGrowth="1" BaseSpeed="101.67" StoryClass="true" casterClass="2" Hat="none" OutfitM="arabian" OutfitF="arabian">
+      <StatsGrowth Values="5 3.25 4.5 3.25" />
+      <HealthGrowth Values="7 4" />
+      <BaseStats Values="44 39 42 36" />
+      <HealthBase Values="83 23" />
+      <noVicariousGiven>true</noVicariousGiven>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>MARK-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>MARK-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>MARK-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>MARK-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>MARK-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>MARK-P2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>MARK-A8</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>MARK-A4</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>MARK-A5</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>MARK-A6</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="300">
+            <AbilityHash>MARK-A9</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="350">
+            <AbilityHash>MARK-A7</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="10" atk="10" mnd="10" dark="5" holy="5" />
+    </Job>
+    <Job ClassName="DEMK" WeaponsType="kfScythe kfAxe" ArmorType="kfHeavy" BonusCrit="3" BaseMove="4" BaseJump="2" CanSwim="false" SpeedGrowth="0.67" BaseSpeed="100" StoryClass="true" Hat="elvenears" OutfitM="heavy" OutfitF="heavy">
+      <StatsGrowth Values="6 3.25 3.5 2.5" />
+      <HealthGrowth Values="8 1" />
+      <BaseStats Values="45.5 39 35 35" />
+      <HealthBase Values="84 15" />
+      <noVicariousGiven>true</noVicariousGiven>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>DEMK-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>DEMK-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>DEMK-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>DEMK-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>DEMK-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>DEMK-A5</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="225">
+            <AbilityHash>DEMK-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>DEMK-A6</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="500">
+            <AbilityHash>DEMK-A7</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="500">
+            <AbilityHash>DEMK-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="10" atk="15" crit="2" dark="10" />
+    </Job>
+    <Job ClassName="LICH" WeaponsType="kfScythe kfRod kfStaff" ArmorType="kfCloth" BaseJump="2" CanSwim="false" SpeedGrowth="0.67" BaseSpeed="95" OnlyForNonStory="true" casterClass="1" Hat="lich" OutfitM="mage1" OutfitF="mage1">
+      <StatsGrowth Values="3.75 2.75 6.5 2.75" />
+      <HealthGrowth Values="7 3.5" />
+      <BaseStats Values="38 34 46 36" />
+      <HealthBase Values="80 18" />
+      <noVicariousGiven>true</noVicariousGiven>
+      <requirements>
+        <UnlockingRequirement ClassHash="UTIL" Level="4" />
+        <UnlockingRequirement ClassHash="SORC" Level="6" />
+        <UnlockingRequirement ClassHash="BADG-05" Level="-1" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>LICH-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>LICH-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>LICH-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>LICH-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>LICH-A1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="300">
+            <AbilityHash>LICH-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="350">
+            <AbilityHash>LICH-A6</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="350">
+            <AbilityHash>LICH-A5</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="500">
+            <AbilityHash>LICH-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="400">
+            <AbilityHash>LICH-A7</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="5" mnd="5" dark="5" />
+    </Job>
+    <Job ClassName="SMED" WeaponsType="kfScythe kfRapier kfCrossbow" ArmorType="kfLightArmor kfLightHelmet kfShield" BaseJump="2" CanSwim="false" SpeedGrowth="0.83" BaseSpeed="90" OnlyForNonStory="true" casterClass="1" Hat="vessel" OutfitM="robes" OutfitF="robes">
+      <StatsGrowth Values="4.25 4 6.25 4" />
+      <HealthGrowth Values="4 7" />
+      <BaseStats Values="42 36.5 48.5 42.5" />
+      <HealthBase Values="72 36" />
+      <noVicariousGiven>true</noVicariousGiven>
+      <requirements>
+        <UnlockingRequirement ClassHash="HEAL" Level="5" />
+        <UnlockingRequirement ClassHash="WIZA" Level="5" />
+        <UnlockingRequirement ClassHash="BADG-00" Level="-1" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>SMED-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>SMED-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>SMED-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>SMED-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>SMED-P2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>SMED-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>SMED-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="400">
+            <AbilityHash>SMED-A5</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="300">
+            <AbilityHash>SMED-A6</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="600">
+            <AbilityHash>SMED-A7</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery mp="5" mnd="5" elem="5" />
+    </Job>
+    <Job ClassName="PRIN" WeaponsType="kfRapier kfRod kfStaff" ArmorType="kfCloth" BaseMove="4" BaseJump="2" SpeedGrowth="1.08" BaseSpeed="100" OnlyForNonStory="true" GenderRequirement="1" casterClass="1" Hat="royal" OutfitM="medarmor" OutfitF="princess">
+      <StatsGrowth Values="3 2.75 5.75 4.75" />
+      <HealthGrowth Values="5 6" />
+      <BaseStats Values="37.5 35 47 48" />
+      <HealthBase Values="76 32" />
+      <noVicariousGiven>true</noVicariousGiven>
+      <requirements>
+        <UnlockingRequirement ClassHash="HEAL" Level="7" />
+        <UnlockingRequirement ClassHash="BADG-02" Level="-1" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>PRIN-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>PRIN-A1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>PRIN-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>PRIN-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>PRIN-A5</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>PRIN-A6</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>PRIN-A7</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>PRIN-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>PRIN-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="600">
+            <AbilityHash>PRIN-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery atk="5" mnd="5" def="5" res="5" holy="5" />
+    </Job>
+    <Job ClassName="LORD" WeaponsType="kfSword kfMace kfRapier" ArmorType="kfHeavyArmor kfHeavyHelmet kfShield" BaseMove="4" BaseJump="2" SpeedGrowth="1.08" BaseSpeed="105" OnlyForNonStory="true" GenderRequirement="0" casterClass="2" Hat="royal" OutfitM="medarmor" OutfitF="medarmor">
+      <StatsGrowth Values="4.5 4.25 4.25 3.5" />
+      <HealthGrowth Values="7 2" />
+      <BaseStats Values="46 41 38 36" />
+      <HealthBase Values="82 21" />
+      <noVicariousGiven>true</noVicariousGiven>
+      <requirements>
+        <UnlockingRequirement ClassHash="BLAD" Level="6" />
+        <UnlockingRequirement ClassHash="BADG-01" Level="-1" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>LORD-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>LORD-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>LORD-A6</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>LORD-A4</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="225">
+            <AbilityHash>LORD-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>LORD-A5</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>LORD-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="400">
+            <AbilityHash>LORD-A7</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="325">
+            <AbilityHash>LORD-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="500">
+            <AbilityHash>LORD-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery atk="5" mnd="5" def="5" res="5" holy="5" />
+    </Job>
+    <Job ClassName="SND-01" ArmorType="kfNone" BaseMove="4" BaseJump="2" CanSwim="false" SpeedGrowth="1.07" BaseSpeed="106.67" PlayerJob="false">
+      <StatsGrowth Values="9 3.5 8 3.5" />
+      <HealthGrowth Values="35 5" />
+      <BaseStats Values="121 70 105 75" />
+      <HealthBase Values="400 20" />
+    </Job>
+    <Job ClassName="KAW-01" BonusEvasion="5" BaseMove="4" BaseJump="3" SpeedGrowth="1.2" BaseSpeed="106.67" PlayerJob="false">
+      <StatsGrowth Values="3.75 3.5 4 4.5" />
+      <HealthGrowth Values="5 2.5" />
+      <BaseStats Values="85 86 88 85" />
+      <HealthBase Values="78 13" />
+    </Job>
+    <Job ClassName="KAW-02" BonusEvasion="5" BaseMove="4" BaseJump="3" SpeedGrowth="1.3" BaseSpeed="106.67" PlayerJob="false">
+      <StatsGrowth Values="4 3.5 4 4.5" />
+      <HealthGrowth Values="5 2.5" />
+      <BaseStats Values="95 96 98 95" />
+      <HealthBase Values="78 13" />
+    </Job>
+    <Job ClassName="KAW-03" BonusEvasion="5" BaseMove="4" BaseJump="3" SpeedGrowth="1.37" BaseSpeed="106.67" PlayerJob="false">
+      <StatsGrowth Values="4 3.5 4.25 4.5" />
+      <HealthGrowth Values="5 2.5" />
+      <BaseStats Values="101 102 105 101" />
+      <HealthBase Values="78 13" />
+    </Job>
+    <Job ClassName="KAW-99" ArmorType="kfNone" BonusEvasion="5" BaseMove="4" BaseJump="3" SpeedGrowth="1.3" BaseSpeed="106.67" MonsterJob="true" useTextFrom="KAW-01">
+      <StatsGrowth Values="3.75 3.5 4.25 4.5" />
+      <HealthGrowth Values="5 2.5" />
+      <BaseStats Values="85 86 88 85" />
+      <HealthBase Values="78 13" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>KAW-99-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>KAW-99-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>KAW-99-C1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>KAW-99-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>KAW-99-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="225">
+            <AbilityHash>KAW-99-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="325">
+            <AbilityHash>KAW-99-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery mp="5" def="5" spd="3" eva="2" />
+    </Job>
+    <Job ClassName="KAW-11" BonusEvasion="5" BaseMove="2" BaseJump="5" SpeedGrowth="0.75" BaseSpeed="106.67" PlayerJob="false">
+      <StatsGrowth Values="3.25 4 4 4" />
+      <HealthGrowth Values="6 2.5" />
+      <BaseStats Values="80 85 88 85" />
+      <HealthBase Values="80 13" />
+    </Job>
+    <Job ClassName="KAW-21" BonusEvasion="5" BaseMove="4" BaseJump="3" SpeedGrowth="1.2" BaseSpeed="106.67" PlayerJob="false">
+      <StatsGrowth Values="3.5 3.5 4.25 4.5" />
+      <HealthGrowth Values="8 2" />
+      <BaseStats Values="75 76 78 85" />
+      <HealthBase Values="88 13" />
+    </Job>
+    <Job ClassName="KAW-22" BonusEvasion="5" BaseMove="4" BaseJump="3" SpeedGrowth="1.25" BaseSpeed="106.67" PlayerJob="false">
+      <StatsGrowth Values="3.5 3.5 4.25 4.5" />
+      <HealthGrowth Values="8.5 2" />
+      <BaseStats Values="75 76 78 85" />
+      <HealthBase Values="88 13" />
+    </Job>
+    <Job ClassName="KAW-23" BonusEvasion="5" BaseMove="4" BaseJump="3" SpeedGrowth="1.3" BaseSpeed="106.67" PlayerJob="false">
+      <StatsGrowth Values="3.5 3.5 4.25 4.5" />
+      <HealthGrowth Values="9 2" />
+      <BaseStats Values="75 76 78 85" />
+      <HealthBase Values="88 13" />
+    </Job>
+    <Job ClassName="DEM-01" ArmorType="kfNone" BaseMove="0" BaseJump="0" CanSwim="false" SpeedGrowth="0.93" BaseSpeed="105" PlayerJob="false">
+      <StatsGrowth Values="7 6 5 6" />
+      <HealthGrowth Values="14 2" />
+      <BaseStats Values="111 100 95 100" />
+      <HealthBase Values="250 20" />
+    </Job>
+    <Job ClassName="DEM-02" ArmorType="kfNone" BaseMove="0" BaseJump="0" CanSwim="false" SpeedGrowth="0.93" BaseSpeed="105" PlayerJob="false">
+      <StatsGrowth Values="7 6 5 6" />
+      <HealthGrowth Values="14 2" />
+      <BaseStats Values="111 100 95 100" />
+      <HealthBase Values="250 20" />
+    </Job>
+    <Job ClassName="HHU-01" BonusEvasion="2" BonusCrit="2" BaseMove="4" BaseJump="3" CanSwim="false" VariantSpriteMode="3" SpeedGrowth="0.93" BaseSpeed="98.33" PlayerJob="false">
+      <StatsGrowth Values="6.5 4 4.25 4" />
+      <HealthGrowth Values="9 2" />
+      <BaseStats Values="100 80 82 80" />
+      <HealthBase Values="90 14" />
+    </Job>
+    <Job ClassName="HHU-02" BonusEvasion="2" BonusCrit="2" BaseMove="4" BaseJump="3" CanSwim="false" VariantSpriteMode="3" SpeedGrowth="0.93" BaseSpeed="98.33" PlayerJob="false">
+      <StatsGrowth Values="7 4 4.25 4" />
+      <HealthGrowth Values="9 2" />
+      <BaseStats Values="100 80 82 80" />
+      <HealthBase Values="90 14" />
+    </Job>
+    <Job ClassName="HHU-03" BonusEvasion="2" BonusCrit="2" BaseMove="4" BaseJump="3" CanSwim="false" VariantSpriteMode="3" SpeedGrowth="0.98" BaseSpeed="98.33" PlayerJob="false">
+      <StatsGrowth Values="7.25 4 4.5 4" />
+      <HealthGrowth Values="9 2" />
+      <BaseStats Values="100 80 82 80" />
+      <HealthBase Values="90 14" />
+    </Job>
+    <Job ClassName="HHU-99" ArmorType="kfNone" BonusEvasion="2" BonusCrit="2" BaseMove="4" BaseJump="3" CanSwim="false" SpeedGrowth="0.93" BaseSpeed="98.33" MonsterJob="true" useTextFrom="HHU-01">
+      <StatsGrowth Values="6.75 4 4.25 4" />
+      <HealthGrowth Values="9 2" />
+      <BaseStats Values="100 80 82 80" />
+      <HealthBase Values="90 14" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>HHU-99-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>HHU-99-C1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>HHU-99-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>HHU-99-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>HHU-99-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>HHU-99-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="225">
+            <AbilityHash>HHU-99-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="10" atk="5" res="5" />
+    </Job>
+    <Job ClassName="BHUN" WeaponsType="kfDagger kfSpear kfGun" ArmorType="kfLightArmor kfLightHelmet kfShield" BonusEvasion="4" BonusCrit="1" BaseMove="4" BaseJump="3" SpeedGrowth="1.37" BaseSpeed="105" StoryClass="true" Hat="none" OutfitM="assassin" OutfitF="assassin">
+      <StatsGrowth Values="4.25 3.5 3.75 3.25" />
+      <HealthGrowth Values="6 2" />
+      <BaseStats Values="42 37.5 39 36" />
+      <HealthBase Values="81 15" />
+      <noVicariousGiven>true</noVicariousGiven>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>BHUN-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>BHUN-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>BHUN-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>BHUN-C1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>BHUN-A5</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>BHUN-A6</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>BHUN-A7</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>BHUN-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>BHUN-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>BHUN-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery atk="10" spd="6" eva="2" crit="2" />
+    </Job>
+    <Job ClassName="WERE" WeaponsType="kfSword kfDagger" ArmorType="kfLight" BonusEvasion="5" BaseMove="5" BaseJump="3" SpeedGrowth="1.1" BaseSpeed="103.33" OnlyForNonStory="true" Hat="werewolf" OutfitM="reaver" OutfitF="reaver">
+      <StatsGrowth Values="5.5 2.75 3 3.5" />
+      <HealthGrowth Values="6.5 1.5" />
+      <BaseStats Values="46.5 40 30 35" />
+      <HealthBase Values="78 15" />
+      <noVicariousGiven>true</noVicariousGiven>
+      <requirements>
+        <UnlockingRequirement ClassHash="MERC" Level="4" />
+        <UnlockingRequirement ClassHash="BADG-03" Level="-1" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>WERE-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>WERE-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>WERE-A5</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>WERE-C1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="225">
+            <AbilityHash>WERE-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>WERE-P2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>WERE-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>WERE-A6</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="350">
+            <AbilityHash>WERE-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="350">
+            <AbilityHash>WERE-A7</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="5" atk="5" crit="2" />
+    </Job>
+    <Job ClassName="VAMP" WeaponsType="kfDagger kfRapier kfGun kfBow" ArmorType="kfRobes kfLightArmor kfClothHelmet kfLightHelmet" BonusEvasion="4" BonusCrit="4" BaseMove="4" BaseJump="3" SpeedGrowth="1.33" BaseSpeed="106.67" OnlyForNonStory="true" Hat="vampire" OutfitM="vampire" OutfitF="vampire">
+      <StatsGrowth Values="4.25 4 4.25 4" />
+      <HealthGrowth Values="5.5 3.5" />
+      <BaseStats Values="41 41 41 41" />
+      <HealthBase Values="72 23" />
+      <noVicariousGiven>true</noVicariousGiven>
+      <requirements>
+        <UnlockingRequirement ClassHash="ROGU" Level="6" />
+        <UnlockingRequirement ClassHash="ALCH" Level="3" />
+        <UnlockingRequirement ClassHash="BADG-04" Level="-1" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>VAMP-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>VAMP-A7</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>VAMP-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>VAMP-P2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="225">
+            <AbilityHash>VAMP-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>VAMP-A4</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>VAMP-A5</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>VAMP-A6</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="450">
+            <AbilityHash>VAMP-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="450">
+            <AbilityHash>VAMP-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery atk="5" spd="3" dark="5" />
+    </Job>
+    <Job ClassName="NOBL" WeaponsType="kfSword" ArmorType="kfLight" BaseJump="2" CanSwim="false" SpeedGrowth="0.78" BaseSpeed="93.33" PlayerJob="false" Hat="none" OutfitM="irdred" OutfitF="irdra">
+      <StatsGrowth Values="4 4 3 4" />
+      <HealthGrowth Values="8 1" />
+      <BaseStats Values="42 42 37 40" />
+      <HealthBase Values="80 16" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>NOBL-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>NOBL-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+    </Job>
+    <Job ClassName="BOL-01" BaseMove="2" BaseJump="1.5" CanSwim="false" SpeedGrowth="0.82" BaseSpeed="96.67" PlayerJob="false">
+      <StatsGrowth Values="6.5 7 3 3.5" />
+      <HealthGrowth Values="9 1" />
+      <BaseStats Values="100 103 60 65" />
+      <HealthBase Values="92 8" />
+    </Job>
+    <Job ClassName="BOL-02" BaseMove="2" BaseJump="1.5" CanSwim="false" SpeedGrowth="0.82" BaseSpeed="96.67" PlayerJob="false">
+      <StatsGrowth Values="7 7 3 3.5" />
+      <HealthGrowth Values="9 1" />
+      <BaseStats Values="100 103 60 65" />
+      <HealthBase Values="92 8" />
+    </Job>
+    <Job ClassName="BOL-03" BaseMove="2" BaseJump="1.5" CanSwim="false" SpeedGrowth="0.82" BaseSpeed="96.67" PlayerJob="false">
+      <StatsGrowth Values="7.5 7 3 3.5" />
+      <HealthGrowth Values="9 1" />
+      <BaseStats Values="100 103 60 65" />
+      <HealthBase Values="92 8" />
+    </Job>
+    <Job ClassName="BOL-99" ArmorType="kfNone" BaseMove="2" BaseJump="1.5" CanSwim="false" SpeedGrowth="0.82" BaseSpeed="96.67" MonsterJob="true" useTextFrom="BOL-01">
+      <StatsGrowth Values="7 7 3 3.5" />
+      <HealthGrowth Values="9 1" />
+      <BaseStats Values="100 103 60 65" />
+      <HealthBase Values="92 8" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>BOL-99-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>BOL-99-C1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>BOL-99-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>BOL-99-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>BOL-99-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>BOL-99-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="325">
+            <AbilityHash>BOL-99-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="10" atk="5" def="10" />
+    </Job>
+    <Job ClassName="BUL-01" BonusCrit="1" BaseMove="4" BaseJump="3" SpeedGrowth="0.77" BaseSpeed="91.67" PlayerJob="false">
+      <StatsGrowth Values="4.5 4 4 6" />
+      <HealthGrowth Values="10 2" />
+      <BaseStats Values="99 80 90 99" />
+      <HealthBase Values="92 18" />
+    </Job>
+    <Job ClassName="BUL-02" BonusCrit="1" BaseMove="4" BaseJump="3" SpeedGrowth="0.77" BaseSpeed="91.67" PlayerJob="false">
+      <StatsGrowth Values="4.5 4 4.25 6" />
+      <HealthGrowth Values="10 2" />
+      <BaseStats Values="99 80 96 99" />
+      <HealthBase Values="92 18" />
+    </Job>
+    <Job ClassName="BUL-03" BonusCrit="1" BaseMove="4" BaseJump="3" SpeedGrowth="0.77" BaseSpeed="91.67" PlayerJob="false">
+      <StatsGrowth Values="4.5 4 4.5 6" />
+      <HealthGrowth Values="11 2" />
+      <BaseStats Values="99 80 94 99" />
+      <HealthBase Values="92 18" />
+    </Job>
+    <Job ClassName="BUL-11" BonusCrit="1" BaseMove="4" BaseJump="3" SpeedGrowth="0.77" BaseSpeed="91.67" PlayerJob="false">
+      <StatsGrowth Values="4.5 4 4 6" />
+      <HealthGrowth Values="10 2" />
+      <BaseStats Values="102 80 93 99" />
+      <HealthBase Values="92 18" />
+    </Job>
+    <Job ClassName="BUL-12" BonusCrit="1" BaseMove="4" BaseJump="3" SpeedGrowth="0.77" BaseSpeed="91.67" PlayerJob="false">
+      <StatsGrowth Values="4.5 4 4.25 6" />
+      <HealthGrowth Values="10 2" />
+      <BaseStats Values="99 80 95 99" />
+      <HealthBase Values="92 18" />
+    </Job>
+    <Job ClassName="BUL-13" BonusCrit="1" BaseMove="4" BaseJump="3" SpeedGrowth="0.77" BaseSpeed="91.67" PlayerJob="false">
+      <StatsGrowth Values="4.5 4 4.5 6" />
+      <HealthGrowth Values="11 2" />
+      <BaseStats Values="99 80 95 99" />
+      <HealthBase Values="92 18" />
+    </Job>
+    <Job ClassName="BUL-21" BonusCrit="1" BaseMove="4" BaseJump="3" SpeedGrowth="0.77" BaseSpeed="91.67" PlayerJob="false">
+      <StatsGrowth Values="4.5 4 4 6" />
+      <HealthGrowth Values="10 2" />
+      <BaseStats Values="99 80 93 99" />
+      <HealthBase Values="92 18" />
+    </Job>
+    <Job ClassName="BUL-22" BonusCrit="1" BaseMove="4" BaseJump="3" SpeedGrowth="0.77" BaseSpeed="91.67" PlayerJob="false">
+      <StatsGrowth Values="4.5 4 4.25 6" />
+      <HealthGrowth Values="10 2" />
+      <BaseStats Values="99 80 93 99" />
+      <HealthBase Values="92 18" />
+    </Job>
+    <Job ClassName="BUL-23" BonusCrit="1" BaseMove="4" BaseJump="3" SpeedGrowth="0.77" BaseSpeed="91.67" PlayerJob="false">
+      <StatsGrowth Values="4.5 4 4.5 6" />
+      <HealthGrowth Values="11 2" />
+      <BaseStats Values="99 80 93 99" />
+      <HealthBase Values="92 18" />
+    </Job>
+    <Job ClassName="BUL-31" BonusCrit="1" BaseMove="4" BaseJump="3" SpeedGrowth="0.77" BaseSpeed="91.67" PlayerJob="false">
+      <StatsGrowth Values="4.5 4 4 6" />
+      <HealthGrowth Values="10 2" />
+      <BaseStats Values="99 80 93 99" />
+      <HealthBase Values="92 18" />
+    </Job>
+    <Job ClassName="BUL-32" BonusCrit="1" BaseMove="4" BaseJump="3" SpeedGrowth="0.77" BaseSpeed="91.67" PlayerJob="false">
+      <StatsGrowth Values="4.5 4 4.25 6" />
+      <HealthGrowth Values="10 2" />
+      <BaseStats Values="99 80 94 99" />
+      <HealthBase Values="92 18" />
+    </Job>
+    <Job ClassName="BUL-33" BonusCrit="1" BaseMove="4" BaseJump="3" SpeedGrowth="0.77" BaseSpeed="91.67" PlayerJob="false">
+      <StatsGrowth Values="4.5 4 4.5 6" />
+      <HealthGrowth Values="11 2" />
+      <BaseStats Values="100 80 93 99" />
+      <HealthBase Values="92 18" />
+    </Job>
+    <Job ClassName="BUL-99" ArmorType="kfNone" BonusCrit="1" BaseMove="4" BaseJump="3" SpeedGrowth="0.77" BaseSpeed="91.67" MonsterJob="true" useTextFrom="BUL-99">
+      <StatsGrowth Values="4.5 4 4 6" />
+      <HealthGrowth Values="10.5 2.5" />
+      <BaseStats Values="94 80 88 99" />
+      <HealthBase Values="92 18" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>BUL-99-A2</AbilityHash>
+            <AbilityHash>BUL-99-A3</AbilityHash>
+            <AbilityHash>BUL-99-A4</AbilityHash>
+            <AbilityHash>BUL-99-A5</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>BUL-99-C1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>BUL-99-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>BUL-99-A6</AbilityHash>
+            <AbilityHash>BUL-99-A7</AbilityHash>
+            <AbilityHash>BUL-99-A8</AbilityHash>
+            <AbilityHash>BUL-99-A9</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>BUL-99-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="275">
+            <AbilityHash>BUL-99-A10</AbilityHash>
+            <AbilityHash>BUL-99-A11</AbilityHash>
+            <AbilityHash>BUL-99-A12</AbilityHash>
+            <AbilityHash>BUL-99-A13</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="225">
+            <AbilityHash>BUL-99-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="10" res="5" elem="5" />
+    </Job>
+    <Job ClassName="DAO-01" BonusEvasion="5" BonusCrit="3" BaseMove="5" BaseJump="3" CanSwim="false" SpeedGrowth="0.92" BaseSpeed="101.67" PlayerJob="false">
+      <StatsGrowth Values="4.5 3.5 4.5 5.5" />
+      <HealthGrowth Values="7.5 3.5" />
+      <BaseStats Values="85 62 85 80" />
+      <HealthBase Values="80 19" />
+    </Job>
+    <Job ClassName="DAO-02" BonusEvasion="7" BonusCrit="3" BaseMove="5" BaseJump="3" CanSwim="false" SpeedGrowth="0.98" BaseSpeed="101.67" PlayerJob="false">
+      <StatsGrowth Values="4.5 3.5 4.5 5.5" />
+      <HealthGrowth Values="7.5 3.5" />
+      <BaseStats Values="90 62 90 80" />
+      <HealthBase Values="80 19" />
+    </Job>
+    <Job ClassName="DAO-03" BonusEvasion="10" BonusCrit="3" BaseMove="5" BaseJump="3" CanSwim="false" SpeedGrowth="0.98" BaseSpeed="101.67" PlayerJob="false">
+      <StatsGrowth Values="4.75 3.5 4.75 5.5" />
+      <HealthGrowth Values="7.5 3.5" />
+      <BaseStats Values="90 62 90 80" />
+      <HealthBase Values="80 19" />
+    </Job>
+    <Job ClassName="DAO-99" ArmorType="kfNone" BonusEvasion="7" BonusCrit="3" BaseMove="5" BaseJump="3" CanSwim="false" SpeedGrowth="0.92" BaseSpeed="101.67" MonsterJob="true" useTextFrom="DAO-01">
+      <StatsGrowth Values="4.5 3.5 4.5 5.5" />
+      <HealthGrowth Values="7.5 3.5" />
+      <BaseStats Values="90 62 90 80" />
+      <HealthBase Values="80 19" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>DAO-99-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>DAO-99-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>DAO-99-C1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>DAO-99-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>DAO-99-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="275">
+            <AbilityHash>DAO-99-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="325">
+            <AbilityHash>DAO-99-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery mnd="5" res="5" holy="10" />
+    </Job>
+    <Job ClassName="BLA-01" BonusCrit="2" BaseMove="4" BaseJump="2" SpeedGrowth="0.87" BaseSpeed="95" PlayerJob="false">
+      <StatsGrowth Values="7.5 3.5 2.5 2.75" />
+      <HealthGrowth Values="10 1.5" />
+      <BaseStats Values="105 60 55 55" />
+      <HealthBase Values="100 8" />
+    </Job>
+    <Job ClassName="BLA-02" BonusCrit="2" BaseMove="4" BaseJump="2" SpeedGrowth="0.87" BaseSpeed="95" PlayerJob="false">
+      <StatsGrowth Values="7.75 3.5 2.5 2.75" />
+      <HealthGrowth Values="11 1.5" />
+      <BaseStats Values="105 60 55 55" />
+      <HealthBase Values="100 8" />
+    </Job>
+    <Job ClassName="BLA-03" BonusCrit="2" BaseMove="4" BaseJump="2" SpeedGrowth="0.87" BaseSpeed="95" PlayerJob="false">
+      <StatsGrowth Values="8 3.5 2.5 2.75" />
+      <HealthGrowth Values="11 1.5" />
+      <BaseStats Values="108 60 55 55" />
+      <HealthBase Values="100 8" />
+    </Job>
+    <Job ClassName="BLA-99" ArmorType="kfNone" BonusCrit="2" BaseMove="4" BaseJump="2" SpeedGrowth="0.87" BaseSpeed="95" MonsterJob="true" useTextFrom="BLA-01">
+      <StatsGrowth Values="7.5 3.5 2.5 2.75" />
+      <HealthGrowth Values="11 1.5" />
+      <BaseStats Values="105 60 55 55" />
+      <HealthBase Values="100 8" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>BLA-99-A1</AbilityHash>
+            <AbilityHash>BLA-99-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>BLA-99-C1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>BLA-99-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>BLA-99-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="275">
+            <AbilityHash>BLA-99-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="325">
+            <AbilityHash>BLA-99-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="10" atk="10" def="5" />
+    </Job>
+    <Job ClassName="HAR-01" BonusEvasion="8" BonusCrit="1" BaseMove="4" BaseJump="1.5" CanSwim="false" SpeedGrowth="1.17" BaseSpeed="108.33" PlayerJob="false">
+      <StatsGrowth Values="5 3.5 4 4.25" />
+      <HealthGrowth Values="7 2" />
+      <BaseStats Values="92 65 84 80" />
+      <HealthBase Values="80 15" />
+    </Job>
+    <Job ClassName="HAR-02" BonusEvasion="8" BonusCrit="1" BaseMove="4" BaseJump="1.5" CanSwim="false" SpeedGrowth="1.18" BaseSpeed="110" PlayerJob="false">
+      <StatsGrowth Values="5 3.5 4 4.25" />
+      <HealthGrowth Values="7 2.5" />
+      <BaseStats Values="92 65 86 80" />
+      <HealthBase Values="80 15" />
+    </Job>
+    <Job ClassName="HAR-03" BonusEvasion="10" BonusCrit="1" BaseMove="4" BaseJump="1.5" CanSwim="false" SpeedGrowth="1.23" BaseSpeed="111.67" PlayerJob="false">
+      <StatsGrowth Values="5 3.5 4 4.25" />
+      <HealthGrowth Values="7 2.5" />
+      <BaseStats Values="94 65 86 80" />
+      <HealthBase Values="78 17" />
+    </Job>
+    <Job ClassName="HAR-11" BonusEvasion="4" BonusCrit="1" BaseMove="4" BaseJump="1" CanSwim="false" SpeedGrowth="1.07" BaseSpeed="103.33" PlayerJob="false">
+      <StatsGrowth Values="5.5 3.5 3.5 4" />
+      <HealthGrowth Values="8.5 2" />
+      <BaseStats Values="96 65 80 75" />
+      <HealthBase Values="88 12" />
+    </Job>
+    <Job ClassName="HAR-12" BonusEvasion="4" BonusCrit="1" BaseMove="4" BaseJump="1" CanSwim="false" SpeedGrowth="1.08" BaseSpeed="103.33" PlayerJob="false">
+      <StatsGrowth Values="5.5 3.5 3.75 4" />
+      <HealthGrowth Values="8.5 2" />
+      <BaseStats Values="96 65 80 75" />
+      <HealthBase Values="88 12" />
+    </Job>
+    <Job ClassName="HAR-13" BonusEvasion="4" BonusCrit="1" BaseMove="4" BaseJump="1" CanSwim="false" SpeedGrowth="1.1" BaseSpeed="103.33" PlayerJob="false">
+      <StatsGrowth Values="5.75 3.5 3.75 4" />
+      <HealthGrowth Values="8.5 2" />
+      <BaseStats Values="96 65 80 75" />
+      <HealthBase Values="88 12" />
+    </Job>
+    <Job ClassName="HAR-99" ArmorType="kfNone" BonusEvasion="8" BonusCrit="1" BaseMove="4" BaseJump="1.5" CanSwim="false" SpeedGrowth="1.18" BaseSpeed="108.33" MonsterJob="true" useTextFrom="HAR-01">
+      <StatsGrowth Values="5 3.5 4 4.25" />
+      <HealthGrowth Values="7 2.5" />
+      <BaseStats Values="92 65 84 80" />
+      <HealthBase Values="80 15" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>HAR-99-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>HAR-99-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>HAR-99-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>HAR-99-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="275">
+            <AbilityHash>HAR-99-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="275">
+            <AbilityHash>HAR-99-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="325">
+            <AbilityHash>HAR-99-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery res="5" spd="3" eva="1" crit="2" />
+    </Job>
+    <Job ClassName="RAK-01" BonusEvasion="2" BonusCrit="4" BaseMove="5" BaseJump="4" SpeedGrowth="1.33" BaseSpeed="108.33" PlayerJob="false">
+      <StatsGrowth Values="6 3.5 4 4.5" />
+      <HealthGrowth Values="7 1.5" />
+      <BaseStats Values="100 70 80 88" />
+      <HealthBase Values="82 12" />
+    </Job>
+    <Job ClassName="RAK-02" BonusEvasion="2" BonusCrit="4" BaseMove="5" BaseJump="4" SpeedGrowth="1.42" BaseSpeed="108.33" PlayerJob="false">
+      <StatsGrowth Values="6 3.5 4 4.5" />
+      <HealthGrowth Values="7 1.5" />
+      <BaseStats Values="100 70 80 88" />
+      <HealthBase Values="82 12" />
+    </Job>
+    <Job ClassName="RAK-03" BonusEvasion="2" BonusCrit="4" BaseMove="5" BaseJump="4" SpeedGrowth="1.42" BaseSpeed="108.33" PlayerJob="false">
+      <StatsGrowth Values="6.25 3.5 4 4.5" />
+      <HealthGrowth Values="7 1.5" />
+      <BaseStats Values="100 70 80 88" />
+      <HealthBase Values="82 12" />
+    </Job>
+    <Job ClassName="RAK-99" ArmorType="kfNone" BonusEvasion="2" BonusCrit="4" BaseMove="5" BaseJump="4" SpeedGrowth="1.42" BaseSpeed="108.33" MonsterJob="true" useTextFrom="RAK-01">
+      <StatsGrowth Values="6 3.5 4 4.5" />
+      <HealthGrowth Values="7 1.5" />
+      <BaseStats Values="100 70 80 88" />
+      <HealthBase Values="82 12" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>RAK-99-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>RAK-99-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>RAK-99-A4</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>RAK-99-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>RAK-99-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="275">
+            <AbilityHash>RAK-99-A1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="275">
+            <AbilityHash>RAK-99-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery atk="5" spd="3" crit="2" />
+    </Job>
+    <Job ClassName="THE-01" BaseMove="5" BaseJump="3" CanSwim="false" SpeedGrowth="1.12" BaseSpeed="103.33" PlayerJob="false">
+      <StatsGrowth Values="4.5 4.5 4.5 4.5" />
+      <HealthGrowth Values="6.5 2" />
+      <BaseStats Values="94 86 90 92" />
+      <HealthBase Values="81 12" />
+    </Job>
+    <Job ClassName="THE-02" BaseMove="5" BaseJump="3" CanSwim="false" SpeedGrowth="1.15" BaseSpeed="103.33" PlayerJob="false">
+      <StatsGrowth Values="4.62 4.5 4.5 4.5" />
+      <HealthGrowth Values="6.5 2" />
+      <BaseStats Values="95 88 90 92" />
+      <HealthBase Values="82 12" />
+    </Job>
+    <Job ClassName="THE-03" BaseMove="5" BaseJump="3" CanSwim="false" SpeedGrowth="1.17" BaseSpeed="105" PlayerJob="false">
+      <StatsGrowth Values="4.75 4.5 4.75 4.5" />
+      <HealthGrowth Values="6.5 2" />
+      <BaseStats Values="96 89 90 92" />
+      <HealthBase Values="82 13" />
+    </Job>
+    <Job ClassName="THE-99" ArmorType="kfNone" BaseMove="5" BaseJump="3" CanSwim="false" SpeedGrowth="1.15" BaseSpeed="105" MonsterJob="true" useTextFrom="THE-01">
+      <StatsGrowth Values="4.5 4.5 4.5 4.5" />
+      <HealthGrowth Values="6.5 2" />
+      <BaseStats Values="96 88 90 92" />
+      <HealthBase Values="82 12" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>THE-99-A2</AbilityHash>
+            <AbilityHash>THE-99-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>THE-99-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>THE-99-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>THE-99-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="275">
+            <AbilityHash>THE-99-A1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="275">
+            <AbilityHash>THE-99-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery mp="5" mnd="5" spd="3" elem="5" />
+    </Job>
+    <Job ClassName="VAN-01" BonusCrit="5" BaseMove="4" BaseJump="3" CanSwim="false" SpeedGrowth="1.07" BaseSpeed="106.67" PlayerJob="false">
+      <StatsGrowth Values="6.75 3.5 4 3" />
+      <HealthGrowth Values="7 1.5" />
+      <BaseStats Values="109 55 70 60" />
+      <HealthBase Values="78 9" />
+    </Job>
+    <Job ClassName="VAN-02" BonusEvasion="2" BonusCrit="5" BaseMove="4" BaseJump="3" CanSwim="false" SpeedGrowth="1.07" BaseSpeed="106.67" PlayerJob="false">
+      <StatsGrowth Values="7 3.5 4 3" />
+      <HealthGrowth Values="7 1.5" />
+      <BaseStats Values="109 55 70 60" />
+      <HealthBase Values="78 9" />
+    </Job>
+    <Job ClassName="VAN-03" BonusEvasion="5" BonusCrit="5" BaseMove="4" BaseJump="3" CanSwim="false" SpeedGrowth="1.13" BaseSpeed="106.67" PlayerJob="false">
+      <StatsGrowth Values="7 3.5 4 3" />
+      <HealthGrowth Values="7 1.5" />
+      <BaseStats Values="114 55 70 60" />
+      <HealthBase Values="78 9" />
+    </Job>
+    <Job ClassName="VAN-99" ArmorType="kfNone" BonusEvasion="5" BonusCrit="5" BaseMove="4" BaseJump="3" CanSwim="false" SpeedGrowth="1.07" BaseSpeed="106.67" MonsterJob="true" useTextFrom="VAN-01">
+      <StatsGrowth Values="7 3.5 4 3" />
+      <HealthGrowth Values="7 1.5" />
+      <BaseStats Values="109 55 70 60" />
+      <HealthBase Values="78 9" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>VAN-99-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>VAN-99-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>VAN-99-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAN-99-C1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>VAN-99-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>VAN-99-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="275">
+            <AbilityHash>VAN-99-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery atk="5" spd="3" crit="2" />
+    </Job>
+    <Job ClassName="UND-01" BaseJump="1" CanSwim="false" SpeedGrowth="0.73" BaseSpeed="96.67" PlayerJob="false">
+      <StatsGrowth Values="5 5 3 4" />
+      <HealthGrowth Values="12 1" />
+      <BaseStats Values="99 80 50 75" />
+      <HealthBase Values="100 3" />
+    </Job>
+    <Job ClassName="UND-02" BaseJump="1" CanSwim="false" SpeedGrowth="0.73" BaseSpeed="96.67" PlayerJob="false">
+      <StatsGrowth Values="5.5 5 3 4" />
+      <HealthGrowth Values="12 1" />
+      <BaseStats Values="99 80 50 75" />
+      <HealthBase Values="100 4" />
+    </Job>
+    <Job ClassName="UND-03" BaseJump="1" CanSwim="false" SpeedGrowth="0.73" BaseSpeed="96.67" PlayerJob="false">
+      <StatsGrowth Values="5.5 5 3 4" />
+      <HealthGrowth Values="13 1" />
+      <BaseStats Values="99 80 50 75" />
+      <HealthBase Values="100 4" />
+    </Job>
+    <Job ClassName="UND-99" ArmorType="kfNone" BaseJump="1" CanSwim="false" SpeedGrowth="0.73" BaseSpeed="96.67" MonsterJob="true" useTextFrom="UND-01">
+      <StatsGrowth Values="5.5 5 3 4" />
+      <HealthGrowth Values="12 1" />
+      <BaseStats Values="99 80 50 75" />
+      <HealthBase Values="100 4" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>UND-99-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>UND-99-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>UND-99-C1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>UND-99-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>UND-99-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="275">
+            <AbilityHash>UND-99-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="275">
+            <AbilityHash>UND-99-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="10" atk="5" dark="5" />
+    </Job>
+    <Job ClassName="PEK-01" BaseJump="2" CanSwim="false" VariantSpriteMode="4" SpeedGrowth="0.82" BaseSpeed="96.67" PlayerJob="false">
+      <StatsGrowth Values="2 11 5 3.5" />
+      <HealthGrowth Values="5 5" />
+      <BaseStats Values="68 125 88 65" />
+      <HealthBase Values="75 28" />
+    </Job>
+    <Job ClassName="PEK-02" BaseJump="2" CanSwim="false" VariantSpriteMode="4" SpeedGrowth="0.82" BaseSpeed="96.67" PlayerJob="false">
+      <StatsGrowth Values="2 11 5.5 3.75" />
+      <HealthGrowth Values="5 5" />
+      <BaseStats Values="68 125 90 65" />
+      <HealthBase Values="75 28" />
+    </Job>
+    <Job ClassName="PEK-03" BaseJump="2" CanSwim="false" VariantSpriteMode="4" SpeedGrowth="0.82" BaseSpeed="96.67" PlayerJob="false">
+      <StatsGrowth Values="2 11 5.5 4" />
+      <HealthGrowth Values="5 5" />
+      <BaseStats Values="68 125 90 65" />
+      <HealthBase Values="75 28" />
+    </Job>
+    <Job ClassName="PEK-11" BaseJump="2" CanSwim="false" VariantSpriteMode="4" SpeedGrowth="0.82" BaseSpeed="96.67" PlayerJob="false">
+      <StatsGrowth Values="3 11 5 3.5" />
+      <HealthGrowth Values="5 5" />
+      <BaseStats Values="68 125 88 65" />
+      <HealthBase Values="75 28" />
+    </Job>
+    <Job ClassName="PEK-12" BaseJump="2" CanSwim="false" VariantSpriteMode="4" SpeedGrowth="0.82" BaseSpeed="96.67" PlayerJob="false">
+      <StatsGrowth Values="3.25 11 5.5 3.5" />
+      <HealthGrowth Values="5 5" />
+      <BaseStats Values="68 125 90 65" />
+      <HealthBase Values="75 28" />
+    </Job>
+    <Job ClassName="PEK-13" BaseJump="2" CanSwim="false" VariantSpriteMode="4" SpeedGrowth="0.82" BaseSpeed="96.67" PlayerJob="false">
+      <StatsGrowth Values="3.25 11 5.75 3.5" />
+      <HealthGrowth Values="5 5" />
+      <BaseStats Values="68 125 90 65" />
+      <HealthBase Values="75 28" />
+    </Job>
+    <Job ClassName="PEK-21" BaseJump="2" CanSwim="false" VariantSpriteMode="4" SpeedGrowth="0.75" BaseSpeed="96.67" PlayerJob="false">
+      <StatsGrowth Values="2 12 5 3.5" />
+      <HealthGrowth Values="5 5" />
+      <BaseStats Values="68 125 88 65" />
+      <HealthBase Values="75 28" />
+    </Job>
+    <Job ClassName="PEK-22" BaseJump="2" CanSwim="false" VariantSpriteMode="4" SpeedGrowth="0.75" BaseSpeed="96.67" PlayerJob="false">
+      <StatsGrowth Values="2 13 5.5 3.5" />
+      <HealthGrowth Values="5 5" />
+      <BaseStats Values="68 125 90 65" />
+      <HealthBase Values="75 28" />
+    </Job>
+    <Job ClassName="PEK-23" BaseJump="2" CanSwim="false" VariantSpriteMode="4" SpeedGrowth="0.75" BaseSpeed="96.67" PlayerJob="false">
+      <StatsGrowth Values="2 14 5.5 3.5" />
+      <HealthGrowth Values="5 5" />
+      <BaseStats Values="68 125 90 65" />
+      <HealthBase Values="75 28" />
+    </Job>
+    <Job ClassName="PEK-31" BaseJump="2" CanSwim="false" VariantSpriteMode="4" SpeedGrowth="0.93" BaseSpeed="96.67" PlayerJob="false">
+      <StatsGrowth Values="2 11 5 3.5" />
+      <HealthGrowth Values="5 5" />
+      <BaseStats Values="68 125 88 65" />
+      <HealthBase Values="75 28" />
+    </Job>
+    <Job ClassName="PEK-32" BaseJump="2" CanSwim="false" VariantSpriteMode="4" SpeedGrowth="0.97" BaseSpeed="96.67" PlayerJob="false">
+      <StatsGrowth Values="2 11 5.5 3.5" />
+      <HealthGrowth Values="5 5" />
+      <BaseStats Values="68 125 90 65" />
+      <HealthBase Values="75 28" />
+    </Job>
+    <Job ClassName="PEK-33" BaseJump="2" CanSwim="false" VariantSpriteMode="4" SpeedGrowth="1" BaseSpeed="96.67" PlayerJob="false">
+      <StatsGrowth Values="2 11 5.5 3.5" />
+      <HealthGrowth Values="5 5" />
+      <BaseStats Values="68 125 90 65" />
+      <HealthBase Values="75 28" />
+    </Job>
+    <Job ClassName="PEK-99" ArmorType="kfNone" BaseJump="2" CanSwim="false" SpeedGrowth="0.83" BaseSpeed="96.67" MonsterJob="true" useTextFrom="PEK-99">
+      <StatsGrowth Values="2 11 5.5 3.5" />
+      <HealthGrowth Values="5 5" />
+      <BaseStats Values="68 125 90 65" />
+      <HealthBase Values="75 28" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>PEK-99-A1</AbilityHash>
+            <AbilityHash>PEK-99-A2</AbilityHash>
+            <AbilityHash>PEK-99-A3</AbilityHash>
+            <AbilityHash>PEK-99-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>PEK-99-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>PEK-99-A5</AbilityHash>
+            <AbilityHash>PEK-99-A6</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>PEK-99-A7</AbilityHash>
+            <AbilityHash>PEK-99-A8</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>PEK-99-A9</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="275">
+            <AbilityHash>PEK-99-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="275">
+            <AbilityHash>PEK-99-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="325">
+            <AbilityHash>PEK-99-A10</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery mp="5" mnd="10" def="10" elem="5" />
+    </Job>
+    <Job ClassName="NIW-01" BonusEvasion="4" BaseJump="3" SpeedGrowth="0.87" BaseSpeed="98.33" PlayerJob="false">
+      <StatsGrowth Values="3.5 4 5.5 4" />
+      <HealthGrowth Values="10 4" />
+      <BaseStats Values="70 78 92 78" />
+      <HealthBase Values="90 24" />
+    </Job>
+    <Job ClassName="NIW-02" BonusEvasion="4" BaseJump="3" SpeedGrowth="0.87" BaseSpeed="98.33" PlayerJob="false">
+      <StatsGrowth Values="3.5 4 5.75 4.25" />
+      <HealthGrowth Values="10 4" />
+      <BaseStats Values="70 78 92 78" />
+      <HealthBase Values="90 24" />
+    </Job>
+    <Job ClassName="NIW-03" BonusEvasion="4" BaseJump="3" SpeedGrowth="0.87" BaseSpeed="98.33" PlayerJob="false">
+      <StatsGrowth Values="4 4 6 4.25" />
+      <HealthGrowth Values="10 4" />
+      <BaseStats Values="74 78 97 80" />
+      <HealthBase Values="90 24" />
+    </Job>
+    <Job ClassName="NIW-99" ArmorType="kfNone" BonusEvasion="4" BaseJump="3" SpeedGrowth="0.87" BaseSpeed="98.33" MonsterJob="true" useTextFrom="NIW-01">
+      <StatsGrowth Values="3.5 4 5.5 4.25" />
+      <HealthGrowth Values="10 4" />
+      <BaseStats Values="70 78 92 78" />
+      <HealthBase Values="90 24" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>NIW-99-A1</AbilityHash>
+            <AbilityHash>NIW-99-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>NIW-99-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>NIW-99-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>NIW-99-C1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="225">
+            <AbilityHash>NIW-99-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>NIW-99-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery mp="10" mnd="10" elem="5" />
+    </Job>
+    <Job ClassName="PHO-01" BonusEvasion="3" BaseMove="4" BaseJump="2" CanSwim="false" SpeedGrowth="0.75" BaseSpeed="95" PlayerJob="false">
+      <StatsGrowth Values="4.5 4 5.5 4" />
+      <HealthGrowth Values="7 4" />
+      <BaseStats Values="80 82 90 82" />
+      <HealthBase Values="80 22" />
+    </Job>
+    <Job ClassName="PHO-02" BonusEvasion="3" BaseMove="4" BaseJump="2" CanSwim="false" SpeedGrowth="0.8" BaseSpeed="95" PlayerJob="false">
+      <StatsGrowth Values="4.5 4 5.5 4" />
+      <HealthGrowth Values="7 4" />
+      <BaseStats Values="82 82 92 82" />
+      <HealthBase Values="80 22" />
+    </Job>
+    <Job ClassName="PHO-03" BonusEvasion="3" BaseMove="4" BaseJump="2" CanSwim="false" SpeedGrowth="0.8" BaseSpeed="95" PlayerJob="false">
+      <StatsGrowth Values="4.5 4 5.75 4" />
+      <HealthGrowth Values="7 4" />
+      <BaseStats Values="82 82 92 82" />
+      <HealthBase Values="80 22" />
+    </Job>
+    <Job ClassName="PHO-99" ArmorType="kfNone" BonusEvasion="3" BaseMove="4" BaseJump="2" CanSwim="false" SpeedGrowth="0.8" BaseSpeed="95" MonsterJob="true" useTextFrom="PHO-01">
+      <StatsGrowth Values="4.5 4 5.5 4" />
+      <HealthGrowth Values="7 4" />
+      <BaseStats Values="80 82 90 82" />
+      <HealthBase Values="80 22" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>PHO-99-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>PHO-99-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>PHO-99-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>PHO-99-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="225">
+            <AbilityHash>PHO-99-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="275">
+            <AbilityHash>PHO-99-A4</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="325">
+            <AbilityHash>PHO-99-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery mp="5" mnd="5" holy="10" />
+    </Job>
+    <Job ClassName="MAL-01" BonusCrit="5" BaseMove="4" BaseJump="2" CanSwim="false" SpeedGrowth="0.8" BaseSpeed="95" PlayerJob="false">
+      <StatsGrowth Values="3.25 3.5 5.5 5" />
+      <HealthGrowth Values="7.5 3" />
+      <BaseStats Values="70 70 90 98" />
+      <HealthBase Values="77 18" />
+    </Job>
+    <Job ClassName="MAL-02" BonusCrit="5" BaseMove="4" BaseJump="2" CanSwim="false" SpeedGrowth="0.8" BaseSpeed="95" PlayerJob="false">
+      <StatsGrowth Values="3.5 3.5 5.5 5" />
+      <HealthGrowth Values="7.5 3" />
+      <BaseStats Values="70 70 93 98" />
+      <HealthBase Values="79 18" />
+    </Job>
+    <Job ClassName="MAL-03" BonusCrit="5" BaseMove="4" BaseJump="2" CanSwim="false" SpeedGrowth="0.8" BaseSpeed="96.67" PlayerJob="false">
+      <StatsGrowth Values="3.5 3.5 5.5 5" />
+      <HealthGrowth Values="7.5 3" />
+      <BaseStats Values="72 70 93 98" />
+      <HealthBase Values="82 18" />
+    </Job>
+    <Job ClassName="MAL-99" ArmorType="kfNone" BonusCrit="5" BaseMove="4" BaseJump="2" CanSwim="false" SpeedGrowth="0.8" BaseSpeed="95" MonsterJob="true" useTextFrom="MAL-01">
+      <StatsGrowth Values="3.25 3.5 5.5 5" />
+      <HealthGrowth Values="7.5 3" />
+      <BaseStats Values="70 70 93 98" />
+      <HealthBase Values="77 18" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>MAL-99-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>MAL-99-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>MAL-99-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>MAL-99-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>MAL-99-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="225">
+            <AbilityHash>MAL-99-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="275">
+            <AbilityHash>MAL-99-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery mnd="5" res="5" dark="5" />
+    </Job>
+    <Job ClassName="HRV-01" BonusCrit="4" BaseMove="4" CanSwim="false" SpeedGrowth="0.98" BaseSpeed="103.33" PlayerJob="false">
+      <StatsGrowth Values="6.75 3.75 3.5 4" />
+      <HealthGrowth Values="8 1.5" />
+      <BaseStats Values="104 80 70 82" />
+      <HealthBase Values="87 18" />
+    </Job>
+    <Job ClassName="HRV-02" BonusCrit="4" BaseMove="4" CanSwim="false" SpeedGrowth="0.98" BaseSpeed="103.33" PlayerJob="false">
+      <StatsGrowth Values="7 3.75 3.5 4" />
+      <HealthGrowth Values="8 1.5" />
+      <BaseStats Values="104 80 70 82" />
+      <HealthBase Values="87 18" />
+    </Job>
+    <Job ClassName="HRV-03" BonusCrit="4" BaseMove="4" CanSwim="false" SpeedGrowth="0.98" BaseSpeed="103.33" PlayerJob="false">
+      <StatsGrowth Values="7.25 3.75 3.5 4" />
+      <HealthGrowth Values="8 1.5" />
+      <BaseStats Values="108 80 70 82" />
+      <HealthBase Values="87 18" />
+    </Job>
+    <Job ClassName="HRV-99" ArmorType="kfNone" BonusCrit="4" BaseMove="4" CanSwim="false" SpeedGrowth="0.98" BaseSpeed="103.33" MonsterJob="true" useTextFrom="HRV-01">
+      <StatsGrowth Values="7 3.75 3.5 4" />
+      <HealthGrowth Values="8 1.5" />
+      <BaseStats Values="104 80 70 82" />
+      <HealthBase Values="87 18" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>HRV-99-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>HRV-99-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>HRV-99-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>HRV-99-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>HRV-99-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="275">
+            <AbilityHash>HRV-99-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="325">
+            <AbilityHash>HRV-99-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery atk="5" spd="3" crit="2" />
+    </Job>
+    <Job ClassName="TAN-01" BaseMove="4" BaseJump="1.5" CanSwim="false" SpeedGrowth="0.75" BaseSpeed="95" PlayerJob="false">
+      <StatsGrowth Values="4.5 5 3 4.5" />
+      <HealthGrowth Values="10 1.5" />
+      <BaseStats Values="90 90 68 90" />
+      <HealthBase Values="90 8" />
+    </Job>
+    <Job ClassName="TAN-02" BaseMove="4" BaseJump="1.5" CanSwim="false" SpeedGrowth="0.75" BaseSpeed="95" PlayerJob="false">
+      <StatsGrowth Values="4.5 5 3.25 5" />
+      <HealthGrowth Values="10 1.5" />
+      <BaseStats Values="90 90 68 90" />
+      <HealthBase Values="90 8" />
+    </Job>
+    <Job ClassName="TAN-03" BaseMove="4" BaseJump="1.5" CanSwim="false" SpeedGrowth="0.75" BaseSpeed="95" PlayerJob="false">
+      <StatsGrowth Values="4.75 5 3.25 5" />
+      <HealthGrowth Values="10 1.5" />
+      <BaseStats Values="90 90 68 90" />
+      <HealthBase Values="90 8" />
+    </Job>
+    <Job ClassName="TAN-99" ArmorType="kfNone" BaseMove="4" BaseJump="1.5" CanSwim="false" SpeedGrowth="0.75" BaseSpeed="95" MonsterJob="true" useTextFrom="TAN-01">
+      <StatsGrowth Values="4.5 5 3.25 5" />
+      <HealthGrowth Values="10 1.5" />
+      <BaseStats Values="90 90 68 90" />
+      <HealthBase Values="90 8" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>TAN-99-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>TAN-99-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>TAN-99-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>TAN-99-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="225">
+            <AbilityHash>TAN-99-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="275">
+            <AbilityHash>TAN-99-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="325">
+            <AbilityHash>TAN-99-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="5" def="10" res="5" />
+    </Job>
+    <Job ClassName="ZOT-01" BonusEvasion="5" BaseMove="4" BaseJump="5" CanSwim="false" SpeedGrowth="1.27" BaseSpeed="106.67" PlayerJob="false">
+      <StatsGrowth Values="6 5 3.75 5" />
+      <HealthGrowth Values="5.5 2" />
+      <BaseStats Values="100 96 80 96" />
+      <HealthBase Values="72 11" />
+    </Job>
+    <Job ClassName="ZOT-02" BonusEvasion="10" BaseMove="4" BaseJump="5" CanSwim="false" SpeedGrowth="1.27" BaseSpeed="106.67" PlayerJob="false">
+      <StatsGrowth Values="6.5 5 3.75 5" />
+      <HealthGrowth Values="6 2" />
+      <BaseStats Values="100 96 80 96" />
+      <HealthBase Values="74 11" />
+    </Job>
+    <Job ClassName="ZOT-03" BonusEvasion="20" BaseMove="4" BaseJump="5" CanSwim="false" SpeedGrowth="1.27" BaseSpeed="106.67" PlayerJob="false">
+      <StatsGrowth Values="7 5 3.75 5" />
+      <HealthGrowth Values="6.5 2" />
+      <BaseStats Values="100 96 80 96" />
+      <HealthBase Values="74 11" />
+    </Job>
+    <Job ClassName="ZOT-99" ArmorType="kfNone" BonusEvasion="10" BaseMove="4" BaseJump="5" CanSwim="false" SpeedGrowth="1.27" BaseSpeed="106.67" MonsterJob="true" useTextFrom="ZOT-01">
+      <StatsGrowth Values="6.5 5 3.75 5" />
+      <HealthGrowth Values="6 2" />
+      <BaseStats Values="100 96 80 96" />
+      <HealthBase Values="74 11" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>ZOT-99-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>ZOT-99-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>ZOT-99-C1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>ZOT-99-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="325">
+            <AbilityHash>ZOT-99-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>ZOT-99-P2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="225">
+            <AbilityHash>ZOT-99-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery atk="5" eva="2" crit="2" />
+    </Job>
+    <Job ClassName="SDA-01" ArmorType="kfNone" BaseMove="4" BaseJump="2" CanSwim="false" SpeedGrowth="0.93" BaseSpeed="101.67" PlayerJob="false">
+      <StatsGrowth Values="7.5 8.25 5 7" />
+      <HealthGrowth Values="15 2" />
+      <BaseStats Values="95 99 80 95" />
+      <HealthBase Values="100 10" />
+    </Job>
+    <Job ClassName="EKA-01" ArmorType="kfNone" BonusCrit="5" BaseMove="4" BaseJump="3" CanSwim="false" SpeedGrowth="0.87" BaseSpeed="106.67" PlayerJob="false">
+      <StatsGrowth Values="4.5 4.5 8 5.5" />
+      <HealthGrowth Values="10.5 8" />
+      <BaseStats Values="80 99 104 95" />
+      <HealthBase Values="120 30" />
+    </Job>
+    <Job ClassName="MKA-01" BonusEvasion="5" BaseMove="4" SpeedGrowth="1" BaseSpeed="103.33" PlayerJob="false">
+      <StatsGrowth Values="3 3.5 3.5 3.5" />
+      <HealthGrowth Values="7 3" />
+      <BaseStats Values="68 78 72 80" />
+      <HealthBase Values="79 20" />
+    </Job>
+    <Job ClassName="BWO-01" ArmorType="kfNone" BaseMove="2" BaseJump="1" CanSwim="false" SpeedGrowth="1.13" BaseSpeed="100" PlayerJob="false">
+      <StatsGrowth Values="9 8.5 7.5 8.5" />
+      <HealthGrowth Values="25 4" />
+      <BaseStats Values="125 99 110 95" />
+      <HealthBase Values="250 30" />
+    </Job>
+    <Job ClassName="BWO-02" ArmorType="kfNone" BaseMove="2" BaseJump="1" CanSwim="false" SpeedGrowth="0.97" BaseSpeed="100" PlayerJob="false">
+      <StatsGrowth Values="10 9.5 9 9.5" />
+      <HealthGrowth Values="35 5" />
+      <BaseStats Values="140 99 125 95" />
+      <HealthBase Values="400 30" />
+    </Job>
+    <Job ClassName="GHO-01" ArmorType="kfNone" BaseMove="4" BaseJump="4" CanSwim="false" SpeedGrowth="1.1" BaseSpeed="100" PlayerJob="false">
+      <StatsGrowth Values="5 7.5 6.25 6" />
+      <HealthGrowth Values="14 10" />
+      <BaseStats Values="90 105 100 90" />
+      <HealthBase Values="200 50" />
+    </Job>
+    <Job ClassName="DAA-01" BaseJump="2" CanSwim="false" SpeedGrowth="0.85" BaseSpeed="98.33" PlayerJob="false">
+      <StatsGrowth Values="6 4.5 4.5 3.75" />
+      <HealthGrowth Values="8 2" />
+      <BaseStats Values="95 70 84 62" />
+      <HealthBase Values="80 14" />
+    </Job>
+    <Job ClassName="DAA-02" BaseJump="2" CanSwim="false" SpeedGrowth="0.88" BaseSpeed="98.33" PlayerJob="false">
+      <StatsGrowth Values="6 4.5 4.75 3.75" />
+      <HealthGrowth Values="8.5 2" />
+      <BaseStats Values="95 70 84 62" />
+      <HealthBase Values="80 14" />
+    </Job>
+    <Job ClassName="DAA-03" BaseJump="2" CanSwim="false" SpeedGrowth="0.88" BaseSpeed="100" PlayerJob="false">
+      <StatsGrowth Values="6.25 4.75 4.75 3.75" />
+      <HealthGrowth Values="8.5 2" />
+      <BaseStats Values="95 70 84 62" />
+      <HealthBase Values="80 14" />
+    </Job>
+    <Job ClassName="DAA-99" ArmorType="kfNone" BaseJump="2" CanSwim="false" SpeedGrowth="0.87" BaseSpeed="98.33" MonsterJob="true" useTextFrom="DAA-01">
+      <StatsGrowth Values="6 4.5 4.5 3.75" />
+      <HealthGrowth Values="7.5 2" />
+      <BaseStats Values="95 70 84 62" />
+      <HealthBase Values="80 14" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>DAA-99-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>DAA-99-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>DAA-99-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>DAA-99-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>DAA-99-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="325">
+            <AbilityHash>DAA-99-A4</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="425">
+            <AbilityHash>DAA-99-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="5" mnd="5" res="5" dark="5" />
+    </Job>
+    <Job ClassName="IMM1" WeaponsType="kfMace kfRod kfStaff" ArmorType="kfCloth" BaseMove="8" BaseJump="2" SpeedGrowth="1.08" BaseSpeed="108.33" PlayerJob="false" Hat="none" OutfitM="irdred" OutfitF="irdra">
+      <StatsGrowth Values="5 4 7 4" />
+      <HealthGrowth Values="15 6" />
+      <BaseStats Values="45 47 45 47" />
+      <HealthBase Values="500 100" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>IMM1-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="100">
+            <AbilityHash>IMM1-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="100">
+            <AbilityHash>IMM1-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="100">
+            <AbilityHash>IMM1-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="100">
+            <AbilityHash>IMM1-A5</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="100">
+            <AbilityHash>IMM1-P1</AbilityHash>
+            <AbilityHash>IMM1-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+    </Job>
+    <Job ClassName="IMM7" WeaponsType="kfRapier kfStaff" ArmorType="kfRobes kfClothHelmet kfShield" BaseMove="4" BaseJump="2" SpeedGrowth="1.3" BaseSpeed="100" PlayerJob="false" Hat="none" OutfitM="irdred" OutfitF="irdra">
+      <StatsGrowth Values="5 4 6 3.75" />
+      <HealthGrowth Values="8 3" />
+      <BaseStats Values="49.5 49.5 49.5 49.5" />
+      <HealthBase Values="550 50" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>IMM7-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="100">
+            <AbilityHash>IMM7-A2</AbilityHash>
+            <AbilityHash>IMM7-A3</AbilityHash>
+            <AbilityHash>IMM7-A4</AbilityHash>
+            <AbilityHash>IMM7-A5</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>IMM7-A6</AbilityHash>
+            <AbilityHash>IMM7-A7</AbilityHash>
+            <AbilityHash>IMM7-A8</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>IMM7-P1</AbilityHash>
+            <AbilityHash>IMM7-P2</AbilityHash>
+            <AbilityHash>IMM7-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+    </Job>
+    <Job ClassName="IMM5" WeaponsType="kfSword" ArmorType="kfHeavy" BaseMove="4" SpeedGrowth="0.93" BaseSpeed="100" PlayerJob="false" Hat="none" OutfitM="irdred" OutfitF="irdra">
+      <StatsGrowth Values="5.5 3.75 5.25 3.75" />
+      <HealthGrowth Values="9 6" />
+      <BaseStats Values="47 47 47 47" />
+      <HealthBase Values="650 50" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>IMM5-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="100">
+            <AbilityHash>IMM5-A2</AbilityHash>
+            <AbilityHash>IMM5-A3</AbilityHash>
+            <AbilityHash>IMM5-A4</AbilityHash>
+            <AbilityHash>IMM5-A5</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>IMM5-A6</AbilityHash>
+            <AbilityHash>IMM5-A7</AbilityHash>
+            <AbilityHash>IMM5-A8</AbilityHash>
+            <AbilityHash>IMM5-A9</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>IMM5-P1</AbilityHash>
+            <AbilityHash>IMM5-P2</AbilityHash>
+            <AbilityHash>IMM5-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+    </Job>
+    <Job ClassName="IMM3" WeaponsType="kfRod kfStaff" ArmorType="kfRobes kfLightArmor kfClothHelmet kfLightHelmet" BaseJump="2" SpeedGrowth="0.8" BaseSpeed="100" PlayerJob="false" Hat="none" OutfitM="irdred" OutfitF="irdra">
+      <StatsGrowth Values="4 3.5 6.5 3.5" />
+      <HealthGrowth Values="7 6" />
+      <BaseStats Values="45 45 49.5 45" />
+      <HealthBase Values="250 60" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>IMM3-A1</AbilityHash>
+            <AbilityHash>IMM3-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="100">
+            <AbilityHash>IMM3-A3</AbilityHash>
+            <AbilityHash>IMM3-A4</AbilityHash>
+            <AbilityHash>IMM3-A5</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>IMM3-A6</AbilityHash>
+            <AbilityHash>IMM3-A7</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>IMM3-P1</AbilityHash>
+            <AbilityHash>IMM3-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+    </Job>
+    <Job ClassName="APB-01" ArmorType="kfNone" BaseMove="4" BaseJump="3" CanSwim="false" SpeedGrowth="1.08" BaseSpeed="108.33" PlayerJob="false">
+      <StatsGrowth Values="5.5 5 7.25 5" />
+      <HealthGrowth Values="12 5" />
+      <BaseStats Values="99 90 99 90" />
+      <HealthBase Values="500 30" />
+    </Job>
+    <Job ClassName="APB-99" ArmorType="kfNone" BaseMove="4" BaseJump="3" CanSwim="false" SpeedGrowth="1" BaseSpeed="103.33" MonsterJob="true" useTextFrom="APB-01">
+      <StatsGrowth Values="5 3.25 6.5 3.25" />
+      <HealthGrowth Values="6 4" />
+      <BaseStats Values="85 80 95 80" />
+      <HealthBase Values="70 25" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>APB-99-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>APB-99-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>APB-99-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>APB-99-A4</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="225">
+            <AbilityHash>APB-99-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="275">
+            <AbilityHash>APB-99-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="225">
+            <AbilityHash>APB-99-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery atk="5" mnd="5" dark="5" />
+    </Job>
+    <Job ClassName="IM4-01" ArmorType="kfNone" BaseMove="4" BaseJump="3" CanSwim="false" SpeedGrowth="1.08" BaseSpeed="108.33" PlayerJob="false">
+      <StatsGrowth Values="5.5 5 7.25 5" />
+      <HealthGrowth Values="12 5" />
+      <BaseStats Values="99 90 99 90" />
+      <HealthBase Values="500 30" />
+    </Job>
+    <Job ClassName="MAW-01" ArmorType="kfNone" BaseJump="2" CanSwim="false" SpeedGrowth="1.15" BaseSpeed="108.33" PlayerJob="false">
+      <StatsGrowth Values="5.5 5 5.5 5" />
+      <HealthGrowth Values="20 5" />
+      <BaseStats Values="105 100 105 100" />
+      <HealthBase Values="500 30" />
+    </Job>
+    <Job ClassName="MAW-02" ArmorType="kfNone" BaseMove="4" BaseJump="3" CanSwim="false" SpeedGrowth="1.15" BaseSpeed="108.33" PlayerJob="false">
+      <StatsGrowth Values="5 5.5 5 5.5" />
+      <HealthGrowth Values="28 4" />
+      <BaseStats Values="105 100 105 100" />
+      <HealthBase Values="1000 30" />
+    </Job>
+    <Job ClassName="MAM-01" ArmorType="kfNone" BaseMove="0" BaseJump="5" CanSwim="false" SpeedGrowth="1" BaseSpeed="108.33" PlayerJob="false">
+      <StatsGrowth Values="5.5 4.5 2.5 4.5" />
+      <HealthGrowth Values="5.5 1.5" />
+      <BaseStats Values="100 95 60 95" />
+      <HealthBase Values="60 10" />
+    </Job>
+    <Job ClassName="MAM-02" ArmorType="kfNone" BaseMove="0" BaseJump="5" CanSwim="false" SpeedGrowth="1.33" BaseSpeed="108.33" PlayerJob="false">
+      <StatsGrowth Values="4.5 4.5 3.5 4.5" />
+      <HealthGrowth Values="5 2" />
+      <BaseStats Values="100 95 70 95" />
+      <HealthBase Values="65 10" />
+    </Job>
+    <Job ClassName="MAA-01" ArmorType="kfNone" BaseJump="3" CanSwim="false" SpeedGrowth="1.08" BaseSpeed="108.33" PlayerJob="false">
+      <StatsGrowth Values="5 4.5 5 4.5" />
+      <HealthGrowth Values="15 3" />
+      <BaseStats Values="90 95 90 95" />
+      <HealthBase Values="350 15" />
+    </Job>
+    <Job ClassName="MAA-02" ArmorType="kfNone" BaseJump="2" CanSwim="false" SpeedGrowth="1" BaseSpeed="105" PlayerJob="false">
+      <StatsGrowth Values="5 4 4.75 4" />
+      <HealthGrowth Values="15 2" />
+      <BaseStats Values="90 90 88 90" />
+      <HealthBase Values="350 15" />
+    </Job>
+    <Job ClassName="MAA-03" ArmorType="kfNone" BaseJump="1.5" CanSwim="false" SpeedGrowth="0.92" BaseSpeed="108.33" PlayerJob="false">
+      <StatsGrowth Values="3.5 3.5 6 5" />
+      <HealthGrowth Values="15 5.5" />
+      <BaseStats Values="80 85 99 95" />
+      <HealthBase Values="350 20" />
+    </Job>
+    <Job ClassName="MAA-04" ArmorType="kfNone" BaseJump="3" CanSwim="false" SpeedGrowth="1.1" BaseSpeed="110" PlayerJob="false">
+      <StatsGrowth Values="6 4.75 3.5 3.5" />
+      <HealthGrowth Values="15 2" />
+      <BaseStats Values="100 100 80 85" />
+      <HealthBase Values="350 14" />
+    </Job>
+    <Job ClassName="REIN" WeaponsType="kfSword kfDagger kfStaff kfCrossbow" ArmorType="kfLightArmor kfLightHelmet kfShield" BonusEvasion="3" BonusCrit="3" BaseMove="4" BaseJump="3" SpeedGrowth="1.25" BaseSpeed="105" StoryClass="true" Hat="none" OutfitM="pirate" OutfitF="pirate">
+      <StatsGrowth Values="4.25 3.5 4.25 3.5" />
+      <HealthGrowth Values="6.5 3" />
+      <BaseStats Values="42 39 42 35.5" />
+      <HealthBase Values="80 18" />
+      <noVicariousGiven>true</noVicariousGiven>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>REIN-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>REIN-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>REIN-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>REIN-C1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>REIN-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="425">
+            <AbilityHash>REIN-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="300">
+            <AbilityHash>REIN-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="500">
+            <AbilityHash>REIN-A5</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="5" mp="5" atk="5" mnd="5" def="5" res="5" spd="3" eva="1" crit="2" elem="5" />
+    </Job>
+    <Job ClassName="EXIL" WeaponsType="kfSword" ArmorType="kfAll" BaseMove="4" SpeedGrowth="1.13" BaseSpeed="103.33" StoryClass="true" casterClass="2" Hat="none" OutfitM="arabian" OutfitF="arabian">
+      <StatsGrowth Values="4.75 3.25 4.5 3.25" />
+      <HealthGrowth Values="6.5 6" />
+      <BaseStats Values="42.5 40 42.5 36" />
+      <HealthBase Values="80 25" />
+      <noVicariousGiven>true</noVicariousGiven>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>EXIL-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>EXIL-A4</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>EXIL-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>EXIL-P2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>EXIL-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>EXIL-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>EXIL-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>EXIL-A5</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="300">
+            <AbilityHash>EXIL-A6</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="350">
+            <AbilityHash>EXIL-A7</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="5" atk="10" mnd="10" def="5" res="5" />
+    </Job>
+  </jobs>
+</XMLJobs>

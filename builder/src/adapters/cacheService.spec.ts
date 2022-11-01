@@ -13,7 +13,7 @@ test("should trigger cache query on registration", (t) => {
   tracker.verify();
 });
 
-test("should trigger cache query on invalidation if invalidation keys are in query keys", (t) => {
+test("should trigger query on invalidation if invalidation keys are in query keys", (t) => {
   const tracker = new assert.CallTracker();
   const query = () => {};
   const trackedQuery = tracker.calls(query, 3);
@@ -26,7 +26,7 @@ test("should trigger cache query on invalidation if invalidation keys are in que
   tracker.verify();
 });
 
-test("should not trigger cache query if query has unsubscribed", (t) => {
+test("should not trigger query if query has unsubscribed", (t) => {
   const tracker = new assert.CallTracker();
   const query = () => {};
   const trackedQuery = tracker.calls(query, 2);
@@ -40,7 +40,7 @@ test("should not trigger cache query if query has unsubscribed", (t) => {
   tracker.verify();
 });
 
-test("should not trigger cache query if invalidation some invalidation keys are different", (t) => {
+test("should not trigger query if invalidation some invalidation keys are different", (t) => {
   const tracker = new assert.CallTracker();
   const query = () => {};
   const trackedQuery = tracker.calls(query, 2);

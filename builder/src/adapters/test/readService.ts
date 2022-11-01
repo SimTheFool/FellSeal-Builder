@@ -5,5 +5,6 @@ import { ReadService } from "../readService.js";
 export const newReadService = (): ReadService => {
   return {
     getAllCharacters: () => newAppResult(testDb.characters),
+    getAllJobs: () => newAppResult(testDb.jobs),
   };
 };
