@@ -6,13 +6,11 @@ import { Title } from "../components/Title";
 
 const Home: NextPage = () => {
   return (
-    <BuilderProvider>
-      <Layout
-        title={<Title />}
-        placeholder={<Title />}
-        characterList={<CharacterList />}
-      />
-    </BuilderProvider>
+    <Layout
+      title={<Title />}
+      placeholder={<Title />}
+      characterList={<CharacterList />}
+    />
   );
 };
 

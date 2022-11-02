@@ -1,6 +1,8 @@
 import type { AppProps } from "next/app";
 import { MantineProvider } from "@mantine/core";
 import { Global } from "@mantine/core";
+import { BuilderProvider } from "../components/builder/Builder";
+import { TranslationProvider } from "../components/translations/Translate";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -49,7 +51,11 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
         ]}
       />
-      <Component {...pageProps} />
+      <TranslationProvider>
+        <BuilderProvider>
+          <Component {...pageProps} />
+        </BuilderProvider>
+      </TranslationProvider>
     </MantineProvider>
   );
 }

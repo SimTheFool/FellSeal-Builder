@@ -10,7 +10,6 @@ import {
 import { Character } from "builder";
 import Image from "next/image";
 import portrait1 from "../../assets/portraits/3-Large.png";
-import { useBuilder } from "../builder/Builder";
 import { portraitHeight, portraitWidth } from "../style";
 
 type CharacterCardProps = {
@@ -18,8 +17,6 @@ type CharacterCardProps = {
 };
 
 export const CharacterCard = ({ character }: CharacterCardProps) => {
-  const { jobsByName } = useBuilder();
-
   const mainJob = character.main;
   const secondaryJob = character.active;
   const [[, firstPassive], [, secondPassive]] = character.passives;
