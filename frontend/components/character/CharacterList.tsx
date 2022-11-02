@@ -1,21 +1,21 @@
 import { Box } from "@mantine/core";
-import { Character } from "builder";
 import { useBoundingClientRect } from "../../utils/hooks/useBoundingClientRect";
 import { useDOMRef } from "../../utils/hooks/useDOMRef";
+import { useBuilder } from "../builder/Builder";
 import { mediaQuery, portraitWidth } from "../style";
 import { CharacterCard } from "./CharacterCard";
 
-type CharacterListProps = {
-  characters: Character[];
-};
+type CharacterListProps = {};
 
-export const CharacterList = ({ characters }: CharacterListProps) => {
+export const CharacterList = ({}: CharacterListProps) => {
+  const { characters } = useBuilder();
+
   const [list, queryList] = useDOMRef<HTMLElement>();
   const { width: listWidth = 0 } = useBoundingClientRect(list) || {};
 
   const itemBaseWidth = portraitWidth + 20;
   const capacity = Math.floor(listWidth / itemBaseWidth);
-  const length = characters.length;
+  const length = characters?.length || 0;
   const present = length % capacity;
   const missing = present ? capacity - present : present;
 
@@ -40,7 +40,7 @@ export const CharacterList = ({ characters }: CharacterListProps) => {
         paddingLeft: 20,
       })}
     >
-      {characters.map((c) => (
+      {(characters || []).map((c) => (
         <CharacterCard character={c} />
       ))}
       {new Array(missing || 0).fill(1).map(() => (

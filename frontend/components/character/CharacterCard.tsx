@@ -10,6 +10,7 @@ import {
 import { Character } from "builder";
 import Image from "next/image";
 import portrait1 from "../../assets/portraits/3-Large.png";
+import { useBuilder } from "../builder/Builder";
 import { portraitHeight, portraitWidth } from "../style";
 
 type CharacterCardProps = {
@@ -17,6 +18,12 @@ type CharacterCardProps = {
 };
 
 export const CharacterCard = ({ character }: CharacterCardProps) => {
+  const { jobsByName } = useBuilder();
+
+  const mainJob = character.main;
+  const secondaryJob = character.active;
+  const [[, firstPassive], [, secondPassive]] = character.passives;
+
   return (
     <Card
       radius="md"
@@ -52,18 +59,18 @@ export const CharacterCard = ({ character }: CharacterCardProps) => {
         >
           <Center>
             <Text size="md" weight={900}>
-              Mercenary
+              {mainJob}
             </Text>
             <Space w="xs" />
-            <Text size="md">Gadgetier</Text>
+            <Text size="md">{secondaryJob}</Text>
           </Center>
           <Center>
             <Text size="sm" color="dimmed">
-              Attack expert
+              {firstPassive}
             </Text>
             <Space w="xs" />
             <Text size="sm" color="dimmed">
-              Blessed one
+              {secondPassive}
             </Text>
           </Center>
         </SimpleGrid>
