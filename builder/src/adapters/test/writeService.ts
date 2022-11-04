@@ -18,7 +18,7 @@ import { WriteService } from "../writeService.js";
 import xmlJobs from "../../assets/jobs.xml";
 import xmlSkills from "../../assets/skills.xml";
 import txtSkillsTranslation from "../../assets/fr/skills.txt";
-import fs from "fs";
+import txtMonstersTranslation from "../../assets/fr/monsters.txt";
 
 export const newWriteService = (): WriteService => {
   migrate();
@@ -39,7 +39,10 @@ const migrate = () => {
   testDb.jobs = importJobAndSkills(xmlJobs, xmlSkills);
 
   testDb.translations = {
-    fr: importTranslations(txtSkillsTranslation),
+    fr: {
+      ...importTranslations(txtSkillsTranslation),
+      ...importTranslations(txtMonstersTranslation),
+    },
     en: {},
   };
 };
@@ -48,20 +51,17 @@ const importTranslations = (
   txtTranslations: string
 ): Record<string, string> => {
   const translationString = Buffer.from(txtTranslations, "base64").toString();
-  const translationJsonString = [
-    "{",
-    translationString
-      .replace(/"/g, '\\"')
-      .replace(/(.*)=((?!").+)/g, '"$1": "$2",')
-      .replace(/\t/g, "")
-      .slice(0, -1),
-    "}",
-  ].join("");
+  const translationJsonString = translationString
+    .replace(/([\r\s\n]+)$/g, "") // Delete final empty lines
+    .replace(/"/g, '\\"') // Escape double quote
+    .replace(/(.*)=((?!").+)/g, '"$1": "$2",') // Parse to json sting
+    .replace(/\t/g, "") // Remove tab
+    .slice(0, -1); // Delete last coma
 
-  console.log(translationJsonString);
-  //fs.writeFileSync("./test.txt", test);
-  //console.log(JSON.parse(translationJsonString));
-  const translation = JSON.parse(translationJsonString);
+  //fs.writeFileSync("./test.txt", translationJsonString);
+
+  const translation = JSON.parse(["{", translationJsonString, "}"].join(""));
+  //console.log(translation);
   return translation;
 };
 
