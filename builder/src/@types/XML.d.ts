@@ -1,4 +1,9 @@
 declare module "*.xml" {
-  const doc: string; // Change this to an actual XML type
-  export default doc;
+  const xml: string;
+  export default xml;
+}
+
+declare module "*.txt" {
+  const txt: string;
+  export default txt;
 }

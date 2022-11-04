@@ -6,5 +6,7 @@ export const newReadService = (): ReadService => {
   return {
     getAllCharacters: () => newAppResult(testDb.characters),
     getAllJobs: () => newAppResult(testDb.jobs),
+    getTranslation: (lang: "en" | "fr") =>
+      newAppResult(testDb.translations[lang]),
   };
 };

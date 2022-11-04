@@ -24,7 +24,7 @@ const getBuildConfig = async () => {
     tsconfig: args.tsconfig,
     entryPoints: await getEntryPoints(include),
     outdir: compilerOptions.outDir,
-    loader: { ".xml": "base64" },
+    loader: { ".xml": "base64", ".txt": "base64" },
     outbase: "./src",
     bundle: true,
     platform: args.platform,

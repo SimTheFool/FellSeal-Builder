@@ -5,6 +5,7 @@ const newTestDb = () => {
   return {
     characters: [] as Character[],
     jobs: [] as Job[],
+    translations: {} as Record<"en" | "fr", Record<string, string>>,
   };
 };
 
