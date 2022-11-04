@@ -1,6 +1,5 @@
-import { Job } from "@domain/Job.js";
-import test from "node:test";
 import assert from "node:assert";
+import test from "node:test";
 import { newClient } from "./index.js";
 
 test("should get fr translation", async (t) => {
@@ -20,4 +19,9 @@ test("should get fr translation", async (t) => {
     translation["sorc-desc"],
     "Ces archi-mages dévastent sans distinction aucune tout le champ de bataille avec une puissance élémentaire brute."
   );
+  assert.equal(
+    translation["demk-c1-desc"],
+    "{counter-offensive-action} par une unité à distance {counter-by-inflicting} {addnegative}."
+  );
+  assert.equal(translation["alch-a1"], "{barrier-spell} Massive");
 });

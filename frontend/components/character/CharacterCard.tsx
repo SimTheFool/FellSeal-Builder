@@ -10,17 +10,21 @@ import {
 import { Character } from "builder";
 import Image from "next/image";
 import portrait1 from "../../assets/portraits/3-Large.png";
+import { SkillText } from "../job/SkillText";
 import { portraitHeight, portraitWidth } from "../style";
 
 type CharacterCardProps = {
   character: Character;
 };
 
-export const CharacterCard = ({ character }: CharacterCardProps) => {
-  const mainJob = character.main;
-  const secondaryJob = character.active;
-  const [[, firstPassive], [, secondPassive]] = character.passives;
-
+export const CharacterCard = ({
+  character: {
+    name,
+    main,
+    active,
+    passives: [firstPassive, secondPassive],
+  },
+}: CharacterCardProps) => {
   return (
     <Card
       radius="md"
@@ -43,7 +47,7 @@ export const CharacterCard = ({ character }: CharacterCardProps) => {
         })}
       >
         <Title order={3} align={"center"} size="h3">
-          {character.name}
+          {name}
         </Title>
         <SimpleGrid
           cols={1}
@@ -56,19 +60,18 @@ export const CharacterCard = ({ character }: CharacterCardProps) => {
         >
           <Center>
             <Text size="md" weight={900}>
-              {mainJob}
+              {main}
             </Text>
             <Space w="xs" />
-            <Text size="md">{secondaryJob}</Text>
+            <Text size="md">{active}</Text>
           </Center>
           <Center>
-            <Text size="sm" color="dimmed">
-              {firstPassive}
-            </Text>
+            <SkillText jobHash={firstPassive[0]} skillHash={firstPassive[1]} />
             <Space w="xs" />
-            <Text size="sm" color="dimmed">
-              {secondPassive}
-            </Text>
+            <SkillText
+              jobHash={secondPassive[0]}
+              skillHash={secondPassive[1]}
+            />
           </Center>
         </SimpleGrid>
       </Box>

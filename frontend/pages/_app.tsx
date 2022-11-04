@@ -51,11 +51,11 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
         ]}
       />
-      <TranslationProvider>
-        <BuilderProvider>
+      <BuilderProvider>
+        <TranslationProvider>
           <Component {...pageProps} />
-        </BuilderProvider>
-      </TranslationProvider>
+        </TranslationProvider>
+      </BuilderProvider>
     </MantineProvider>
   );
 }

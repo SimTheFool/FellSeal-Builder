@@ -19,6 +19,7 @@ import xmlJobs from "../../assets/jobs.xml";
 import xmlSkills from "../../assets/skills.xml";
 import txtSkillsTranslation from "../../assets/fr/skills.txt";
 import txtMonstersTranslation from "../../assets/fr/monsters.txt";
+//import fs from "fs";
 
 export const newWriteService = (): WriteService => {
   migrate();
@@ -52,10 +53,12 @@ const importTranslations = (
 ): Record<string, string> => {
   const translationString = Buffer.from(txtTranslations, "base64").toString();
   const translationJsonString = translationString
+    .replace(/\t/g, "") // Remove tab
     .replace(/([\r\s\n]+)$/g, "") // Delete final empty lines
     .replace(/"/g, '\\"') // Escape double quote
-    .replace(/(.*)=((?!").+)/g, '"$1": "$2",') // Parse to json sting
-    .replace(/\t/g, "") // Remove tab
+    .replace(/{(.*)}/g, "$t($1)")
+    .replace(/[;\s]*([A-Za-z0-9-]+)[;\s]*=((?!").+)/gm, '\n"$1": "$2",') // Parse to json sting
+    .replace(/([A-Za-z]+-[A-Za-z0-9-]*)/g, (x) => x.toLowerCase()) // replace uppercased keys
     .slice(0, -1); // Delete last coma
 
   //fs.writeFileSync("./test.txt", translationJsonString);

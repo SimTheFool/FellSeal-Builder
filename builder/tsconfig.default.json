@@ -12,6 +12,7 @@
     "rootDir": "./src",
     "baseUrl": "./src",
     "paths": {
+      "@internal/utils/*": ["../../utils/build/*"],
       "@utils/*": ["./utils/*"],
       "@domain/*": ["./domain/*"],
       "@adapters/*": ["./adapters/test/*"],
@@ -19,6 +20,5 @@
     }
   },
   "include": ["./src/entries/**/index.ts"],
-  "exclude": ["node_modules", "build-*", "dist"],
-  "references": [{ "path": "../utils/" }]
+  "exclude": ["node_modules", "build-*", "dist"]
 }

@@ -4,6 +4,7 @@ import { newCommands } from "./commands";
 
 export { Character } from "@domain/character/Character";
 export { Job } from "@domain/Job";
+export { Skill, ActiveSkill, CounterSkill, PassiveSkill } from "@domain/Skill";
 export { AppQuery } from "@utils/query";
 export { AppErrors } from "@utils/Error";
 

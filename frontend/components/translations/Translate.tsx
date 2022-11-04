@@ -4,38 +4,36 @@ import {
   useTranslation,
 } from "react-i18next";
 import i18n from "i18next";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { newClient } from "builder";
+import { useBuilderQuery } from "../../utils/store/useQuery";
 
-const en = {
-  "Welcome to React": "Wddddt",
-};
+const { queries } = newClient();
 
-const fr = {
-  "Welcome to React": "aaaaaxxxxx",
-};
-
-const setTranslations = ([en, fr]: [
-  Record<string, string>,
-  Record<string, string>
-]) => {
-  i18n.use(initReactI18next).init({
-    resources: {
-      en: { translation: en },
-      fr: { translation: fr },
-    },
-    lng: "en",
-    fallbackLng: "en",
-  });
-};
+i18n.use(initReactI18next).init({
+  resources: {},
+  lng: "fr",
+  fallbackLng: "fr",
+  react: {
+    bindI18n: "loaded languageChanged",
+    bindI18nStore: "added",
+    useSuspense: true,
+  },
+});
 
 export const TranslationProvider = ({
   children,
 }: {
   children: JSX.Element;
 }) => {
+  const [translationFr = {}] = useBuilderQuery(queries.getTranslation)("fr");
+  const [translationEn = {}] = useBuilderQuery(queries.getTranslation)("en");
+  console.log(translationFr);
+
   useEffect(() => {
-    setTranslations([en, fr]);
-  }, []);
+    i18n.addResourceBundle("en", "translation", translationEn);
+    i18n.addResourceBundle("fr", "translation", translationFr);
+  }, [translationFr, translationEn]);
 
   return <I18nextProvider i18n={i18n}>{children}</I18nextProvider>;
 };
