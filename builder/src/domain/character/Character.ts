@@ -9,6 +9,7 @@ type Counter = readonly [job: Job["hash"], skill: CounterSkill["hash"]];
 
 export type Character = {
   id: Id;
+  position: number;
   name: Name;
   job: Job["hash"];
   ability: Job["hash"];

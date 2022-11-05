@@ -19,6 +19,7 @@ import xmlJobs from "../../assets/jobs.xml";
 import xmlSkills from "../../assets/skills.xml";
 import txtSkillsTranslation from "../../assets/fr/skills.txt";
 import txtMonstersTranslation from "../../assets/fr/monsters.txt";
+import { v4 as uuid } from "uuid";
 //import fs from "fs";
 
 export const newWriteService = (): WriteService => {
@@ -29,8 +30,19 @@ export const newWriteService = (): WriteService => {
       testDb.characters = [...newCharacters, ...characters];
       return newAppResult(undefined);
     },
+    addNewCharacter: (c: Character) => {
+      const newCharacters = [c, ...testDb.characters].map((c, index) => ({
+        ...c,
+        position: index,
+        id: uuid() as Character["id"],
+      }));
+      testDb.characters = [...newCharacters];
+      return newAppResult(undefined);
+    },
   };
 };
+
+/** ############################ */
 
 const migrate = () => {
   testDb.characters = fakeCharacters.map((c) => ({
@@ -47,6 +59,8 @@ const migrate = () => {
     en: {},
   };
 };
+
+/** ############################ */
 
 const importTranslations = (
   txtTranslations: string

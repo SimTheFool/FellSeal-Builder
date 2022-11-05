@@ -6,4 +6,5 @@ export type WriteService = {
   persistCharacters: (
     characters: Character[]
   ) => AppResult<undefined, AppErrors<string>>;
+  addNewCharacter: (c: Character) => AppResult<undefined, AppErrors<string>>;
 };

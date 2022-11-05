@@ -1,4 +1,7 @@
-import { UnvalidatedCharacter } from "@domain/character/Character.js";
+import {
+  Character,
+  UnvalidatedCharacter,
+} from "@domain/character/Character.js";
 import { newUnvalidatedCharacter } from "@fixtures/characters";
 import assert from "node:assert";
 import test from "node:test";
@@ -26,14 +29,14 @@ const waitForCharacter = async (
   queries: Queries,
   character: UnvalidatedCharacter
 ) =>
-  new Promise((res, rej) =>
+  new Promise<[Character, Character[]]>((res, rej) =>
     queries.getAllCharacters().on(
       (characters) => {
         const savedCharacter = characters.find(
           (c) => c.name === character.name
         );
         if (!savedCharacter) return;
-        res(savedCharacter);
+        res([savedCharacter, characters]);
       },
       (err) => assert.fail("could not get characters")
     )
@@ -64,7 +67,7 @@ test("should get characters on change command", async (t) => {
   const { queries, commands } = newClient();
   const waitForArtie = waitForCharacter(queries, artie);
   commands.persistCharacters([artie]);
-  const savedArtie = await waitForArtie;
+  const [savedArtie] = await waitForArtie;
   assert.deepStrictEqual(savedArtie, artie);
 });
 
@@ -87,4 +90,17 @@ test("should not trigger when unsusbribed", async (t) => {
   commands.persistCharacters([davad]);
 
   tracker.verify();
+});
+
+test("should add empty new character with only position 0 and id", async (t) => {
+  const { queries, commands } = newClient();
+  const waitForEmpty = waitForCharacter(queries, {});
+  commands.addNewCharacter({});
+  const [savedEmpty] = await waitForEmpty;
+  assert.equal(savedEmpty.position, 0);
+  assert.equal(typeof savedEmpty.id, "string");
+  assert.ok(!savedEmpty.job);
+  assert.ok(!savedEmpty.ability);
+  assert.ok(!savedEmpty.passives);
+  assert.ok(!savedEmpty.portrait);
 });

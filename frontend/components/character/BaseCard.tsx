@@ -1,4 +1,4 @@
-import { Box, Card, Center, SimpleGrid, Title } from "@mantine/core";
+import { Box, Card, CardProps, Center, SimpleGrid, Title } from "@mantine/core";
 import Image from "next/image";
 import { MainJobSkillText, SecondaryJobSkillText } from "../job/JobText";
 import { PassiveSkillText } from "../job/SkillText";
@@ -11,6 +11,7 @@ type BaseCardProps = {
   ability?: string;
   passives?: readonly [readonly [string, string], readonly [string, string]];
   counter?: readonly [string, string];
+  onClick?: () => void;
 };
 
 export const BaseCard = ({
@@ -20,6 +21,7 @@ export const BaseCard = ({
   ability,
   passives,
   counter,
+  onClick,
 }: BaseCardProps) => {
   return (
     <Card
@@ -31,6 +33,7 @@ export const BaseCard = ({
         margin: 10,
         color: t.colors.white[0],
       })}
+      onClick={onClick}
     >
       <Card.Section>
         <Image
