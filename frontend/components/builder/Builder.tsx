@@ -3,12 +3,12 @@ import { newClient, AppErrors, Character, Job } from "builder";
 import { useBuilderQuery } from "../../utils/store/useQuery";
 import { keyBy } from "lodash";
 
-const { queries, commands } = newClient();
+const { queries } = newClient();
 
 type BuilderContext = {
   characters?: Character[];
   charactersError?: AppErrors<string>;
-  jobsByName?: Record<Job["name"], Job>;
+  jobsByHash?: Record<Job["hash"], Job>;
   jobsError?: AppErrors<string>;
 };
 const builderContext = createContext<BuilderContext>({});
@@ -19,14 +19,14 @@ export const BuilderProvider = ({ children }: { children: JSX.Element }) => {
   )();
   const [jobs, jobsError] = useBuilderQuery(queries.getAllJobs)();
 
-  const jobsByName = useMemo(() => jobs && keyBy(jobs, (j) => j.name), [jobs]);
+  const jobsByHash = useMemo(() => jobs && keyBy(jobs, (j) => j.hash), [jobs]);
 
   return (
     <builderContext.Provider
       value={{
         characters,
         charactersError,
-        jobsByName,
+        jobsByHash,
         jobsError,
       }}
     >

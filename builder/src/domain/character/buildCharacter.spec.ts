@@ -8,12 +8,12 @@ const fakeCharacter = newUnvalidatedCharacter("arost");
 
 const fakeCharacterWithoutMain = {
   ...fakeCharacter,
-  main: undefined,
+  job: undefined,
 };
 
 const fakeCharacterWithoutActive = {
   ...fakeCharacter,
-  active: undefined,
+  ability: undefined,
 };
 
 const fakeCharacterWithoutPassives = {

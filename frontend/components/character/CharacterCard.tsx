@@ -10,7 +10,8 @@ import {
 import { Character } from "builder";
 import Image from "next/image";
 import portrait1 from "../../assets/portraits/3-Large.png";
-import { SkillText } from "../job/SkillText";
+import { MainJobSkillText, SecondaryJobSkillText } from "../job/JobText";
+import { PassiveSkillText } from "../job/SkillText";
 import { portraitHeight, portraitWidth } from "../style";
 
 type CharacterCardProps = {
@@ -20,8 +21,8 @@ type CharacterCardProps = {
 export const CharacterCard = ({
   character: {
     name,
-    main,
-    active,
+    job,
+    ability,
     passives: [firstPassive, secondPassive],
   },
 }: CharacterCardProps) => {
@@ -59,16 +60,17 @@ export const CharacterCard = ({
           })}
         >
           <Center>
-            <Text size="md" weight={900}>
-              {main}
-            </Text>
+            <MainJobSkillText jobHash={job} />
             <Space w="xs" />
-            <Text size="md">{active}</Text>
+            <SecondaryJobSkillText jobHash={ability} />
           </Center>
           <Center>
-            <SkillText jobHash={firstPassive[0]} skillHash={firstPassive[1]} />
+            <PassiveSkillText
+              jobHash={firstPassive[0]}
+              skillHash={firstPassive[1]}
+            />
             <Space w="xs" />
-            <SkillText
+            <PassiveSkillText
               jobHash={secondPassive[0]}
               skillHash={secondPassive[1]}
             />

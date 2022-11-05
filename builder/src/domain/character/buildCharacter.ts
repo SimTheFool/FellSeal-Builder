@@ -35,12 +35,12 @@ type ValidatorMap = {
 };
 
 const validatorMap: ValidatorMap = {
-  main: [
+  job: [
     (v) => {
       if (!v) return CHARACTER_BUILD_ERRORS.MISSING_MAIN;
     },
   ],
-  active: [
+  ability: [
     (v) => {
       if (!v) return CHARACTER_BUILD_ERRORS.MISSING_ACTIVE;
     },

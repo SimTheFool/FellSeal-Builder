@@ -21,7 +21,7 @@ test("should get fr translation", async (t) => {
   );
   assert.equal(
     translation["demk-c1-desc"],
-    "{counter-offensive-action} par une unité à distance {counter-by-inflicting} {addnegative}."
+    "$t(counter-offensive-action) par une unité à distance $t(counter-by-inflicting) $t(addnegative)."
   );
-  assert.equal(translation["alch-a1"], "{barrier-spell} Massive");
+  assert.equal(translation["alch-a1"], "$t(barrier-spell) Massive");
 });

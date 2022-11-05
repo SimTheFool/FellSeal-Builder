@@ -56,8 +56,8 @@ const importTranslations = (
     .replace(/\t/g, "") // Remove tab
     .replace(/([\r\s\n]+)$/g, "") // Delete final empty lines
     .replace(/"/g, '\\"') // Escape double quote
-    .replace(/{(.*)}/g, "$t($1)")
-    .replace(/[;\s]*([A-Za-z0-9-]+)[;\s]*=((?!").+)/gm, '\n"$1": "$2",') // Parse to json sting
+    .replace(/{([A-Za-z0-9-]*)}/g, "$t($1)")
+    .replace(/[;\s]*([A-Za-z0-9-]+)[;\s]*=((?!").+)/gm, '\n"$1": "$2",') // Parse to json string
     .replace(/([A-Za-z]+-[A-Za-z0-9-]*)/g, (x) => x.toLowerCase()) // replace uppercased keys
     .slice(0, -1); // Delete last coma
 
@@ -96,6 +96,7 @@ const importJobAndSkills = (xmlJobs: string, xmlSkills: string): Job[] => {
     const { actives, passives, counters } = skillIds.reduce(
       ({ actives, passives, counters }, id) => {
         const { HashName, Name, SpellType } = parsedSkillsByHashname[id];
+        const skillHash = HashName.toLowerCase();
         const match = id.match(/^.*([A | P | C])\d+$/);
         const skillType = match?.[1] || "N/A";
 
@@ -106,16 +107,16 @@ const importJobAndSkills = (xmlJobs: string, xmlSkills: string): Job[] => {
           actives: [
             ...actives,
             ...(skillType === "A"
-              ? [newActiveSkill(HashName, Name, SpellType)]
+              ? [newActiveSkill(skillHash, Name, SpellType)]
               : []),
           ],
           passives: [
             ...passives,
-            ...(skillType === "P" ? [newPassiveSkill(HashName, Name)] : []),
+            ...(skillType === "P" ? [newPassiveSkill(skillHash, Name)] : []),
           ],
           counters: [
             ...counters,
-            ...(skillType === "C" ? [newCounterSkill(HashName, Name)] : []),
+            ...(skillType === "C" ? [newCounterSkill(skillHash, Name)] : []),
           ],
         };
       },
@@ -136,7 +137,9 @@ const importJobAndSkills = (xmlJobs: string, xmlSkills: string): Job[] => {
         : xmlJob.noVicariousGiven === true
         ? "story"
         : "character";
-    return newJob(xmlJob.ClassName, actives, passives, counters, jobType);
+
+    const hash = xmlJob.ClassName.toLowerCase();
+    return newJob(hash, actives, passives, counters, jobType);
   });
 
   return jobs;

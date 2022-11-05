@@ -1,8 +1,10 @@
-import { Nominal } from "utils";
 import { ActiveSkill, CounterSkill, PassiveSkill } from "./Skill";
 
 export type Job = {
-  name: string;
+  hash: string;
+  title: string;
+  ability: string;
+  description: string;
   actives: ActiveSkill[];
   passives: PassiveSkill[];
   counters: CounterSkill[];
@@ -12,14 +14,17 @@ export type Job = {
 export type JobType = "character" | "story" | "badge" | "bzil" | "monster";
 
 export const newJob = (
-  name: string,
+  hash: string,
   actives: ActiveSkill[],
   passives: PassiveSkill[],
   counters: CounterSkill[],
   type: JobType
 ): Job => {
   return {
-    name,
+    hash,
+    title: `${hash}-title`,
+    ability: `${hash}-ability`,
+    description: `${hash}-desc`,
     actives,
     passives,
     counters,

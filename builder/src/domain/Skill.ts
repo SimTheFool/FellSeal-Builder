@@ -1,7 +1,7 @@
 export type Skill = PassiveSkill | ActiveSkill | CounterSkill;
 
 type BaseSkill = {
-  id: string;
+  hash: string;
   name: string;
 };
 
@@ -12,23 +12,23 @@ export type ActiveSkill = BaseSkill & {
   type: "active";
 };
 export const newActiveSkill = (
-  id: string,
+  hash: string,
   name: string,
   skillType: SkillType
 ): ActiveSkill => {
-  return { id, name, skillType, type: "active" };
+  return { hash, name, skillType, type: "active" };
 };
 
 export type PassiveSkill = BaseSkill & {
   type: "passive";
 };
-export const newPassiveSkill = (id: string, name: string): PassiveSkill => {
-  return { id, name, type: "passive" };
+export const newPassiveSkill = (hash: string, name: string): PassiveSkill => {
+  return { hash, name, type: "passive" };
 };
 
 export type CounterSkill = BaseSkill & {
   type: "counter";
 };
-export const newCounterSkill = (id: string, name: string): CounterSkill => {
-  return { id, name, type: "counter" };
+export const newCounterSkill = (hash: string, name: string): CounterSkill => {
+  return { hash, name, type: "counter" };
 };
