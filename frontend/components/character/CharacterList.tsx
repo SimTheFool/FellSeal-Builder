@@ -3,7 +3,9 @@ import { useBoundingClientRect } from "../../utils/hooks/useBoundingClientRect";
 import { useDOMRef } from "../../utils/hooks/useDOMRef";
 import { useBuilder } from "../builder/Builder";
 import { mediaQuery, portraitWidth } from "../style";
+import { BaseCard } from "./BaseCard";
 import { CharacterCard } from "./CharacterCard";
+import { NewCard } from "./NewCard";
 
 type CharacterListProps = {};
 
@@ -16,7 +18,7 @@ export const CharacterList = ({}: CharacterListProps) => {
   const itemBaseWidth = portraitWidth + 20;
   const capacity = Math.floor(listWidth / itemBaseWidth);
   const length = characters?.length || 0;
-  const present = length % capacity;
+  const present = (length + 1) % capacity;
   const missing = present ? capacity - present : present;
 
   return (
@@ -40,7 +42,7 @@ export const CharacterList = ({}: CharacterListProps) => {
         paddingLeft: 20,
       })}
     >
-      <CharacterCard />
+      <NewCard label={"Nouveau"} />
       {(characters || []).map((c) => (
         <CharacterCard character={c} />
       ))}
