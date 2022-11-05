@@ -9,11 +9,12 @@ type Counter = readonly [job: Job["hash"], skill: CounterSkill["hash"]];
 
 export type Character = {
   id: Id;
-  name?: Name;
+  name: Name;
   job: Job["hash"];
   ability: Job["hash"];
   passives: readonly [Passive, Passive];
   counter: Counter;
+  portrait: string;
 };
 
 export type UnvalidatedCharacter = {
@@ -22,6 +23,7 @@ export type UnvalidatedCharacter = {
   ability?: Job["hash"];
   passives?: readonly [Passive | undefined, Passive | undefined];
   counter?: Counter;
+  portrait?: string;
 };
 
 export type CharacterId = Id;

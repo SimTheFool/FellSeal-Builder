@@ -3,8 +3,8 @@ import { Job, Skill } from "builder";
 import { useTranslate } from "../translations/Translate";
 
 type SkillText = {
-  jobHash: Job["hash"];
-  skillHash: Skill["hash"];
+  jobHash?: Job["hash"];
+  skillHash?: Skill["hash"];
   sx?: (theme: MantineTheme) => CSSObject;
 } & TextProps;
 
@@ -23,10 +23,11 @@ export const PassiveSkillText = ({
       sx={(t) => ({
         ...sx?.(t),
         color: t.colors.dark[3],
+        visibility: skillHash ? "visible" : "hidden",
       })}
       {...textProps}
     >
-      {t(skillHash)}
+      {skillHash ? t(skillHash) : "hidden"}
     </Text>
   );
 };

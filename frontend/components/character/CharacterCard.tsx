@@ -1,32 +1,24 @@
-import {
-  Box,
-  Card,
-  Center,
-  SimpleGrid,
-  Space,
-  Text,
-  Title,
-} from "@mantine/core";
+import { Box, Card, Center, SimpleGrid, Title } from "@mantine/core";
 import { Character } from "builder";
 import Image from "next/image";
-import portrait1 from "../../assets/portraits/3-Large.png";
 import { MainJobSkillText, SecondaryJobSkillText } from "../job/JobText";
 import { PassiveSkillText } from "../job/SkillText";
 import { portraitHeight, portraitWidth } from "../style";
 
 type CharacterCardProps = {
-  character: Character;
+  character?: Character;
 };
 
-export const CharacterCard = ({
-  character: {
+export const CharacterCard = ({ character }: CharacterCardProps) => {
+  const {
     name,
+    portrait,
     job,
     ability,
-    passives: [firstPassive, secondPassive],
+    passives: [firstPassive, secondPassive] = [],
     counter,
-  },
-}: CharacterCardProps) => {
+  } = character || {};
+
   return (
     <Card
       radius="md"
@@ -39,7 +31,11 @@ export const CharacterCard = ({
       })}
     >
       <Card.Section>
-        <Image src={portrait1} width={portraitWidth} height={portraitHeight} />
+        <Image
+          src={`/portraits/${portrait ?? "default.png"}`}
+          width={portraitWidth}
+          height={portraitHeight}
+        />
       </Card.Section>
       <Box
         sx={(t) => ({
@@ -58,8 +54,15 @@ export const CharacterCard = ({
             background: `linear-gradient(0deg, rgba(0,0,0,1) 10%, rgba(0,0,0,0.4906337535014006) 80%, rgba(255,0,0,0) 100%)`,
           })}
         >
-          <Title order={3} align={"center"} size="h3">
-            {name}
+          <Title
+            order={3}
+            align={"center"}
+            size="h3"
+            sx={(t) => ({
+              visibility: name ? "visible" : "hidden",
+            })}
+          >
+            {name ?? "hidden"}
           </Title>
           <SimpleGrid cols={1} spacing={0}>
             <Center>
@@ -83,8 +86,8 @@ export const CharacterCard = ({
           <SimpleGrid cols={2} spacing={0}>
             <Center>
               <PassiveSkillText
-                jobHash={firstPassive[0]}
-                skillHash={firstPassive[1]}
+                jobHash={firstPassive?.[0]}
+                skillHash={firstPassive?.[1]}
                 sx={(t) => ({
                   lineHeight: `${t.fontSizes.sm}px`,
                 })}
@@ -93,16 +96,16 @@ export const CharacterCard = ({
             <div></div>
             <Center>
               <PassiveSkillText
-                jobHash={secondPassive[0]}
-                skillHash={secondPassive[1]}
+                jobHash={secondPassive?.[0]}
+                skillHash={secondPassive?.[1]}
                 sx={(t) => ({
                   lineHeight: `${t.fontSizes.sm}px`,
                 })}
               />
             </Center>
             <PassiveSkillText
-              jobHash={counter[0]}
-              skillHash={counter[1]}
+              jobHash={counter?.[0]}
+              skillHash={counter?.[1]}
               lineClamp={1}
               px="sm"
               sx={(t) => ({

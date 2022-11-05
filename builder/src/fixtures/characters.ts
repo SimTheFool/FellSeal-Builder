@@ -6,6 +6,7 @@ import {
 export const characters = [
   {
     id: "001",
+    portrait: "4-Large.png",
     name: "Julian",
     job: "lich",
     ability: "drui",
@@ -17,6 +18,7 @@ export const characters = [
   },
   {
     id: "002",
+    portrait: "3-Large.png",
     name: "Axel",
     job: "temp",
     ability: "sorc",

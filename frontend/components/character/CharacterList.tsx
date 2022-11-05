@@ -40,6 +40,7 @@ export const CharacterList = ({}: CharacterListProps) => {
         paddingLeft: 20,
       })}
     >
+      <CharacterCard />
       {(characters || []).map((c) => (
         <CharacterCard character={c} />
       ))}
