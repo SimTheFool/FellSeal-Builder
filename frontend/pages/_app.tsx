@@ -12,6 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         colorScheme: "dark",
         colors: {
           back_grey: ["#26262688"],
+          white: ["#DDD"],
         },
         shadows: {
           xs: "0px 0px 7px rgba(0, 0, 0, 0.65)",
@@ -21,9 +22,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           md: 20,
         },
         fontSizes: {
-          xs: 10,
+          xs: 11,
           sm: 14,
-          md: 20,
+          md: 19,
           lg: 22,
           xl: 26,
         },
@@ -46,6 +47,13 @@ function MyApp({ Component, pageProps }: AppProps) {
             "@font-face": {
               fontFamily: "Baskerville",
               src: `url('/fonts/baskerville.ttf')`,
+              fontStyle: "normal",
+            },
+          },
+          {
+            "@font-face": {
+              fontFamily: "Libre Baskerville",
+              src: `url('/fonts/LibreBaskerville-Regular.ttf')`,
               fontStyle: "normal",
             },
           },

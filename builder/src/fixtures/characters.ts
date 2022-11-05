@@ -13,6 +13,7 @@ export const characters = [
       ["knig", "knig-p1"],
       ["blad", "blad-p1"],
     ] as const,
+    counter: ["gunn", "gunn-c1"],
   },
   {
     id: "002",
@@ -23,6 +24,7 @@ export const characters = [
       ["lich", "lich-p1"],
       ["drui", "drui-p1"],
     ] as const,
+    counter: ["alch", "alch-c1"],
   },
 ] as unknown as Character[];
 
@@ -36,4 +38,5 @@ export const newUnvalidatedCharacter = (
     ["wiza", "wiza-p2"],
     ["knig", "knig-p1"],
   ] as const,
+  counter: ["wiza", "wiza-c1"],
 });
