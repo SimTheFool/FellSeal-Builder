@@ -7,6 +7,16 @@ type Name = NominalString<"character_name">;
 type Passive = readonly [job: Job["hash"], skill: PassiveSkill["hash"]];
 type Counter = readonly [job: Job["hash"], skill: CounterSkill["hash"]];
 
+export type CharacterTag =
+  | "support"
+  | "tank"
+  | "heal"
+  | "physical"
+  | "magickal"
+  | "alteration"
+  | "mobility"
+  | "special";
+
 export type Character = {
   id: Id;
   position: number;
@@ -16,6 +26,7 @@ export type Character = {
   passives: readonly [Passive, Passive];
   counter: Counter;
   portrait: string;
+  tags?: CharacterTag[];
 };
 
 export type UnvalidatedCharacter = {
@@ -25,6 +36,7 @@ export type UnvalidatedCharacter = {
   passives?: readonly [Passive | undefined, Passive | undefined];
   counter?: Counter;
   portrait?: string;
+  tags?: CharacterTag[];
 };
 
 export type CharacterId = Id;

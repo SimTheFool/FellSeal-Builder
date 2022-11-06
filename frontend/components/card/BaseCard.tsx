@@ -1,21 +1,11 @@
-import { CSSProperties } from "@emotion/serialize";
-import {
-  Box,
-  Card,
-  CardProps,
-  Center,
-  CSSObject,
-  MantineTheme,
-  SimpleGrid,
-  Sx,
-  Title,
-  Transition,
-} from "@mantine/core";
+import { Box, Card, Center, SimpleGrid, Title } from "@mantine/core";
+import { CharacterTag } from "builder";
 import Image from "next/image";
 import { useState } from "react";
 import { MainJobSkillText, SecondaryJobSkillText } from "../job/JobText";
 import { PassiveSkillText } from "../job/SkillText";
 import { portraitHeight, portraitWidth } from "../style";
+import { TagList } from "../tags/TagList";
 
 type BaseCardProps = {
   name?: string;
@@ -24,6 +14,7 @@ type BaseCardProps = {
   ability?: string;
   passives?: readonly [readonly [string, string], readonly [string, string]];
   counter?: readonly [string, string];
+  tags?: CharacterTag[];
   onClick?: () => void;
 };
 
@@ -34,6 +25,7 @@ export const BaseCard = ({
   ability,
   passives,
   counter,
+  tags = [],
   onClick,
 }: BaseCardProps) => {
   const [hovered, setHovered] = useState(false);
@@ -59,6 +51,17 @@ export const BaseCard = ({
           height={portraitHeight}
         />
       </Card.Section>
+
+      <Box
+        sx={(t) => ({
+          position: "absolute",
+          top: 0,
+          left: 0,
+        })}
+      >
+        <TagList tags={tags} p="md" />
+      </Box>
+
       <Box
         sx={(t) => ({
           position: "absolute",
@@ -112,6 +115,16 @@ export const BaseCard = ({
           />
         </SimpleGrid>
       </Box>
+
+      {/* <Box
+        sx={(t) => ({
+          position: "absolute",
+          top: 0,
+          right: 0,
+        })}
+      >
+        Controls
+      </Box> */}
     </Card>
   );
 };

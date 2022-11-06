@@ -3,7 +3,11 @@ import { newQueries } from "./queries";
 import { newCommands } from "./commands";
 
 export { AppResult } from "@utils/result/Result";
-export { Character, UnvalidatedCharacter } from "@domain/character/Character";
+export {
+  Character,
+  UnvalidatedCharacter,
+  CharacterTag,
+} from "@domain/character/Character";
 export { Job } from "@domain/Job";
 export { Skill, ActiveSkill, CounterSkill, PassiveSkill } from "@domain/Skill";
 export { AppQuery } from "@utils/query";

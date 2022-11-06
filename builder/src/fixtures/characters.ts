@@ -16,6 +16,7 @@ export const characters = [
       ["blad", "blad-p1"],
     ] as const,
     counter: ["gunn", "gunn-c1"],
+    tags: ["physical", "magickal"],
   },
   {
     id: "002",
@@ -29,6 +30,7 @@ export const characters = [
       ["drui", "drui-p1"],
     ] as const,
     counter: ["alch", "alch-c1"],
+    tags: ["special", "tank", "alteration", "physical", "magickal"],
   },
 ] as unknown as Character[];
 

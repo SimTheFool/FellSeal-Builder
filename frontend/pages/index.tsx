@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
-import { BuilderProvider } from "../components/builder/Builder";
-import { CharacterList } from "../components/character/CharacterList";
+import { CharacterList } from "../components/CharacterList";
 import { Layout } from "../components/Layout";
 import { Title } from "../components/Title";
 

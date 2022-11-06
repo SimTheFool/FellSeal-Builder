@@ -1,10 +1,10 @@
 import { Box } from "@mantine/core";
-import { useBoundingClientRect } from "../../utils/hooks/useBoundingClientRect";
-import { useDOMRef } from "../../utils/hooks/useDOMRef";
-import { useBuilder } from "../builder/Builder";
-import { mediaQuery, portraitWidth } from "../style";
-import { CharacterCard } from "./CharacterCard";
-import { NewCard } from "./NewCard";
+import { useBoundingClientRect } from "../utils/hooks/useBoundingClientRect";
+import { useDOMRef } from "../utils/hooks/useDOMRef";
+import { useBuilder } from "./builder/Builder";
+import { CharacterCard } from "./card/CharacterCard";
+import { NewCard } from "./card/NewCard";
+import { portraitWidth, mediaQuery } from "./style";
 
 type CharacterListProps = {};
 
