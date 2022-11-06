@@ -6,7 +6,7 @@ import {
 import i18n from "i18next";
 import { useEffect, useState } from "react";
 import { newClient } from "builder";
-import { useBuilderQuery } from "../../utils/store/useQuery";
+import { useBuilderQuery } from "../builder/useQuery";
 
 const { queries } = newClient();
 

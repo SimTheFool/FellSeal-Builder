@@ -1,5 +1,6 @@
 import { CSSObject, MantineTheme, Sx, Text, TextProps } from "@mantine/core";
 import { Job, Skill } from "builder";
+import { PlaceholdingText } from "../../utils/components/PlaceholdingText";
 import { useTranslate } from "../translations/Translate";
 
 type SkillText = {
@@ -16,18 +17,18 @@ export const PassiveSkillText = ({
 }: SkillText) => {
   const { t } = useTranslate();
   return (
-    <Text
+    <PlaceholdingText
       size="sm"
       weight={900}
       color="dimmed"
       sx={(t) => ({
         ...sx?.(t),
         color: t.colors.dark[3],
-        visibility: skillHash ? "visible" : "hidden",
+        visibility: skillHash ? "inherit" : "hidden",
       })}
       {...textProps}
     >
-      {skillHash ? t(skillHash) : "hidden"}
-    </Text>
+      {skillHash && t(skillHash)}
+    </PlaceholdingText>
   );
 };

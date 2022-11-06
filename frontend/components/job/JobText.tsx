@@ -1,12 +1,6 @@
-import {
-  CSSObject,
-  MantineStyleSystemProps,
-  MantineTheme,
-  Sx,
-  Text,
-  TextProps,
-} from "@mantine/core";
+import { CSSObject, MantineTheme, TextProps } from "@mantine/core";
 import { Job } from "builder";
+import { PlaceholdingText } from "../../utils/components/PlaceholdingText";
 import { useBuilder } from "../builder/Builder";
 import { useTranslate } from "../translations/Translate";
 
@@ -41,16 +35,5 @@ const JobSkillText = ({ jobHash, sx, ...textProps }: JobText) => {
   const { jobsByHash } = useBuilder();
   const job = jobHash ? jobsByHash?.[jobHash] : undefined;
 
-  return (
-    <Text
-      size="md"
-      sx={(t) => ({
-        ...sx?.(t),
-        visibility: job ? "visible" : "hidden",
-      })}
-      {...textProps}
-    >
-      {job ? t(job.title) : "hidden"}
-    </Text>
-  );
+  return <PlaceholdingText sx={sx}>{job && t(job.title)}</PlaceholdingText>;
 };

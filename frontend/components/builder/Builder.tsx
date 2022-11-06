@@ -1,9 +1,9 @@
 import { createContext, useContext, useMemo } from "react";
 import { newClient, AppErrors, Character, Job } from "builder";
-import { useBuilderQuery } from "../../utils/store/useQuery";
+import { useBuilderQuery } from "./useQuery";
 import { keyBy } from "lodash";
 import { UnvalidatedCharacter } from "builder/dist/domain/character/Character";
-import { useBuilderCommand } from "../../utils/store/useCommand";
+import { useBuilderCommand } from "./useCommand";
 
 const { queries, commands } = newClient();
 
