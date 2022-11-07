@@ -39,6 +39,11 @@ export const newWriteService = (): WriteService => {
       testDb.characters = [...newCharacters];
       return newAppResult(undefined);
     },
+    deleteCharacter: (id: Character["id"]) => {
+      const newCharacters = testDb.characters.filter((c) => c.id !== id);
+      testDb.characters = newCharacters;
+      return newAppResult(undefined);
+    },
   };
 };
 

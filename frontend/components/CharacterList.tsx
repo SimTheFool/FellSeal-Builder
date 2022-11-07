@@ -41,7 +41,7 @@ export const CharacterList = ({}: CharacterListProps) => {
         paddingLeft: 20,
       })}
     >
-      <NewCard label={"Nouveau"} onClick={() => addNewCharacter?.({})} />
+      <NewCard onClick={() => addNewCharacter?.({})} />
 
       {(characters || []).map((c) => (
         <CharacterCard character={c} />

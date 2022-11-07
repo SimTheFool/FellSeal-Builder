@@ -7,4 +7,7 @@ export type WriteService = {
     characters: Character[]
   ) => AppResult<undefined, AppErrors<string>>;
   addNewCharacter: (c: Character) => AppResult<undefined, AppErrors<string>>;
+  deleteCharacter: (
+    id: Character["id"]
+  ) => AppResult<undefined, AppErrors<string>>;
 };

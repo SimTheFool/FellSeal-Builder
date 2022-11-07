@@ -1,12 +1,23 @@
-import { CardProps } from "@mantine/core";
-import { Character } from "builder";
 import { BaseCard } from "./BaseCard";
+import { BaseCardAside } from "./BaseCardAside";
+import { BaseCardFooter } from "./BaseCardFooter";
+import { BaseCardPortrait } from "./BaseCardPortrait";
+import { BaseCardSubtitle } from "./BaseCardSubtitle";
+import { BaseCardTitle } from "./BaseCardTitle";
 
 type NewCardProps = {
-  label: string;
   onClick: () => void;
 };
 
-export const NewCard = ({ label, onClick }: NewCardProps) => {
-  return <BaseCard name={label} onClick={onClick} />;
+export const NewCard = ({ onClick }: NewCardProps) => {
+  return (
+    <BaseCard
+      onClick={onClick}
+      background={<BaseCardPortrait />}
+      title={<BaseCardTitle name="Nouveau" />}
+      subtitle={<BaseCardSubtitle />}
+      footer={<BaseCardFooter display={true} />}
+      aside={<BaseCardAside />}
+    />
+  );
 };

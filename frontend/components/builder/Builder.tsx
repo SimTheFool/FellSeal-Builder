@@ -1,14 +1,20 @@
 import { createContext, useContext, useMemo } from "react";
-import { newClient, AppErrors, Character, Job } from "builder";
+import {
+  newClient,
+  AppErrors,
+  Character,
+  Job,
+  UnvalidatedCharacter,
+} from "builder";
 import { useBuilderQuery } from "./useQuery";
 import { keyBy } from "lodash";
-import { UnvalidatedCharacter } from "builder/dist/domain/character/Character";
 import { useBuilderCommand } from "./useCommand";
 
 const { queries, commands } = newClient();
 
 type BuilderContext = {
   addNewCharacter?: (unvalidatedCharacter: UnvalidatedCharacter) => void;
+  deleteCharacter?: (id: Character["id"]) => void;
   characters?: Character[];
   charactersError?: AppErrors<string>;
   jobsByHash?: Record<Job["hash"], Job>;
@@ -26,10 +32,13 @@ export const BuilderProvider = ({ children }: { children: JSX.Element }) => {
 
   const [addNewCharacter] = useBuilderCommand(commands.addNewCharacter);
 
+  const [deleteCharacter] = useBuilderCommand(commands.deleteCharacter);
+
   return (
     <builderContext.Provider
       value={{
         addNewCharacter,
+        deleteCharacter,
         characters,
         charactersError,
         jobsByHash,

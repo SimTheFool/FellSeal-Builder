@@ -42,6 +42,21 @@ const waitForCharacter = async (
     )
   );
 
+const waitForOccurence = async (queries: Queries, occurence: number) => {
+  let count = 0;
+  return new Promise<Character[]>((res, rej) =>
+    queries.getAllCharacters().on(
+      (characters) => {
+        if (count === occurence) {
+          res(characters);
+        }
+        count++;
+      },
+      (err) => assert.fail("could not get characters")
+    )
+  );
+};
+
 /** Tests */
 
 test("should save character", (t) => {
@@ -103,4 +118,16 @@ test("should add empty new character with only position 0 and id", async (t) => 
   assert.ok(!savedEmpty.ability);
   assert.ok(!savedEmpty.passives);
   assert.ok(!savedEmpty.portrait);
+});
+
+test("should delete character from id", async (t) => {
+  t.runOnly(true);
+  const idToDelete = "001" as Character["id"];
+  const { queries, commands } = newClient();
+  const waitForRefetch1 = waitForOccurence(queries, 1);
+  commands.deleteCharacter(idToDelete);
+  const charactersWithDeleted = await waitForRefetch1;
+
+  const found = charactersWithDeleted.find((c) => c.id === idToDelete);
+  assert.equal(found, undefined);
 });

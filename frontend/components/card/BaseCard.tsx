@@ -1,35 +1,27 @@
-import { Box, Card, Center, SimpleGrid, Title } from "@mantine/core";
-import { CharacterTag } from "builder";
+import { Box, Card, CardProps, SimpleGrid } from "@mantine/core";
 import Image from "next/image";
-import { useState } from "react";
-import { MainJobSkillText, SecondaryJobSkillText } from "../job/JobText";
-import { PassiveSkillText } from "../job/SkillText";
+import { HTMLProps, ReactNode, useState } from "react";
 import { portraitHeight, portraitWidth } from "../style";
-import { TagList } from "../tags/TagList";
 
 type BaseCardProps = {
-  name?: string;
-  portrait?: string;
-  job?: string;
-  ability?: string;
-  passives?: readonly [readonly [string, string], readonly [string, string]];
-  counter?: readonly [string, string];
-  tags?: CharacterTag[];
-  onClick?: () => void;
-};
+  background?: ReactNode;
+  title?: ReactNode;
+  subtitle?: ReactNode;
+  footer?: ReactNode;
+  aside?: ReactNode;
+  controls?: ReactNode;
+} & Omit<CardProps, "children" | "sx"> &
+  Omit<HTMLProps<HTMLLIElement>, "ref" | "children" | "title" | "controls">;
 
 export const BaseCard = ({
-  name,
-  portrait,
-  job,
-  ability,
-  passives,
-  counter,
-  tags = [],
-  onClick,
+  background,
+  title,
+  subtitle,
+  footer,
+  aside,
+  controls,
+  ...props
 }: BaseCardProps) => {
-  const [hovered, setHovered] = useState(false);
-
   return (
     <Card
       radius="md"
@@ -40,17 +32,9 @@ export const BaseCard = ({
         margin: 10,
         color: t.colors.white[0],
       })}
-      onClick={onClick}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      {...props}
     >
-      <Card.Section>
-        <Image
-          src={`/portraits/${portrait ?? "default.png"}`}
-          width={portraitWidth}
-          height={portraitHeight}
-        />
-      </Card.Section>
+      <Card.Section>{background}</Card.Section>
 
       <Box
         sx={(t) => ({
@@ -59,7 +43,7 @@ export const BaseCard = ({
           left: 0,
         })}
       >
-        <TagList tags={tags} p="md" />
+        {aside}
       </Box>
 
       <Box
@@ -79,103 +63,22 @@ export const BaseCard = ({
             background: `linear-gradient(0deg, rgba(0,0,0,1) 10%, rgba(0,0,0,0.4906337535014006) 80%, rgba(255,0,0,0) 100%)`,
           })}
         >
-          <Title
-            order={3}
-            align={"center"}
-            size="h3"
-            sx={(t) => ({
-              visibility: name ? "inherit" : "hidden",
-            })}
-          >
-            {name ?? "hidden"}
-          </Title>
-          <SimpleGrid cols={1} spacing={0}>
-            <Center>
-              <MainJobSkillText
-                jobHash={job}
-                sx={(t) => ({
-                  lineHeight: `${t.fontSizes.sm}px`,
-                })}
-              />
-            </Center>
-            <Center>
-              <SecondaryJobSkillText
-                jobHash={ability}
-                sx={(t) => ({
-                  lineHeight: `${t.fontSizes.sm}px`,
-                })}
-              />
-            </Center>
-          </SimpleGrid>
-
-          <BaseCardFooter
-            passives={passives}
-            counter={counter}
-            hovered={hovered}
-          />
+          {title}
+          {subtitle}
+          {footer}
         </SimpleGrid>
       </Box>
 
-      {/* <Box
+      <Box
+        p="md"
         sx={(t) => ({
           position: "absolute",
           top: 0,
           right: 0,
         })}
       >
-        Controls
-      </Box> */}
+        {controls}
+      </Box>
     </Card>
-  );
-};
-
-type BaseCardFooterProps = Pick<BaseCardProps, "passives" | "counter"> & {
-  hovered: boolean;
-};
-const BaseCardFooter = ({
-  passives,
-  counter,
-  hovered,
-}: BaseCardFooterProps) => {
-  return (
-    <SimpleGrid
-      cols={2}
-      spacing={0}
-      sx={(t) => ({
-        opacity: hovered ? 1 : 0,
-        "transition-property": "opacity",
-        "transition-duration": "0.5s",
-      })}
-    >
-      <Center>
-        <PassiveSkillText
-          jobHash={passives?.[0][0]}
-          skillHash={passives?.[0][1]}
-          sx={(t) => ({
-            lineHeight: `${t.fontSizes.sm}px`,
-          })}
-        />
-      </Center>
-      <div></div>
-      <Center>
-        <PassiveSkillText
-          jobHash={passives?.[1][0]}
-          skillHash={passives?.[1][1]}
-          sx={(t) => ({
-            lineHeight: `${t.fontSizes.md}px`,
-          })}
-        />
-      </Center>
-      <PassiveSkillText
-        jobHash={counter?.[0]}
-        skillHash={counter?.[1]}
-        lineClamp={1}
-        px="md"
-        sx={(t) => ({
-          textAlign: "right",
-          lineHeight: `${t.fontSizes.md}px`,
-        })}
-      />
-    </SimpleGrid>
   );
 };
