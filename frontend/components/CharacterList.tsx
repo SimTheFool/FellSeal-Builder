@@ -1,4 +1,5 @@
 import { Box } from "@mantine/core";
+import { ReactNode } from "react";
 import { useBoundingClientRect } from "../utils/hooks/useBoundingClientRect";
 import { useDOMRef } from "../utils/hooks/useDOMRef";
 import { useBuilder } from "./builder/Builder";
@@ -41,26 +42,14 @@ export const CharacterList = ({}: CharacterListProps) => {
         paddingLeft: 20,
       })}
     >
-      <Box
-        sx={(t) => ({
-          marginBottom: 15,
-          marginLeft: 5,
-          marginRight: 5,
-        })}
-      >
+      <ListItem>
         <NewCard onClick={() => addNewCharacter?.({})} />
-      </Box>
+      </ListItem>
 
       {(characters || []).map((c) => (
-        <Box
-          sx={(t) => ({
-            marginBottom: 15,
-            marginLeft: 5,
-            marginRight: 5,
-          })}
-        >
+        <ListItem>
           <CharacterCard character={c} key={c.id} />
-        </Box>
+        </ListItem>
       ))}
 
       {new Array(missing || 0).fill(1).map(() => (
@@ -71,6 +60,24 @@ export const CharacterList = ({}: CharacterListProps) => {
           })}
         ></Box>
       ))}
+    </Box>
+  );
+};
+
+type ListItempProps = { children: ReactNode };
+const ListItem = ({ children }: ListItempProps) => {
+  return (
+    <Box
+      sx={(t) => ({
+        [mediaQuery.enoughHeight]: {
+          marginBottom: 15,
+        },
+        marginBottom: 0,
+        marginLeft: 5,
+        marginRight: 5,
+      })}
+    >
+      {children}
     </Box>
   );
 };
