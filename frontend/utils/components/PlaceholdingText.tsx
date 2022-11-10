@@ -1,5 +1,5 @@
 import { CSSObject, MantineTheme, Sx, Text, TextProps } from "@mantine/core";
-import { ReactNode } from "react";
+import { MouseEvent } from "react";
 
 type PlaceholdingTextProps = Omit<TextProps, "sx"> & {
   children?: string;

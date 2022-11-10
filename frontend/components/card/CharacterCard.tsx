@@ -1,28 +1,33 @@
+import { Box, Button, Center } from "@mantine/core";
+import { useDisclosure, useInterval } from "@mantine/hooks";
 import { Character } from "builder";
 import { useEffect, useState } from "react";
+import { useBuilder } from "../builder/Builder";
 import { BaseCard } from "./BaseCard";
 import { BaseCardAside } from "./BaseCardAside";
 import { BaseCardFooter } from "./BaseCardFooter";
 import { BaseCardPortrait } from "./BaseCardPortrait";
 import { BaseCardSubtitle } from "./BaseCardSubtitle";
 import { BaseCardTitle } from "./BaseCardTitle";
-import { RiCloseFill } from "react-icons/ri";
-import { Box, Button, Center, CloseButton, Popover } from "@mantine/core";
-import { useBuilder } from "../builder/Builder";
-import { useDisclosure, useInterval } from "@mantine/hooks";
 
 type CharacterCardProps = {
   character: Character;
+  onFocus: (id: Character["id"]) => void;
 };
 
-export const CharacterCard = ({ character }: CharacterCardProps) => {
+export const CharacterCard = ({ character, onFocus }: CharacterCardProps) => {
   const [hovered, { close: leave, open: enter }] = useDisclosure(false);
-
   const { deleteCharacter } = useBuilder();
+
+  const handleFocusedClick = () => {
+    if (!hovered) return;
+    onFocus(character.id);
+  };
 
   return (
     <Box onMouseEnter={enter} onMouseLeave={leave}>
       <BaseCard
+        onClick={handleFocusedClick}
         background={<BaseCardPortrait {...character} />}
         title={<BaseCardTitle {...character} />}
         subtitle={<BaseCardSubtitle {...character} />}
@@ -42,7 +47,7 @@ type CharacterControlsProps = {
   onDelete: () => void;
 };
 const CharacterControls = ({ onDelete, display }: CharacterControlsProps) => {
-  const suppDuration = 1000;
+  const suppDuration = 700;
   const [suppState, setSuppState] = useState(0);
   const suppRatio = Math.min((suppState / suppDuration) * 100, 100);
 

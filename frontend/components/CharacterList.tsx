@@ -1,4 +1,5 @@
 import { Box } from "@mantine/core";
+import { Character } from "builder";
 import { ReactNode } from "react";
 import { useBoundingClientRect } from "../utils/hooks/useBoundingClientRect";
 import { useDOMRef } from "../utils/hooks/useDOMRef";
@@ -7,9 +8,11 @@ import { CharacterCard } from "./card/CharacterCard";
 import { NewCard } from "./card/NewCard";
 import { portraitWidth, mediaQuery } from "./style";
 
-type CharacterListProps = {};
+type CharacterListProps = {
+  onFocusCharacter: (id: Character["id"]) => void;
+};
 
-export const CharacterList = ({}: CharacterListProps) => {
+export const CharacterList = ({ onFocusCharacter }: CharacterListProps) => {
   const { characters, addNewCharacter } = useBuilder();
 
   const [list, queryList] = useDOMRef<HTMLElement>();
@@ -48,7 +51,7 @@ export const CharacterList = ({}: CharacterListProps) => {
 
       {(characters || []).map((c) => (
         <ListItem>
-          <CharacterCard character={c} key={c.id} />
+          <CharacterCard character={c} key={c.id} onFocus={onFocusCharacter} />
         </ListItem>
       ))}
 
