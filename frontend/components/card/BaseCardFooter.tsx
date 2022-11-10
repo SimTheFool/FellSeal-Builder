@@ -17,6 +17,7 @@ export const BaseCardFooter = ({
       spacing={0}
       sx={(t) => ({
         opacity: display ? 1 : 0,
+        pointerEvents: display ? "auto" : "none",
         "transition-property": "opacity",
         "transition-duration": "0.5s",
       })}
@@ -26,7 +27,7 @@ export const BaseCardFooter = ({
           jobHash={passives?.[0][0]}
           skillHash={passives?.[0][1]}
           sx={(t) => ({
-            lineHeight: `${t.fontSizes.sm}px`,
+            lineHeight: `${t.fontSizes.md}px`,
           })}
         />
       </Center>

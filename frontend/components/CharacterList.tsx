@@ -14,7 +14,7 @@ export const CharacterList = ({}: CharacterListProps) => {
   const [list, queryList] = useDOMRef<HTMLElement>();
   const { width: listWidth = 0 } = useBoundingClientRect(list) || {};
 
-  const itemBaseWidth = portraitWidth + 20;
+  const itemBaseWidth = portraitWidth + 10;
   const capacity = Math.floor(listWidth / itemBaseWidth);
   const length = characters?.length || 0;
   const present = (length + 1) % capacity;
@@ -24,6 +24,7 @@ export const CharacterList = ({}: CharacterListProps) => {
     <Box
       {...queryList()}
       component="ul"
+      mx="md"
       sx={(t) => ({
         [mediaQuery.enoughHeight]: {
           flexWrap: "wrap",
@@ -32,7 +33,6 @@ export const CharacterList = ({}: CharacterListProps) => {
         },
         display: "flex",
         listStyle: "none",
-        margin: 0,
         padding: 0,
         li: {
           flexGrow: 0,
@@ -41,10 +41,26 @@ export const CharacterList = ({}: CharacterListProps) => {
         paddingLeft: 20,
       })}
     >
-      <NewCard onClick={() => addNewCharacter?.({})} />
+      <Box
+        sx={(t) => ({
+          marginBottom: 15,
+          marginLeft: 5,
+          marginRight: 5,
+        })}
+      >
+        <NewCard onClick={() => addNewCharacter?.({})} />
+      </Box>
 
       {(characters || []).map((c) => (
-        <CharacterCard character={c} />
+        <Box
+          sx={(t) => ({
+            marginBottom: 15,
+            marginLeft: 5,
+            marginRight: 5,
+          })}
+        >
+          <CharacterCard character={c} key={c.id} />
+        </Box>
       ))}
 
       {new Array(missing || 0).fill(1).map(() => (

@@ -13,7 +13,7 @@ export const BaseCardSubtitle = ({ job, ability }: BaseCardSubtitleProps) => {
         <MainJobSkillText
           jobHash={job}
           sx={(t) => ({
-            lineHeight: `${t.fontSizes.sm}px`,
+            lineHeight: `${t.fontSizes.md}px`,
           })}
         />
       </Center>

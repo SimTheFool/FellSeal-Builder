@@ -1,6 +1,6 @@
-import { Box, Card, CardProps, SimpleGrid } from "@mantine/core";
+import { Box, Card, CardProps, Popover, SimpleGrid } from "@mantine/core";
 import Image from "next/image";
-import { HTMLProps, ReactNode, useState } from "react";
+import { HTMLProps, ReactNode, useEffect, useState } from "react";
 import { portraitHeight, portraitWidth } from "../style";
 
 type BaseCardProps = {
@@ -9,9 +9,8 @@ type BaseCardProps = {
   subtitle?: ReactNode;
   footer?: ReactNode;
   aside?: ReactNode;
-  controls?: ReactNode;
-} & Omit<CardProps, "children" | "sx"> &
-  Omit<HTMLProps<HTMLLIElement>, "ref" | "children" | "title" | "controls">;
+  onClick?: () => void;
+};
 
 export const BaseCard = ({
   background,
@@ -19,20 +18,18 @@ export const BaseCard = ({
   subtitle,
   footer,
   aside,
-  controls,
-  ...props
+  onClick,
 }: BaseCardProps) => {
   return (
     <Card
+      onClick={onClick}
       radius="md"
       shadow="md"
       component="li"
       sx={(t) => ({
         height: portraitHeight,
-        margin: 10,
-        color: t.colors.white[0],
+        color: t.colors.white[1],
       })}
-      {...props}
     >
       <Card.Section>{background}</Card.Section>
 
@@ -67,17 +64,6 @@ export const BaseCard = ({
           {subtitle}
           {footer}
         </SimpleGrid>
-      </Box>
-
-      <Box
-        p="md"
-        sx={(t) => ({
-          position: "absolute",
-          top: 0,
-          right: 0,
-        })}
-      >
-        {controls}
       </Box>
     </Card>
   );

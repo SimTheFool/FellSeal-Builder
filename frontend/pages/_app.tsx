@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         colorScheme: "dark",
         colors: {
           back_grey: ["#26262688"],
-          white: ["#DDD"],
+          white: ["#FFF", "#EEE"],
         },
         shadows: {
           xs: "0px 0px 7px rgba(0, 0, 0, 0.65)",

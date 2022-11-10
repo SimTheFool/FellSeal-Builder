@@ -35,5 +35,9 @@ const JobSkillText = ({ jobHash, sx, ...textProps }: JobText) => {
   const { jobsByHash } = useBuilder();
   const job = jobHash ? jobsByHash?.[jobHash] : undefined;
 
-  return <PlaceholdingText sx={sx}>{job && t(job.title)}</PlaceholdingText>;
+  return (
+    <PlaceholdingText sx={sx} {...textProps}>
+      {job && t(job.title)}
+    </PlaceholdingText>
+  );
 };

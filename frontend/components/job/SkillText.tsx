@@ -23,7 +23,7 @@ export const PassiveSkillText = ({
       color="dimmed"
       sx={(t) => ({
         ...sx?.(t),
-        color: t.colors.dark[3],
+        color: t.colors.dark[2],
         visibility: skillHash ? "inherit" : "hidden",
       })}
       {...textProps}
