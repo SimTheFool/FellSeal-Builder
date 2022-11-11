@@ -7,7 +7,7 @@ export const Title = () => (
     order={1}
     align={"center"}
     sx={(t) => ({
-      [mediaQuery.enoughHeight]: {
+      [mediaQuery.enoughHeight.media]: {
         height: "3em",
       },
       width: "100%",

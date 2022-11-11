@@ -28,7 +28,7 @@ export const BaseCard = ({
       component="li"
       sx={(t) => ({
         height: portraitHeight,
-        color: t.colors.white[1],
+        color: t.colors.white[0],
       })}
     >
       <Card.Section>{background}</Card.Section>

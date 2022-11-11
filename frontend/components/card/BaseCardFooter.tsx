@@ -1,5 +1,5 @@
 import { Center, SimpleGrid } from "@mantine/core";
-import { PassiveSkillText } from "../job/SkillText";
+import { PassiveSkillText } from "../text/SkillText";
 
 type BaseCardFooterProps = {
   passives?: readonly [readonly [string, string], readonly [string, string]];

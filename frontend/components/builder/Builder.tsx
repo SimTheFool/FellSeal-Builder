@@ -16,6 +16,7 @@ type BuilderContext = {
   addNewCharacter?: (unvalidatedCharacter: UnvalidatedCharacter) => void;
   deleteCharacter?: (id: Character["id"]) => void;
   characters?: Character[];
+  charactersById?: Record<Character["id"], Character>;
   charactersError?: AppErrors<string>;
   jobsByHash?: Record<Job["hash"], Job>;
   jobsError?: AppErrors<string>;
@@ -26,6 +27,12 @@ export const BuilderProvider = ({ children }: { children: JSX.Element }) => {
   const [characters, charactersError] = useBuilderQuery(
     queries.getAllCharacters
   )();
+
+  const charactersById = useMemo(
+    () => characters && keyBy(characters, (c) => c.id as string),
+    [characters]
+  );
+
   const [jobs, jobsError] = useBuilderQuery(queries.getAllJobs)();
 
   const jobsByHash = useMemo(() => jobs && keyBy(jobs, (j) => j.hash), [jobs]);
@@ -40,6 +47,7 @@ export const BuilderProvider = ({ children }: { children: JSX.Element }) => {
         addNewCharacter,
         deleteCharacter,
         characters,
+        charactersById,
         charactersError,
         jobsByHash,
         jobsError,

@@ -30,7 +30,7 @@ export const CharacterList = ({ onFocusCharacter }: CharacterListProps) => {
       component="ul"
       mx="md"
       sx={(t) => ({
-        [mediaQuery.enoughHeight]: {
+        [mediaQuery.enoughHeight.media]: {
           flexWrap: "wrap",
           justifyContent: "space-evenly",
           paddingLeft: 0,
@@ -72,7 +72,7 @@ const ListItem = ({ children }: ListItempProps) => {
   return (
     <Box
       sx={(t) => ({
-        [mediaQuery.enoughHeight]: {
+        [mediaQuery.enoughHeight.media]: {
           marginBottom: 15,
         },
         marginBottom: 0,

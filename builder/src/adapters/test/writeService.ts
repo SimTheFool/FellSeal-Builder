@@ -34,7 +34,7 @@ export const newWriteService = (): WriteService => {
       const newCharacters = [c, ...testDb.characters].map((c, index) => ({
         ...c,
         position: index,
-        id: uuid() as Character["id"],
+        id: c.id || (uuid() as Character["id"]),
       }));
       testDb.characters = [...newCharacters];
       return newAppResult(undefined);

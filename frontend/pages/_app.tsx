@@ -57,6 +57,11 @@ function MyApp({ Component, pageProps }: AppProps) {
               fontStyle: "normal",
             },
           },
+          {
+            "*::-webkit-scrollbar": {
+              display: "none",
+            },
+          },
         ]}
       />
       <BuilderProvider>

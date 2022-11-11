@@ -1,5 +1,5 @@
 import { Center, SimpleGrid } from "@mantine/core";
-import { MainJobSkillText, SecondaryJobSkillText } from "../job/JobText";
+import { MainJobSkillText, SecondaryJobSkillText } from "../text/JobText";
 
 type BaseCardSubtitleProps = {
   job?: string;

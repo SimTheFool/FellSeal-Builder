@@ -41,7 +41,7 @@ export const Layout = ({ title, placeholder, characterList }: LayoutProps) => {
         component="main"
         shadow="xs"
         sx={(t) => ({
-          [mediaQuery.enoughHeight]: {
+          [mediaQuery.enoughHeight.media]: {
             maxWidth: "900px",
             margin: "auto",
             width: "unset",
@@ -59,7 +59,7 @@ export const Layout = ({ title, placeholder, characterList }: LayoutProps) => {
         <Box
           component="div"
           sx={(t) => ({
-            [mediaQuery.enoughHeight]: {
+            [mediaQuery.enoughHeight.media]: {
               display: "block",
             },
             display: "none",
