@@ -5,7 +5,7 @@ import { EditorHeading } from "./EditorHeading";
 
 type EditorPassivesCounterDetailProps = {
   passives?: Character["passives"];
-  counter: Character["counter"];
+  counter?: Character["counter"];
 };
 export const EditorPassivesCounterDetail = ({
   passives,
@@ -39,8 +39,8 @@ export const EditorPassivesCounterDetail = ({
         })}
       >
         <PassiveSkillText
-          jobHash={counter[0]}
-          skillHash={counter[1]}
+          jobHash={counter?.[0]}
+          skillHash={counter?.[1]}
           sx={(t) => ({
             minWidth: "50%",
           })}
@@ -49,15 +49,3 @@ export const EditorPassivesCounterDetail = ({
     </SimpleGrid>
   );
 };
-
-/* const SkillDetail = () => {
-  return (
-    <PassiveSkillText
-      jobHash="knig"
-      skillHash="knig-p1"
-      sx={(t) => ({
-        minWidth: "50%",
-      })}
-    />
-  );
-}; */

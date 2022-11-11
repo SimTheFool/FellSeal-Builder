@@ -26,7 +26,7 @@ export const EditorLayout = ({ header, sections }: EditorLayout) => {
         {header}
       </Box>
 
-      <SimpleGrid verticalSpacing={0} cols={enoughHeight ? 1 : 3}>
+      <SimpleGrid verticalSpacing={0} spacing={0} cols={enoughHeight ? 1 : 3}>
         {sections.map((s) => (
           <Box
             sx={(t) => ({

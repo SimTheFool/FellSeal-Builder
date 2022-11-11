@@ -29,6 +29,7 @@ export const CharacterList = ({ onFocusCharacter }: CharacterListProps) => {
       {...queryList()}
       component="ul"
       mx="md"
+      my={0}
       sx={(t) => ({
         [mediaQuery.enoughHeight.media]: {
           flexWrap: "wrap",

@@ -29,6 +29,7 @@ export const BaseCard = ({
       sx={(t) => ({
         height: portraitHeight,
         color: t.colors.white[0],
+        cursor: "pointer",
       })}
     >
       <Card.Section>{background}</Card.Section>

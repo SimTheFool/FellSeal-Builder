@@ -29,7 +29,7 @@ export const CharacterCard = ({ character, onFocus }: CharacterCardProps) => {
       <BaseCard
         onClick={handleFocusedClick}
         background={<BaseCardPortrait {...character} />}
-        title={<BaseCardTitle {...character} />}
+        title={<BaseCardTitle {...character} readonly={!hovered} />}
         subtitle={<BaseCardSubtitle {...character} />}
         footer={<BaseCardFooter {...character} display={hovered} />}
         aside={<BaseCardAside {...character} />}

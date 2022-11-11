@@ -10,8 +10,30 @@ import {
 import { useTranslate } from "../translations/Translate";
 import { EditorHeading } from "./EditorHeading";
 
-type EditorJobDetailProps = { jobHash?: Character["job"] };
-export const JobDetail = ({ jobHash }: EditorJobDetailProps) => {
+export const MainJobDetail = ({ jobHash }: JobDetailProps) => {
+  return <JobDetail jobHash={jobHash} />;
+};
+
+export const SecondaryJobDetail = ({ jobHash }: JobDetailProps) => {
+  return <JobDetail jobHash={jobHash} secondary />;
+};
+
+type SkillContainerProps = { children: ReactNode };
+const SkillContainer = ({ children }: SkillContainerProps) => {
+  return (
+    <Box
+      sx={(t) => ({
+        display: "flex",
+        flexWrap: "wrap",
+      })}
+    >
+      {children}
+    </Box>
+  );
+};
+
+type JobDetailProps = { jobHash?: Character["job"]; secondary?: boolean };
+const JobDetail = ({ jobHash, secondary = false }: JobDetailProps) => {
   const { t } = useTranslate();
   const { jobsByHash } = useBuilder();
   const job = jobHash && jobsByHash?.[jobHash];
@@ -32,43 +54,33 @@ export const JobDetail = ({ jobHash }: EditorJobDetailProps) => {
           ))}
       </SkillContainer>
 
-      <SkillContainer>
-        {job &&
-          job.passives.map((p) => (
-            <PassiveSkillText
-              skillHash={p.hash}
-              sx={(t) => ({
-                minWidth: "50%",
-              })}
-            />
-          ))}
-      </SkillContainer>
+      {!secondary && (
+        <>
+          <SkillContainer>
+            {job &&
+              job.passives.map((p) => (
+                <PassiveSkillText
+                  skillHash={p.hash}
+                  sx={(t) => ({
+                    minWidth: "50%",
+                  })}
+                />
+              ))}
+          </SkillContainer>
 
-      <SkillContainer>
-        {job &&
-          job.counters.map((c) => (
-            <CounterSkillText
-              skillHash={c.hash}
-              sx={(t) => ({
-                minWidth: "50%",
-              })}
-            />
-          ))}
-      </SkillContainer>
+          <SkillContainer>
+            {job &&
+              job.counters.map((c) => (
+                <CounterSkillText
+                  skillHash={c.hash}
+                  sx={(t) => ({
+                    minWidth: "50%",
+                  })}
+                />
+              ))}
+          </SkillContainer>
+        </>
+      )}
     </SimpleGrid>
-  );
-};
-
-type SkillContainerProps = { children: ReactNode };
-const SkillContainer = ({ children }: SkillContainerProps) => {
-  return (
-    <Box
-      sx={(t) => ({
-        display: "flex",
-        flexWrap: "wrap",
-      })}
-    >
-      {children}
-    </Box>
   );
 };

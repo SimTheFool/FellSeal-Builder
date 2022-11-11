@@ -4,7 +4,7 @@ import { Character } from "builder";
 import { useBuilder } from "../builder/Builder";
 import { mediaQuery } from "../style";
 import { EditorHeader } from "./EditorHeader";
-import { JobDetail } from "./EditorJobDetail";
+import { MainJobDetail, SecondaryJobDetail } from "./EditorJobDetail";
 import { EditorLayout } from "./EditorLayout";
 import { EditorPassivesCounterDetail } from "./EditorPassivesCountersDetail";
 
@@ -23,7 +23,8 @@ export const Editor = ({ id, onClose, ...props }: EditorProps) => {
     <Drawer
       opened={!!id}
       onClose={onClose}
-      withOverlay={false}
+      withOverlay={true}
+      overlayOpacity={0}
       lockScroll={false}
       position={enoughHeight ? "left" : "right"}
       size={enoughHeight ? "unset" : "100%"}
@@ -47,8 +48,8 @@ export const Editor = ({ id, onClose, ...props }: EditorProps) => {
         <EditorLayout
           header={<EditorHeader {...character} />}
           sections={[
-            <JobDetail jobHash={character.job} />,
-            <JobDetail jobHash={character.ability} />,
+            <MainJobDetail jobHash={character.job} />,
+            <SecondaryJobDetail jobHash={character.ability} secondary />,
             <EditorPassivesCounterDetail
               passives={character.passives}
               counter={character.counter}

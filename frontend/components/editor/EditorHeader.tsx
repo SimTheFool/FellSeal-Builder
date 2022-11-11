@@ -39,7 +39,7 @@ export const EditorHeader = ({ portrait, name }: EditorHeaderProps) => {
           })}
         >
           <Image
-            src={`/portraits/${portrait}`}
+            src={`/portraits/${portrait || "default.png"}`}
             layout={enoughHeight ? "responsive" : "fixed"}
             width={portraitWidth * 1.2}
             height={portraitHeight * 1.2}
@@ -57,7 +57,7 @@ export const EditorHeader = ({ portrait, name }: EditorHeaderProps) => {
           />
         </Box>
       </Box>
-      <NameText name={name} align="left" pl="xl" />
+      <NameText name={name || "Name"} align="left" pl="xl" readonly={false} />
     </Box>
   );
 };
