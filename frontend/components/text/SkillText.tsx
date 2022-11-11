@@ -9,21 +9,26 @@ type SkillText = {
   sx?: (theme: MantineTheme) => CSSObject;
 } & TextProps;
 
-export const PassiveSkillText = ({
-  jobHash,
-  skillHash,
-  sx,
-  ...textProps
-}: SkillText) => {
+export const PassiveSkillText = ({ ...props }: SkillText) => {
+  return <SkillText {...props} color="dark.2" />;
+};
+
+export const CounterSkillText = ({ ...props }: SkillText) => {
+  return <SkillText {...props} color="dark.2" />;
+};
+
+export const ActiveSkillText = ({ ...props }: SkillText) => {
+  return <SkillText {...props} color="white.0" />;
+};
+
+const SkillText = ({ jobHash, skillHash, sx, ...textProps }: SkillText) => {
   const { t } = useTranslate();
   return (
     <PlaceholdingText
       size="sm"
       weight={900}
-      color="dimmed"
       sx={(t) => ({
         ...sx?.(t),
-        color: t.colors.dark[2],
         visibility: skillHash ? "inherit" : "hidden",
       })}
       {...textProps}

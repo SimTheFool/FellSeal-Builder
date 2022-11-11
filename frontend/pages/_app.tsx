@@ -37,6 +37,10 @@ function MyApp({ Component, pageProps }: AppProps) {
               lineHeight: 0.45,
               fontWeight: 400,
             },
+            h4: {
+              fontSize: 30,
+              fontWeight: 700,
+            },
           },
         },
       }}

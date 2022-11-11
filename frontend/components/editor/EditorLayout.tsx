@@ -20,7 +20,7 @@ export const EditorLayout = ({ header, sections }: EditorLayout) => {
         sx={(t) => ({
           position: "relative",
           height: "20%",
-          overflow: "hidden",
+          overflow: "visible",
         })}
       >
         {header}
@@ -33,7 +33,7 @@ export const EditorLayout = ({ header, sections }: EditorLayout) => {
               maxWidth: 300,
             })}
             pl="xl"
-            mt="xl"
+            mt="md"
           >
             {s}
           </Box>

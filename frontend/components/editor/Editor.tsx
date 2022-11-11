@@ -1,16 +1,12 @@
-import { DrawerProps, Drawer, SimpleGrid, Box, Title } from "@mantine/core";
+import { Drawer, DrawerProps } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { Character } from "builder";
 import { useBuilder } from "../builder/Builder";
-import { mediaQuery, portraitHeight, portraitWidth } from "../style";
-import Image from "next/image";
-import { ReactNode } from "react";
-import { NameText } from "../text/NameText";
-import { PassiveSkillText } from "../text/SkillText";
+import { mediaQuery } from "../style";
 import { EditorHeader } from "./EditorHeader";
 import { JobDetail } from "./EditorJobDetail";
 import { EditorLayout } from "./EditorLayout";
-import { EditorPassivesCounterDetail as EditorPassivesCounterDetail } from "./EditorPassivesCountersDetail";
+import { EditorPassivesCounterDetail } from "./EditorPassivesCountersDetail";
 
 type EditorProps = {
   id: Character["id"];
@@ -29,12 +25,17 @@ export const Editor = ({ id, onClose, ...props }: EditorProps) => {
       onClose={onClose}
       withOverlay={false}
       lockScroll={false}
-      position={enoughHeight ? "left" : "bottom"}
+      position={enoughHeight ? "left" : "right"}
       size={enoughHeight ? "unset" : "100%"}
       styles={(t) => ({
         drawer: {
           overflowY: "auto",
           backgroundColor: "black",
+          perspective: "1px",
+          borderTopLeftRadius: enoughHeight ? 0 : t.radius.md,
+          borderBottomLeftRadius: enoughHeight ? 0 : t.radius.md,
+          borderTopRightRadius: enoughHeight ? t.radius.md : 0,
+          borderBottomRightRadius: enoughHeight ? t.radius.md : 0,
         },
         header: {
           display: "none",
@@ -44,11 +45,14 @@ export const Editor = ({ id, onClose, ...props }: EditorProps) => {
     >
       {character && (
         <EditorLayout
-          header={<EditorHeader />}
+          header={<EditorHeader {...character} />}
           sections={[
-            <JobDetail />,
-            <JobDetail />,
-            <EditorPassivesCounterDetail />,
+            <JobDetail jobHash={character.job} />,
+            <JobDetail jobHash={character.ability} />,
+            <EditorPassivesCounterDetail
+              passives={character.passives}
+              counter={character.counter}
+            />,
           ]}
         />
       )}
