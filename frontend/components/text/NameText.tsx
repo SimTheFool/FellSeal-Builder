@@ -1,10 +1,25 @@
-import { ActionIcon, TextProps, Title, TitleProps } from "@mantine/core";
+import {
+  ActionIcon,
+  CSSObject,
+  MantineTheme,
+  Sx,
+  TextProps,
+  Title,
+  TitleProps,
+} from "@mantine/core";
 import { AiFillEdit } from "react-icons/ai";
 
-type NameTextProps = TitleProps & { name?: string; readonly?: boolean };
+type NameTextProps = TitleProps & {
+  name?: string;
+  readonly?: boolean;
+  onClick?: () => void;
+  sx?: (theme: MantineTheme) => CSSObject;
+};
 export const NameText = ({
   name,
   readonly = true,
+  onClick,
+  sx,
   ...props
 }: NameTextProps) => {
   return (
@@ -13,6 +28,7 @@ export const NameText = ({
       align={"center"}
       size="h3"
       sx={(t) => ({
+        ...sx?.(t),
         visibility: name ? "inherit" : "hidden",
         color: t.colors.white[0],
       })}
@@ -30,6 +46,7 @@ export const NameText = ({
           "transition-property": "opacity",
           "transition-duration": "0.5s",
         })}
+        onClick={onClick}
       >
         <AiFillEdit viewBox="0 0 1024 750" />
       </ActionIcon>

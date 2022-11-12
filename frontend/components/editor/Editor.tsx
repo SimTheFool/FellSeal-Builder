@@ -1,4 +1,4 @@
-import { Drawer, DrawerProps } from "@mantine/core";
+import { ActionIcon, Box, Drawer, DrawerProps } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { Character } from "builder";
 import { useBuilder } from "../builder/Builder";
@@ -7,15 +7,23 @@ import { EditorHeader } from "./EditorHeader";
 import { MainJobDetail, SecondaryJobDetail } from "./EditorJobDetail";
 import { EditorLayout } from "./EditorLayout";
 import { EditorPassivesCounterDetail } from "./EditorPassivesCountersDetail";
+import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 
 type EditorProps = {
   id: Character["id"];
   onClose: () => void;
+  onNext: () => void;
+  onPrevious: () => void;
 } & Omit<DrawerProps, "opened" | "id">;
 
-export const Editor = ({ id, onClose, ...props }: EditorProps) => {
+export const Editor = ({
+  id,
+  onClose,
+  onPrevious,
+  onNext,
+  ...props
+}: EditorProps) => {
   const enoughHeight = useMediaQuery(mediaQuery.enoughHeight.value);
-
   const { charactersById } = useBuilder();
   const character = charactersById?.[id];
 
@@ -26,17 +34,14 @@ export const Editor = ({ id, onClose, ...props }: EditorProps) => {
       withOverlay={true}
       overlayOpacity={0}
       lockScroll={false}
+      shadow="unset"
       position={enoughHeight ? "left" : "right"}
-      size={enoughHeight ? "unset" : "100%"}
+      size={enoughHeight ? "unset" : "80%"}
       styles={(t) => ({
         drawer: {
-          overflowY: "auto",
-          backgroundColor: "black",
-          perspective: "1px",
-          borderTopLeftRadius: enoughHeight ? 0 : t.radius.md,
-          borderBottomLeftRadius: enoughHeight ? 0 : t.radius.md,
-          borderTopRightRadius: enoughHeight ? t.radius.md : 0,
-          borderBottomRightRadius: enoughHeight ? t.radius.md : 0,
+          position: "absolute",
+          overflow: "visible",
+          backgroundColor: "unset",
         },
         header: {
           display: "none",
@@ -44,19 +49,59 @@ export const Editor = ({ id, onClose, ...props }: EditorProps) => {
       })}
       {...props}
     >
-      {character && (
-        <EditorLayout
-          header={<EditorHeader {...character} />}
-          sections={[
-            <MainJobDetail jobHash={character.job} />,
-            <SecondaryJobDetail jobHash={character.ability} secondary />,
-            <EditorPassivesCounterDetail
-              passives={character.passives}
-              counter={character.counter}
-            />,
-          ]}
-        />
-      )}
+      <Box
+        mt="md"
+        sx={(t) => ({
+          boxSizing: "content-box",
+          position: "relative",
+          height: "100%",
+          overflow: "hidden",
+          backgroundColor: "black",
+          borderTopLeftRadius: enoughHeight ? 0 : t.radius.xl,
+          borderTopRightRadius: enoughHeight ? t.radius.xl : 0,
+          boxShadow: t.shadows.md,
+        })}
+      >
+        {character && (
+          <EditorLayout
+            header={<EditorHeader {...character} />}
+            sections={[
+              <MainJobDetail jobHash={character.job} />,
+              <SecondaryJobDetail jobHash={character.ability} secondary />,
+              <EditorPassivesCounterDetail
+                passives={character.passives}
+                counter={character.counter}
+              />,
+            ]}
+          />
+        )}
+      </Box>
+      <Controls onUp={onPrevious} onDown={onNext} />
     </Drawer>
+  );
+};
+
+type ControlsProps = {
+  onUp: () => void;
+  onDown: () => void;
+};
+export const Controls = ({ onUp, onDown }: ControlsProps) => {
+  const enoughHeight = useMediaQuery(mediaQuery.enoughHeight.value);
+  return (
+    <Box
+      sx={(t) => ({
+        position: "absolute",
+        left: enoughHeight ? "100%" : "unset",
+        bottom: "0%",
+        right: enoughHeight ? "unset" : "100%",
+      })}
+    >
+      <ActionIcon variant="transparent" onClick={onUp}>
+        <IoIosArrowUp />
+      </ActionIcon>
+      <ActionIcon variant="transparent" onClick={onDown}>
+        <IoIosArrowDown />
+      </ActionIcon>
+    </Box>
   );
 };

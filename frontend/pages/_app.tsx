@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           md: "0px 0px 20px rgba(0, 0, 0, 0.95)",
         },
         radius: {
-          md: 20,
+          md: 19,
         },
         fontSizes: {
           xs: 11,
