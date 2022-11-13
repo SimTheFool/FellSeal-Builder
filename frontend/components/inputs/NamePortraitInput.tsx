@@ -1,8 +1,10 @@
-import { ActionIcon, Box, Modal, TextInput } from "@mantine/core";
+import { Box, TextInput } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
 import Image, { StaticImageData } from "next/image";
 import { useEffect, useState } from "react";
-import { portraitHeight, portraitWidth } from "../style";
 import { BsCheckLg } from "react-icons/bs";
+import { Modal } from "../Modal";
+import { mediaQuery, portraitHeight, portraitWidth } from "../style";
 
 const importAll = (r: __WebpackModuleApi.RequireContext) => {
   let images: Record<string, StaticImageData> = {};
@@ -29,6 +31,8 @@ export const NamePortraitInput = ({
   value: initialValue,
   onChange,
 }: NamePortraitInputProps) => {
+  const enoughHeight = useMediaQuery(mediaQuery.enoughHeight.value);
+
   const [[name, portrait], setValue] = useState(initialValue);
   const changeName = (newName: string) => setValue([newName, portrait]);
   const changePortrait = (newPortrait: string) => setValue([name, newPortrait]);
@@ -39,56 +43,13 @@ export const NamePortraitInput = ({
 
   return (
     <Modal
-      overflow="inside"
       opened={opened}
       onClose={onClose}
-      overlayOpacity={0.5}
-      styles={(t) => ({
-        modal: {
-          maxWidth: "90%",
-          width: "650px",
-          backgroundColor: t.colors.black,
-        },
-        header: {
-          display: "none",
-        },
-      })}
+      onChange={() => {
+        onChange([name, portrait]);
+        onClose();
+      }}
     >
-      <Box
-        sx={(t) => ({
-          position: "sticky",
-          display: "flex",
-          justifyContent: "space-between",
-          top: 0,
-          width: "100%",
-          backgroundColor: t.colors.black,
-          zIndex: 1,
-        })}
-      >
-        <ActionIcon
-          sx={(t) => ({
-            width: "unset",
-            display: "inline",
-          })}
-          variant="transparent"
-          onClick={onClose}
-        >
-          Back
-        </ActionIcon>
-        <ActionIcon
-          sx={(t) => ({
-            width: "unset",
-            display: "inline",
-          })}
-          variant="transparent"
-          onClick={() => {
-            onChange([name, portrait]);
-            onClose();
-          }}
-        >
-          Ok
-        </ActionIcon>
-      </Box>
       <TextInput
         py="md"
         variant="unstyled"
