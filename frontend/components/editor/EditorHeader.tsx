@@ -99,7 +99,7 @@ export const EditorHeader = ({
             align="left"
             sx={(t) => ({
               position: "absolute",
-              transform: "rotateZ(-90deg) translateX(-100px)",
+              transform: "rotateZ(-90deg) translateX(-30px)",
               transformOrigin: "top left",
               zIndex: 2,
               opacity: 0.2,
@@ -107,12 +107,12 @@ export const EditorHeader = ({
             size={"h1"}
           />
         )}
-        {/* <NamePortraitInput
+        <NamePortraitInput
           value={[name, portrait]}
-          onChange={() => {}}
+          onChange={(value) => {}}
           opened={inputOpened}
           onClose={() => setinputOpened(false)}
-        /> */}
+        />
       </Box>
     </>
   );

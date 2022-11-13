@@ -1,8 +1,10 @@
 import { Box, Button, Center } from "@mantine/core";
 import { useDisclosure, useInterval } from "@mantine/hooks";
 import { Character } from "builder";
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { useBuilder } from "../builder/Builder";
+import { EditButton } from "../buttons/EditButton";
+import { ViewButton } from "../buttons/ViewButton";
 import { BaseCard } from "./BaseCard";
 import { BaseCardAside } from "./BaseCardAside";
 import { BaseCardFooter } from "./BaseCardFooter";
@@ -25,28 +27,68 @@ export const CharacterCard = ({ character, onFocus }: CharacterCardProps) => {
   };
 
   return (
-    <Box onMouseEnter={enter} onMouseLeave={leave}>
-      <BaseCard
-        onClick={handleFocusedClick}
-        background={<BaseCardPortrait {...character} />}
-        title={<BaseCardTitle {...character} readonly={!hovered} />}
-        subtitle={<BaseCardSubtitle {...character} />}
-        footer={<BaseCardFooter {...character} display={hovered} />}
-        aside={<BaseCardAside {...character} />}
-      />
-      <CharacterControls
-        display={hovered}
-        onDelete={() => deleteCharacter?.(character.id)}
+    <CharacterCardControls
+      hovered={hovered}
+      onHover={enter}
+      onHoverLeave={leave}
+      onDelete={() => deleteCharacter?.(character.id)}
+      card={
+        <BaseCard
+          onClick={handleFocusedClick}
+          background={<BaseCardPortrait {...character} />}
+          title={<BaseCardTitle {...character} />}
+          subtitle={<BaseCardSubtitle {...character} />}
+          footer={<BaseCardFooter {...character} display={hovered} />}
+          aside={<BaseCardAside {...character} />}
+        />
+      }
+    />
+  );
+};
+
+type CharacterCardControlsProps = {
+  hovered: boolean;
+  onHover: () => void;
+  onHoverLeave: () => void;
+  onDelete: () => void;
+  card: ReactNode;
+};
+const CharacterCardControls = ({
+  hovered,
+  onHover,
+  onHoverLeave,
+  onDelete,
+  card,
+}: CharacterCardControlsProps) => {
+  return (
+    <Box
+      onMouseEnter={onHover}
+      onMouseLeave={onHoverLeave}
+      sx={(t) => ({
+        position: "relative",
+      })}
+    >
+      {card}
+      <DeleteButtonProps display={hovered} onDelete={onDelete} />
+      <ViewButton
+        mt="xs"
+        mr="sm"
+        sx={(t) => ({
+          position: "absolute",
+          top: 0,
+          right: 0,
+        })}
+        visible={hovered}
       />
     </Box>
   );
 };
 
-type CharacterControlsProps = {
+type DeleteButtonProps = {
   display: boolean;
   onDelete: () => void;
 };
-const CharacterControls = ({ onDelete, display }: CharacterControlsProps) => {
+const DeleteButtonProps = ({ onDelete, display }: DeleteButtonProps) => {
   const suppDuration = 700;
   const [suppState, setSuppState] = useState(0);
   const suppRatio = Math.min((suppState / suppDuration) * 100, 100);

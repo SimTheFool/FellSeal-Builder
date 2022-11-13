@@ -13,6 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         colors: {
           back_grey: ["#26262688"],
           white: ["#FFF", "#EEE"],
+          black: ["#000"],
         },
         shadows: {
           xs: "0px 0px 7px rgba(0, 0, 0, 0.65)",
@@ -26,7 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           sm: 14,
           md: 19,
           lg: 22,
-          xl: 26,
+          xl: 50,
         },
         fontFamily: "Baskerville",
         headings: {

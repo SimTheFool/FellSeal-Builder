@@ -1,8 +1,8 @@
-import { Box, Drawer, Modal, Text, TextInput } from "@mantine/core";
-import { map } from "lodash";
-import { portraitHeight, portraitWidth } from "../style";
+import { ActionIcon, Box, Modal, TextInput } from "@mantine/core";
 import Image, { StaticImageData } from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { portraitHeight, portraitWidth } from "../style";
+import { BsCheckLg } from "react-icons/bs";
 
 const importAll = (r: __WebpackModuleApi.RequireContext) => {
   let images: Record<string, StaticImageData> = {};
@@ -33,33 +33,70 @@ export const NamePortraitInput = ({
   const changeName = (newName: string) => setValue([newName, portrait]);
   const changePortrait = (newPortrait: string) => setValue([name, newPortrait]);
 
+  useEffect(() => {
+    setValue(initialValue);
+  }, [initialValue]);
+
   return (
     <Modal
+      overflow="inside"
       opened={opened}
       onClose={onClose}
-      title="Portrait and name"
+      overlayOpacity={0.5}
       styles={(t) => ({
         modal: {
           maxWidth: "90%",
-          width: "unset",
+          width: "650px",
+          backgroundColor: t.colors.black,
         },
         header: {
           display: "none",
         },
       })}
     >
+      <Box
+        sx={(t) => ({
+          position: "sticky",
+          display: "flex",
+          justifyContent: "space-between",
+          top: 0,
+          width: "100%",
+          backgroundColor: t.colors.black,
+          zIndex: 1,
+        })}
+      >
+        <ActionIcon
+          sx={(t) => ({
+            width: "unset",
+            display: "inline",
+          })}
+          variant="transparent"
+          onClick={onClose}
+        >
+          Back
+        </ActionIcon>
+        <ActionIcon
+          sx={(t) => ({
+            width: "unset",
+            display: "inline",
+          })}
+          variant="transparent"
+          onClick={() => {
+            onChange([name, portrait]);
+            onClose();
+          }}
+        >
+          Ok
+        </ActionIcon>
+      </Box>
       <TextInput
-        placeholder="Name"
-        label="Character name:"
+        py="md"
         variant="unstyled"
-        radius="md"
-        pb="xl"
         value={name}
         onChange={(v) => changeName(v.target.value)}
-        size="md"
         autoFocus
+        size="xl"
       />
-      <Text size="md">Portrait:</Text>
       <Box
         sx={(t) => ({
           display: "flex",
@@ -67,22 +104,57 @@ export const NamePortraitInput = ({
           position: "relative",
         })}
       >
-        {Object.entries(images).map(([name, image]) => (
-          <Portrait name={name} image={image} />
+        {Object.entries(images).map(([portraitName, portraitImage]) => (
+          <Portrait
+            key={portraitName}
+            portraitName={portraitName}
+            portraitImage={portraitImage}
+            selected={portraitName === portrait}
+            onSelect={(portraitName) => changePortrait(portraitName)}
+          />
         ))}
       </Box>
     </Modal>
   );
 };
 
-type PortraitProps = { name: string; image: StaticImageData };
-const Portrait = ({ name, image }: PortraitProps) => {
+type PortraitProps = {
+  portraitName: string;
+  portraitImage: StaticImageData;
+  selected: boolean;
+  onSelect: (portraitName: string) => void;
+};
+const Portrait = ({
+  portraitName,
+  portraitImage,
+  selected,
+  onSelect,
+}: PortraitProps) => {
   return (
-    <Image
-      src={image}
-      layout="intrinsic"
-      width={portraitWidth / 2.5}
-      height={portraitHeight / 2.5}
-    />
+    <Box
+      m="sm"
+      sx={(t) => ({
+        position: "relative",
+      })}
+    >
+      <Image
+        onClick={() => onSelect(portraitName)}
+        src={portraitImage}
+        layout="fixed"
+        width={portraitWidth / 2.5}
+        height={portraitHeight / 2.5}
+      />
+      {selected && (
+        <Box
+          sx={(t) => ({
+            position: "absolute",
+            top: 0,
+            right: 0,
+          })}
+        >
+          <BsCheckLg />
+        </Box>
+      )}
+    </Box>
   );
 };
