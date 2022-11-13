@@ -12,8 +12,12 @@ type EditorHeaderProps = {
   portrait?: Character["portrait"];
   name?: Character["name"];
 };
-export const EditorHeader = ({ portrait, name }: EditorHeaderProps) => {
+export const EditorHeader = ({
+  portrait = "default.png",
+  name = "Name",
+}: EditorHeaderProps) => {
   const enoughHeight = useMediaQuery(mediaQuery.enoughHeight.value);
+  const hugeHeight = useMediaQuery(mediaQuery.hugeHeight.value);
   const [inputOpened, setinputOpened] = useState(false);
 
   return (
@@ -80,15 +84,35 @@ export const EditorHeader = ({ portrait, name }: EditorHeaderProps) => {
         <NameText
           name={name || "Name"}
           align="left"
+          ml={hugeHeight ? "xl" : 0}
           pl="xl"
           sx={(t) => ({
             zIndex: 2,
+            width: "100px",
           })}
+          size={enoughHeight ? "h2" : "h3"}
         />
+
+        {hugeHeight && (
+          <NameText
+            name={name || "Name"}
+            align="left"
+            sx={(t) => ({
+              position: "absolute",
+              transform: "rotateZ(-90deg) translateX(-100px)",
+              transformOrigin: "top left",
+              zIndex: 2,
+              opacity: 0.2,
+            })}
+            size={"h1"}
+          />
+        )}
         {/* <NamePortraitInput
-        opened={inputOpened}
-        onClose={() => setinputOpened(false)}
-      /> */}
+          value={[name, portrait]}
+          onChange={() => {}}
+          opened={inputOpened}
+          onClose={() => setinputOpened(false)}
+        /> */}
       </Box>
     </>
   );

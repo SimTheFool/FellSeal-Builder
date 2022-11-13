@@ -39,9 +39,11 @@ export const Editor = ({
       size={enoughHeight ? "unset" : "80%"}
       styles={(t) => ({
         drawer: {
+          marginTop: t.fontSizes.md,
           position: "absolute",
           overflow: "visible",
           backgroundColor: "unset",
+          maxWidth: "80%",
         },
         header: {
           display: "none",
@@ -50,9 +52,7 @@ export const Editor = ({
       {...props}
     >
       <Box
-        mt="md"
         sx={(t) => ({
-          boxSizing: "content-box",
           position: "relative",
           height: "100%",
           overflow: "hidden",

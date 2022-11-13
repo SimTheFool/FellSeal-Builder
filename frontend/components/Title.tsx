@@ -5,6 +5,7 @@ import { mediaQuery } from "./style";
 export const Title = () => (
   <MantineTitle
     order={1}
+    size={"h3"}
     align={"center"}
     sx={(t) => ({
       [mediaQuery.enoughHeight.media]: {

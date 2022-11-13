@@ -28,28 +28,30 @@ export const NameText = ({
       align={"center"}
       size="h3"
       sx={(t) => ({
-        ...sx?.(t),
         visibility: name ? "inherit" : "hidden",
         color: t.colors.white[0],
+        ...sx?.(t),
       })}
       {...props}
     >
       {name ?? "hidden"}
-      <ActionIcon
-        ml="sm"
-        sx={(t) => ({
-          display: "inline-flex",
-          flexDirection: "column",
-          justifyContent: "flex-end",
-          opacity: readonly ? 0 : 1,
-          pointerEvents: readonly ? "none" : "auto",
-          "transition-property": "opacity",
-          "transition-duration": "0.5s",
-        })}
-        onClick={onClick}
-      >
-        <AiFillEdit viewBox="0 0 1024 750" />
-      </ActionIcon>
+      {!readonly && (
+        <ActionIcon
+          ml="sm"
+          sx={(t) => ({
+            display: "inline-flex",
+            flexDirection: "column",
+            justifyContent: "flex-end",
+            opacity: readonly ? 0 : 1,
+            pointerEvents: readonly ? "none" : "auto",
+            "transition-property": "opacity",
+            "transition-duration": "0.5s",
+          })}
+          onClick={onClick}
+        >
+          <AiFillEdit viewBox="0 0 1024 750" />
+        </ActionIcon>
+      )}
     </Title>
   );
 };

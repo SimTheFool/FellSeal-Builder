@@ -32,6 +32,16 @@ function MyApp({ Component, pageProps }: AppProps) {
         headings: {
           fontFamily: "Baskerville",
           sizes: {
+            h1: {
+              fontSize: 170,
+              lineHeight: 0.45,
+              fontWeight: 400,
+            },
+            h2: {
+              fontSize: 95,
+              lineHeight: 0.45,
+              fontWeight: 400,
+            },
             h3: {
               fontSize: 60,
               lineHeight: 0.45,
