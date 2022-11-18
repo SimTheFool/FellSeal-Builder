@@ -4,18 +4,12 @@ import {
   MantineTheme,
   SimpleGrid,
   SimpleGridProps,
-  Sx,
-  Title,
 } from "@mantine/core";
 import { Character } from "builder";
 import { ReactNode, useMemo, useState } from "react";
 import { useBuilder } from "../builder/Builder";
 import { JobInput } from "../inputs/JobInput";
-import {
-  ActiveSkillText,
-  CounterSkillText,
-  PassiveSkillText,
-} from "../text/SkillText";
+import { ActiveSkillText, PassiveSkillText } from "../text/SkillText";
 import { useTranslate } from "../translations/Translate";
 import { EditorHeading } from "./EditorHeading";
 

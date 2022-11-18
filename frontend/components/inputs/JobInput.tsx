@@ -1,20 +1,12 @@
-import {
-  ActionIcon,
-  Box,
-  Button,
-  SimpleGrid,
-  Space,
-  Stack,
-} from "@mantine/core";
+import { ActionIcon, Box, Button, Stack } from "@mantine/core";
 import { Character } from "builder";
 import { ReactNode, useEffect, useState } from "react";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { useBuilder } from "../builder/Builder";
 import { ReadonlyJobDetail } from "../editor/EditorJobDetail";
 import { Modal } from "../Modal";
+import { MainJobSkillText } from "../text/JobText";
 import { useTranslate } from "../translations/Translate";
-import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import { Title } from "../Title";
-import { MainJobSkillText, SecondaryJobSkillText } from "../text/JobText";
 
 type CharacterJob = Character["job"];
 type CharacterAbility = Character["ability"];
@@ -51,6 +43,10 @@ export const JobInput = ({
     setInspectedHash(job);
   }, [job]);
 
+  useEffect(() => {
+    setValue(initialValue);
+  }, [initialValue, opened]);
+
   return (
     <Modal
       opened={opened}
@@ -81,6 +77,7 @@ export const JobInput = ({
         >
           {jobs?.map(({ hash, title }) => (
             <JobOption
+              id={hash}
               title={title}
               onClick={() => setInspectedHash(hash)}
               isJob={job === hash}
@@ -131,16 +128,19 @@ type JobOptionProps = {
   onClick?: (hash: string) => void;
   isJob?: boolean;
   isAbility?: boolean;
+  id?: string;
 };
 export const JobOption = ({
   title,
   onClick,
   isJob,
   isAbility,
+  id,
 }: JobOptionProps) => {
   const { t } = useTranslate();
   return (
     <Button
+      id={id}
       onClick={() => onClick?.(title)}
       p="sm"
       color="white"
@@ -249,6 +249,14 @@ export const HeaderButton = ({ label, first = false }: HeaderButtonProps) => {
         color: t.colors.white[1],
         width: "120px",
       })}
+      onClick={() => {
+        const element = document.querySelector(`#${label}`);
+        element?.scrollIntoView({
+          behavior: "smooth",
+          block: "end",
+          inline: "nearest",
+        });
+      }}
     >
       <MainJobSkillText jobHash={label} />
       <Box
