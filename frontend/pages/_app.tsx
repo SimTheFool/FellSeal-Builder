@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         colorScheme: "dark",
         colors: {
           back_grey: ["#26262688"],
-          white: ["#FFF", "#EEE"],
+          white: ["#FFF", "#EEE", "#555", "#333"],
           black: ["#000"],
         },
         shadows: {
@@ -20,13 +20,14 @@ function MyApp({ Component, pageProps }: AppProps) {
           md: "0px 0px 20px rgba(0, 0, 0, 0.95)",
         },
         radius: {
+          xs: 8,
           md: 19,
         },
         fontSizes: {
           xs: 11,
           sm: 14,
           md: 19,
-          lg: 22,
+          lg: 24,
           xl: 50,
         },
         fontFamily: "Baskerville",

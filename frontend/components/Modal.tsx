@@ -8,16 +8,25 @@ type ModalProps = {
   onChange: () => void;
   opened: boolean;
   children: ReactNode;
+  overflow?: boolean;
+  headerContent?: ReactNode;
 };
 
-export const Modal = ({ children, opened, onChange, onClose }: ModalProps) => {
+export const Modal = ({
+  children,
+  opened,
+  onChange,
+  onClose,
+  overflow = true,
+  headerContent,
+}: ModalProps) => {
   const enoughHeight = useMediaQuery(mediaQuery.enoughHeight.value);
   return (
     <MantineModal
       overflow="inside"
       opened={opened}
       onClose={onClose}
-      overlayOpacity={0.1}
+      overlayOpacity={0.3}
       overlayColor={"white"}
       styles={(t) => ({
         inner: {
@@ -30,9 +39,11 @@ export const Modal = ({ children, opened, onChange, onClose }: ModalProps) => {
           width: "650px",
           maxHeight: "100%",
           backgroundColor: t.colors.black,
+          overflow: "visible",
         },
         body: {
           maxHeight: "100%",
+          overflowY: overflow ? "auto" : "hidden",
         },
         header: {
           display: "none",
@@ -51,9 +62,16 @@ export const Modal = ({ children, opened, onChange, onClose }: ModalProps) => {
         })}
       >
         <HeaderButton onClick={onClose}>Back</HeaderButton>
+        <Box>{headerContent}</Box>
         <HeaderButton onClick={onChange}>Ok</HeaderButton>
       </Box>
-      {children}
+      <Box
+        sx={(t) => ({
+          height: "80vh",
+        })}
+      >
+        {children}
+      </Box>
     </MantineModal>
   );
 };

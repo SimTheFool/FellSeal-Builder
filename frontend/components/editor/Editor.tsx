@@ -66,8 +66,14 @@ export const Editor = ({
           <EditorLayout
             header={<EditorHeader {...character} />}
             sections={[
-              <MainJobDetail jobHash={character.job} />,
-              <SecondaryJobDetail jobHash={character.ability} secondary />,
+              <MainJobDetail
+                jobHash={character.job}
+                abilityHash={character.ability}
+              />,
+              <SecondaryJobDetail
+                jobHash={character.job}
+                abilityHash={character.ability}
+              />,
               <EditorPassivesCounterDetail
                 passives={character.passives}
                 counter={character.counter}

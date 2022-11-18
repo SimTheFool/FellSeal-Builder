@@ -20,6 +20,7 @@ type BuilderContext = {
   charactersById?: Record<Character["id"], Character>;
   charactersError?: AppErrors<string>;
   jobsByHash?: Record<Job["hash"], Job>;
+  jobs?: Job[];
   jobsError?: AppErrors<string>;
 };
 const builderContext = createContext<BuilderContext>({});
@@ -57,6 +58,7 @@ export const BuilderProvider = ({ children }: { children: JSX.Element }) => {
         charactersById,
         charactersError,
         jobsByHash,
+        jobs,
         jobsError,
       }}
     >

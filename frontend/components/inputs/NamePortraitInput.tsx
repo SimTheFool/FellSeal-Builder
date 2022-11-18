@@ -31,9 +31,8 @@ export const NamePortraitInput = ({
   value: initialValue,
   onChange,
 }: NamePortraitInputProps) => {
-  const enoughHeight = useMediaQuery(mediaQuery.enoughHeight.value);
-
-  const [[name, portrait], setValue] = useState(initialValue);
+  const [value, setValue] = useState(initialValue);
+  const [name, portrait] = value;
   const changeName = (newName: string) => setValue([newName, portrait]);
   const changePortrait = (newPortrait: string) => setValue([name, newPortrait]);
 
