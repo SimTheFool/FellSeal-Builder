@@ -1,10 +1,12 @@
 import { ActionIcon, Box, Button, Stack } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
 import { Character } from "builder";
 import { ReactNode, useEffect, useState } from "react";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { useBuilder } from "../builder/Builder";
 import { ReadonlyJobDetail } from "../editor/EditorJobDetail";
 import { Modal } from "../Modal";
+import { mediaQuery } from "../style";
 import { MainJobSkillText } from "../text/JobText";
 import { useTranslate } from "../translations/Translate";
 
@@ -28,6 +30,8 @@ export const JobInput = ({
   onClose,
   value: initialValue,
 }: JobsInputProps) => {
+  const enoughHeight = useMediaQuery(mediaQuery.enoughHeight.value);
+
   const [value, setValue] = useState(initialValue);
   const { job, ability } = value;
   const changeJob = (newJob: CharacterJob) =>
@@ -64,6 +68,7 @@ export const JobInput = ({
           display: "flex",
           justifyContent: "space-around",
           flexWrap: "nowrap",
+          flexDirection: enoughHeight ? "column" : "unset",
           maxHeight: "100%",
           overflow: "hidden",
         })}
@@ -73,6 +78,8 @@ export const JobInput = ({
           align="flex-start"
           sx={(t) => ({
             overflow: "auto",
+            flexDirection: enoughHeight ? "row" : "column",
+            flexWrap: enoughHeight ? "wrap" : "nowrap",
           })}
         >
           {jobs?.map(({ hash, title }) => (
@@ -86,11 +93,12 @@ export const JobInput = ({
           ))}
         </Stack>
         <Box
+          py="md"
           sx={(t) => ({
             display: "flex",
             flexDirection: "column",
-            justifyContent: "center",
             maxWidth: "300px",
+            margin: "0 auto 0 auto",
           })}
         >
           <Box
@@ -98,7 +106,7 @@ export const JobInput = ({
               display: "flex",
               justifyContent: "center",
             })}
-            pb="md"
+            pb={enoughHeight ? 0 : "md"}
           >
             <ActionButton
               active={inspectedhash === job}
@@ -138,6 +146,7 @@ export const JobOption = ({
   id,
 }: JobOptionProps) => {
   const { t } = useTranslate();
+  const enoughHeight = useMediaQuery(mediaQuery.enoughHeight.value);
   return (
     <Button
       id={id}
@@ -146,7 +155,7 @@ export const JobOption = ({
       color="white"
       variant="outline"
       sx={(t) => ({
-        width: "100%",
+        width: enoughHeight ? "45%" : "100%",
         border: "1px solid white",
         borderColor: t.colors.white[2],
         overflow: "visible",
@@ -171,8 +180,6 @@ export const JobOption = ({
         })}
       >
         <Box>{t(title)}</Box>
-        {isJob && <Box>I</Box>}
-        {isAbility && <Box>II</Box>}
         <MdOutlineKeyboardArrowRight />
       </Box>
     </Button>
@@ -247,7 +254,6 @@ export const HeaderButton = ({ label, first = false }: HeaderButtonProps) => {
       sx={(t) => ({
         position: "relative",
         color: t.colors.white[1],
-        width: "120px",
       })}
       onClick={() => {
         const element = document.querySelector(`#${label}`);
@@ -265,7 +271,7 @@ export const HeaderButton = ({ label, first = false }: HeaderButtonProps) => {
           left: "50%",
           bottom: "50%",
           transform: "translateY(61%) translateX(-50%)",
-          fontSize: t.fontSizes.xl * 0.7,
+          fontSize: t.fontSizes.xl * 0.6,
           color: t.colors.white[2],
           zIndex: -1,
         })}

@@ -1,6 +1,7 @@
 import { ActionIcon, Box, Modal as MantineModal } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { ReactNode } from "react";
+import { BsArrowLeftShort, BsCheck } from "react-icons/bs";
 import { mediaQuery } from "./style";
 
 type ModalProps = {
@@ -61,9 +62,13 @@ export const Modal = ({
           zIndex: 1,
         })}
       >
-        <HeaderButton onClick={onClose}>Back</HeaderButton>
+        <HeaderButton onClick={onClose}>
+          <BsArrowLeftShort size={25} />
+        </HeaderButton>
         <Box>{headerContent}</Box>
-        <HeaderButton onClick={onChange}>Ok</HeaderButton>
+        <HeaderButton onClick={onChange}>
+          <BsCheck size={25} />
+        </HeaderButton>
       </Box>
       <Box
         sx={(t) => ({
