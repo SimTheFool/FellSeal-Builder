@@ -11,10 +11,12 @@ import { AiFillEdit } from "react-icons/ai";
 type EditorHeaderProps = {
   portrait?: Character["portrait"];
   name?: Character["name"];
+  onChange: (infos: Partial<Character>) => void;
 };
 export const EditorHeader = ({
   portrait = "default.png",
   name = "Name",
+  onChange,
 }: EditorHeaderProps) => {
   const enoughHeight = useMediaQuery(mediaQuery.enoughHeight.value);
   const hugeHeight = useMediaQuery(mediaQuery.hugeHeight.value);
@@ -109,7 +111,12 @@ export const EditorHeader = ({
         )}
         <NamePortraitInput
           value={[name, portrait]}
-          onChange={(value) => {}}
+          onChange={([name, portrait]) => {
+            onChange({
+              portrait,
+              name,
+            });
+          }}
           opened={inputOpened}
           onClose={() => setinputOpened(false)}
         />

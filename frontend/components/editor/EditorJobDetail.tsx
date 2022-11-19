@@ -31,12 +31,13 @@ export const ReadonlyJobDetail = ({
   return <BaseJobDetail jobHash={jobHash} sx={sx} {...props} readonly />;
 };
 
-type BaseJobDetailProps = SimpleGridProps & {
+type BaseJobDetailProps = Omit<SimpleGridProps, "onChange"> & {
   jobHash?: Character["job"];
   abilityHash?: Character["ability"];
   secondary?: boolean;
   readonly?: boolean;
   strokePassives?: boolean;
+  onChange?: (infos: Partial<Character>) => void;
   sx?: (theme: MantineTheme) => CSSObject;
 };
 const BaseJobDetail = ({
@@ -46,6 +47,7 @@ const BaseJobDetail = ({
   readonly = false,
   sx,
   strokePassives = false,
+  onChange,
   ...props
 }: BaseJobDetailProps) => {
   const { t } = useTranslate();
@@ -101,7 +103,9 @@ const BaseJobDetail = ({
       </SimpleGrid>
       <JobInput
         value={jobInputValue}
-        onChange={(value) => {}}
+        onChange={(value) => {
+          onChange?.(value);
+        }}
         opened={inputOpened}
         onClose={() => setInputOpened(false)}
       />

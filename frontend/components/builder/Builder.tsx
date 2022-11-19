@@ -15,6 +15,7 @@ const { queries, commands } = newClient();
 type BuilderContext = {
   addNewCharacter?: (unvalidatedCharacter: UnvalidatedCharacter) => void;
   deleteCharacter?: (id: Character["id"]) => void;
+  patchCharacter?: (id: Character["id"], infos: Partial<Character>) => void;
   characters?: Character[];
   orderedCharacters?: Character[];
   charactersById?: Record<Character["id"], Character>;
@@ -48,11 +49,14 @@ export const BuilderProvider = ({ children }: { children: JSX.Element }) => {
 
   const [deleteCharacter] = useBuilderCommand(commands.deleteCharacter);
 
+  const [patchCharacter] = useBuilderCommand(commands.patchCharacter);
+
   return (
     <builderContext.Provider
       value={{
         addNewCharacter,
         deleteCharacter,
+        patchCharacter,
         characters,
         orderedCharacters,
         charactersById,

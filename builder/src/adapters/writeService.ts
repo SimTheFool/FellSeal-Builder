@@ -10,4 +10,8 @@ export type WriteService = {
   deleteCharacter: (
     id: Character["id"]
   ) => AppResult<undefined, AppErrors<string>>;
+  patchCharacter: (
+    id: Character["id"],
+    characterInfos: Partial<Character>
+  ) => AppResult<undefined, AppErrors<string>>;
 };

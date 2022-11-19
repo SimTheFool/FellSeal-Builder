@@ -121,7 +121,6 @@ test("should add empty new character with only position 0 and id", async (t) => 
 });
 
 test("should delete character from id", async (t) => {
-  t.runOnly(true);
   const idToDelete = "001" as Character["id"];
   const { queries, commands } = newClient();
   const waitForRefetch1 = waitForOccurence(queries, 1);
@@ -130,4 +129,20 @@ test("should delete character from id", async (t) => {
 
   const found = charactersWithDeleted.find((c) => c.id === idToDelete);
   assert.equal(found, undefined);
+});
+
+test("should patch character from id", async (t) => {
+  t.runOnly(true);
+  const idToPatch = "001" as Character["id"];
+  const { queries, commands } = newClient();
+  const waitForRefetch1 = waitForOccurence(queries, 1);
+  commands.patchCharacter(idToPatch, {
+    name: "Docto",
+    ability: "assa",
+  } as Partial<Character>);
+  const charactersWithPatched = await waitForRefetch1;
+
+  const found = charactersWithPatched.find((c) => c.id === idToPatch);
+  assert.equal(found?.name, "Docto");
+  assert.equal(found?.ability, "assa");
 });

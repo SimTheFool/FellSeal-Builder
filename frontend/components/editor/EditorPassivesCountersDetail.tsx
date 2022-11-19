@@ -8,10 +8,12 @@ import { EditorHeading } from "./EditorHeading";
 type EditorPassivesCounterDetailProps = {
   passives?: Character["passives"];
   counter?: Character["counter"];
+  onChange?: (infos: Partial<Character>) => void;
 };
 export const EditorPassivesCounterDetail = ({
   passives,
   counter,
+  onChange,
 }: EditorPassivesCounterDetailProps) => {
   const [inputPassiveOpened, setInputPassivesOpened] = useState(false);
   const [inputCounterOpened, setInputCounterOpened] = useState(false);
@@ -59,13 +61,21 @@ export const EditorPassivesCounterDetail = ({
       </SimpleGrid>
       <PassivesSkillInput
         value={passives}
-        onChange={(value) => {}}
+        onChange={(value) => {
+          onChange?.({
+            passives: value as Character["passives"],
+          });
+        }}
         opened={inputPassiveOpened}
         onClose={() => setInputPassivesOpened(false)}
       />
       <CounterSkillInput
         value={counter && [counter]}
-        onChange={(value) => {}}
+        onChange={(value) => {
+          onChange?.({
+            counter: value[0],
+          });
+        }}
         opened={inputCounterOpened}
         onClose={() => setInputCounterOpened(false)}
       />

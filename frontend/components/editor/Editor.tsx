@@ -24,8 +24,10 @@ export const Editor = ({
   ...props
 }: EditorProps) => {
   const enoughHeight = useMediaQuery(mediaQuery.enoughHeight.value);
-  const { charactersById } = useBuilder();
+  const { charactersById, patchCharacter } = useBuilder();
   const character = charactersById?.[id];
+  const patch = (infos: Partial<Character>) =>
+    patchCharacter?.(character?.id, infos);
 
   return (
     <Drawer
@@ -64,19 +66,22 @@ export const Editor = ({
       >
         {character && (
           <EditorLayout
-            header={<EditorHeader {...character} />}
+            header={<EditorHeader {...character} onChange={patch} />}
             sections={[
               <MainJobDetail
                 jobHash={character.job}
                 abilityHash={character.ability}
+                onChange={patch}
               />,
               <SecondaryJobDetail
                 jobHash={character.job}
                 abilityHash={character.ability}
+                onChange={patch}
               />,
               <EditorPassivesCounterDetail
                 passives={character.passives}
                 counter={character.counter}
+                onChange={patch}
               />,
             ]}
           />

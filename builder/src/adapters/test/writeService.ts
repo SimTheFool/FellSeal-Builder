@@ -44,6 +44,20 @@ export const newWriteService = (): WriteService => {
       testDb.characters = newCharacters;
       return newAppResult(undefined);
     },
+    patchCharacter: (id: Character["id"], infos: Partial<Character>) => {
+      const character = testDb.characters.find((c) => c.id === id);
+      const newCharacters = testDb.characters.filter((c) => c.id !== id);
+
+      testDb.characters = [
+        ...newCharacters,
+        {
+          ...character,
+          ...(infos as Character),
+          id,
+        },
+      ];
+      return newAppResult(undefined);
+    },
   };
 };
 
