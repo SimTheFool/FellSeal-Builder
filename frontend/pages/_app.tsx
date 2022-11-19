@@ -21,6 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         },
         radius: {
           xs: 8,
+          sm: 11,
           md: 19,
         },
         fontSizes: {

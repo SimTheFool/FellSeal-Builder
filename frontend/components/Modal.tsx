@@ -1,4 +1,9 @@
-import { ActionIcon, Box, Modal as MantineModal } from "@mantine/core";
+import {
+  ActionIcon,
+  ActionIconProps,
+  Box,
+  Modal as MantineModal,
+} from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { ReactNode } from "react";
 import { BsArrowLeftShort, BsCheck } from "react-icons/bs";
@@ -11,6 +16,7 @@ type ModalProps = {
   children: ReactNode;
   overflow?: boolean;
   headerContent?: ReactNode;
+  disabled?: boolean;
 };
 
 export const Modal = ({
@@ -20,6 +26,7 @@ export const Modal = ({
   onClose,
   overflow = true,
   headerContent,
+  disabled = false,
 }: ModalProps) => {
   const enoughHeight = useMediaQuery(mediaQuery.enoughHeight.value);
   return (
@@ -66,7 +73,7 @@ export const Modal = ({
           <BsArrowLeftShort size={25} />
         </HeaderButton>
         <Box>{headerContent}</Box>
-        <HeaderButton onClick={onChange}>
+        <HeaderButton onClick={onChange} disabled={disabled}>
           <BsCheck size={25} />
         </HeaderButton>
       </Box>
@@ -81,19 +88,23 @@ export const Modal = ({
   );
 };
 
-type HeaderButtonProps = {
+type HeaderButtonProps = ActionIconProps & {
   onClick: () => void;
   children: ReactNode;
 };
-const HeaderButton = ({ onClick, children }: HeaderButtonProps) => {
+const HeaderButton = ({ onClick, children, ...props }: HeaderButtonProps) => {
   return (
     <ActionIcon
       sx={(t) => ({
         width: "unset",
         display: "inline",
+        "&:disabled": {
+          color: t.colors.white[3],
+        },
       })}
       variant="transparent"
       onClick={onClick}
+      {...props}
     >
       {children}
     </ActionIcon>
