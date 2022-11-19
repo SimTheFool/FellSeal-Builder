@@ -1,15 +1,17 @@
-import { Box, Center } from "@mantine/core";
+import { Box, Center, Divider } from "@mantine/core";
 import { Character, CharacterSkill } from "builder";
 import { ReactNode, useCallback, useEffect, useMemo, useState } from "react";
 import { useBuilder } from "../builder/Builder";
 import { Modal } from "../Modal";
 import { MainJobSkillText } from "../text/JobText";
 import { PassiveSkillText } from "../text/SkillText";
+import { useTranslate } from "../translations/Translate";
 
 type SkillValue = readonly CharacterSkill[];
 type SkillItem = {
   jobHash: string;
   hash: string;
+  description: string;
 };
 type SkillInputProps = {
   opened: boolean;
@@ -176,10 +178,11 @@ const SkillDetail = ({
   selected = false,
   onSelected,
 }: SkillDetailProps) => {
+  const { t } = useTranslate();
   return (
     <Box
       component="li"
-      py="xs"
+      py="md"
       px="sm"
       my="xs"
       sx={(t) => ({
@@ -197,7 +200,7 @@ const SkillDetail = ({
           size="md"
           sx={(t) => ({
             display: "inline",
-            lineHeight: 0.3,
+            lineHeight: 0.7,
           })}
         />
       </Center>
@@ -210,12 +213,15 @@ const SkillDetail = ({
           })}
         />
       </Center>
+      <Divider my="sm" />
       <Box
         sx={(t) => ({
           fontSize: t.fontSizes.sm,
+          fontFamily: "Libre Baskerville",
+          textAlign: "center",
         })}
       >
-        AAAAA dfgdfg fghfghfgh gyjgthj ghj
+        {t(skill.description)}
       </Box>
     </Box>
   );

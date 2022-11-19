@@ -115,7 +115,8 @@ const importJobAndSkills = (xmlJobs: string, xmlSkills: string): Job[] => {
     const { actives, passives, counters } = skillIds.reduce(
       ({ actives, passives, counters }, id) => {
         const { HashName, Name, SpellType } = parsedSkillsByHashname[id];
-        const skillHash = HashName.toLowerCase();
+        const skillHash: string = HashName.toLowerCase();
+        const skillDescription = `${skillHash}-desc`;
         const match = id.match(/^.*([A | P | C])\d+$/);
         const skillType = match?.[1] || "N/A";
 
@@ -126,16 +127,20 @@ const importJobAndSkills = (xmlJobs: string, xmlSkills: string): Job[] => {
           actives: [
             ...actives,
             ...(skillType === "A"
-              ? [newActiveSkill(skillHash, Name, SpellType)]
+              ? [newActiveSkill(skillHash, Name, skillDescription, SpellType)]
               : []),
           ],
           passives: [
             ...passives,
-            ...(skillType === "P" ? [newPassiveSkill(skillHash, Name)] : []),
+            ...(skillType === "P"
+              ? [newPassiveSkill(skillHash, Name, skillDescription)]
+              : []),
           ],
           counters: [
             ...counters,
-            ...(skillType === "C" ? [newCounterSkill(skillHash, Name)] : []),
+            ...(skillType === "C"
+              ? [newCounterSkill(skillHash, Name, skillDescription)]
+              : []),
           ],
         };
       },
