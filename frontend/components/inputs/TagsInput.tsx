@@ -1,6 +1,8 @@
 import { Box, BoxProps } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
 import { CharacterTag } from "builder";
 import { ReactNode } from "react";
+import { mediaQuery } from "../style";
 import { iconsData, TagIcon } from "../tags/TagIcons";
 
 type TagsInputProps = {
@@ -8,6 +10,7 @@ type TagsInputProps = {
   onChange?: (value: CharacterTag[]) => void;
 };
 export const TagsInput = ({ value, onChange }: TagsInputProps) => {
+  const enoughHeight = useMediaQuery(mediaQuery.enoughHeight.value);
   const toggleTag = (tag: CharacterTag) => {
     const tagIndex = value.findIndex((t) => t === tag);
     if (tagIndex < 0) {
@@ -25,6 +28,7 @@ export const TagsInput = ({ value, onChange }: TagsInputProps) => {
         padding: 0,
         margin: 0,
         listStyle: "none",
+        display: enoughHeight ? "unset" : "flex",
       })}
       component="ul"
     >
@@ -60,6 +64,7 @@ const TagButton = ({
       m="xs"
       component="li"
       sx={(t) => ({
+        cursor: "pointer",
         opacity: selected ? 1 : 0.5,
       })}
       onClick={onClick}

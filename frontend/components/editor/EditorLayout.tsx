@@ -47,7 +47,9 @@ export const EditorLayout = ({ header, sections, tags }: EditorLayout) => {
       <Box
         sx={(t) => ({
           position: "absolute",
-          right: 0,
+          left: enoughHeight ? "unset" : "50%",
+          right: enoughHeight ? 0 : "unset",
+          transform: enoughHeight ? "unset" : "translateX(-50%)",
           bottom: 0,
         })}
       >
