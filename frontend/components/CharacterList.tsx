@@ -13,14 +13,14 @@ type CharacterListProps = {
 };
 
 export const CharacterList = ({ onFocusCharacter }: CharacterListProps) => {
-  const { characters, addNewCharacter } = useBuilder();
+  const { orderedCharacters, addNewCharacter } = useBuilder();
 
   const [list, queryList] = useDOMRef<HTMLElement>();
   const { width: listWidth = 0 } = useBoundingClientRect(list) || {};
 
   const itemBaseWidth = portraitWidth + 10;
   const capacity = Math.floor(listWidth / itemBaseWidth);
-  const length = characters?.length || 0;
+  const length = orderedCharacters?.length || 0;
   const present = (length + 1) % capacity;
   const missing = present ? capacity - present : present;
 
@@ -50,7 +50,7 @@ export const CharacterList = ({ onFocusCharacter }: CharacterListProps) => {
         <NewCard onClick={() => addNewCharacter?.({})} />
       </ListItem>
 
-      {(characters || []).map((c) => (
+      {(orderedCharacters || []).map((c) => (
         <ListItem>
           <CharacterCard character={c} key={c.id} onFocus={onFocusCharacter} />
         </ListItem>
