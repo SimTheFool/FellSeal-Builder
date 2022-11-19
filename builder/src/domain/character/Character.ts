@@ -4,8 +4,9 @@ import { NominalString } from "utils";
 
 type Id = NominalString<"character_id">;
 type Name = NominalString<"character_name">;
-type Passive = readonly [job: Job["hash"], skill: PassiveSkill["hash"]];
-type Counter = readonly [job: Job["hash"], skill: CounterSkill["hash"]];
+/* type Passive = readonly [job: Job["hash"], skill: PassiveSkill["hash"]];
+type Counter = readonly [job: Job["hash"], skill: CounterSkill["hash"]]; */
+export type CharacterSkill = readonly [job: string, skill: string];
 
 export type CharacterTag =
   | "support"
@@ -23,8 +24,8 @@ export type Character = {
   name: Name;
   job: Job["hash"];
   ability: Job["hash"];
-  passives: readonly [Passive, Passive];
-  counter: Counter;
+  passives: readonly [CharacterSkill, CharacterSkill];
+  counter: CharacterSkill;
   portrait: string;
   tags?: CharacterTag[];
 };
@@ -33,8 +34,8 @@ export type UnvalidatedCharacter = {
   name?: string;
   job?: Job["hash"];
   ability?: Job["hash"];
-  passives?: readonly [Passive | undefined, Passive | undefined];
-  counter?: Counter;
+  passives?: readonly [CharacterSkill | undefined, CharacterSkill | undefined];
+  counter?: CharacterSkill;
   portrait?: string;
   tags?: CharacterTag[];
 };

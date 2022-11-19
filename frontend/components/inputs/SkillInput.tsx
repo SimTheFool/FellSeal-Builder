@@ -1,12 +1,12 @@
 import { Box, Center } from "@mantine/core";
-import { Character } from "builder";
-import { useEffect, useMemo, useState } from "react";
+import { Character, CharacterSkill } from "builder";
+import { ReactNode, useCallback, useEffect, useMemo, useState } from "react";
 import { useBuilder } from "../builder/Builder";
 import { Modal } from "../Modal";
 import { MainJobSkillText } from "../text/JobText";
 import { PassiveSkillText } from "../text/SkillText";
 
-type SkillValue = Character["passives"];
+type SkillValue = readonly CharacterSkill[];
 type SkillItem = {
   jobHash: string;
   hash: string;
@@ -17,9 +17,13 @@ type SkillInputProps = {
   value?: SkillValue;
   onChange: (value: SkillValue) => void;
   options?: SkillItem[];
+  maxOptions: number;
+  maxOptionMessage: (max: number, current: number) => ReactNode;
 };
 
-export const PassivesSkillInput = (props: Omit<SkillInputProps, "options">) => {
+export const PassivesSkillInput = (
+  props: Omit<SkillInputProps, "options" | "maxOptions" | "maxOptionMessage">
+) => {
   const { jobs } = useBuilder();
   const passivesOptions = useMemo(
     () =>
@@ -33,11 +37,64 @@ export const PassivesSkillInput = (props: Omit<SkillInputProps, "options">) => {
     [jobs]
   );
 
-  return <SkillInput {...props} options={passivesOptions} />;
+  const maxOptionsMessage = (max: number, current: number): ReactNode => (
+    <>
+      Select two passives
+      {current < max
+        ? ` - missing ${max - current}`
+        : current == max
+        ? ""
+        : ` - too many selected (${current})`}
+    </>
+  );
+
+  return (
+    <SkillInput
+      {...props}
+      options={passivesOptions}
+      maxOptions={2}
+      maxOptionMessage={maxOptionsMessage}
+    />
+  );
 };
 
-export const CounterSkillInput = (props: Omit<SkillInputProps, "options">) => {
-  return <SkillInput {...props} options={[]} />;
+export const CounterSkillInput = (
+  props: Omit<SkillInputProps, "options" | "maxOptions" | "maxOptionMessage">
+) => {
+  const { jobs } = useBuilder();
+  const counterOptions = useMemo(
+    () =>
+      jobs &&
+      Object.values(jobs).flatMap(({ counters, ...job }) =>
+        counters.map((counter) => ({
+          ...counter,
+          jobHash: job.hash,
+        }))
+      ),
+    [jobs]
+  );
+
+  const maxOptionsMessage = useCallback(
+    (max: number, current: number): ReactNode => (
+      <>
+        Select one counter
+        {current < max
+          ? ` - missing ${max - current}`
+          : current == max
+          ? ""
+          : ` - too many selected (${current})`}
+      </>
+    ),
+    []
+  );
+  return (
+    <SkillInput
+      {...props}
+      options={counterOptions}
+      maxOptions={1}
+      maxOptionMessage={maxOptionsMessage}
+    />
+  );
 };
 
 const SkillInput = ({
@@ -46,48 +103,41 @@ const SkillInput = ({
   onClose,
   value: initialValue,
   options,
+  maxOptions,
+  maxOptionMessage,
 }: SkillInputProps) => {
-  const [passives, setPassives] = useState<readonly Character["passives"][0][]>(
+  const [skills, setSkills] = useState<readonly CharacterSkill[]>(
     initialValue || []
   );
-  const passivesHash = useMemo(() => passives.map((p) => p[1]), [passives]);
+  const skillsHash = useMemo(() => skills.map((p) => p[1]), [skills]);
 
   const toggleSkill = (skill: SkillItem) => {
-    const skillIndex = passives.findIndex((s) => s[1] === skill.hash);
+    const skillIndex = skills.findIndex((s) => s[1] === skill.hash);
     if (skillIndex < 0) {
-      setPassives([...passives, [skill.jobHash, skill.hash]]);
+      setSkills([...skills, [skill.jobHash, skill.hash]]);
       return;
     }
 
-    const newPassives = [...passives];
-    newPassives.splice(skillIndex, 1);
-    setPassives(newPassives);
+    const newSkills = [...skills];
+    newSkills.splice(skillIndex, 1);
+    setSkills(newSkills);
   };
 
   useEffect(() => {
-    setPassives(initialValue || []);
+    setSkills(initialValue || []);
   }, [initialValue, opened]);
 
   return (
     <Modal
-      disabled={passives.length !== 2}
+      disabled={skills.length !== maxOptions}
       opened={opened}
       onClose={onClose}
       onChange={() => {
-        onChange(passives as any);
+        onChange(skills as any);
         onClose();
       }}
       overflow={false}
-      headerContent={
-        <>
-          Select two passives
-          {passives.length < 2
-            ? ` - missing ${2 - passives.length}`
-            : passives.length == 2
-            ? ""
-            : ` - too many selected (${passives.length})`}
-        </>
-      }
+      headerContent={maxOptionMessage(maxOptions, skills.length)}
     >
       <Box
         pt="md"
@@ -107,7 +157,7 @@ const SkillInput = ({
           <SkillDetail
             skill={o}
             key={o.hash}
-            selected={passivesHash.includes(o.hash)}
+            selected={skillsHash.includes(o.hash)}
             onSelected={toggleSkill}
           />
         ))}

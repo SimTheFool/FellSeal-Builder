@@ -7,6 +7,7 @@ export {
   Character,
   UnvalidatedCharacter,
   CharacterTag,
+  CharacterSkill,
 } from "@domain/character/Character";
 export { Job } from "@domain/Job";
 export { Skill, ActiveSkill, CounterSkill, PassiveSkill } from "@domain/Skill";

@@ -1,7 +1,7 @@
 import { Box, SimpleGrid } from "@mantine/core";
 import { Character } from "builder";
 import { useState } from "react";
-import { PassivesSkillInput } from "../inputs/SkillInput";
+import { CounterSkillInput, PassivesSkillInput } from "../inputs/SkillInput";
 import { PassiveSkillText } from "../text/SkillText";
 import { EditorHeading } from "./EditorHeading";
 
@@ -13,12 +13,13 @@ export const EditorPassivesCounterDetail = ({
   passives,
   counter,
 }: EditorPassivesCounterDetailProps) => {
-  const [inputOpened, setInputOpened] = useState(false);
+  const [inputPassiveOpened, setInputPassivesOpened] = useState(false);
+  const [inputCounterOpened, setInputCounterOpened] = useState(false);
 
   return (
     <>
       <SimpleGrid cols={1} verticalSpacing={0}>
-        <EditorHeading onClick={() => setInputOpened(true)}>
+        <EditorHeading onClick={() => setInputPassivesOpened(true)}>
           Passives
         </EditorHeading>
         <Box
@@ -38,7 +39,9 @@ export const EditorPassivesCounterDetail = ({
               />
             ))}
         </Box>
-        <EditorHeading>Counter</EditorHeading>
+        <EditorHeading onClick={() => setInputCounterOpened(true)}>
+          Counter
+        </EditorHeading>
         <Box
           sx={(t) => ({
             display: "flex",
@@ -57,8 +60,14 @@ export const EditorPassivesCounterDetail = ({
       <PassivesSkillInput
         value={passives}
         onChange={(value) => {}}
-        opened={inputOpened}
-        onClose={() => setInputOpened(false)}
+        opened={inputPassiveOpened}
+        onClose={() => setInputPassivesOpened(false)}
+      />
+      <CounterSkillInput
+        value={counter && [counter]}
+        onChange={(value) => {}}
+        opened={inputCounterOpened}
+        onClose={() => setInputCounterOpened(false)}
       />
     </>
   );
