@@ -2,7 +2,7 @@ import { Box } from "@mantine/core";
 import { Character, CharacterTag } from "builder";
 import Image from "next/image";
 
-const iconsData: Record<CharacterTag, [svgPath: string, alt: string]> = {
+export const iconsData: Record<CharacterTag, [svgPath: string, alt: string]> = {
   physical: ["/icons/physical.svg", "physical damage"],
   magickal: ["/icons/magickal.svg", "magickal damage"],
   support: ["/icons/support.svg", "support"],

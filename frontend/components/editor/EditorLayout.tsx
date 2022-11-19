@@ -1,13 +1,15 @@
 import { Box, SimpleGrid } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { ReactNode } from "react";
+import { TagsInput } from "../inputs/TagsInput";
 import { mediaQuery, portraitHeight } from "../style";
 
 type EditorLayout = {
   header: ReactNode;
   sections: ReactNode[];
+  tags: ReactNode;
 };
-export const EditorLayout = ({ header, sections }: EditorLayout) => {
+export const EditorLayout = ({ header, sections, tags }: EditorLayout) => {
   const enoughHeight = useMediaQuery(mediaQuery.enoughHeight.value);
   const hugeHeight = useMediaQuery(mediaQuery.hugeHeight.value);
   return (
@@ -15,6 +17,7 @@ export const EditorLayout = ({ header, sections }: EditorLayout) => {
       sx={(t) => ({
         height: "100%",
         overflowX: "auto",
+        position: "relative",
       })}
     >
       <Box
@@ -40,6 +43,16 @@ export const EditorLayout = ({ header, sections }: EditorLayout) => {
           </Box>
         ))}
       </SimpleGrid>
+
+      <Box
+        sx={(t) => ({
+          position: "absolute",
+          right: 0,
+          bottom: 0,
+        })}
+      >
+        {tags}
+      </Box>
     </Box>
   );
 };

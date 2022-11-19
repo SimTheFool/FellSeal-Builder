@@ -8,6 +8,7 @@ import { MainJobDetail, SecondaryJobDetail } from "./EditorJobDetail";
 import { EditorLayout } from "./EditorLayout";
 import { EditorPassivesCounterDetail } from "./EditorPassivesCountersDetail";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
+import { TagsInput } from "../inputs/TagsInput";
 
 type EditorProps = {
   id: Character["id"];
@@ -84,6 +85,16 @@ export const Editor = ({
                 onChange={patch}
               />,
             ]}
+            tags={
+              <TagsInput
+                value={character.tags || []}
+                onChange={(v) =>
+                  patch({
+                    tags: v,
+                  })
+                }
+              />
+            }
           />
         )}
       </Box>

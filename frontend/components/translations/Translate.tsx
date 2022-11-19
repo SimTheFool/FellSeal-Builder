@@ -28,7 +28,6 @@ export const TranslationProvider = ({
 }) => {
   const [translationFr = {}] = useBuilderQuery(queries.getTranslation)("fr");
   const [translationEn = {}] = useBuilderQuery(queries.getTranslation)("en");
-  console.log(translationFr);
 
   useEffect(() => {
     i18n.addResourceBundle("en", "translation", translationEn);
