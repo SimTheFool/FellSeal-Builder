@@ -16,6 +16,6 @@
     "frontend": "yarn workspace frontend",
     "builder": "yarn workspace builder",
     "watch:libs": "yarn ut build:watch",
-    "build": "task dist -d ./builder F=client-standalone -f && yarn frontend build"
+    "build": "task dist -d ./builder F=client-standalone -f && yarn ut build && yarn frontend build"
   }
 }

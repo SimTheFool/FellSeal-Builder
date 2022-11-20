@@ -6,7 +6,8 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "build:watch": "tsc -w"
+    "build:watch": "tsc -w",
+    "build": "tsc"
   },
   "devDependencies": {
     "typescript": "^4.8.4"
