@@ -13,6 +13,8 @@
   ],
   "scripts": {
     "ut": "yarn workspace utils",
-    "watch:libs": "yarn ut build:watch"
+    "frontend": "yarn workspace frontend",
+    "watch:libs": "yarn ut build:watch",
+    "build:front": "yarn frontend build"
   }
 }
