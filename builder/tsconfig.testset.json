@@ -1,4 +1,8 @@
 {
   "extends": "./tsconfig.default.json",
-  "include": ["./src/**/*.spec.ts", "./src/@types/XML.d.ts"]
+  "include": [
+    "./src/**/*.spec.ts",
+    "./src/@types/XML.d.ts",
+    "./src/@types/definitions.d.ts"
+  ]
 }

@@ -14,13 +14,7 @@ import { newAppResult } from "@utils/result/Result.js";
 import { XMLParser } from "fast-xml-parser";
 import { keyBy } from "lodash";
 import { WriteService } from "../writeService.js";
-
-import xmlJobs from "../../assets/jobs.xml";
-import xmlSkills from "../../assets/skills.xml";
-import txtSkillsTranslation from "../../assets/fr/skills.txt";
-import txtMonstersTranslation from "../../assets/fr/monsters.txt";
 import { v4 as uuid } from "uuid";
-//import fs from "fs";
 
 export const newWriteService = (): WriteService => {
   migrate();
@@ -68,12 +62,12 @@ const migrate = () => {
     ...c,
   }));
 
-  testDb.jobs = importJobAndSkills(xmlJobs, xmlSkills);
+  /* testDb.jobs = importJobAndSkills(xmlJobs, xmlSkills); */
 
   testDb.translations = {
     fr: {
-      ...importTranslations(txtSkillsTranslation),
-      ...importTranslations(txtMonstersTranslation),
+      /* ...importTranslations(txtSkillsTranslation),
+      ...importTranslations(txtMonstersTranslation), */
     },
     en: {},
   };

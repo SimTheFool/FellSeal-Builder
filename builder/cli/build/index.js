@@ -3,6 +3,8 @@ import yargs from "yargs/yargs";
 import { hideBin } from "yargs/helpers";
 import getTsConfig from "./getTsConfig.js";
 import getEntryPoints from "./getEntryPoints.js";
+import translationPlugin from "./translationPlugin.js";
+import gameDataPlugin from "./gameDataPlugin.js";
 
 const args = yargs(hideBin(process.argv))
   .option("tsconfig", {
@@ -24,7 +26,6 @@ const getBuildConfig = async () => {
     tsconfig: args.tsconfig,
     entryPoints: await getEntryPoints(include),
     outdir: compilerOptions.outDir,
-    loader: { ".xml": "base64", ".txt": "base64" },
     outbase: "./src",
     bundle: true,
     platform: args.platform,
@@ -34,6 +35,7 @@ const getBuildConfig = async () => {
         args.platform === "node" &&
         "import { createRequire as topLevelCreateRequire } from 'module';\n const require = topLevelCreateRequire(import.meta.url);",
     },
+    plugins: [translationPlugin, gameDataPlugin],
   };
 };
 
