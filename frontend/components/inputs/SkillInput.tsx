@@ -180,6 +180,13 @@ const SkillDetail = ({
 }: SkillDetailProps) => {
   const { t } = useTranslate();
   const { skillsByHash } = useBuilder();
+  const finalSkill = useMemo(() => {
+    const originSkill = skill.hash ? skillsByHash?.[skill.hash] : undefined;
+    const finalSkill = originSkill?.likeHash
+      ? skillsByHash?.[originSkill?.likeHash]
+      : skill;
+    return finalSkill;
+  }, [skillsByHash, skill]);
   return (
     <Box
       component="li"
@@ -197,7 +204,7 @@ const SkillDetail = ({
     >
       <Center>
         <PassiveSkillText
-          skill={skillsByHash?.[skill.hash]}
+          skillHash={skill.hash}
           size="md"
           sx={(t) => ({
             display: "inline",
@@ -222,7 +229,7 @@ const SkillDetail = ({
           textAlign: "center",
         })}
       >
-        {t(skill.description)}
+        {finalSkill && t(finalSkill?.description)}
       </Box>
     </Box>
   );

@@ -51,7 +51,7 @@ const BaseJobDetail = ({
   ...props
 }: BaseJobDetailProps) => {
   const { t } = useTranslate();
-  const { jobsByHash, skillsByHash } = useBuilder();
+  const { jobsByHash } = useBuilder();
   const job = secondary
     ? abilityHash && jobsByHash?.[abilityHash]
     : jobHash && jobsByHash?.[jobHash];
@@ -77,7 +77,7 @@ const BaseJobDetail = ({
           {job &&
             job.actives.map((a) => (
               <ActiveSkillText
-                skill={skillsByHash?.[a.hash]}
+                skillHash={a.hash}
                 sx={(t) => ({
                   minWidth: "50%",
                 })}
@@ -91,7 +91,7 @@ const BaseJobDetail = ({
               {job &&
                 job.passives.map((p) => (
                   <PassiveSkillText
-                    skill={skillsByHash?.[p.hash]}
+                    skillHash={p.hash}
                     sx={(t) => ({
                       minWidth: "50%",
                     })}

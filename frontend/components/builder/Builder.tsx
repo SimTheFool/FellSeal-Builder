@@ -49,6 +49,8 @@ export const BuilderProvider = ({ children }: { children: JSX.Element }) => {
 
   const [skills, skillsError] = useBuilderQuery(queries.getAllSkills)();
 
+  console.log(skills?.find((s) => s.hash === "lord-p1"));
+
   const skillsByHash = useMemo(
     () => skills && keyBy(skills, (s) => s.hash),
     [skills]

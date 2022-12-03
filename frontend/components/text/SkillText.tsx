@@ -1,11 +1,13 @@
 import { CSSObject, MantineTheme, Sx, Text, TextProps } from "@mantine/core";
 import { Job, Skill } from "builder";
+import { useMemo } from "react";
 import { PlaceholdingText } from "../../utils/components/PlaceholdingText";
+import { useBuilder } from "../builder/Builder";
 import { useTranslate } from "../translations/Translate";
 
 type SkillText = {
   jobHash?: Job["hash"];
-  skill?: Skill;
+  skillHash?: Skill["hash"];
   sx?: (theme: MantineTheme) => CSSObject;
 } & TextProps;
 
@@ -21,19 +23,28 @@ export const ActiveSkillText = ({ ...props }: SkillText) => {
   return <SkillText {...props} color="white.0" />;
 };
 
-const SkillText = ({ jobHash, skill, sx, ...textProps }: SkillText) => {
+const SkillText = ({ skillHash, sx, ...textProps }: SkillText) => {
   const { t } = useTranslate();
+  const { skillsByHash } = useBuilder();
+  const finalSkill = useMemo(() => {
+    const skill = skillHash ? skillsByHash?.[skillHash] : undefined;
+    const finalSkill = skill?.likeHash
+      ? skillsByHash?.[skill?.likeHash]
+      : skill;
+    return finalSkill;
+  }, [skillsByHash, skillHash]);
+
   return (
     <PlaceholdingText
       size="sm"
       weight={900}
       sx={(t) => ({
         ...sx?.(t),
-        visibility: skill ? "inherit" : "hidden",
+        visibility: skillHash ? "inherit" : "hidden",
       })}
       {...textProps}
     >
-      {skill && t(skill.likeHash || skill.hash)}
+      {finalSkill && t(finalSkill.hash)}
     </PlaceholdingText>
   );
 };

@@ -1,7 +1,6 @@
 import { Box, SimpleGrid } from "@mantine/core";
 import { Character } from "builder";
 import { useState } from "react";
-import { useBuilder } from "../builder/Builder";
 import { CounterSkillInput, PassivesSkillInput } from "../inputs/SkillInput";
 import { PassiveSkillText } from "../text/SkillText";
 import { EditorHeading } from "./EditorHeading";
@@ -18,7 +17,7 @@ export const EditorPassivesCounterDetail = ({
 }: EditorPassivesCounterDetailProps) => {
   const [inputPassiveOpened, setInputPassivesOpened] = useState(false);
   const [inputCounterOpened, setInputCounterOpened] = useState(false);
-  const { skillsByHash } = useBuilder();
+
   return (
     <>
       <SimpleGrid cols={1} verticalSpacing={0}>
@@ -35,7 +34,7 @@ export const EditorPassivesCounterDetail = ({
             passives.map((p) => (
               <PassiveSkillText
                 jobHash={p[0]}
-                skill={skillsByHash?.[p[1]]}
+                skillHash={p[1]}
                 sx={(t) => ({
                   minWidth: "50%",
                 })}
@@ -53,7 +52,7 @@ export const EditorPassivesCounterDetail = ({
         >
           <PassiveSkillText
             jobHash={counter?.[0]}
-            skill={counter && skillsByHash?.[counter[1]]}
+            skillHash={counter?.[1]}
             sx={(t) => ({
               minWidth: "50%",
             })}
