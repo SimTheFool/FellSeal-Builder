@@ -1,4 +1,5 @@
 import { Center, SimpleGrid } from "@mantine/core";
+import { useBuilder } from "../builder/Builder";
 import { PassiveSkillText } from "../text/SkillText";
 
 type BaseCardFooterProps = {
@@ -11,6 +12,8 @@ export const BaseCardFooter = ({
   counter,
   display,
 }: BaseCardFooterProps) => {
+  const { skillsByHash } = useBuilder();
+
   return (
     <SimpleGrid
       cols={2}
@@ -25,7 +28,7 @@ export const BaseCardFooter = ({
       <Center>
         <PassiveSkillText
           jobHash={passives?.[0][0]}
-          skillHash={passives?.[0][1]}
+          skill={passives && skillsByHash?.[passives[0][1]]}
           sx={(t) => ({
             lineHeight: `${t.fontSizes.md}px`,
           })}
@@ -35,7 +38,7 @@ export const BaseCardFooter = ({
       <Center>
         <PassiveSkillText
           jobHash={passives?.[1][0]}
-          skillHash={passives?.[1][1]}
+          skill={passives && skillsByHash?.[passives[1][1]]}
           sx={(t) => ({
             lineHeight: `${t.fontSizes.md}px`,
           })}
@@ -43,7 +46,7 @@ export const BaseCardFooter = ({
       </Center>
       <PassiveSkillText
         jobHash={counter?.[0]}
-        skillHash={counter?.[1]}
+        skill={counter && skillsByHash?.[counter[1]]}
         lineClamp={1}
         px="md"
         sx={(t) => ({

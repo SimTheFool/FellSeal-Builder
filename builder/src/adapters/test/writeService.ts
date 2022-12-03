@@ -2,7 +2,7 @@ import { Character } from "@domain/character/Character.js";
 import { characters, characters as fakeCharacters } from "@fixtures/characters";
 import { testDb } from "@utils/infra/testDb.js";
 import { newAppResult } from "@utils/result/Result.js";
-import { importJobsAndSkills } from "assets/importGameData";
+import { importJobs, importSkills } from "assets/importGameData";
 import { importTranslations } from "assets/importTranslations";
 import { v4 as uuid } from "uuid";
 import { WriteService } from "../writeService.js";
@@ -53,7 +53,9 @@ const migrate = () => {
     ...c,
   }));
 
-  testDb.jobs = importJobsAndSkills();
+  testDb.jobs = importJobs();
+
+  testDb.skills = importSkills();
 
   testDb.translations = importTranslations();
 };

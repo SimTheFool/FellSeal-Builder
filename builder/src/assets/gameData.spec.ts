@@ -9,6 +9,9 @@ test("should get skills", (t) => {
   assert.equal(knigA1?.name, "knig-a1");
   assert.equal(knigA1?.description, "knig-a1-desc");
   assert.equal(knigA1?.type, "active");
+
+  const lichA1 = skills_gamedata.find((s) => s.hash === "lich-a1");
+  assert.equal(lichA1?.likeHash, "anat-a1");
 });
 
 test("should get jobs", (t) => {

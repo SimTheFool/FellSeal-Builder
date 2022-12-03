@@ -4,7 +4,7 @@ export default (jsonSkills) => {
     ({ Ability }) => Ability
   );
 
-  const skills = rawSkills.map(({ HashName }) => {
+  const skills = rawSkills.map(({ HashName, CopyFrom }) => {
     const hash = HashName.toLowerCase();
     const skillTypeLetter = HashName.match(/^.*([A | P | C])\d+$/i);
     if (!skillTypeLetter) return;
@@ -13,6 +13,7 @@ export default (jsonSkills) => {
       name: hash,
       description: `${hash}-desc`,
       type: skillTypes[skillTypeLetter[1]],
+      likeHash: CopyFrom?.toLowerCase(),
     };
   });
   return skills.filter((s) => s);

@@ -3,7 +3,7 @@ import { Skill, ActiveSkill, PassiveSkill, CounterSkill } from "@domain/Skill";
 import jobsGameData from "./gameData/jobs.gdata";
 import skillsGameData from "./gameData/skills.gdata";
 
-export const importJobsAndSkills = (): Job[] => {
+export const importJobs = (): Job[] => {
   const skillsByHash = skillsGameData.reduce((acc, skill) => {
     const { hash } = skill;
     return {
@@ -39,3 +39,5 @@ export const importJobsAndSkills = (): Job[] => {
 
   return jobs;
 };
+
+export const importSkills = () => skillsGameData;

@@ -5,7 +5,7 @@ import { useTranslate } from "../translations/Translate";
 
 type SkillText = {
   jobHash?: Job["hash"];
-  skillHash?: Skill["hash"];
+  skill?: Skill;
   sx?: (theme: MantineTheme) => CSSObject;
 } & TextProps;
 
@@ -21,7 +21,7 @@ export const ActiveSkillText = ({ ...props }: SkillText) => {
   return <SkillText {...props} color="white.0" />;
 };
 
-const SkillText = ({ jobHash, skillHash, sx, ...textProps }: SkillText) => {
+const SkillText = ({ jobHash, skill, sx, ...textProps }: SkillText) => {
   const { t } = useTranslate();
   return (
     <PlaceholdingText
@@ -29,11 +29,11 @@ const SkillText = ({ jobHash, skillHash, sx, ...textProps }: SkillText) => {
       weight={900}
       sx={(t) => ({
         ...sx?.(t),
-        visibility: skillHash ? "inherit" : "hidden",
+        visibility: skill ? "inherit" : "hidden",
       })}
       {...textProps}
     >
-      {skillHash && t(skillHash)}
+      {skill && t(skill.likeHash || skill.hash)}
     </PlaceholdingText>
   );
 };

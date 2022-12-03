@@ -5,6 +5,7 @@ import {
   Character,
   Job,
   UnvalidatedCharacter,
+  Skill,
 } from "builder";
 import { useBuilderQuery } from "./useQuery";
 import { keyBy, sortBy } from "lodash";
@@ -21,6 +22,7 @@ type BuilderContext = {
   charactersById?: Record<Character["id"], Character>;
   charactersError?: AppErrors<string>;
   jobsByHash?: Record<Job["hash"], Job>;
+  skillsByHash?: Record<Skill["hash"], Skill>;
   jobs?: Job[];
   jobsError?: AppErrors<string>;
 };
@@ -45,6 +47,13 @@ export const BuilderProvider = ({ children }: { children: JSX.Element }) => {
 
   const jobsByHash = useMemo(() => jobs && keyBy(jobs, (j) => j.hash), [jobs]);
 
+  const [skills, skillsError] = useBuilderQuery(queries.getAllSkills)();
+
+  const skillsByHash = useMemo(
+    () => skills && keyBy(skills, (s) => s.hash),
+    [skills]
+  );
+
   const [addNewCharacter] = useBuilderCommand(commands.addNewCharacter);
 
   const [deleteCharacter] = useBuilderCommand(commands.deleteCharacter);
@@ -64,6 +73,7 @@ export const BuilderProvider = ({ children }: { children: JSX.Element }) => {
         jobsByHash,
         jobs,
         jobsError,
+        skillsByHash,
       }}
     >
       {children}

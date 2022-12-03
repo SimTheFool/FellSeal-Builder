@@ -179,6 +179,7 @@ const SkillDetail = ({
   onSelected,
 }: SkillDetailProps) => {
   const { t } = useTranslate();
+  const { skillsByHash } = useBuilder();
   return (
     <Box
       component="li"
@@ -196,7 +197,7 @@ const SkillDetail = ({
     >
       <Center>
         <PassiveSkillText
-          skillHash={skill.hash}
+          skill={skillsByHash?.[skill.hash]}
           size="md"
           sx={(t) => ({
             display: "inline",

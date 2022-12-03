@@ -13,7 +13,7 @@ const { queries } = newClient();
 i18n.use(initReactI18next).init({
   resources: {},
   lng: "fr",
-  fallbackLng: "fr",
+  fallbackLng: "en",
   react: {
     bindI18n: "loaded languageChanged",
     bindI18nStore: "added",
