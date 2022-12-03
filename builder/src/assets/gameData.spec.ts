@@ -15,6 +15,10 @@ test("should get skills", (t) => {
 
   const mercP2 = skills_gamedata.find((s) => s.hash === "merc-p2");
   assert.equal(mercP2?.power, "25");
+
+  const bladP1 = skills_gamedata.find((s) => s.hash === "blad-p1");
+  assert.equal(bladP1?.power, "32");
+  assert.equal(bladP1?.power2, "1.5");
 });
 
 test("should get jobs", (t) => {

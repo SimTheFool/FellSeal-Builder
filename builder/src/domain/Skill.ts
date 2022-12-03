@@ -6,6 +6,8 @@ type BaseSkill = {
   name: string;
   likeHash?: string;
   power?: string;
+  power2?: string;
+  power3?: string;
 };
 
 export type SkillType = "kNothing" | "kSkill" | "kSpell";
@@ -20,7 +22,9 @@ export const newActiveSkill = (
   description: string,
   skillType: SkillType,
   likeHash?: string,
-  power?: string
+  power?: string,
+  power2?: string,
+  power3?: string
 ): ActiveSkill => {
   return {
     hash,
@@ -30,6 +34,8 @@ export const newActiveSkill = (
     description,
     likeHash,
     power,
+    power2,
+    power3,
   };
 };
 
@@ -41,9 +47,20 @@ export const newPassiveSkill = (
   name: string,
   description: string,
   likeHash?: string,
-  power?: string
+  power?: string,
+  power2?: string,
+  power3?: string
 ): PassiveSkill => {
-  return { hash, name, type: "passive", description, likeHash, power };
+  return {
+    hash,
+    name,
+    type: "passive",
+    description,
+    likeHash,
+    power,
+    power2,
+    power3,
+  };
 };
 
 export type CounterSkill = BaseSkill & {
@@ -54,7 +71,18 @@ export const newCounterSkill = (
   name: string,
   description: string,
   likeHash?: string,
-  power?: string
+  power?: string,
+  power2?: string,
+  power3?: string
 ): CounterSkill => {
-  return { hash, name, type: "counter", description, likeHash, power };
+  return {
+    hash,
+    name,
+    type: "counter",
+    description,
+    likeHash,
+    power,
+    power2,
+    power3,
+  };
 };
