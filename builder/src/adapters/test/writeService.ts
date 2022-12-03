@@ -1,20 +1,10 @@
 import { Character } from "@domain/character/Character.js";
-import { Job } from "@domain/Job.js";
-import {
-  ActiveSkill,
-  CounterSkill,
-  PassiveSkill,
-  Skill,
-} from "@domain/Skill.js";
 import { characters, characters as fakeCharacters } from "@fixtures/characters";
 import { testDb } from "@utils/infra/testDb.js";
 import { newAppResult } from "@utils/result/Result.js";
 import { importJobsAndSkills } from "assets/importGameData";
 import { importTranslations } from "assets/importTranslations";
 import { v4 as uuid } from "uuid";
-import jobsGameData from "../../assets/gameData/jobs.gdata";
-import skillsGameData from "../../assets/gameData/skills.gdata";
-import translation_skills_fr from "../../assets/translations/fr/skills.tra";
 import { WriteService } from "../writeService.js";
 
 export const newWriteService = (): WriteService => {
