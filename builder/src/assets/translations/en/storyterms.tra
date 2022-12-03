@@ -1,0 +1,49 @@
+; Story terms
+arbiter				=Arbiter
+arbiters			=Arbiters
+immortal			=Immortal
+immortals			=Immortals
+immortalsn			=Immortals
+guild				=Guild
+marked				=Marked
+markeds				=Marked
+mark				=Mark
+council				=Council
+immortal-council	={Immortal} {council}
+relic				=Relic
+relics				=Relics
+ancient-bone		=Ancient Beast Bone
+chapterhouse		=Chapterhouse
+rebel-faction		=Sigil
+rebels				=Sigil members
+sigil				={rebel-faction}
+temple				=Temple
+temples				=Temples
+sealed-temple		=Sealed {temple}
+sealed-temples		=Sealed {Temples}
+medallion			=Medallion
+
+; Final boss name
+ancient-beast	=The Maw
+ancientbeast	={ancient-beast}
+
+; Name of the world
+worldname		=Teora
+worldmapname	={worldname}
+teora			={worldname}
+; Secret dungeon name
+ancient-path    =Ancient Path
+
+; Name of the game
+Fell-Seal		=Fell Seal: Arbiter's Mark
+
+
+; ***************************************************
+; Extras - No need to translate
+monster-cadavers	={UND-01-Titles}
+vangals				={VAN-01-Titles}
+
+monster-malcubi		={MAL-01-Titles}
+
+warden				={arbiter}
+wardens				={arbiters}

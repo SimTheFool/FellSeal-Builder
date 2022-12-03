@@ -1,0 +1,879 @@
+; **********************
+; Monsters
+; **********************
+; General info about weapons
+monster-weapon			=Natural Weapon
+monster-weapon-desc		=Creature's natural weapon, such as claws, talons, fangs, etc.
+
+passive-auto-effect=Character has permanent {addpositive} effect.
+
+; ****************************
+; Family: Bzzerk
+; ****************************
+; Base Ability
+BOL-Ability		=Charging
+
+; *** Classes ***
+BOL-01-Title	=Bzzerk
+BOL-01-Desc		=Normally a slow, lumbering beast, it is easy to be caught off-guard by the burst of speed this raging armored insect is capable of when charging.
+BOL-02-Title	=Golyat
+BOL-03-Title	=Khepra
+
+
+; *** Abilities ***
+BOL-01-A1		=Siege Ram
+BOL-01-A1-Desc	={damage-single} If the character has a clear straight line to the target, they can travel any distance. {ignore-cover}
+
+BOL-01-P1		=Stampede
+BOL-01-P1-Desc	=Damage dealt increases by {powerratio} for every tile the character has moved this turn.
+
+BOL-03-C1		=Shared Rage
+BOL-03-C1-Desc	={counter-offensive-action-adjacent} {counter-by-inflicting} {addnegative}.
+
+BOL-03-A3		=War Shell
+BOL-03-A3-Desc	={status-pos-opener} to the character. {help-posstatus-Thorns-desc}
+
+
+; ****************************
+; Family: Bulldrake
+; ****************************
+; Base Ability
+BUL-Ability		=Drake {term-breath}
+
+; *** Classes ***
+BUL-99-Title	=Bulldrake
+BUL-99-Desc		=This creature uses its elemental breath to terraform the environment more to its liking.
+BUL-01-Desc		={BUL-99-Desc}
+BUL-11-Desc		={BUL-99-Desc}
+BUL-21-Desc		={BUL-99-Desc}
+BUL-31-Desc		={BUL-99-Desc}
+BUL-Title2		=Bulldevil
+BUL-Title3		=Bulldralisk
+
+BUL-Blue	=Polar
+BUL-Red		=Vulcan
+BUL-Brown	=Cave
+BUL-Yellow	=Storm
+
+BUL-01-Title	={BUL-Blue} {BUL-99-Title}
+BUL-11-Title	={BUL-Red} {BUL-99-Title}
+BUL-21-Title	={BUL-Brown} {BUL-99-Title}
+BUL-31-Title	={BUL-Yellow} {BUL-99-Title}
+BUL-02-Title	={BUL-Blue} {BUL-Title2}
+BUL-12-Title	={BUL-Red} {BUL-Title2}
+BUL-22-Title	={BUL-Brown} {BUL-Title2}
+BUL-32-Title	={BUL-Yellow} {BUL-Title2}
+BUL-03-Title	={BUL-Blue} {BUL-Title3}
+BUL-13-Title	={BUL-Red} {BUL-Title3}
+BUL-23-Title	={BUL-Brown} {BUL-Title3}
+BUL-33-Title	={BUL-Yellow} {BUL-Title3}
+
+; *** Abilities ***
+BUL-01-A1     	=Rest Up
+BUL-01-A1-desc	={status-pos-opener} and restores {powerratio} ({dmgsource}) {hp} to the target, but will also inflict them with {addnegative}.
+
+BUL-01-A2     	=Water {term-breath}
+BUL-01-A2-desc	={damage-cone-opener} {add-negative-effect-closer}
+BUL-11-A2     	=Fire {term-breath}
+BUL-11-A2-desc	={BUL-01-A2-desc}
+BUL-21-A2     	=Earth {term-breath}
+BUL-21-A2-desc	={BUL-01-A2-desc}
+BUL-31-A2     	=Thunder {term-breath}
+BUL-31-A2-desc	={BUL-01-A2-desc}
+
+BUL-01-P1     	=Somniloquy
+BUL-01-P1-desc	=At the start of their turn, if the character is asleep, they will deal {elem} {powerratio} to {power3ratio} ({dmgsource}) damage to all enemies on the map, based on proximity.
+BUL-11-P1     	={BUL-01-P1}
+BUL-11-P1-desc	={BUL-01-P1-desc}
+BUL-21-P1     	={BUL-01-P1}
+BUL-21-P1-desc	={BUL-01-P1-desc}
+BUL-31-P1     	={BUL-01-P1}
+BUL-31-P1-desc	={BUL-01-P1-desc}
+BUL-99-P1     	={BUL-01-P1}
+BUL-99-P1-desc	=At the start of their turn, if the character is asleep, they will deal {powerratio} to {power3ratio} ({dmgsource}) damage of a random {element} between {element-water}, {element-fire}, {element-earth} or {element-thunder} to all enemies on the map, based on proximity.
+
+BUL-03-A4     	={spell-element-water} {term-limit}
+BUL-03-A4-desc	={damage-aoe-opener} around the character, but inflicts the character with {status-sleep-icon}{negative-sleep}.
+BUL-13-A4     	={spell-element-fire} {term-limit}
+BUL-13-A4-desc	={BUL-03-A4-desc}
+BUL-23-A4     	={spell-element-earth} {term-limit}
+BUL-23-A4-desc	={BUL-03-A4-desc}
+BUL-33-A4     	={spell-element-thunder} {term-limit}
+BUL-33-A4-desc	={BUL-03-A4-desc}
+
+
+; ****************************
+; Family: Rakker Jak
+; ****************************
+; Base Ability
+RAK-Ability=Sneak & Skulk
+
+; *** Classes ***
+; ** Rakker Jak
+RAK-01-Title	=Rakkerjak
+RAK-01-Desc		=A hyperactive creature that moves by bouncing on its tail. This frees up all its limbs for attacking, making it deadly in close combat.
+RAK-02-Title	=Redcap
+RAK-03-Title	=Grue
+
+
+; *** Abilities ***
+RAK-02-P1     	=Submariner
+RAK-02-P1-Desc	=Damage is increased (rather than decreased) while in water. Also grants the ability to swim.
+
+RAK-02-A2		=Flip Kick
+RAK-02-A2-Desc	={VAN-02-A1-desc}
+
+RAK-02-A3		=Rusty Stab
+RAK-02-A3-Desc	={damage-with-chance-negative}
+
+RAK-03-A4		=Shadow Hunt
+RAK-03-A4-Desc	={damage-single} If the target is defeated by this {ability}, character gains {status-haste-icon}{positive-haste}.
+
+
+; ****************************
+; Family: Therva
+; ****************************
+; Beam Sound onomatopoeia
+THE-Beam		=Zohl
+; Base Ability
+THE-Ability		={THE-Beam}!
+
+; *** Classes ***
+THE-01-Title	=Therva
+THE-01-Desc 	=This distant relative of dragons is incredibly resilient against magic. It is known for its ability to focus ambient magic into powerful blasts.
+THE-02-Title	=Zohlamander
+THE-03-Title	=Dwimera
+
+; *** Abilities ***
+THE-01-A1     	={THE-Beam} {term-beam}
+THE-01-A1-Desc	=Uses all {mp} to do {elem} ({dmgsource}) damage in a line. Does more damage the more {mp} was used.
+
+THE-02-A2     	=Throat Jab
+THE-02-A2-desc	={damage-with-chance-negative}
+
+THE-03-A3     	=Purge
+THE-03-A3-Desc	={BLAD-A1-desc}
+
+THE-03-A4     	={THE-Beam} Heal
+THE-03-A4-Desc	=Uses all {mp} to heal the target. Does more healing the more {mp} was used.
+
+
+; ****************************
+; Family: Vangal
+; ****************************
+; Base Ability
+VAN-Ability		=Alpha
+
+; *** Classes ***
+VAN-01-Title	=Vangal
+VAN-01-Titles	=Vangals
+VAN-01-Desc		=A quilled guardian that faithfully defends its packmates, even in the face of insurmountable odds.
+VAN-02-Title	=Komainu
+VAN-03-Title	=Gyaum
+vangal			={VAN-01-Title}
+
+; *** Abilities ***
+VAN-02-A1		=Snapback
+VAN-02-A1-desc	={damage-single-opener} and exchanges position with them. {ignores-cover-evasion} {bypass-counters}
+
+VAN-02-A2		=Lick Wounds
+VAN-02-A2-desc	={BLAD-A3-desc}
+
+VAN-03-A3		=Rally Howl
+VAN-03-A3-desc	={BLAD-A4-desc}
+
+VAN-03-P2     	=Deep Wounds
+VAN-03-P2-Desc	={offensive-abilities-inflict}
+
+
+; ****************************
+; Family: Helhund
+; ****************************
+; Base Ability
+HHU-Ability		=Flaming Rage
+
+; *** Classes ***
+HHU-01-Title	=Helhund
+HHU-01-Desc		=A ravenous flame beast with an insatiable appetite for destruction.
+HHU-02-Title	=Kaftar
+HHU-03-Title	=Xolotl
+
+; *** Abilities ***
+HHU-01-A1     	=Firescourge
+HHU-01-A1-Desc	={damage-burst-chance-neg}
+
+HHU-01-A2     	=Pick Off
+HHU-01-A2-Desc	={damage-single-opener}. Deals {power2ratio} less damage for each adjacent ally the target has.
+
+HHU-02-P1     	={SORC-P2}
+HHU-02-P1-Desc	={SORC-P2-desc}
+
+HHU-02-C1     	=Pounce
+HHU-02-C1-Desc	={counter-offensive-action-ranged} by trying to jump right next to the unit and attacking them with a weaker {regular-attack}. Doesn't trigger if the character is underwater.
+
+; ****************************
+; Family: Niwot
+; ****************************
+; Base Ability
+NIW-Ability		=Melody
+
+; *** Classes ***
+NIW-01-Title	=Niwot
+NIW-01-Desc		=This bizarre bird's sonic assault leaves its victims' ears ringing for days afterwards.
+NIW-02-Title	=Warwot
+NIW-03-Title	=Bardwot
+
+; *** Abilities ***
+NIW-01-A1		=Ultrasonic Hammer
+NIW-01-A1-Desc	={damage-basic-opener} that ignores the target's defense.
+
+NIW-02-A2		=Sonic Boom
+NIW-02-A2-Desc	={damage-line-opener} and bypasses all counter {abilities}.
+
+NIW-03-A3		=Mercurial Dance
+NIW-03-A3-Desc	={GAMB-A2-desc}
+
+NIW-03-A4		=Forest Flute
+NIW-03-A4-Desc	={heal-small-opener} and a small amount of {mp} to the target.
+
+
+; ****************************
+; Family: Undead
+; ****************************
+; Base Ability
+UND-Ability		=Putrescence
+undead-term		=Undead
+
+; *** Classes ***
+UND-01-Title	=Cadaver
+UND-01-Titles	=Cadavers
+UND-01-Desc		=An animated corpse forced back to life by dark necromantic energies.
+UND-02-Title	=Rancorpse
+UND-03-Title	=Manananggal
+
+; *** Abilities ***
+UND-01-A1		=Fetid Touch
+UND-01-A1-Desc	={damage-with-chance-negative}
+
+UND-02-A2		=Wild Slam
+UND-02-A2-Desc	={damage-single-opener} with reduced accuracy. If the attack hits, it is always a {critical-hit} {add-negative-effect-100-closer}
+
+UND-02-P1		=Arcane Engine
+UND-02-P1-Desc	={HP}/{MP} restored beyond maximum is converted to the other type ({mp}/{hp}).
+
+UND-03-A3		=Autotomize
+UND-03-A3-Desc	=Character gains {power3} movement and {power2} jump until the end of the battle, but loses {locterm} of current {hp}.
+
+UND-03-A4		=Ravenous Soul
+UND-03-A4-desc	={MARK-A5-desc}
+
+UND-03-P2     	={LICH-P2}
+UND-03-P2-Desc	={LICH-P2-Desc}
+
+
+; ****************************
+; Family: Kawa
+; ****************************
+; Base Ability
+KAW-Ability		=Gobbledegook
+
+; *** Classes ***
+KAW-01-Title	=Kawa
+KAW-01-Desc		=Individually weak, this goblin-like race finds strength in numbers.
+KAW-02-Title	={KAW-01-Title} Skirmisher
+KAW-03-Title	={KAW-01-Title} Warrior
+KAW-11-Title	=Bandit {KAW-01-Title}
+bandit-kawa		={color=term}{KAW-11-Title}{color=base}
+KAW-21-Title	={undead-term} {KAW-01-Title}
+KAW-22-Title	={undead-term} {KAW-02-Title}
+KAW-23-Title	={undead-term} {KAW-03-Title}
+
+; *** Abilities ***
+KAW-01-A1		=Swarm Strike
+KAW-01-A1-Desc	={damage-single-opener}. The attack deals significantly increased damage for each ally in melee range of the target.
+
+KAW-01-C1		={ROGU-C1}
+KAW-01-C1-desc	={ROGU-C1-desc}
+
+KAW-02-A2		=Meatshield
+KAW-02-A2-desc	=Character will be protected from taking any kind of direct damage by having the target take the hit in their stead (will not work for area of effect {abilities} if the protector is already a target of the {ability}).
+
+KAW-02-A3		=Boomerang Bounce
+KAW-02-A3-Desc	={damage-single-range-opener} and pushes the target away by one tile. Depending on the terrain, this could have interesting results.
+
+KAW-03-A4		=Blazing Bolas
+KAW-03-A4-Desc	={damage-line-opener} and places a trap dealing {locterm} {element-fire-icon}{element-fire} ({mnd}) damage on a random tile in the area of the {ability}.
+
+KAW-03-P2		=Switcheroo
+KAW-03-P2-Desc	=Upon defeating an enemy, another {kawa} will join the battle (only once per character turn and only on solid ground).
+
+KAW-23-P2		={KAW-03-P2}
+KAW-23-P2-desc	={KAW-03-P2-Desc}
+
+KAW-11-A1		=Escape
+KAW-11-A1-desc	=Character escapes from combat.
+
+
+; *** Boss Kawa
+; Base Ability
+EKA-Ability		=Dark Magic
+EKA-01-Title	=Fellmage
+EKA-02-Title	={KAW-03-Title}
+
+; *** Abilities ***
+EKA-01-A1		=Luussa
+EKA-01-A1-desc	={damage-aoe-opener}, absorbs the damage dealt, {add-negative-effect-closer}
+
+EKA-01-A2		=Blood Offering
+EKA-01-A2-desc	=Resurrects a dead enemy as a random demonic unit that will attack foes until it falls. {raise-prevention}
+
+EKA-01-A3		=Dark Beam
+EKA-01-A3-desc	={THE-01-A1-Desc}
+
+EKA-01-A4		={darkbarrier-spell}
+EKA-01-A4-desc	={status-pos-opener} and raises {spell-element-water}, {spell-element-fire}, {spell-element-earth}, {spell-element-thunder} and {spell-element-dark} resistances by {power2}.
+
+
+; ****************************
+; Family: Arpia
+; ****************************
+; Base Ability
+HAR-Ability		=Mischief
+
+; *** Classes ***
+HAR-01-Title	=Arpia
+HAR-01-Desc		=Even the kindest naturalist has little good to say about these foul, sadistic kleptomaniacs. They have been known to steal and eat anything that isn't nailed down.
+HAR-02-Title	=Termagaunt
+HAR-03-Title	=Seireen
+
+; *** Abilities ***
+HAR-01-A4		=Grubby Talons
+HAR-01-A4-Desc	={damage-single-opener} and attempts to steal a consumable item.
+
+HAR-02-A3=Skyjack
+HAR-02-A3-Desc	={Deals-OneOverXDamage-opener} and displaces them to a random location within a {locterm} tiles radius. {ignore-cover}
+
+HAR-02-P1		=Opportunist
+HAR-02-P1-Desc	=Deals {powerratio} more damage per {debuff} on the target.
+
+HAR-03-A2		=Dirge
+HAR-03-A2-desc	={status-chance-negative}
+
+HAR-03-C1		={weaken-spell}
+HAR-03-C1-Desc	={counter-with-negative-status}
+
+HAR-11-Title={undead-term} {HAR-01-Title}
+HAR-12-Title={undead-term} {HAR-02-Title}
+HAR-13-Title={undead-term} {HAR-03-Title}
+
+
+; ****************************
+; Family: Daodrenner
+; ****************************
+; Base Ability
+DAO-Ability		=Holy Beast
+
+; *** Classes ***
+DAO-01-Title	=Daodrenner
+DAO-01-Desc		=Fierce and wild, this sacred beast protects the forest and all its denizens.
+DAO-02-Title	=Re'em
+DAO-03-Title	=Keryneia
+
+; *** Abilities ***
+DAO-02-A2		=Alicorn
+DAO-02-A2-Desc	={heal-small-opener} and removes {removenegative}.
+
+DAO-02-P2		=Auto-{renew-spell}
+DAO-02-P2-Desc	={passive-auto-effect} {help-posstatus-Renew-desc}
+
+DAO-03-A3		=Polestar
+DAO-03-A3-Desc	={BLAD-A4-desc}
+
+DAO-03-A4		=Silverhorn
+DAO-03-A4-Desc	={BLAD-A5-desc}
+
+
+; ****************************
+; Family: Blardger
+; ****************************
+; Base Ability
+BLA-Ability		=Smash!
+
+; *** Classes ***
+BLA-01-Title	=Blardger
+BLA-01-Desc		=A troll-like creature that thrives in close-quarters combat.
+BLA-02-Title	=Belzebindler
+BLA-03-Title	=Desmogr
+
+; *** Abilities ***
+BLA-02-A2		=Snack Stash
+BLA-02-A2-desc	=Unit gains 2 random {buffs}.
+
+; Know Weakness
+BLA-02-P2     	={RANG-P1}
+BLA-02-P2-desc	={RANG-P1-Desc}
+
+BLA-02-C1		=Thrash
+BLA-02-C1-Desc	={counter-offensive-action-adjacent} with {REAV-A3}.
+
+BLA-03-A4		=Massive Hit
+BLA-03-A4-Desc	={damage-single}
+
+
+; ****************************
+; Family: Pektite
+; ****************************
+; Base Ability
+PEK-Ability		=Jellymancy
+
+; *** Classes ***
+PEK-99-Title	=Pektite
+PEK-99-Desc		=A magical creature that embodies the elements.
+PEK-01-Desc		={PEK-99-Desc}
+PEK-11-Desc		={PEK-99-Desc}
+PEK-21-Desc		={PEK-99-Desc}
+PEK-31-Desc		={PEK-99-Desc}
+PEK-Title2		=Sylphite
+PEK-Title3		=Tsunymphite
+
+PEK-Blue	=Blueberry
+PEK-Red		=Strawberry
+PEK-Brown	=Date
+PEK-Yellow	=Lemon
+
+PEK-01-Title	={PEK-Blue} {PEK-99-Title}
+PEK-11-Title	={PEK-Red} {PEK-99-Title}
+PEK-21-Title	={PEK-Brown} {PEK-99-Title}
+PEK-31-Title	={PEK-Yellow} {PEK-99-Title}
+PEK-02-Title	={PEK-Blue} {PEK-Title2}
+PEK-12-Title	={PEK-Red} {PEK-Title2}
+PEK-22-Title	={PEK-Brown} {PEK-Title2}
+PEK-32-Title	={PEK-Yellow} {PEK-Title2}
+PEK-03-Title	={PEK-Blue} {PEK-Title3}
+PEK-13-Title	={PEK-Red} {PEK-Title3}
+PEK-23-Title	={PEK-Brown} {PEK-Title3}
+PEK-33-Title	={PEK-Yellow} {PEK-Title3}
+
+; *** Abilities ***
+PEK-01-P1     	=Amorphous
+PEK-01-P1-desc	={KNIG-P1-desc}
+
+PEK-02-A3     	=Coalesce
+PEK-02-A3-desc	=Character will sacrifice their life to revive an ally on the given tile, restore all their {hp}, and transfer all {buffs} to them. {no-injury-for-death}
+
+PEK-03-A4		=Focus Fire
+PEK-03-A4-Desc	=Turns any multi-target {spell} that can target others into a single-target {spell} that does {power2ratio} bonus damage.
+
+
+; ****************************
+; Family: Phoenix
+; ****************************
+; Base Ability
+PHO-Ability		=Holy Flame
+
+; *** Classes ***
+PHO-01-Title	=Ercinee
+PHO-01-Desc		=A legendary bird of rebirth and renewal.
+PHO-02-Title	=Alkonost
+PHO-03-Title	=Phoenix
+
+; *** Abilities ***
+PHO-01-A1		=Sacred Bolt
+PHO-01-A1-Desc	={damage-single-range}
+
+PHO-01-C1		=Turnabout
+PHO-01-C1-Desc	=Upon death, deals {powerratio} {elem} ({dmgsource}) damage around the character (height: {locterm}).
+
+PHO-02-A2		=Kamikaze
+PHO-02-A2-Desc	={sacrifice-life-opener} to deal {elem} damage to all enemies (damage increases the more current {hp} the character has and the closer they are to enemies).
+
+PHO-02-P2		=Auto-{rebirth-spell}
+PHO-02-P2-Desc	=Character has permanent {addpositive} effect (only once per battle). {help-posstatus-Rebirth-desc}
+
+PHO-02-A3		=Final Chant
+PHO-02-A3-Desc	={sacrifice-life-opener} to heal all allies (healing increases the more current {hp} the character has).
+
+PHO-03-A4		=Rekindle
+PHO-03-A4-Desc	={damage-aoe-opener} and grants {status-rebirth-icon}{positive-rebirth} to the character.
+
+PHO-03-P1     	={SMED-P2}
+PHO-03-P1-Desc	={SMED-P2-Desc}
+
+
+; ****************************
+; Family: Malcubus
+; ****************************
+; Base Ability
+MAL-Ability		=Nightmares
+
+; *** Classes ***
+MAL-01-Title	=Malcubus
+MAL-01-Titles	=Malcubi
+MAL-01-Desc		=This insidious demon destroys its victims from within by haunting their dreams.
+MAL-02-Title	=Sincubus
+MAL-03-Title	=Domincubus
+
+
+; *** Abilities ***
+MAL-01-A1     	=Sedate
+MAL-01-A1-desc	={damage-line-negative}
+
+MAL-02-A3     	=Phantasm
+MAL-02-A3-desc	={status-negative} If the target has {status-sleep-icon}{negative-sleep}, it also deals {power2ratio} {elem} ({dmgsource}) damage to the target.
+
+mind-controlled-desc=(a Mind-Controlled unit gets an immediate turn upon receiving the effect)
+MAL-03-A4     	=Soul Binder
+MAL-03-A4-desc	={damage-with-chance-negative} If the target has {status-sleep-icon}{negative-sleep}, the {debuff} chance is 100% and the target becomes Mind-Controlled for 1 turn {mind-controlled-desc}.
+
+MAL-03-P2     	=Manaburn
+MAL-03-P2-desc	=Dealing damage also deals {powerratio} as {mp} damage to the target.
+
+; ****************************
+; Family: Harvester
+; ****************************
+; Base Ability
+HRV-Ability		=Harvest
+
+; *** Classes ***
+HRV-01-Title	=Harvester
+HRV-01-Desc		=A blade-swathed demon that revels in the hunt.
+HRV-02-Title	=Huntsman
+HRV-03-Title	=Harrower
+harvester		={HRV-01-Title}
+
+; *** Abilities ***
+HRV-01-A1		=Barbed Blades
+HRV-01-A1-Desc	={damage-single-range-opener} {add-negative-effect-closer}
+
+HRV-02-A2		=Spearvault
+HRV-02-A2-Desc	={damage-aoe}
+
+HRV-02-A3		=Whetstone
+HRV-02-A3-Desc	={status-pos-single}
+
+HRV-01-P1		={TEMP-P2}
+HRV-01-P1-Desc	={TEMP-P2-desc}
+
+HRV-03-P2     	={DEMK-P1}
+HRV-03-P2-Desc	={DEMK-P1-Desc}
+
+
+; ****************************
+; Family: Zotzit
+; ****************************
+; Said to have been created by a mad mage, this absurd blowfish/bee hybrid is mischievous and elusive.
+
+ZOT-Ability		=Sting
+ZOT-01-Title	=Zotzit
+Zot-title		={zot-01-title}
+ZOT-01-Desc		=Said to have been created by a mad mage, this absurd blowfish/bee hybrid is mischievous and elusive.
+ZOT-02-Title	=Bumblestirge
+ZOT-03-Title	=Goldilox
+
+ZOT-01-A1		=Final Sting
+ZOT-01-A1-desc	={damage-single-range-chance-neg} The character will instantly flee the battlefield afterwards.
+
+ZOT-99-A1		={ZOT-01-A1}
+ZOT-99-A1-desc	={damage-single-range-chance-neg}
+
+ZOT-02-A4		=Rain of Spines
+ZOT-02-A4-desc	={RANG-A1-desc}
+
+ZOT-02-P1		=Shifting Target
+ZOT-02-P1-desc	={eva} increases every turn by {power}, up to {power2} gain.
+
+ZOT-01-C1		={positive-AdaptEvade}
+ZOT-01-C1-desc	=When character is targeted by any offensive action, it gains a {buff} granting 100% evasion for any subsequent actions of the same type ({spells}, {skills} or {regular-attacks}).
+
+
+; ****************************
+; Family: Tangrel
+; ****************************
+; Base Ability
+TAN-Ability		=Armored Menace
+
+; *** Abilities ***
+TAN-01-Title	=Tangrel
+TAN-01-Desc		=Well-armored and territorial, this burrowing beast is crisscrossed with scars from past battles.
+TAN-02-Title	=Troggle
+TAN-03-Title	=Adamantrog
+
+; *** Abilities ***
+TAN-01-A1		=Tail Flail
+TAN-01-A1-Desc	={MERC-A2-desc} {ignores-cover-evasion}
+
+TAN-01-C1		=Scar Tissue
+TAN-01-C1-desc	=Whenever damage is taken, whichever stat was used to defend ({def} or {res}) will increase by {powerratio} until the end of the battle, up to a bonus of {power2ratio}.
+
+TAN-02-A2		=Reflective Coating
+TAN-02-A2-Desc	={BLAD-A4-desc}
+
+TAN-02-A3     	={KNIG-A4}
+TAN-02-A3-Desc	={KNIG-A4-Desc}
+
+TAN-03-A4-Part2	=Shatter
+TAN-03-A4		=Diamondform
+TAN-03-A4-Desc	=Character takes negligible damage until the start of their next turn and counters offensive actions with {TAN-03-A4-Part2} when attacked. {TAN-03-A4-Part2} will deal {element-earth-icon}{element-earth} damage to all adjacent targets, but will remove the {TAN-03-A4} effect on the character and afflict them with {status-defdn-icon}{negative-DEFdn}.
+
+TAN-03-P2		=Sunder
+TAN-03-P2-Desc	={offensive-abilities-inflict}
+
+
+; ****************************
+; Family: Demon Turret
+; ****************************
+; Base Ability
+DEM-Ability		=Obliteration
+
+; *** Classes ***
+DEM-01-Title	=Aeoth
+DEM-01-Desc		=???
+DEM-02-Title	=Abyssal {DEM-01-Title}
+DEM-02-Desc		={DEM-01-Desc}
+
+; *** Abilities ***
+DEM-01-A1		={barrage-spell} {term-tier1}
+DEM-01-A1-Desc	={damage-aoe-opener} from a very long distance. The attack will land in the designated area next turn and bypass all counter {abilities}. {ignore-evasion}
+
+DEM-01-P1		=Steadfast
+DEM-01-P1-Desc	=Character cannot be displaced.
+
+DEM-01-A2		={barrage-spell} {term-tier2}
+DEM-01-A2-Desc	={DEM-01-A1-Desc}
+
+DEM-01-P2		=Impetus
+DEM-01-P2-Desc	={spd} increases every turn by {powerratio}, up to {power2ratio} gain.
+
+DEM-02-A1		={DEM-01-A1}
+DEM-02-A1-desc	={DEM-01-A1-desc}
+
+DEM-02-A2		={DEM-01-A2}
+DEM-02-A2-desc	={DEM-01-A2-desc}
+
+
+; ****************************
+; Family: Archafflictor
+; ****************************
+; Base Ability
+DAA-Ability		=Affliction
+
+; *** Classes ***
+DAA-01-Title	=Archafflictor
+DAA-01-Desc		=A member of the demonic nobility caste, it spreads corruption to everything around it.
+DAA-02-Title	=Pestilord
+DAA-03-Title	=Overscourge
+
+; *** Abilities ***
+DAA-01-A1		=Vilerot
+DAA-01-A1-Desc	={multi-damage-with-negative}
+
+DAA-03-A4		=Plaguestorm
+DAA-03-A4-desc	={damage-all-enemies-scaling} {chance-random-debuff}
+
+DAA-01-C1     	=Adaptive Aegis
+DAA-01-C1-Desc	=When the character is dealt elemental damage, they gain a {buff} that increases their resistance to that {element} (they only gain protection to the last {element} they were damaged with).
+
+
+; ****************************
+; Family: Story - Noble Demon
+; ****************************
+; Base Ability
+SND-Ability		=Corruption
+
+; *** Classes ***
+SND-01-Title	=Noble Demon
+SND-01-Desc		=???
+
+; *** Abilities ***
+SND-01-A1		=Necrotizer
+SND-01-A1-Desc	={damage-with-chance-negative}
+
+SND-01-A3		=Infestation
+SND-01-A3-Desc	={damage-aoe} {damage-increase-with-debuff}
+
+SND-01-A4		=Nightmare
+SND-01-A4-desc	={multi-damage-with-negative}
+
+SND-01-A5		={SND-01-A4}
+SND-01-A5-Desc	={multi-damage-with-negative}
+
+SND-01-A6		=Backhand
+SND-01-A6-Desc	={damage-single}
+
+SND-01-P1		=Plaguebearer
+SND-01-P1-Desc	=When using a {regular-attack}, unit transfers any {debuffs} they are afflicted with onto the target.
+
+SND-01-P2		=Strong Body
+SND-01-P2-Desc	=Unit takes 50% less damage from %-based damage.
+
+
+; ****************************
+; Family: Story - Worm
+; ****************************
+; Base Ability
+BWO-Ability		=Burrow
+
+; *** Classes ***
+BWO-01-Title	=Earthwyrm
+BWO-02-Title	={BWO-01-Title} Queen
+
+; *** Abilities ***
+BWO-01-A1		=Loco Rush
+BWO-01-A1-Desc	=The next turn after using this {ability}, the character charges in a straight line until they reach the edge of the map, doing {powerratio} {elem} ({dmgsource}) damage to any in the way and knocking them aside. {ignores-cover-evasion} Bypasses all counter {abilities}.
+
+BWO-01-A2		=Acid {term-breath}
+BWO-01-A2-Desc	={multi-damage-with-negative}
+
+BWO-01-A3		=Quicksand
+BWO-01-A3-Desc	={damage-with-negative} If {BWO-01-A3} roots the target, {BWO-01-A1} can be used this turn as well.
+
+BWO-01-A4		=Whiplash
+BWO-01-A4-Desc	=Summons a {TAN-01-Title} to join in the battle on the character's side.
+
+BWO-02-A1		={BWO-01-A1}
+BWO-02-A1-SHOT	={BWO-01-A1}
+BWO-02-A1-Desc	={BWO-01-A1-Desc}
+
+BWO-02-A3		={BWO-01-A3}
+BWO-02-A3-Desc	={multi-damage-with-negative} If {BWO-01-A3} roots the target, {BWO-01-A1} can be used this turn as well.
+
+BWO-01-P1		=Aegis Hide
+BWO-01-P1-Desc	=Damage taken from the front and sides is greatly reduced. {Abilities} that do not target a direction do reduced damage.
+
+BWO-01-P3		=Large Body
+BWO-01-P3-desc  ={ASSA-P1-desc}
+
+BWO-01-C1		={term-critical-opener} {haste-spell}
+BWO-01-C1-desc	={status-pos-critical-counter} {help-posstatus-Haste-desc}
+
+Work-Breach		=Breach
+
+
+; ****************************
+; Family: Story - Ghostly Lady
+; ****************************
+; Base Ability
+GHO-Ability		=Anguish
+
+GHO-01-Title	=Mourngeist
+
+GHO-01-A1		=Ghostly Wail
+GHO-01-A1-desc	={damage-cone-negative}
+
+GHO-01-A2		=Locket
+GHO-01-A2-desc	={damage-single-range-chance-neg}
+
+; Anquine is her Family Name.
+GHO-01-A3		=Anquine Strike
+GHO-01-A3-desc	={damage-with-negative}
+
+
+
+; ****************************
+; Family: Story - Ancient Path Boss
+; ****************************
+; Base Ability
+APB-Ability		=Pure Evil
+
+; *** Classes ***
+APB-01-Title	=Mummified
+APB-01-Desc		=These {Bzils} have been eternally preserved via long-forgotten arcane methods. Death has only made them stronger.
+
+; *** Abilities ***
+APB-01-A1		=Curse
+APB-01-A1-desc	={damage-with-negative}
+
+APB-01-A2		=Sacrifice
+APB-01-A2-desc	=Character dispels all {buffs} on an allied unit and instantly kills them. The character then gains {addpositive}.
+
+APB-01-A3		=Canopic Jar
+APB-01-A3-desc	=Summons a random soul to unleash an offensive attack centered on the target, that will only affect enemies.
+
+APB-01-A4		=Ravenous Soul
+APB-01-A4-desc	={damage-basic-opener} to the target's {hp} and {mp} and absorbs it.
+
+APB-01-P1		=Deathfeeder
+APB-01-P1-desc	=Character gains {powerratio} bonus to {atk}, {def}, {mnd} and {res} per character that died this battle (up to {power2ratio} max bonus).
+
+APB-01-P2		=Gravedweller
+APB-01-P2-desc	=Increases damage done by {powerratio} for each height value the target has over the character.
+
+; Immortal Subclass
+IM4-01-Title={IMM1-Title}
+
+; ****************************
+; Family: Story - The Maw
+; ****************************
+; Base Ability
+MAW-Ability		=The Void
+
+; *** Classes ***
+MAW-01-Title	=Ancient Beast
+MAW-02-Title	={MAW-01-Title}
+
+; *** Abilities ***
+MAW-01-A1		=Dreadmaw
+MAW-01-A1-desc	={multi-damage-with-negative} Also steals {buffs} from the targets.
+
+MAW-01-A2		=Forsaken One
+MAW-01-A2-desc	=Reduces the {hp} of all enemies to 1.
+
+MAW-01-P1		=Mana Rush
+MAW-01-P1-desc	={MP} cost of all {abilities} becomes 0 when {hp} is {critical-hp}.
+
+MAW-01-P2		=Ecdysis
+MAW-01-P2-desc	={debuffs-cap} on the character only last 1 turn. When they wear off, they transfer to all adjacent enemies. When a {buff} wears off, it transfers to all adjacent allies.
+
+MAW-01-P3		=Broodmaster
+MAW-01-P3-desc	=Damage taken is reduced for every live ally on the field.
+
+MAW-02-A6		=Drain Souls
+MAW-02-A6-desc	=Drains {power} {hp} from every ally.
+
+; Minions of The Maw
+MAM-Ability		=Wriggling
+
+MAM-01-Title	=Viscerawyrm
+MAM-02-Title	={MAM-01-Title}
+
+MAM-01-A1		=Gutspawn
+MAM-01-A1-desc	=Spawns a random demon on the field.
+
+MAM-01-A2		=Blisterburst
+MAM-01-A2-desc	=Character dies. Next turn, all combatants (allies and enemies) will be dealt {powerratio} {elem} ({dmgsource}) damage. Can only be used when {hp} is {critical-hp}.
+
+MAM-01-A3		=Gastric Acid
+MAM-01-A3-desc	={MARK-A5-desc}
+; {damage-single-opener}'s {mp}.
+
+MAM-01-P1		=Regenesis
+MAM-01-P1-desc	=Automatically revive with full {hp} after {power} turns being dead.
+
+MAM-01-C1		=Tenacity
+MAM-01-C1-desc	=Character will retain at least 1 {hp} after taking damage unless they had only 1 {hp} before taking damage.
+
+MAA-Ability		=Anima
+MAA-01-Title	=Corrupted Soul
+MAA-02-Title	={MAA-01-Title}
+MAA-03-Title	={MAA-01-Title}
+MAA-04-Title	={MAA-01-Title}
+
+mAA-01-c1-base 	=Upon death, deals {powerratio} {elem} ({dmgsource}) damage to all enemies on the map.
+maa-01-c1-extra =Will not trigger if character is afflicted by
+MAA-01-C1		=Shackled Soul
+MAA-01-C1-desc	={maa-01-c1-base} {maa-01-c1-extra} {status-cripple-icon}{negative-cripple}.
+
+MAA-02-C1		={MAA-01-C1}
+MAA-02-C1-desc	={maa-01-c1-base} {maa-01-c1-extra} {status-mute-icon}{negative-mute}.
+
+; ****************************
+; Family: Story - Corrupted apprentice
+; ****************************
+; Base Ability
+SDA-Ability		=???
+
+; *** Classes ***
+SDA-01-Title	=Corrupted {name-apprentice}
+
+MKA-Ability		=Mercantilism
+MKA-01-Title	=Gentle Merchant

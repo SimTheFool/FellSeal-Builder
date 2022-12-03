@@ -1,0 +1,314 @@
+; **********************
+; Armors
+; **********************
+; Cloth
+ar-cloth-00     =Linen Robe
+ar-cloth-00-desc=A simple linen shift to be worn when doing housework.
+
+ar-cloth-01     =Cotton Robe
+ar-cloth-01-desc=Cotton garments worn by novice mages.
+
+ar-cloth-02     =Silk Robe
+ar-cloth-02-desc=Fancy clothes for rich merchants and noblemen.
+
+ar-cloth-03     =Flowing Robe
+ar-cloth-03-desc=A collection of diaphanous veils adorned with seashells.
+
+ar-cloth-04     =Molten Robe
+ar-cloth-04-desc=Robes woven out of strands of lava.
+
+ar-cloth-05     =Sand Robe
+ar-cloth-05-desc=A sun-bleached burnoose worn out by many sandstorms.
+
+ar-cloth-06     =Spark Robe
+ar-cloth-06-desc=A robe knit out of copper wire through which courses electricity.
+
+ar-cloth-07     =Monk Robe
+ar-cloth-07-desc=An old gi yellowed by years of strenuous martial arts training.
+
+ar-cloth-08     =White Robe
+ar-cloth-08-desc=An ivory robe kept pristine by holy magic.
+
+ar-cloth-09     =Black Robe
+ar-cloth-09-desc=A sable robe bereft of any markings.
+
+ar-cloth-10     =Velvet Robe
+ar-cloth-10-desc=Comfortable finery to wear at home.
+
+ar-cloth-11     =Devout Robe
+ar-cloth-11-desc=Surprisingly comfortable traveling clothes worn by pilgrims.
+
+ar-cloth-12     =Darksilk Robe
+ar-cloth-12-desc=A robe worn by the denizens of the plane of darkness.
+
+ar-cloth-13     =Scholar Robe
+ar-cloth-13-desc=Out of fashion by at least twenty years, yet a favorite of academics.
+
+ar-cloth-14     =Embroidered Robe
+ar-cloth-14-desc=A fancy robe decorated with the finest needlework.
+
+ar-cloth-15     =Master Robe
+ar-cloth-15-desc=The official robe of the greatest mage of the land.
+
+; Light
+ar-light-00     =Traveler Garb
+ar-light-00-desc=Padded clothes to protect from weather and bandits alike.
+
+ar-light-01     ={mat-leather-cap} Armor
+ar-light-01-desc=Light armor for swashbucklers.
+
+ar-light-02     =Chain Mail
+ar-light-02-desc=Military armor issued to common infantrymen.
+
+ar-light-03     =Brigandine
+ar-light-03-desc=Garment lined with light metal plates.
+
+ar-light-04     ={mat-mythril-cap} Vest
+ar-light-04-desc=A shirt of interlocking {mat-mythril} rings.
+
+ar-light-05     =Judogi
+ar-light-05-desc=Martial arts garb with protective {mat-steel} inserts in strategic locations.
+
+ar-light-06     =Desert Garb
+ar-light-06-desc=Protective clothing worn by raiders.
+
+ar-light-07     =Ninja Garb
+ar-light-07-desc=Assassin's gear light enough to allow for quick movements and swift strikes.
+
+ar-light-08     =Chitin Suit
+ar-light-08-desc=Armor built out of the shells of giant insects.
+
+ar-light-09     ={mat-golden-cap} Garb
+ar-light-09-desc=Fancy clothes woven out of {mat-gold} thread. More protective than you'd think.
+
+ar-light-10     ={Warden} Garb
+ar-light-10-desc=An enchanted set of forester clothing, with mysterious powers.
+
+ar-light-11     =Lorica Speculo
+ar-light-11-desc=An ancient hauberk strong against magic.
+
+ar-light-12     =Lorica Musculata
+ar-light-12-desc=A muscle cuirass for those looking for every bit of strength.
+
+ar-light-13     =Lorica Mentis
+ar-light-13-desc=A light cuirass with many charms attached, to enhance magical abilities.
+
+ar-light-14     =Noctis Garb
+ar-light-14-desc=A black {mat-leather} surcoat, to feel at home in the night.
+
+ar-light-15     =Shining Mail
+ar-light-15-desc=A {mat-golden} tabard fit for a hero.
+
+
+; Heavys
+ar-heavy-00		={mat-bronze-cap} Armor
+ar-heavy-00-desc=Old armor from a time before {mat-steel}.
+
+ar-heavy-01		={mat-steel-cap} Armor
+ar-heavy-01-desc=Standard military issue for heavy infantry.
+
+ar-heavy-02		={mat-silver-cap} Armor
+ar-heavy-02-desc={mat-silver-cap} platemail that attracts magical energies.
+
+ar-heavy-03		={mat-gold-cap} Armor
+ar-heavy-03-desc=Very heavy, very gaudy, very powerful.
+
+ar-heavy-04		={mat-mythril-cap} Armor
+ar-heavy-04-desc={mat-mythril-cap} plate, strong against metal and magic.
+
+ar-heavy-05		=Cold Armor
+ar-heavy-05-desc=Armor forged in the midst of a snowstorm.
+
+ar-heavy-06		=Ancient Armor
+ar-heavy-06-desc=The full plate of a forgotten hero.
+
+ar-heavy-07		=Dragonscale Mail
+ar-heavy-07-desc=Mail forged in dragonfire.
+
+ar-heavy-08		=Dendrite Armor
+ar-heavy-08-desc=Armor carved out of green crystal.
+
+ar-heavy-09		={Warden} Armor
+ar-heavy-09-desc=Enchanted armor that protects the health of the wearer.
+
+ar-heavy-10		=Royal Armor
+ar-heavy-10-desc=Superior armor fit for a king.
+
+ar-heavy-11		=Valiant Armor
+ar-heavy-11-desc=Armor designed by a genius: light enough to fight in, yet stronger than any other armor.
+
+ar-heavy-12		=Soul Armor
+ar-heavy-12-desc=A mysterious suit of black platemail caked with blood.
+
+ar-heavy-13		=Old Armor
+ar-heavy-13-desc=The only memento left to {name-apprentice} from her departed mother, this armor has seen better days.
+
+ar-heavy-14		={ar-heavy-13}
+ar-heavy-14-desc=The only memento left to {name-apprentice} from her departed mother.
+
+; Shield
+ar-shield-00		=Buckler
+ar-shield-00-desc	=Small target shield for archers and fencers.
+
+ar-shield-01		={mat-bronze-cap} Shield
+ar-shield-01-desc	=Military shield, obsolete since the discovery of {mat-steel}.
+
+ar-shield-02		={mat-steel-cap} Shield
+ar-shield-02-desc	=Shield used by knights and soldiers.
+
+ar-shield-03		={mat-gold-cap} Shield
+ar-shield-03-desc	=Heavy shield with limited utility against regular weapons. 
+
+ar-shield-04		=Water Shield
+ar-shield-04-desc	=A blueish {mat-silver} shield that turns cold into healing energy.
+
+ar-shield-05		=Fire Shield
+ar-shield-05-desc	=A red-tinted {mat-steel} shield that turns heat into healing energy.
+
+ar-shield-06		=Earth Shield
+ar-shield-06-desc	=A dull {mat-bronze} shield that draws healing energies from the earth itself.
+
+ar-shield-07		=Thunder Shield
+ar-shield-07-desc	=A glowing {mat-gold} shield that turns lightning into healing energy.
+
+ar-shield-08		={mat-mythril-cap} Shield
+ar-shield-08-desc	=A shield made of {mat-mythril}, powerful against all forms of attacks.
+
+ar-shield-09		=Aegis Shield
+ar-shield-09-desc	=A blessed shield that is particularly strong against magical attacks.
+
+ar-shield-10		={Warden} Shield
+ar-shield-10-desc	=A spiked shield that also protects against many forms of injuries.
+
+ar-shield-11		=Magic Shield
+ar-shield-11-desc	=A small buckler intended for wizards, to help with their offensive magic.
+
+ar-shield-12		=Valiant Shield
+ar-shield-12-desc	=A very light shield used to deflect blows rather than to block them.
+
+ar-shield-13		=Behemoth Guard
+ar-shield-13-desc	=The shield of a legendary giant: merely holding it makes one stronger.
+
+ar-shield-14		=Cursed Shield
+ar-shield-14-desc	=Only battle can appease the curse on this shield.
+
+ar-shield-15		=Shield of the Six
+ar-shield-15-desc	=A shield with unfathomable defensive power.
+
+
+
+; Cloth hats
+ar-hat-00		=Circlet
+ar-hat-00-desc	=A thin {mat-bronze} hair ornament.
+
+ar-hat-01		=Phrygian Cap
+ar-hat-01-desc	=A felt hat worn by rebels.
+
+ar-hat-02		={mat-silver-cap} Circlet
+ar-hat-02-desc	=A {mat-silver} tiara, delicate but strong against magic.
+
+ar-hat-03		=Battlemage Hat
+ar-hat-03-desc	=A colorful hat to boost confidence.
+
+ar-hat-04		=Sage Hat
+ar-hat-04-desc	=A tall hat worn by religious types.
+
+ar-hat-05		={mat-mythril-cap} Circlet
+ar-hat-05-desc	=A gorgeous {mat-mythril} coronet forged by an artist.
+
+ar-hat-06		=Wizard Cone
+ar-hat-06-desc	=Classic wizard headgear.
+
+ar-hat-07		=Miter
+ar-hat-07-desc	=This hat ensures delivery of the longest sermons.
+
+ar-hat-08		=White Hat
+ar-hat-08-desc	=A bleached silk hat with unmatched magical protection.
+
+ar-hat-09		=Black Hat
+ar-hat-09-desc	=A hat of black velvet, the mark of an archmage. 
+
+ar-hat-10		=Royal Crown
+ar-hat-10-desc	=An impressive crown of many metals.
+
+ar-hat-11		=Witch Crown
+ar-hat-11-desc	=A hat woven from raw moonlight, enhances all martial abilities.
+
+
+; Light Hat
+ar-cap-00		=Fur Cap
+ar-cap-00-desc	=A thick raccoon fur hat, very warm.
+
+ar-cap-01		=Feathered Cap
+ar-cap-01-desc	=A dyed {mat-leather} hat with an eagle's feather.
+
+ar-cap-02		={mat-leather-cap} Helmet
+ar-cap-02-desc	=Heavy boiled {mat-leather} helmet, common amongst mercenaries.
+
+ar-cap-03		=Green Beret
+ar-cap-03-desc	=The dress hat of an elite military unit.
+
+ar-cap-04		=Poseur's Cap
+ar-cap-04-desc	=Big flashy headgear worn by charlatans and dandies.
+
+ar-cap-05		=Red Beret
+ar-cap-05-desc	=A beret dyed red to hide head wounds.
+
+ar-cap-06		=Studded Helm
+ar-cap-06-desc	=A {mat-leather} helmet reinforced with metal studs and bands.
+
+ar-cap-07		=Chain Coif
+ar-cap-07-desc	=A chain mail hood that protects the entire head.
+
+ar-cap-08		=Spidersilk Cap
+ar-cap-08-desc	=A veil woven out of spider silk. Incredibly light and resistant.
+
+ar-cap-09		=Black Cowl
+ar-cap-09-desc	=A black silk mask favored by mystical assassins.
+
+ar-cap-10		={Warden} Cap
+ar-cap-10-desc	=The hat of a highly skilled traveling warrior.
+
+ar-cap-11		=Ninja Cowl
+ar-cap-11-desc	=A cowl allowed to only the most vicious killers.
+
+ar-cap-12		=Flash Cap
+ar-cap-12-desc	=A hat that grants incredible speed.
+
+ar-cap-13		=Cap of Ages
+ar-cap-13-desc	=A turban that makes its wearer nigh impossible to kill.
+
+
+; Heavy Helm
+ar-helm-00		={mat-bronze-cap} Helm
+ar-helm-00-desc	=An old horseman's helmet.
+
+ar-helm-01		={mat-steel-cap} Helm
+ar-helm-01-desc	=Standard-issue military headgear.
+
+ar-helm-02		={mat-silver-cap} Helm
+ar-helm-02-desc	=A {mat-silver} helmet with a crest of red horsehair.
+
+ar-helm-03		={mat-gold-cap} Helm
+ar-helm-03-desc	=A flashy helmet to help officers to be seen.
+
+ar-helm-04		={mat-mythril-cap} Helm
+ar-helm-04-desc	=A {mat-mythril} sallet to protect against magic.
+
+ar-helm-05		=Malcubus Helm
+ar-helm-05-desc	=The head covering of a devil, proof against seduction.
+
+ar-helm-06		=Morion
+ar-helm-06-desc	=An open helmet heavily reinforced to protect against head blows.
+
+ar-helm-07		=Dendrite Helm
+ar-helm-07-desc	=A armet carved out of green crystal.
+
+ar-helm-08		={Warden} Helm
+ar-helm-08-desc	=An heavy helmet that protects from debilitating wounds and magic.
+
+ar-helm-09		=Royal Helm
+ar-helm-09-desc	=An ornate helm decorated with {mat-gold} and gemstones.
+
+ar-helm-10		=Valiant Helm
+ar-helm-10-desc	=A helmet engraved with scenes of heroism.

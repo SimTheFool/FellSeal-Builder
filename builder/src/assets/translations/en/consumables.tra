@@ -1,0 +1,37 @@
+; ********************************
+; Consumables
+; ********************************
+; Replacement
+item-healing	=Restores {power} {hp} to a single target.
+item-negative	=Inflicts {addnegative} on the target.
+
+; Main Items
+item-potion				=Potion
+item-potions			=Potions
+item-potion-desc		={item-healing}
+
+item-heavypotion		=Heavy {item-potion}
+item-heavypotion-desc	={item-healing}
+
+item-fullpotion			=Full {item-potion}
+item-fullpotion-desc	={item-healing}
+
+item-raisepotion		=Phoenix Ashes
+item-raisepotion-desc	=Revives a fallen ally with {percent} {hp}.
+
+item-acidbomb			=Corrosive Bomb
+item-acidbomb-desc		={item-negative}
+
+item-mindnumber			=Noxious Bomb
+item-mindnumber-desc	={item-negative}
+
+item-manastone			=Mana Stone
+item-manastone-desc		=Restores {power} {mp} to a single target.
+
+item-rock				=Rock
+item-rocks				=Rocks
+item-rock-desc			=Deals {power} damage to a single target.
+
+item-remedy				=Remedy
+item-remedys			=Remedies
+item-remedy-desc		={status-negative-remove}

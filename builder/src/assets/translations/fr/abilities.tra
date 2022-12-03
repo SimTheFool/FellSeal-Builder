@@ -626,7 +626,6 @@ smed-p2-desc=Augmente l'{atk} de {power}% de la valeur d'{mnd} et l'{mnd} de {po
 smed-c1=Âme sanctifiée
 nobl-ability=Assurance
 work-missing=Manquant
-term-expert=Expert
 work-missing-desc=Manquant !
 
 negative-except=tous les {debuffs} sauf

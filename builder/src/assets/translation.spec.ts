@@ -1,17 +1,34 @@
 import test from "node:test";
 import assert from "node:assert";
-import skill_fr_translations from "./translations/fr/skills.tra";
+import { importTranslations } from "./importTranslations";
 
-test("should get translations", (t) => {
-  assert.equal(skill_fr_translations["knig-p1"], "Pas par le flanc");
-  assert.equal(skill_fr_translations["knig-a7"], "Un pour tous");
+const { fr, en } = importTranslations();
+
+test("should get all fr translations", (t) => {
+  assert.equal(fr["knig-p1"], "Pas par le flanc");
+  assert.equal(fr["knig-a7"], "Un pour tous");
   assert.equal(
-    skill_fr_translations["sorc-desc"],
+    fr["sorc-desc"],
     "Ces archi-mages dévastent sans distinction aucune tout le champ de bataille avec une puissance élémentaire brute."
   );
   assert.equal(
-    skill_fr_translations["demk-c1-desc"],
+    fr["demk-c1-desc"],
     "$t(counter-offensive-action) par une unité à distance $t(counter-by-inflicting) $t(addnegative)."
   );
-  assert.equal(skill_fr_translations["alch-a1"], "$t(barrier-spell) Massive");
+  assert.equal(fr["alch-a1"], "$t(barrier-spell) Massive");
+  assert.equal(fr["samu-a1"], "Longue portée");
+});
+
+test("should get all en translations", (t) => {
+  assert.equal(en["knig-p1"], "No Flank");
+  assert.equal(en["knig-a7"], "One for All");
+  assert.equal(
+    en["sorc-desc"],
+    "These archmages indiscriminately lay waste to the entire battlefield with raw elemental power."
+  );
+  assert.equal(
+    en["demk-c1-desc"],
+    "$t(counter-offensive-action) by a unit from range $t(counter-by-inflicting) $t(addnegative)."
+  );
+  assert.equal(en["alch-a1"], "$t(term-mass) $t(barrier-spell)");
 });

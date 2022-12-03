@@ -1,0 +1,1540 @@
+; ********************************
+; Common strings
+; ********************************
+; Strings that other strings use to build upon.
+; Openers
+damage-basic-opener			=Deals {powerratio} {elem} ({dmgsource}) damage
+damage-single-opener		={damage-basic-opener} to the target
+damage-aoe-opener			={damage-basic-opener} in a {size} area
+damage-line-opener			={damage-basic-opener} in a line
+damage-cone-opener			={damage-basic-opener} in a cone
+damage-single-range-opener 	={damage-single-opener} from a distance
+damage-around-caster-opener	={damage-aoe-opener} around the character
+heal-small-opener			=Restores {powerratio} ({dmgsource}) {hp}
+heal-aoe-opener				={heal-small-opener} in a {size} area
+status-chance-neg-opener	=Has a {addnegativechance} chance of inflicting {addnegative}
+status-pos-opener			=Grants {addpositive}
+status-pos-single-opener	={status-pos-opener} to the target
+counter-evade-opener		=Character always evades any
+increase-character-opener	=Increases the character's
+sacrifice-life-opener		=Sacrifices the character's life
+
+chance-random-debuff		=Has a {addnegativechance} chance of inflicting a random {debuff}.
+
+; Closers
+add-negative-effect-closer	=and has a {addnegativechance} chance of inflicting {addnegative}.
+add-negative-effect-100-closer =and will inflict {addnegative}.
+
+; Common Extra descriptions.
+counts-as-regular			=Counts as a {regular-attack} and will use the equipped weapon's element and {debuffs}.
+raise-prevention			=This will prevent the target unit from being revived by their own allies.
+trophy-collected			=If the target is defeated by this {ability}, it cannot be raised for the rest of the encounter.
+trophy-noboss				=Boss enemies are immune to being collected.
+damage-increase-with-debuff	=Damage increases for each {debuff} the target is inflicted with.
+ignore-cover				=Ignores {KNIG-A2} status.
+ignore-evasion				=Cannot be evaded.
+ignores-buff-from-gear		=(ignores permanent {buffs} from gear)
+ignores-cover-evasion		=Ignores {KNIG-A2} status and cannot be evaded.
+no-trigger-on-rebirth		=Does not trigger if the target has {status-rebirth-icon}{positive-rebirth}.
+cleave-no-mp				=0 {MP} is gained on this turn.
+prevents-rebirth			=On a killing blow, {status-rebirth-icon}{positive-rebirth} will be ignored.
+immune-to-debuff			=Character is immune to {removenegative}.
+quicken-warning				=Granting a character {quicken-spell} will give them the {negative-exhaust} debuff, which prevents further {quicken-spell} on that character until it wears off.
+quicken-counter-warning		=This {counter} ignores the {negative-exhaust} debuff, but will still apply the debuff to the character.
+inflicts-random-debuff		=Inflicts a random number of debuffs.
+counter-items				=Character counters any damage or {debuff} by using the best available {item}.
+lose-hp						=Damages the character by {power2} of their current {hp}.
+excluded-abilities			=(Some {abilities} are excluded from this.)
+no-injury-for-death			=The character will not suffer an {injury} from this.
+no-target-water				=Cannot target units that are on a water tile.
+bypass-counters				=It bypasses all {counter} {abilities}.
+regular-attacks-inflict		=Character's {regular-attacks} have a {addnegativechance} chance to inflict {addnegative} on the target. {decreasing-odds}
+offensive-abilities-inflict =Character's offensive actions have a {addnegativechance} chance to inflict {addnegative} on the target. {decreasing-odds}
+regular-criticals-inflict	={regular-attacks} that land a {critical-hit} inflict {addnegative} on the target.
+is-immune-to				=Character is immune to {removenegative}.
+
+decreasing-odds=
+
+; Potential additions
+debuff-protection-name		=Oathbound
+debuff-protection			=Character is {power}% less likely to be afflicted by {debuffs} per adjacent ally.
+
+debuff-remove-immune		={debuff} immunities on non-boss targets are treated as {power}% resistance.
+
+debuff-remove-heal			=Whenever the character heals a target, they also remove a random {debuff} from them.
+debuff-add-dmg				=Whenever the character successfully afflicts a target with a {debuff}, they also deal {powerratio} {elem} ({dmgsource}) damage to them.
+
+heal-with-renew				=Whenever the character uses single-target healing to heal a target's {hp} beyond its maximum, it grants the target {addpositive}.
+discover-weakness			=Discover Weakness
+discover-weakness-desc		=Reduces the target's resistance to an {element} by {power}%.
+
+mimic-buffs	=Mimic Prowess
+mimic-buffs-desc=Character copies all {buffs} from the target to themselves.
+
+; special
+power-per-level={power}+{power2}*{generic-level}
+
+; These terms are used in various spells to standardize their naming. eg: Vicious Strike, Power Strike, etc.
+term-burst			=Burst
+term-tier1			=I
+term-tier2			=II
+term-tier-locus		=Locus
+; This is a bolt, like a "bolt of magic". eg: Earth Bolt, Fire Bolt, etc.
+term-tier-bolt		=Bolt
+term-strike			=Strike
+term-hit			=Hit
+term-bullet			=Bullet
+term-beam			=Beam
+; eg: Life Font, Mana Font
+term-font			=Font
+term-chant			=Chant
+term-blade			=Blade
+term-slice			=Slice
+term-expert			=Expert
+term-flourish		=Flourish
+; eg: Thunder Limit
+term-limit			=Limit
+term-blow			=Blow
+term-breath			=Breath
+term-critical-opener=Critical:
+term-wildcard-opener=Wild Card:
+term-powder			=Powder
+term-shot			=Shot
+term-steal			=Steal
+term-trap			=Trap
+; eg: Mass Renew, Mass Haste
+term-mass			=Mass
+; Spell names
+barrage-spell		=Barrage
+primal-spell		=Primal
+wrathful-spell		=Wrathful
+heal-spell			=Heal
+revive-spell		=Revive
+panacea-spell		=Panacea
+aegis-spell			=Aegis
+shield-spell		=Shield
+; Used for spells and their associated status effect.
+renew-spell			=Renew
+haste-spell			=Haste
+fleetoffoot-spell	=Fleet of Foot
+rebirth-spell		=Rebirth
+mirage-spell		=Mirage
+barrier-spell		=Barrier
+darkbarrier-spell	=Dark Barrier
+thorns-spell		=Thorns
+boon-spell			=Boon
+focus-spell			=Focus
+poison-spell		=Poison
+bleed-spell			=Bleed
+sleep-spell			=Sleep
+blind-spell			=Blind
+weaken-spell		=Weaken
+cripple-spell		=Cripple
+mute-spell			=Mute
+slow-spell			=Slow
+root-spell			=Root
+cleave-spell		=Cleave
+quicken-spell		=Quicken
+
+; Game terms
+term-item		=Item
+term-items		=Items
+term-currency	=GP
+term-loot		=Component
+term-loots		=Components
+
+; Elements
+spell-element-water		=Water
+spell-element-fire		=Fire
+spell-element-earth		=Earth
+spell-element-thunder	=Thunder
+spell-element-dark		=Dark
+spell-element-holy		=Holy
+
+; Common descriptions made from the above
+damage-single-range			={damage-single-range-opener}.
+damage-single-range-chance-neg	={damage-single-range-opener} {add-negative-effect-closer}
+damage-with-negative		={damage-single-opener} and inflicts {addnegative}.
+damage-with-chance-negative	={damage-single-opener} {add-negative-effect-closer}
+damage-single				={damage-single-opener}.
+damage-burst				={damage-around-caster-opener}.
+damage-burst-chance-neg		={damage-around-caster-opener} {add-negative-effect-closer}
+damage-aoe					={damage-aoe-opener}.
+damage-line					={damage-line-opener}.
+damage-cone					={damage-cone-opener}.
+damage-all-enemies			={damage-basic-opener} to all enemies on the map.
+damage-all-enemies-scaling	=Deals {powerratio} to {power3ratio} {elem} ({dmgsource}) damage to all enemies on the map, based on proximity.
+damage-line-negative		={damage-line-opener} {add-negative-effect-closer}
+damage-cone-negative		={damage-cone-opener} {add-negative-effect-closer}
+multi-damage-with-negative	={damage-aoe-opener} {add-negative-effect-closer}
+
+heal-single					={heal-small-opener} to the target.
+heal-aoe					={heal-aoe-opener}.
+
+buff-around-caster			={status-pos-opener} to the character and all adjacent targets.
+buff-caster-mirage			=Grants {status-mirage-icon}{positive-mirage} to the character.
+buff-caster-thorn			=Grants {status-thorns-icon}{positive-thorns} to the character.
+buff-caster					={status-pos-opener} to the character.
+trap-status					=Character lays down a trap that will inflict {addnegative} and immediately end the turn of any enemy that steps on it.
+
+status-chance-negative		={status-chance-neg-opener} on the target.
+status-chance-negative-aoe	={status-chance-neg-opener} in a {size} area.
+status-negative				=Inflicts {addnegative} on the target.
+status-negative-aoe			=Inflicts {addnegative} in a {size} area.
+status-pos-single			={status-pos-single-opener}.
+status-aoe-positive			={status-pos-opener} in a {size} area.
+status-pos-critical-counter	={status-pos-opener} to the character when {hp} is {critical-hp} after taking damage.
+status-negative-remove		=Removes {removenegative} from the target.
+revive-ally					=Revives an ally on the given tile and restores {percent} {hp}.
+
+counter-offensive-action			=Counters any offensive action taken on the character
+counter-offensive-action-adjacent	={counter-offensive-action} by an adjacent unit
+counter-offensive-action-ranged		=Counters any ranged offensive action taken on the character
+counter-by-inflicting				=by inflicting the offender with
+counter-with-negative-status		={counter-offensive-action} {counter-by-inflicting} {addnegative}.
+counter-any-offensive-with-positive	={status-pos-opener} to the character after being targeted by any damaging offensive action.
+
+;Extras
+size-small	=small
+size-large	=large
+
+
+; ********************************
+; Mercenary
+; ********************************
+; Job
+MERC-Title  =Mercenary
+MERC-Ability=War Craft
+MERC-Desc   =These fighters are versed in all manner of warcraft. They know that combat can be a fickle thing and are prepared for whatever situation is thrown at them.
+
+; Abilities
+MERC-A1     =Field Aid
+MERC-A1-desc={heal-small-opener} and removes {removenegative}.
+
+MERC-A2     =Forceful {term-strike}
+MERC-A2-desc={damage-basic-opener} and pushes the target away by one tile. Depending on the terrain, this could have interesting results.
+
+MERC-A3     =Power {term-strike}
+MERC-A3-desc={damage-with-negative}
+
+MERC-A4     =Mind {term-strike}
+MERC-A4-desc={damage-with-negative}
+
+MERC-A5     =Precise {term-strike}
+MERC-A5-desc={damage-single-opener} with 100% accuracy (cannot miss).
+
+MERC-A6     =Flash {term-strike}
+MERC-A6-desc={damage-single-opener}. {bypass-counters}
+
+MERC-A7     =Stunning {term-strike}
+MERC-A7-desc={damage-single-opener} and delays progress towards their next turn by {locterm}% of its current value.
+
+; Passives
+MERC-P1     =Sturdy Grip
+MERC-P1-desc=Allows the character to hold a melee two-handed weapon in one hand and to equip a shield, regardless of the currently selected {jobterm}.
+
+MERC-P2     =Health {term-expert}
+MERC-P2-desc={increase-character-opener} base maximum {hp} value by {power}%.
+
+; Counter
+MERC-C1     =Counterattack
+MERC-C1-desc=Counters with a {regular-attack} any offensive action taken against the character by an adjacent unit.
+
+
+; ********************************
+; Knight
+; ********************************
+; Job
+KNIG-Title  =Knight
+KNIG-Ability=Chivalry
+KNIG-Desc   =These champions protect the weak and can shrug off even the most powerful of blows.
+knight		={KNIG-Title}
+
+; Abilities
+KNIG-A1     =Defend
+KNIG-A1-desc=Character takes half damage from all attacks until their next turn and heals {powerratio} ({dmgsource}) {hp}.
+
+KNIG-A2     =Protect
+KNIG-A2-desc=Character protects a target from taking any kind of direct damage by taking the hit in their stead (will not work for area of effect {abilities} if the protector is already a target of the {ability}). While this is active, the character cannot be displaced.
+
+KNIG-A3     =Taunt
+KNIG-A3-desc={status-negative}
+
+KNIG-A4     =Defensive {term-hit}
+KNIG-A4-desc={damage-single-opener}. Deals more damage the higher the caster's {def} value is. {counts-as-regular}
+
+KNIG-A5     =Chivalrous Spirit
+KNIG-A5-desc={status-pos-opener} to the character. {help-posstatus-Rebirth-desc}
+
+Deals-OneOverXDamage-opener=Deals damage equal to {percent-damage} of the target's current {HP}
+Deals-OneOverXDamage={Deals-OneOverXDamage-opener}.
+KNIG-A6     =Heavy {term-hit}
+KNIG-A6-desc={Deals-OneOverXDamage}
+
+KNIG-A7     =One for All
+KNIG-A7-desc=Ends your turn. Every time an ally takes a single-target offensive action on a target within your weapon's range, you will follow up with a {regular-attack} on that target (melee weapons attack at {power2ratio} and ranged weapons attack at {power3ratio}).
+
+; Passives
+KNIG-P1     =No Flank
+KNIG-P1-desc=All attacks targeting this character are considered to be from the front.
+
+KNIG-P2     =Life {term-font}
+KNIG-P2-desc=Character recovers {power}+{generic-level}/{power2} {hp} with each step taken.
+
+; Counter
+KNIG-C1     ={thorns-spell}
+KNIG-C1-desc={counter-any-offensive-with-positive}
+
+
+; ********************************
+; Templar
+; ********************************
+; Job
+BLAD-Title  =Templar
+BLAD-Ability=Holy Justice
+BLAD-Desc   =These noble and valiant champions fight to purge corruption from the land. They sacrifice themselves without hesitation in the name of a greater cause.
+templar		={BLAD-Title}
+
+; Abilities
+BLAD-A1     =Cleansing {term-blade}
+BLAD-A1-desc={damage-single-opener} and dispels all {buffs}. Deals increased damage for each {buff} dispelled.
+
+BLAD-A2     ={spell-element-holy} {term-chant}
+BLAD-A2-desc={damage-burst}
+
+BLAD-A3     =Soothing {term-chant}
+BLAD-A3-desc={heal-small-opener} to the character and all adjacent targets.
+
+BLAD-A4     =Emboldening {term-chant}
+BLAD-A4-desc={buff-around-caster}
+
+BLAD-A5     =Righteous {term-blade}
+BLAD-A5-Desc={damage-single}
+
+BLAD-A6     =Rapturous {term-chant}
+BLAD-A6-desc={sacrifice-life-opener} to heal and remove {removenegative} from all allies. {no-injury-for-death}
+
+BLAD-A7     =Siphon
+BLAD-A7-desc={damage-single-opener} and does {power2ratio} of that amount as {mp} damage that is absorbed.
+
+; Passives
+BLAD-P1     =Defense {term-expert}
+BLAD-P1-desc={increase-character-opener} base {def} value by {power-per-level}.
+
+BLAD-P2     =Resilience
+BLAD-P2-desc=Any {debuffs} applied to the character will last 1 less turn.
+
+; Counter
+BLAD-C1     =Evade Attack
+BLAD-C1-desc={counter-evade-opener} {regular-attack}.
+
+; ********************************
+; Tempest
+; ********************************
+; Job
+TEMP-Title  =Duelist
+TEMP-Ability={term-flourish}
+TEMP-Desc   =Duelists are unmatched in the art of one-on-one combat. Their unending quest for perfection has granted them some of the deadliest techniques known.
+
+; Abilities
+TEMP-A1     =Flowing {term-flourish}
+TEMP-A1-desc={damage-with-chance-negative}
+
+TEMP-A2     =Blazing {term-flourish}
+TEMP-A2-desc={damage-with-chance-negative}
+
+TEMP-A3     =Earthen {term-flourish}
+TEMP-A3-desc={damage-with-chance-negative}
+
+TEMP-A4     =Thundering {term-flourish}
+TEMP-A4-desc={damage-with-chance-negative}
+
+TEMP-A5     =Falcon {term-flourish}
+TEMP-A5-desc={damage-single-range}
+
+TEMP-A6     =Revival
+TEMP-A6-desc={revive-ally}
+
+TEMP-A7     =Crippling {term-flourish}
+TEMP-A7-desc={damage-with-chance-negative}
+
+; Passives
+TEMP-P1     =Leech Life
+TEMP-P1-desc=Character's {regular-attacks} absorb some of the damage dealt.
+
+TEMP-P2		=Blood Mark
+TEMP-P2-Desc=Character gains stacking {powerratio} damage bonus for each time they attack the same target they did last turn. Bonus resets upon changing targets.
+
+; Counter
+TEMP-C1     =Evade Skill
+TEMP-C1-desc={counter-evade-opener} offensive {skill}.
+
+
+; ********************************
+; Reaver
+; ********************************
+; Job
+REAV-Title  =Reaver
+REAV-Ability=Brutality
+REAV-Desc   =These wild warriors charge wildly into battle, heedless of their own safety. Their brutality is unmatched.
+
+; Abilities
+REAV-A1     ={primal-spell} Cry
+REAV-A1-desc={multi-damage-with-negative}
+
+REAV-A2     =Desperate {term-blow}
+REAV-A2-desc=Deals as much damage as the character is missing {hp}.
+
+REAV-A3     =Whirling {term-blow}
+REAV-A3-desc={damage-burst}
+
+REAV-A4     =Reckless {term-blow}
+REAV-A4-desc={damage-single-opener}, but also damages the character by 1/4 of the damage dealt.
+
+REAV-A5     ={primal-spell} {term-blow}
+REAV-A5-desc={damage-single-range}
+
+REAV-A6     ={primal-spell} Wave
+REAV-A6-desc={damage-aoe}
+
+REAV-A7      =Spread Pain
+REAV-A7-desc={damage-basic-opener} and transfers all of the character's {debuffs} to the target.
+
+; Passives
+REAV-P1     =Bloodlust
+REAV-P1-desc=Damage dealt increases the lower the character's current {hp} is (up to {powerratio}).
+
+REAV-P2     =Into the Fray
+REAV-P2-desc=Damage/healing dealt increases by {powerratio} to {power2ratio} for every adjacent enemy. More adjacent enemies means a higher increase.
+
+; Counter
+REAV-C1     ={term-critical-opener} {rebirth-spell}
+REAV-C1-Desc={status-pos-critical-counter} {help-posstatus-Rebirth-desc}
+
+
+; ********************************
+; Assassin
+; ********************************
+; Job
+ASSA-Title  =Assassin
+ASSA-Ability=Lethality
+ASSA-Desc   =Trained for morally questionable endeavors, Assassins have numerous creative methods for neutralizing their target. Whether striking from the shadows or wielding two weapons, they are formidable foes.
+
+; Abilities
+ASSA-A1     =Assassinate
+ASSA-A1-desc={damage-single-range-chance-neg}
+
+ASSA-A2     ={mirage-spell}
+ASSA-A2-desc={status-pos-opener} to the character. {help-posstatus-Mirage-desc}
+
+ASSA-A3     =Dispel {term-powder}
+ASSA-A3-desc={damage-single-range-opener} and removes {removepositive} from the target.
+
+ASSA-A4     ={sleep-spell} {term-powder}
+ASSA-A4-Desc={damage-line-negative}
+
+ASSA-A5     =Collect Bounty
+ASSA-A5-desc={damage-single-opener} and yields a rare {resource} if the character lands a killing blow on a {human} target. {trophy-collected} {prevents-rebirth} {trophy-noboss}
+
+ASSA-A6     ={blind-spell} {term-powder}
+ASSA-A6-desc={damage-single-range-chance-neg}
+
+ASSA-A7     =Sabotage
+ASSA-A7-desc=Character exchanges position on the map with the target. {ignores-cover-evasion} {bypass-counters}
+
+; Passives
+ASSA-P1     =Cautious Step
+ASSA-P1-desc=Character is immune to traps as well as to {removenegative}.
+
+ASSA-P2     =Dual Wield
+ASSA-P2-desc=Character can equip two weapons or two shields at the same time. When using {skills}, the attack granted by the 2nd weapon will not apply.
+
+; Counter
+ASSA-C1     ={term-critical-opener} {mirage-spell}
+ASSA-C1-desc={status-pos-critical-counter} {help-posstatus-Mirage-desc}
+
+
+; ********************************
+; Ranger
+; ********************************
+; Job
+RANG-Title  =Ranger
+RANG-Ability=Survival
+RANG-Desc   =These survivalists have honed their skill in archery to deadly effect.
+
+; Abilities
+RANG-A1     =Rain of Arrows
+RANG-A1-desc={damage-line}
+
+RANG-A2     =Scout
+RANG-A2-desc=Reveals all traps in a {locterm} radius around the character and grants the character {status-critup-icon}{positive-critup}. {help-posstatus-CRITUp-desc}
+
+RANG-A3     =Collect Pelt
+RANG-A3-desc={damage-single-opener} and yields a rare {resource} if the character lands a killing blow on a {monster} target. {trophy-collected} {prevents-rebirth} {trophy-noboss}
+
+RANG-A4     =Multishot
+RANG-A4-desc={damage-aoe}
+
+RANG-A5     =Rooting {term-shot}
+RANG-A5-desc={damage-with-chance-negative}
+
+RANG-A6     =Balm
+RANG-A6-desc={status-negative-remove}
+
+RANG-A7     =Sniper {term-shot}
+RANG-A7-desc={damage-basic-opener} to the target, but will inflict {status-root-icon}{negative-root} on the character.
+
+; Passives
+RANG-P1     =Know Weakness
+RANG-P1-desc={increase-character-opener} chances of landing a {critical-hit} by {power}%.
+
+RANG-P2     =Evasion Up
+RANG-P2-desc={increase-character-opener} {eva} value by {power}%.
+
+; Counter
+RANG-C1     =Countershot
+RANG-C1-desc=Counters with a {regular-attack} any ranged offensive {regular-attack} or {skill} taken against the character.
+
+
+; ********************************
+; Rogue
+; ********************************
+; Job
+ROGU-Title  =Scoundrel
+ROGU-Ability=Trickery
+ROGU-Desc   =Tricksters who eschew brute strength in favor of speed and nimbleness. They are adept at acquiring what others possess.
+
+; Abilities
+ROGU-A1     ={term-steal} {term-currency}
+ROGU-A1-desc={damage-single-opener} and attempts to steal {currency} from the target.
+
+ROGU-A2     ={term-steal} {term-item}
+ROGU-A2-desc={damage-single-opener} and attempts to steal a consumable item from the target (the item will be added to the character's team item count for this encounter).
+
+ROGU-A3     ={term-steal} {term-loot}
+ROGU-A3-desc=Attempts to steal a {resource} from the target.
+
+ROGU-A4     ={term-steal} {Buffs-cap}
+ROGU-A4-desc={damage-single-opener} and attempts to steal {buffs} from the target.
+
+ROGU-A5     ={fleetoffoot-spell}
+ROGU-A5-desc=Grants {addpositive} and removes {removenegative} around the character. {help-posstatus-fleetoffoot-desc}
+
+ROGU-A6     =Sneak Attack
+ROGU-A6-desc={damage-single-opener}. The attack deals significantly increased damage from the sides or the back, but is weak from the front.
+
+ROGU-A7     =Dirty Hit
+ROGU-A7-desc={damage-with-chance-negative} {counts-as-regular}
+
+ROGU-A8		=Arterial Cut
+ROGU-A8-desc={damage-with-chance-negative} {counts-as-regular}
+
+; Passives
+ROGU-P1     =Attack {term-expert}
+ROGU-P1-desc={increase-character-opener} base {atk} value by {power-per-level}.
+
+ROGU-P2     =Exploit Weakness
+ROGU-P2-desc=Increases {critical-hit} damage by {power}%.
+
+; Counter
+ROGU-C1     ={term-steal}
+ROGU-C1-desc={counter-offensive-action-adjacent} by attempting to steal a {resource} (enemies will steal an {item} instead).
+
+
+; ********************************
+; Gunner
+; ********************************
+; Job
+GUNN-Title  =Gunner
+GUNN-Ability={term-bullet} Infusion
+GUNN-Desc   =Expert sharpshooters who disable their targets from afar.
+
+; Abilities
+GUNN-A1     ={Focus-spell}
+GUNN-A1-desc=The character is granted {addpositive}. On the character's next turn, any action taken (other than items) uses up {Focus-spell} and deals double damage/healing. {GUNN-A1} will wear off even if not used.
+
+GUNN-A2     =Slowing {term-bullet}
+GUNN-A2-Desc={damage-with-chance-negative}
+
+GUNN-A3     =Crippling {term-bullet}
+GUNN-A3-Desc={damage-with-chance-negative}
+
+GUNN-A4     =Silencing {term-bullet}
+GUNN-A4-Desc={damage-with-chance-negative}
+
+GUNN-A5     =Enraging {term-bullet}
+GUNN-A5-Desc={damage-with-chance-negative}
+
+GUNN-A6     =Opportunistic {term-bullet}
+GUNN-A6-desc={damage-single-opener}. {damage-increase-with-debuff}
+
+GUNN-A7     =Magic {term-bullet}
+GUNN-A7-Desc={damage-single} {counts-as-regular}
+
+; Passives
+GUNN-P1     =Concentration
+GUNN-P1-desc={increase-character-opener} accuracy by {power}% when taking any offensive action (does not apply to Steal {abilities}).
+
+GUNN-P2     =Height Advantage
+GUNN-P2-desc=Increases damage done by {powerratio} (up to {power2ratio}) for each height value the character has over the target.
+
+; Counter
+GUNN-C1     =Teleport Other
+GUNN-C1-desc={counter-offensive-action-adjacent} by teleporting the offender to a random location on dry land on the map.
+
+
+; ********************************
+; Peddler
+; ********************************
+; Job
+PEDD-Title  =Peddler
+PEDD-Ability=Peddle
+PEDD-Desc   =Relying on their wits, Peddlers prefer to stay out of direct combat. They set clever traps and know how to get the most value out of items.
+
+; Abilities
+PEDD-A1     =Immobilizing {term-trap}
+PEDD-A1-desc={trap-status}
+
+PEDD-A2     =Lacerating {term-trap}
+PEDD-A2-desc={trap-status}
+
+PEDD-A3     =Painful {term-trap}
+PEDD-A3-desc=Character lays down a trap that will damage an enemy stepping on it for 1/2 of their current {hp} and immediately end their turn.
+
+PEDD-A4     =Alluring {term-trap}
+PEDD-A4-desc={trap-status}
+
+PEDD-A5     =Patented Usage
+PEDD-A5-desc=The selected item will be used on a {size} area (can't be used with {item-raisepotion} or {item-manastone}).
+
+PEDD-A6     =Critical Expertise
+PEDD-A6-desc={status-pos-single} {help-posstatus-CRITUp-desc}
+
+PEDD-A7     =Sales Pitch
+PEDD-A7-Desc={status-aoe-positive} {help-posstatus-Haste-desc}
+
+; Passives
+PEDD-P1     =Quick Fingers
+PEDD-P1-desc=Situational commands (such as {command-open}, {command-gather}, {command-climb}, {command-activate}, etc.) do not cost an action to use.
+
+PEDD-P2     ={term-item} Potency
+PEDD-P2-desc=When using an item, it will have double the normal potency.
+
+; Counter
+PEDD-C1     ={term-critical-opener} {quicken-spell}
+PEDD-C1-desc=Grants the character an immediate turn when {hp} is {critical-hp} after taking damage.
+
+
+; ********************************
+; Mender
+; ********************************
+; Job
+HEAL-Title  =Mender
+HEAL-Ability=Holy Magic
+HEAL-Desc   =Medics who specialize in using Holy Magic to keep their allies healthy and alive.
+
+; Abilities
+HEAL-A1     ={heal-spell} {term-tier1}
+HEAL-A1-desc={heal-single}
+
+HEAL-A2     ={heal-spell} {term-tier2}
+HEAL-A2-desc={heal-single}
+
+HEAL-A3     ={term-mass} {heal-spell} {term-tier1}
+HEAL-A3-desc={heal-aoe}
+
+HEAL-A4     ={revive-spell} {term-tier1}
+HEAL-A4-desc={revive-ally}
+
+HEAL-A5     ={revive-spell} {term-tier2}
+HEAL-A5-desc={revive-ally}
+
+HEAL-A6     ={panacea-spell} {term-tier2}
+HEAL-A6-desc={status-negative-remove}
+
+HEAL-A7     ={rebirth-spell}
+HEAL-A7-desc={status-pos-single} {help-posstatus-Rebirth-desc}
+
+; Passives
+HEAL-P1     =Blessed One
+HEAL-P1-desc=Every time the character uses a single target healing {ability} or item on a target other than themselves, they are healed for {powerratio} of the amount.
+
+HEAL-P2     =Mana {term-font}
+HEAL-P2-desc=Character recovers {locterm} {mp} with each step taken.
+
+; Counter
+HEAL-C1     ={renew-spell}
+HEAL-C1-desc={counter-any-offensive-with-positive} {help-posstatus-Renew-desc}
+
+
+; ********************************
+; Alchemystic
+; ********************************
+; Job
+ALCH-Title  =Alchemystic
+ALCH-Ability=Soul Magic
+ALCH-Desc   =These mystics wield Soul Magic to support and empower their allies.
+
+; Abilities
+ALCH-A1     ={term-mass} {barrier-spell}
+ALCH-A1-desc={status-aoe-positive} {help-posstatus-Barrier-desc}
+
+ALCH-A2     ={term-mass} {shield-spell}
+ALCH-A2-desc={status-aoe-positive}
+
+ALCH-A3     ={term-mass} {aegis-spell}
+ALCH-A3-desc={status-aoe-positive}
+
+ALCH-A4     ={term-mass} {renew-spell}
+ALCH-A4-desc={status-aoe-positive} {help-posstatus-Renew-desc}
+
+ALCH-A5     ={haste-spell}
+ALCH-A5-desc={status-pos-single} {help-posstatus-Haste-desc}
+
+ALCH-A6     ={term-mass} {haste-spell}
+ALCH-A6-desc={status-aoe-positive} {help-posstatus-Haste-desc}
+
+ALCH-A7     =Refresh
+ALCH-A7-desc=Refreshes the duration of {buffs} on targets in a {size} area.
+
+ALCH-A8     ={term-mass} Insight
+ALCH-A8-desc={status-aoe-positive} {help-posstatus-MNDUp-desc}
+
+ALCH-A9		=Soul Tendrils
+ALCH-A9-desc={damage-aoe}
+
+; Passives
+ALCH-P1     =Resistance {term-expert}
+ALCH-P1-desc={increase-character-opener} base {res} value by {power-per-level}.
+
+ALCH-P2		=Side Effects
+ALCH-P2-desc=Using an {ability} or {regular-attack} to successfully apply a {buff} also restores {powerratio} {hp} to the target, and a {debuff} also deals {power2ratio} {hp} damage to the target.
+
+; Counter
+ALCH-C1     =Mystic Shield
+ALCH-C1-desc=As long as character has any {mp} when taking damage, the whole damage is negated. Damage taken will lower current {mp}.
+
+
+; ********************************
+; Sorcerer
+; ********************************
+; Job
+SORC-Title  =Sorcerer
+SORC-Ability=Lay Waste
+SORC-Desc   =These archmages indiscriminately lay waste to the entire battlefield with raw elemental power.
+
+; Abilities
+SORC-A1     =Hailstorm
+SORC-A1-desc={damage-all-enemies-scaling}
+
+SORC-A2     =Firestorm
+SORC-A2-desc={damage-all-enemies-scaling}
+
+SORC-A3     =Meteorstorm
+SORC-A3-desc={damage-all-enemies-scaling}
+
+SORC-A4     =Thunderstorm
+SORC-A4-desc={damage-all-enemies-scaling}
+
+SORC-A5     =Darkstorm
+SORC-A5-desc={damage-all-enemies-scaling}
+
+SORC-A6     =Holystorm
+SORC-A6-desc={damage-all-enemies-scaling}
+
+SORC-A7     =Voidstorm
+SORC-A7-desc={damage-all-enemies-scaling}
+
+; Passives
+SORC-P1     =Economy
+SORC-P1-desc=All {abilities} with a {mp} cost have that cost reduced by 1/{power}.
+
+SORC-P2=Eruptor
+SORC-P2-Desc=Any turn the character doesn't deal {HP} damage, they build a {powerratio} bonus to their damage (up to {power2ratio}). The bonus is used up upon dealing damage.
+
+; Counter
+SORC-C1     ={root-spell}
+SORC-C1-desc={counter-with-negative-status}
+
+
+; ********************************
+; Utility
+; ********************************
+; Job
+UTIL-Title  =Plague Doctor
+UTIL-Ability=Treatment
+UTIL-Desc   =Learned and versatile surgeons who put their knowledge of medicine to great use, be it to help or harm.
+
+; Abilities
+UTIL-A1     =Recovery
+UTIL-A1-desc={heal-aoe-opener} and removes {removenegative}.
+
+UTIL-A2     ={heal-spell} {term-burst}
+UTIL-A2-desc={heal-aoe-opener} around the character.
+
+UTIL-A3     ={term-mass} {weaken-spell}
+UTIL-A3-desc={status-negative-aoe}
+
+UTIL-A4     ={term-mass} {thorns-spell}
+UTIL-A4-desc={status-aoe-positive} {help-posstatus-Thorns-desc}
+
+UTIL-A5     ={poison-spell}
+UTIL-A5-Desc={damage-with-chance-negative}
+
+UTIL-A6     ={poison-spell} {term-burst}
+UTIL-A6-desc={damage-aoe-opener} around the character {add-negative-effect-closer}
+
+UTIL-A7     ={term-mass} {slow-spell}
+UTIL-A7-desc={status-chance-negative-aoe}
+
+UTIL-P1		=Permanence
+UTIL-P1-desc=When the character successfully applies a {buff} or {debuff} to a target, it will last 1 more turn than normal.
+
+UTIL-P2     =Fortitude
+UTIL-P2-desc=Character is immune to {injuries} and {removenegative}.
+
+; Counter
+UTIL-C1     ={barrier-spell}
+UTIL-C1-desc={status-pos-opener} to the character after being targeted by any offensive action. {help-posstatus-Barrier-desc}
+
+
+; ********************************
+; Wizard
+; ********************************
+; Job
+WIZA-Title  =Wizard
+WIZA-Ability=Elementalism
+WIZA-Desc   =These spell-slingers can take out large groups of enemies at once by unleashing destructive magic upon the battlefield.
+
+; Abilities
+WIZA-A1     ={spell-element-water} {term-tier1}
+WIZA-A1-desc={damage-aoe}
+
+WIZA-A2     ={spell-element-fire} {term-tier1}
+WIZA-A2-desc={damage-aoe}
+
+WIZA-A3     ={spell-element-earth} {term-tier1}
+WIZA-A3-desc={damage-aoe}
+
+WIZA-A4     ={spell-element-thunder} {term-tier1}
+WIZA-A4-desc={damage-aoe}
+
+WIZA-A5     ={spell-element-water} {term-tier2}
+WIZA-A5-desc={damage-aoe}
+
+WIZA-A6     ={spell-element-fire} {term-tier2}
+WIZA-A6-desc={damage-aoe}
+
+WIZA-A7     ={spell-element-earth} {term-tier2}
+WIZA-A7-desc={damage-aoe}
+
+WIZA-A8     ={spell-element-thunder} {term-tier2}
+WIZA-A8-desc={damage-aoe}
+
+WIZA-A9     ={spell-element-water} {term-tier-locus}
+WIZA-A9-desc={damage-single}
+
+WIZA-A10     ={spell-element-fire} {term-tier-locus}
+WIZA-A10-desc={damage-single}
+
+WIZA-A11     ={spell-element-earth} {term-tier-locus}
+WIZA-A11-desc={damage-single}
+
+WIZA-A12     ={spell-element-thunder} {term-tier-locus}
+WIZA-A12-desc={damage-single}
+
+; Passives
+WIZA-P1     =Smart Casting
+WIZA-P1-desc=Offensive multi-target {abilities} will not include allies as possible targets and helpful multi-target {abilities} will not include enemies as possible targets.
+
+WIZA-P2     ={boon-spell}
+WIZA-P2-desc=Upon felling an enemy, the character will get a guaranteed {critical-hit} on their next action. {WIZA-P2} will wear off at the end of the next turn even if it wasn't used. {no-trigger-on-rebirth}
+
+; Counter
+WIZA-C1     =Magic
+WIZA-C1-desc=Counters any damaging offensive {spell} casted on the character by casting a non-elemental version of it back at the attacker.
+
+
+; ********************************
+; Druid
+; ********************************
+; Job
+DRUI-Title  =Druid
+DRUI-Ability=Duality
+DRUI-Desc   =Representing the duality in all things, Druids dabble in both the destructive and curative facets of magic. Though they do not excel in any one area, they are well-rounded and can eventually learn to cast two spells at once.
+
+; Abilities
+DRUI-A6     ={panacea-spell} {term-tier1}
+DRUI-A6-Desc={status-negative-remove}
+
+DRUI-A7     =Total Shield
+DRUI-A7-desc={status-pos-single}
+
+;DRUI-A8     ={aegis-spell}
+;DRUI-A8-desc={status-pos-single}
+
+DRUI-A8     =Dispel
+DRUI-A8-desc=Removes {removepositive} in a {size} area.
+
+DRUI-A9     ={bleed-spell}
+DRUI-A9-Desc={damage-with-chance-negative}
+
+; Passives
+DRUI-P1     =Mind {term-expert}
+DRUI-P1-desc={increase-character-opener} base {mnd} value by {power-per-level}.
+
+DRUI-P2     =Double Cast
+DRUI-P2-desc=Allows the character to cast two {spells} during their turn, but at 75% power each.
+
+; Counter
+DRUI-C1     =Adaptive Affinity
+DRUI-C1-desc=When the character is dealt elemental damage, they gain a {buff} that increases their own damage output by {powerratio} with that {element}.
+
+
+; ********************************
+; Fellblade
+; ********************************
+; Job
+FELL-Title  =Fellblade
+FELL-Ability=Dark Blade
+FELL-Desc   =These reclusive warriors are adept at anointing their blades with a mix of deadly toxins.
+
+; Abilities
+FELL-A1     ={poison-spell} {term-slice}
+FELL-A1-Desc={damage-with-chance-negative} {counts-as-regular}
+
+FELL-A2     =Chaos {term-slice}
+FELL-A2-Desc={damage-single-range-opener} and inflicts {power2} random {debuff}. {counts-as-regular}
+
+FELL-A3     =Black Blade
+FELL-A3-Desc={damage-line-negative}
+
+FELL-A4     ={sleep-spell} {term-slice}
+FELL-A4-desc={damage-with-chance-negative} {counts-as-regular}
+
+FELL-A5     =Decay {term-slice}
+FELL-A5-desc={damage-with-negative} {counts-as-regular}
+
+FELL-A6     =Miasma
+FELL-A6-desc={damage-aoe-opener} and spreads any {debuff} from the center target (if there is one) to other targets in a {size} area.
+
+FELL-A7     =Health Siphon
+FELL-A7-desc={damage-single-opener} and absorbs the damage dealt. Deals more damage the more {debuffs} the target is inflicted with.
+
+; Passives
+FELL-P1     =Malice
+FELL-P1-desc=Increases the accuracy of inflicting {debuffs} by {power}%.
+
+FELL-P2     =Versatile
+FELL-P2-desc=Allows the character's {skills} and {spells} to inflict {critical-hits}, and when the character lands a {critical-hit}, they regain a portion of their maximum {mp}. 
+
+; Counter
+FELL-C1     =Evade Magic
+FELL-C1-desc={counter-evade-opener} offensive {spell}.
+
+
+; ********************************
+; Warmage
+; ********************************
+; Job
+WARM-Title  =Warmage
+WARM-Ability=Battle Magic
+WARM-Desc   =Warmages earned their name by wading into the thick of battle, fusing magic and weaponry to devastating effect. These masters of both body and mind embody the concept of "high risk, high reward."
+
+; Abilities
+WARM-A1     ={spell-element-water} {term-tier-bolt}
+WARM-A1-desc={damage-single}
+
+WARM-A2     ={spell-element-fire} {term-tier-bolt}
+WARM-A2-desc={damage-single}
+
+WARM-A3     ={spell-element-earth} {term-tier-bolt}
+WARM-A3-desc={damage-single}
+
+WARM-A4     ={spell-element-thunder} {term-tier-bolt}
+WARM-A4-desc={damage-single}
+
+WARM-A5     =Infused Edge
+WARM-A5-desc=Deals a {regular-attack} to the target and then follows it up with a single-target version of any {spell} casted directly on the target (regardless of the spell's usual targeting style). The spell portion will bypass all {counter} {abilities}.
+
+WARM-A6     ={spell-element-water} {term-burst}
+WARM-A6-desc={damage-burst}
+
+WARM-A7     ={spell-element-fire} {term-burst}
+WARM-A7-desc={damage-burst}
+
+WARM-A8     ={spell-element-earth} {term-burst}
+WARM-A8-desc={damage-burst}
+
+WARM-A9     ={spell-element-thunder} {term-burst}
+WARM-A9-desc={damage-burst}
+
+WARM-A10     =Pulsar
+WARM-A10-desc={damage-single}
+
+; Passives
+WARM-P1     =Elemental Mastery
+WARM-P1-desc=The character ignores part of the target's elemental resistance (if it is less than 100) when dealing damage of the <sprite name="icon-element-fire">{element-fire}, <sprite name="icon-element-water">{element-water}, <sprite name="icon-element-earth">{element-earth} or <sprite name="icon-element-electric">{element-thunder} type. This can bring the resistance under 0.
+penumbral-master-desc=The character ignores part of the target's elemental resistance (if it is less than 100) when dealing damage of the <sprite name="icon-element-dark">{element-dark} or <sprite name="icon-element-holy">{element-holy} type. This can bring the resistance under 0.
+
+WARM-P2     =Leech Mana
+WARM-P2-desc=Character's {regular-attacks} convert some of the damage dealt into {mp}.
+
+; Counter
+WARM-C1     ={haste-spell}
+WARM-C1-desc={counter-any-offensive-with-positive} {help-posstatus-Haste-desc}
+
+
+; ********************************
+; Gambler
+; ********************************
+; Job
+GAMB-Title  =Gambler
+GAMB-Ability=Lady Luck
+GAMB-Desc   =Knowing that even the best-laid plans are subject to the whims of Lady Luck, Gamblers have found ways to manipulate the forces of chance in their favor.
+
+backfiring-chance=(ignores evasion, but has a small chance of backfiring)
+; Abilities
+GAMB-A1     ={term-wildcard-opener} <sprite name="icon-cardsuit-spade">
+GAMB-A1-desc=Usually inflicts a random number of {debuffs} on a single target {backfiring-chance}. 
+
+GAMB-A2     ={term-wildcard-opener} <sprite name="icon-cardsuit-diamond">
+GAMB-A2-desc=Usually grants a random number of {buffs} to a single target {backfiring-chance}.
+
+GAMB-A3     ={term-wildcard-opener} <sprite name="icon-cardsuit-club">
+GAMB-A3-desc=Usually deals a random amount of damage to a single target {backfiring-chance}.
+
+GAMB-A4     ={term-wildcard-opener} <sprite name="icon-cardsuit-heart">
+GAMB-A4-desc=Usually restores a random amount of {hp} to a single target {backfiring-chance}.
+
+GAMB-A5     =Pile On
+GAMB-A5-desc=Refreshes the duration of all {debuffs} on targets in a {size} area.
+
+GAMB-A6     ={quicken-spell}
+GAMB-A6-desc=Grants the target an immediate turn.
+
+GAMB-A7     =Allure
+GAMB-A7-desc={status-chance-negative}
+
+; Passives
+GAMB-P1     =Initiative
+GAMB-P1-desc=Character gains a free turn at the very start of combat.
+
+GAMB-P2     =Lucky
+GAMB-P2-desc=Character has that extra bit of luck that'll help them succeed in various things during combat.
+
+; Counter
+GAMB-C1     ={fleetoffoot-spell}
+GAMB-C1-desc={status-pos-opener} to the character and removes {removenegative} after being targeted by any damaging offensive action. {help-posstatus-fleetoffoot-desc}
+
+
+; ********************************
+; Gadgeteer
+; ********************************
+; Job
+GADG-Title  =Gadgeteer
+GADG-Ability=Engineering
+GADG-Desc   =These tinkers have invented all manner of technological marvels. As long as they have crafted the right tool for the job, they are ready for anything.
+
+; Abilities
+GADG-A0     =Gadgets
+GADG-A0-desc=Use a variety of high-tech gadgets for a versatile arsenal. Gadgets must be crafted or found before they can be used.
+
+GADG-A1     =Springger
+GADG-A1-Desc={MERC-A2-desc}
+
+GADG-A2     =Impalotron
+GADG-A2-desc={damage-basic-opener} that ignores the target's defense.
+
+GADG-A3     =Harmonizer
+GADG-A3-Desc={status-chance-negative-aoe}
+
+GADG-A4     =Shockerotron
+GADG-A4-desc={status-pos-single} {help-posstatus-Rebirth-desc}
+
+GADG-A5     =Speed Generator
+GADG-A5-desc={status-aoe-positive} {help-posstatus-Haste-desc}
+
+GADG-A6     =Demoralizer
+GADG-A6-desc={status-negative}
+
+GADG-A7     =Energizer
+GADG-A7-desc=Restores {power} {mp} to the target.
+
+GADG-A8     =Surpriser-Plus
+GADG-A8-desc={damage-with-negative}
+
+GADG-A9     =Molecular Infuser
+GADG-A9-desc={status-pos-single}
+
+GADG-A10     =Reflectotron
+GADG-A10-Desc={status-pos-single} {help-posstatus-Thorns-desc}
+
+GADG-A11     =Absorber-Plus
+GADG-A11-desc={damage-basic-opener} to the target's {mp}.
+
+GADG-A12     =Electroconstrictor
+GADG-A12-Desc={damage-with-chance-negative}
+
+GADG-A13     =Demolecularizer
+GADG-A13-desc={damage-aoe}
+
+GADG-A14     =Dispelotron
+GADG-A14-Desc=Removes {removepositive} from the target.
+
+GADG-A15     =Healbot-3000
+GADG-A15-desc={heal-small-opener} and grants {addpositive} to the target. {help-posstatus-Renew-desc}
+
+; Passives
+GADG-P1     =Perfect Focus
+GADG-P1-desc=Character deals {powerratio} increased damage/healing with full {hp}.
+
+GADG-P2     =Mana {term-expert}
+GADG-P2-desc=Character starts combat with {power} {mp} instead of 0.
+
+; Counter
+GADG-C1     =Absorb Mana
+GADG-C1-desc=When character is targeted by an offensive {ability} that has an {mp} cost, they gain the same amount of {mp} that was used. {GADG-C1-note}
+GADG-C1-note=Only triggers if the offensive {ability} would do damage (rather than healing) to the target.
+
+; --------------- Story Classes -------------------
+; ********************************
+; Marked
+; ********************************
+; helper text
+dmg-quarter-self=damages the character by 1/4 of their current {hp}
+dmg-power3-self=damages the character by 1/{power3} of their current {hp}
+
+MARK-Title  =Marked
+MARK-Ability=Ancient Power
+MARK-Desc   =One who has been selected as a candidate for the title of {immortal}. Their power increases as they draw energy from each {relic} in the land.
+
+MARK-A1     ={spell-element-dark} Bolt
+MARK-A1-desc={damage-single-range}
+
+MARK-A2     ={wrathful-spell} Blow
+MARK-A2-desc={damage-single-opener}, but also {dmg-power3-self}.
+
+MARK-A3     ={wrathful-spell} {term-beam}
+MARK-A3-desc={damage-line}
+
+MARK-A4     =Drain Health
+MARK-A4-desc={damage-single-opener} and absorbs the damage dealt.
+
+; other spells reference this desc. careful if changing it.
+MARK-A5     =Drain Soul
+MARK-A5-desc={damage-single-opener}'s {mp} and absorbs the damage dealt as {mp}.
+
+MARK-A6     ={wrathful-spell} {term-burst}
+MARK-A6-desc={damage-burst} Also {dmg-power3-self}.
+
+MARK-A7     ={spell-element-holy} {term-burst}
+MARK-A7-desc={damage-burst}
+
+MARK-A8		={spell-element-holy} Bolt
+MARK-A8-desc={damage-single-range}
+
+MARK-A9		={spell-element-holy} {term-beam}
+MARK-A9-desc={damage-line}
+
+MARK-P1     =Execute
+MARK-P1-desc={ANAT-P1-desc}
+
+MARK-P2     =Avenger
+MARK-P2-desc=Character gains {powerratio} bonus damage and {power2ratio} damage reduction for each fallen ally (up to {locterm} stacks).
+
+MARK-C1     ={slow-spell}
+MARK-C1-desc={counter-with-negative-status}
+
+
+; ********************************
+; Spymaster
+; ********************************
+REIN-Title	=Spymaster
+REIN-Ability=Many Masks
+REIN-desc	=Where others might revel in fame and glory, the {REIN-Title} abandons their identity, hiding behind many masks to accomplish their goals. They immerse themselves in their alternate persona so flawlessly that they can even copy the abilities of those around them.
+
+REIN-A1		=Pandora's Box
+REIN-A1-desc=Use a random offensive ability on a target. {ignore-evasion} {excluded-abilities}
+
+REIN-A2		=Exemplar
+REIN-A2-desc=Copies all of the character's {buffs} {ignores-buff-from-gear} to the targets in a {size} area around the character.
+
+REIN-A3		=Spry Step
+REIN-A3-desc={buff-caster}
+
+REIN-A4		=Mirror Trick
+REIN-A4-desc=Character uses the last (non-boss) {ability} that was used by any combatant. {excluded-abilities}
+
+REIN-A5		=Doppelganger
+REIN-A5-desc=Copies the moveset of any (non-boss) combatant (only 1 moveset can be copied. Copying another will replace the last one.)
+
+REIN-P1		=Shadowstep
+REIN-P1-desc=Character instantly crosses the distance between 2 points by stepping into the shadows.
+
+
+; ********************************
+; The Exiled - Kairu
+; ********************************
+EXIL-Title	=The Exiled
+EXIL-Ability=Averian Style
+EXIL-desc	=A mysterious swordsman from another land.
+
+EXIL-A2=Dash Strike
+EXIL-A2-desc={BOL-01-A1-Desc}
+
+EXIL-A6=Averian Thrust
+EXIL-A6-desc={damage-burst}
+
+
+; ********************************
+; Anatomist
+; ********************************
+ANAT-Title  =Anatomist
+ANAT-Ability=Anatomy
+ANAT-Desc   =One who has devoted all their efforts in the pursuit of knowledge about death and how to overcome it. They are adept both at healing and harming.
+
+ANAT-A1     =Reanimate
+ANAT-A1-Desc=Resurrects a dead enemy as a {UND-01-Title} that will attack foes until it falls. {raise-prevention}
+
+ANAT-A2     ={spell-element-dark} {term-tier1}
+ANAT-A2-Desc={damage-aoe}
+
+ANAT-A3     ={spell-element-dark} {term-tier2}
+ANAT-A3-Desc={damage-aoe}
+
+ANAT-A4     ={spell-element-dark} {term-tier-locus}
+ANAT-A4-Desc={damage-single}
+
+ANAT-P1     =Pain Points
+ANAT-P1-desc=Damage from offensive {abilities} is increased by {percent} when target's {hp} is below {percent2} of their maximum.
+
+ANAT-P2     =Legendary Healer
+ANAT-P2-desc=Healing is increased by {powerratio}.
+
+ANAT-C1     ={cripple-spell}
+ANAT-C1-desc={counter-offensive-action} {counter-by-inflicting} {addnegative}.
+
+
+; ********************************
+; Demon Knight
+; ********************************
+DEMK-Title  =Demon Knight
+DEMK-Ability=Rage
+DEMK-Desc   =A knight corrupted by a {relic}'s dark energies. They brutally decimate the battlefield, gaining great momentum for every foe felled.
+
+DEMK-A1     =Enraged {term-blow}
+DEMK-A1-Desc={damage-single-opener}, but also {dmg-power3-self}.
+
+DEMK-A2     =Vicious Slash
+DEMK-A2-Desc={damage-line-opener}. Also {dmg-power3-self}.
+
+DEMK-A3     =Vicious Push
+DEMK-A3-Desc={MERC-A2-Desc}
+
+DEMK-A4     =Rend
+DEMK-A4-Desc={damage-with-negative}
+
+DEMK-A5     =Demonic Might
+DEMK-A5-desc={status-pos-single} Also {dmg-power3-self}.
+
+DEMK-A7     =Corrupted {term-blade}
+DEMK-A7-desc={damage-single} Also {dmg-power3-self}.
+
+DEMK-P1     ={cleave-spell}
+DEMK-P1-desc=Character gets another turn after felling an enemy (only occurs once per natural turn). {cleave-no-mp} {no-trigger-on-rebirth}
+
+DEMK-P2     =Focused Rage
+DEMK-P2-desc={regular-attacks} use all current {mp} to inflict more damage ({focusedragebonus} bonus per 1 MP used).
+command-focused={DEMK-P2}
+command-focused-desc={DEMK-P2-desc}
+
+DEMK-C1     ={mute-spell}
+DEMK-C1-desc={counter-offensive-action} {counter-by-inflicting} {addnegative}.
+; DEMK-C1-desc={counter-offensive-action} by a unit from range {counter-by-inflicting} {addnegative}.
+
+
+; ********************************
+; Bounter Hunter
+; ********************************
+BHUN-Title  =Bounty Hunter
+BHUN-Ability=Hunting
+BHUN-Desc   =These mercenary agents are relentless in the pursuit of their mark. 
+
+BHUN-A1     =Net
+BHUN-A1-desc={status-negative}
+
+BHUN-A2     ={KAW-02-A3}
+BHUN-A2-desc={KAW-02-A3-desc}
+
+BHUN-A3     =Shakedown
+BHUN-A3-desc={damage-single-opener} and attempts to steal a {resource} from them.
+
+BHUN-A4		=Shadowstrike
+BHUN-A4-desc={damage-single} {buff-caster-mirage} {counts-as-regular}
+
+BHUN-A7     =Garrote
+BHUN-A7-desc={damage-single-range-chance-neg}
+
+BHUN-P1     ={RANG-P1} {term-tier2}
+BHUN-P1-desc={RANG-P1-desc} (Stacks with {RANG-P1}.)
+
+BHUN-P2     ={DEM-01-P2}
+BHUN-P2-desc={DEM-01-P2-desc}
+
+BHUN-C1     ={bleed-spell}
+BHUN-C1-desc={counter-with-negative-status}
+
+BHUN-A5		=Collect Trophy
+BHUN-A5-desc={damage-single-opener} and yields a rare {resource} if the character lands a killing blow on the target. {trophy-collected} {prevents-rebirth} {trophy-noboss}
+
+
+; ********************************
+; Immortal (Primus)
+; ********************************
+IMM1-Title	=Immortal
+IMM1-Ability=Divinity
+IMM7-Title	={IMM1-Title}
+IMM7-Ability={IMM1-Ability}
+IMM5-Title	={IMM1-Title}
+IMM5-Ability={IMM1-Ability}
+IMM3-Title	={IMM1-Title}
+IMM3-Ability={IMM1-Ability}
+
+IMM1-A1     =Teleport
+IMM1-A1-desc=Teleports the target to a nearby location. {bypass-counters}
+
+IMM1-A2     =Downfall
+IMM1-A2-desc=Targets in a {size} area around the caster are teleported {power2} tiles up in the air and then fall down, taking %-based fall damage.
+
+IMM1-A3		=Furystorm
+IMM1-A3-desc={damage-all-enemies-scaling} {counts-as-regular}
+
+IMM1-A4		=Interstitch
+IMM1-A4-desc=Teleports a target within range into another target within range. {damage-basic-opener} to the teleported target and instantly kills the secondary target and bypasses {status-rebirth-icon}{positive-rebirth}. {ignores-cover-evasion} 
+
+IMM1-A5		=Lapidatus
+IMM1-A5-desc={damage-aoe}
+
+IMM1-P1     =Strong Body
+IMM1-P1-desc={SND-01-P2-Desc}
+
+IMM1-P2		=Immortal Mind
+IMM1-P2-desc=All {debuffs} have {power}% less chance to work on this character.
+
+IMM1-P3		=Tainted
+IMM1-P3-desc=Any {debuffs} on the character are applied to the target when attacking with a {regular-attack}.
+
+; --------------- Extra Classes -------------------
+; ********************************
+; Werewolf
+; ********************************
+WERE-Title  =Werewolf
+WERE-Ability=Savagery
+WERE-Desc   =Feral warriors who channel their primal inner beast during combat. Their ferocity is unmatched.
+
+WERE-A1      =Bite
+WERE-A1-Desc={damage-with-chance-negative}
+
+WERE-A2     =Fetid {term-breath}
+WERE-A2-Desc={damage-cone-negative}
+
+cannot-be-used-if-notargets=Cannot be used if there are no targets in the area.
+note-cannot-be-water-tile=(cannot be a water tile)
+WERE-A3     =Leap
+WERE-A3-Desc=Character displaces themselves to the target location {note-cannot-be-water-tile} and deals {powerratio} {elem} ({dmgsource}) damage to the targets in a {size} area around them. {cannot-be-used-if-notargets}
+
+WERE-A4     =Cunning Slash
+WERE-A4-Desc={damage-single-opener} with 100% accuracy (cannot miss). {bypass-counters}
+
+WERE-A5     =Regenerate
+WERE-A5-Desc={status-pos-single-opener} and removes {removenegative}. {help-posstatus-Renew-desc}
+
+WERE-A6     =Howl
+WERE-A6-Desc={damage-burst-chance-neg}
+
+WERE-A7     =Blood Trophy
+WERE-A7-Desc={damage-single} {trophy-collected} {prevents-rebirth}
+
+WERE-P1		=Charged Blows
+WERE-P1-desc=Character expends all of their remaining {mp} to increase damage when using {regular-attacks}.
+
+
+; ********************************
+; Vampire
+; ********************************
+VAMP-Title  =Vampire
+VAMP-Titles =Vampires
+VAMP-Ability=Vampirism
+VAMP-Desc   =Denizens of the shadows, {VAMP-Titles} are imbued with an unnatural charm and a lust for blood.
+
+VAMP-A1		=Thrown Dagger
+VAMP-A1-desc={damage-single-range-chance-neg}
+
+VAMP-A3     =Night Embrace
+VAMP-A3-desc={damage-single-opener} and inflicts {addnegative} if target is inflicted with {status-bleed-icon}{negative-bleed}.
+
+VAMP-A4     =Blood Suck
+VAMP-A4-Desc={damage-single-opener} and absorbs the damage dealt. Deals {power2ratio} more damage if target is inflicted with {status-bleed-icon}{negative-bleed}.
+
+VAMP-A5     =Soul Suck
+VAMP-A5-Desc={MARK-A5-desc} Deals {power2ratio} more damage if target is inflicted with {status-bleed-icon}{negative-bleed}.
+
+VAMP-A6     =Charm
+VAMP-A6-desc={status-negative}
+
+VAMP-A7     =Blood Nova
+VAMP-A7-Desc={multi-damage-with-negative}
+
+VAMP-P1     =Bat Form
+VAMP-P1-Desc=Character transforms into a swarm of bats when moving.
+
+VAMP-P2     ={MARK-P1}
+VAMP-P2-Desc={ANAT-P1-desc}
+
+VAMP-C1     ={mute-spell}
+VAMP-C1-Desc={DEMK-C1-desc}
+
+
+; ********************************
+; Lich
+; ********************************
+LICH-Title  =Lich
+LICH-Ability=Malevolence
+LICH-Desc   =A spellcaster of great power who has turned to dark magic in their quest for immortality.
+
+LICH-A5     ={spell-element-dark} {term-burst}
+LICH-A5-Desc={damage-burst}
+
+LICH-A7     =Nightmare
+LICH-A7-Desc={multi-damage-with-negative}
+
+LICH-P1     =Blood Magic
+LICH-P1-Desc=Character uses {hp} rather than {mp} when using {abilities} ({locterm}% {hp} is used instead of 1 {mp}).
+
+LICH-P2     =Chilling Touch
+LICH-P2-Desc={offensive-abilities-inflict}
+
+LICH-C1		={poison-spell}
+LICH-C1-Desc={counter-with-negative-status}
+
+
+; ********************************
+; Lord
+; ********************************
+LORD-Title  =Lord
+LORD-Ability=Countenance
+LORD-Desc   =Through great deeds in battle, the {LORD-Title} has proven himself worthy of bearing the mantle of rulership.
+lord		={LORD-Title}
+
+LORD-A1     =Aries Ram
+LORD-A1-Desc={damage-line-negative}
+
+LORD-A2     =Gemini Flail
+LORD-A2-Desc={damage-cone-negative}
+
+LORD-A3     =Scorpio Ballista
+LORD-A3-Desc={damage-single-range-chance-neg}
+
+LORD-A4     =Sagittarian Cavalry
+LORD-A4-Desc={multi-damage-with-negative}
+
+LORD-A5     =Rally
+LORD-A5-Desc={buff-around-caster}
+
+LORD-C1     ={DRUI-A7}
+LORD-C1-Desc={counter-any-offensive-with-positive}
+
+
+; ********************************
+; Princess
+; ********************************
+PRIN-Title  =Princess
+PRIN-Ability=Regality
+PRIN-Desc   =Ordained with the right to rule, the noble {PRIN-Title} draws upon great holy and restorative power for her spells.
+princess	={PRIN-Title}
+
+PRIN-A3     ={term-mass} {heal-spell} {term-tier2}
+PRIN-A3-Desc={heal-aoe}
+
+PRIN-A4     ={spell-element-holy} {term-tier1}
+PRIN-A4-Desc={damage-aoe}
+
+PRIN-A5     ={spell-element-holy} {term-tier2}
+PRIN-A5-Desc={damage-aoe}
+
+PRIN-A6		={spell-element-holy} {term-tier-locus}
+PRIN-A6-Desc={damage-single}
+
+PRIN-P1		={DRUI-P2} {term-tier2}
+PRIN-P1-Desc=Allows the character to cast two {spells} during their turn.
+
+PRIN-P2     =Equip All
+PRIN-P2-Desc=Character is proficient with all weapons and armors and can equip any of them.
+
+PRIN-C1     ={DRUI-A7}
+PRIN-C1-Desc={counter-any-offensive-with-positive}
+
+
+; ********************************
+; Vessel
+; ********************************
+SMED-Title  =Vessel
+SMED-Ability=Channel Soul
+SMED-Desc   =A channeler who has spent years training their body and mind in order to call upon the souls of ancient, powerful beings.
+
+SMED-A1     =Nameless One
+SMED-A1-Desc={damage-single}
+
+SMED-A2     =Ippokampos
+SMED-A2-desc={damage-cone}
+
+SMED-A3     =Avernaal
+SMED-A3-desc={damage-aoe}
+
+SMED-A4     =Quetzalcoatl
+SMED-A4-desc={damage-line}
+
+SMED-A5     =Psyhie
+SMED-A5-desc={heal-aoe-opener} around the caster. Also restores {power2} {mp}.
+
+SMED-A6     =Fáfnir
+SMED-A6-desc={damage-single-range} {ignore-evasion}
+
+SMED-A7     =Immortal Souls
+SMED-A7-desc={damage-aoe}
+
+SMED-P1     =Hallowed Mind
+SMED-P1-Desc=Character gains a bonus to healing/damage the next turn after using a {regular-attack} ({powerratio} for using a melee weapon and {power2ratio} for using a ranged weapon).
+;SMED-P1-Desc=Character is {power}% less likely to be afflicted by {debuffs}.
+
+SMED-P2     =Hallowed Body
+SMED-P2-Desc=Increases {atk} by {power}% of {mnd} and {mnd} by {power}% of {atk}.
+
+SMED-C1     =Hallowed Soul
+SMED-C1-Desc={DAA-01-C1-Desc}
+
+
+; BONUS passives
+BONU-P1={Penumbral-Mastery}
+BONU-P1-Desc={penumbral-master-desc}
+
+BONU-P2={BOL-01-P1}
+BONU-P2-Desc={BOL-01-P1-Desc}
+
+; --------------- Enemy Classes -------------------
+; ********************************
+; Noble
+; ********************************
+NOBL-Title		=Noble
+NOBL-Ability	=Poise
+
+; Debug
+WORK-TESTDEATH	=Lots of Dmg
+WORK-TESTWEAK	=90% dmg
+WORK-TESTCHARM  =100% charm
+WORK-TESTSLEEP  =100% sleep+dmg
+WORK-TESTMP		=Full MP
+WORK-MISSING	=Missing
+WORK-MISSING-Desc=Missing!
+WORK-TESTWEAKEN	=100% Weaken

@@ -1,0 +1,149 @@
+; Map Names
+mapname-aqueduct01     	=Bardvig Aqueduct
+mapname-aqueduct01-desc	=This old construction conveys pure spring water from {mapname-Forest02} to {mapname-City01}. Many {kawa} merchants cross here, making it a popular ambush point for bandits.
+
+mapname-arena01			=The Arena
+
+mapname-beach01     	=Strangled Cove
+mapname-beach01-desc	=These dangerous shores are littered with countless shipwrecks. Their tainted cargo has leached into the bay, rendering the water toxic.
+
+mapname-Cabin01     	={necro}'s Cabin
+
+mapname-canyon01     	=The Resting Giants
+mapname-canyon01-desc	=These ancient hills are where old beasts go for their final days. Poachers often roam the area.
+
+mapname-canyon02     	=Iirzk'tara Gorge
+mapname-canyon02-desc	=These long-abandoned mining tunnels are now home to troglodytic giants.
+
+mapname-cave01       	=Occul Cavern
+mapname-cave02       	=Occul Riverbed
+
+mapname-cave03     		=Decaying Depths
+mapname-cave03-desc		=The foul wind whistling through these tunnels sounds like a dying moan. It hints at the unfathomable depths still to come.
+
+mapname-cave04     		=Fetid Depths
+mapname-cave04-desc		=The caverns are becoming warmer as they descend deeper into the earth, smelling now of sulfur in addition to the ubiquitous rot.
+
+mapname-cave05     		=Infernal Depths
+mapname-cave05-desc		=These blisteringly hot tunnels wind through the heart of the earth. How much deeper could the {Ancient-Path} go?
+
+mapname-cave06     		=The Gauntlet
+mapname-cave06-desc		=An eerie light comes from ahead, foretelling that the end of the {Ancient-Path} is within reach. But before that, one more ordeal awaits.
+
+mapname-City01     		=Gelligh
+mapname-City01-desc		=The industrial {mapname-City01} is often plagued by thieves and scoundrels.
+mapname-City03			={mapname-City01}
+
+mapname-City02     	={mapname-town2}
+mapname-coastal01   =Fenfjord
+mapname-coastal02   =Port Grendel
+mapname-Council01   ={Immortal-Council} Chambers
+
+mapname-Crossroads01     	=The Crossroads
+mapname-Crossroads01-desc	=There used to be travelers sojourning in the area, but frequent marauder attacks have taken their toll on the busy road.
+
+mapname-crossroads02     	=Gyaum Tor
+mapname-Crossroads02-desc	=Many travelers pass through these roads, which makes them a prime target for more brazen thieves.
+
+mapname-Desert01     		=Zzakander Spires
+mapname-Desert01-desc		=These desert towers are architectural wonders of the world, yet they only hint at the vast network of {bzil} tunnel dwellings beneath the ground.
+
+mapname-Desert02     		=Caravan Trail
+mapname-Desert02-desc		=Dotted with ancient ruins, this trail is nowadays only home to the hardiest of desert creatures.
+
+mapname-Forest01     		=Banyan Span
+mapname-Forest01-desc		=This living bridge was woven together from tree roots over a period of decades. It connects the once-isolated {mapname-town2} to the mainland.
+
+mapname-Forest02     		=Kapawka Jungle
+mapname-Forest02-desc		=A dense, dark, and dangerous tangle of trees that barely allows any sunlight through. While inhospitable to {humans}, {kawas} are right at home here.
+
+mapname-Forest03     		=Alpine Woods
+mapname-Forest03-desc		=Poachers, bandits, and wild beasts all claim this territory as their own.
+
+mapname-Forest04     		=Timber Road
+mapname-Forest04-desc		=Danger sometimes lurks in these otherwise quiet woods, in the form of wild beasts and nature worshipers.
+
+mapname-Forest05     		=Claret Woods
+mapname-Forest05-desc		=It is said that these old woods hide a magical pathway used by a long-dead civilization.
+
+mapname-Gate01       		={map-immortalcity}
+mapname-Grandhall01			=Cataracta Citadel
+
+mapname-Graveyard01     	=Restful Stones
+mapname-Graveyard01-desc	=This secluded graveyard is not as restful as it seems; necromantic energies permeate the earth, corrupting the dead that lie here.
+
+mapname-highlands01     	=The Highlands
+mapname-highlands01-desc	=This area sees very few travelers pass through and should thus be free from banditry... but some rogues consider that a golden opportunity.
+
+mapname-highlands02			=Lodestarhenge
+mapname-highlands02-desc	=The air feels positively electric around these mysterious old monoliths.
+
+mapname-KawaShop        	=Unassuming Hovel
+
+mapname-mountain01      	=Devilsblood Ascent
+mapname-mountain01-desc		=This scorched slope is streaked with veins of magma hot enough to melt steel. Only fiery creatures and madmen venture here.
+
+mapname-mountain02     		=Gelligh Foothills
+mapname-mountain02-desc		=Hopeful adventurers dreaming of untold riches once flocked here, but the mine shafts dotting these foothills are now stripped bare.
+
+mapname-mountain03     		=Mount Nervanzer
+mapname-mountain03-desc		=Peaceful. Quiet. And very cold. This frigid land is perpetually covered in a thick blanket of snow.
+
+mapname-tomb01     			=Ancient Tomb
+mapname-tomb01-desc			=The {Ancient-Path} terminates in a sepulcher that predates the {Human} race. What primordial knowledge might be locked away?
+
+mapname-void01     			=Teratoma
+
+mapname-void02     			=Nervanzer Wellspring
+mapname-void02-desc			=This hot natural spring once gushed with fresh, clear water, warmed by the earth itself. But {ancient-beast}'s influence has tainted it with a foul corruption.
+
+mapname-void03				=???
+
+mapname-Oasis01     		=Oldebzar
+mapname-Oasis01-desc		=One of the oldest markets in the world, {mapname-Oasis01} is a melting pot of {human} and {bzil} cultures.
+oldebzar					={mapname-Oasis01}
+
+mapname-Plains01     		=Azure Fields
+mapname-Plains01-desc		=This vast savanna of sapphire-blue stretches as far as the eye can see. Wild beasts hide amid the tall grass.
+
+mapname-Plains02     		=Godstear Wastes
+mapname-plains02-desc		=An ancient battlefield that was so wracked by destruction that, to this day, very few things are able grow in its wretched soil.
+
+mapname-ship01     			=Drakesmouth Seaway
+mapname-ship01-desc			=Haunted by pirates and sea monsters alike, safely navigating this dangerous trade route is no mean feat.
+
+mapname-Swamp01     		=Phougamouth Bogs
+mapname-Swamp01-desc		=Any who venture into this mud-choked mire must contend with its frigid, poisonous waters.
+
+mapname-swamp02     		=Screwworm Swamp
+mapname-swamp02-desc		=The stench of rot comes not only from the parasite-ridden waters, but also from deep within the surrounding caverns.
+
+mapname-Temple01-city     	=Centina
+mapname-Temple01-city-desc	=Welcome to the Arena! Here, you can fight a wide variety of opponents for fame and glory!
+
+mapname-Temple01			=Highlands {Temple}
+mapname-Temple02			=Jungle {Temple}
+mapname-Temple03			=Desert {Temple}
+mapname-Temple04			=Mountain {Temple}
+
+mapname-templeoutside01     	=Scarred Summit
+mapname-templeoutside01-desc	=An area seldom visited by any, all sorts of strange beasts and cultists make their nest here...
+
+mapname-Templeoutside02     	=Ekhidna Falls
+mapname-Templeoutside02-desc	=The ancient ruins here are slowly but surely being overtaken by the encroaching jungle. The native monsters are fiercely territorial, viciously attacking any intruders.
+
+mapname-Templeoutside03     	=Baaz Island
+mapname-Templeoutside03-desc	=This island was sacred to the {Bzil} in ancient times, but nowadays it's only home to abandoned ruins.
+
+mapname-town2					=Thespeiros
+
+; Story map names
+map-ImmortalCity				=Illuster
+mapname-kawacity				=Gogombob City
+mapname-kawacity01				={mapname-kawacity}
+mapname-kawacity01-desc			=An old, remote {Kawa} city built at the base of an active volcano, it hides many ancient secrets. {Arbiters} rarely venture here, making it a popular target for monsters and bandits.
+
+; wrappers and convenience
+illuster		={map-ImmortalCity}
+centina 		={mapname-Temple01-city}
+gelligh					={mapname-City01}

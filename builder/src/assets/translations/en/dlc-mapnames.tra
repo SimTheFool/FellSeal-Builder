@@ -1,0 +1,20 @@
+; MapNames
+mapname-arena02		=Battle Royal Arena
+mapname-arena02-desc=Crowds gather from miles around to attend the mass battles that take place here.
+
+mapname-city04		={mapname-coastal02}
+mapname-coastal02-desc	=A lawless haven for pirates and brigands, {mapname-coastal02} is nonetheless a vital and bustling refuge from the storm-torn seas surrounding it.
+
+mapname-city05		={mapname-coastal01}
+mapname-coastal01-desc	=A small, ramshackle hamlet in the backcountry. The honest folk here always welcome an {Arbiter}'s visit. The dishonest folk, not so much.
+
+mapname-graveyard02			=Lost Grave
+mapname-graveyard02-desc	=This remotest of places, deep in the hinterlands, is home only to a solitary grave.
+
+mapname-lab01		={name-kawa-evil}'s Study
+mapname-lab01-desc	=This derelict museum has been converted into a wizard's study. A pall of profane magic hangs in the air from the foul experiments that once took place here.
+
+mapname-sewer01		=Dumadi Depths
+mapname-sewer01-desc=Watchful, hungry eyes glitter in the shadows of these dank sewer tunnels.
+
+mapname-shop01		={name-kawamerchant}'s Emporium

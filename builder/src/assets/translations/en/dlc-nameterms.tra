@@ -1,0 +1,43 @@
+; Missions and recruits
+miss-sergeant-male-lastname=Greely
+miss-arbiter-male-lastname=Lancaster
+miss-arbiter-male-lastname2=Moray
+miss-bandit-male-nickname=Lucky Lebrice
+miss-monster-female-name=Zzarina
+miss-marked-male-name=Thorn
+
+miss-wrangler-male-name=Pelier
+
+miss-super-female-recruit=The Celestial One
+
+; Hunts - Assume monsters are genderless (or male if language doesn't have genderless)
+miss-harvester-name=Wrax
+miss-archafflictor-name=Malsester
+; This one monster is genderless (or female if language doesn't have genderless)
+miss-malcubus-name=Varukha
+
+hunt-monster-archafflictor=Eosphoral
+hunt-monster-harvester=N'kadikonda
+hunt-monster-blardger=Krampus
+hunt-monster-bzzerk={miss-monster-female-name}
+hunt-monster-bulldrake=Beachmaster Zelk
+hunt-monster-daodrenner=Kernunnos
+hunt-monster-arpia=Aello
+hunt-monster-ercinee=Kelaino
+hunt-monster-niwot=Podargi
+hunt-monster-hellhund=Erevos
+hunt-monster-tangrel=Tamboro
+hunt-monster-kawa=Gurglemonger
+; This one monster is genderless (or female if language doesn't have genderless)
+hunt-monster-malcubus=Sharde
+hunt-monster-raife=Shard of {name-rebelleader}
+hunt-monster-water-pektite=Macaron
+hunt-monster-fire-pektite=Mochi
+hunt-monster-earth-pektite=Ma'amoul
+hunt-monster-thunder-pektite=Meringue
+hunt-monster-rakkerjak=Jiaoqi
+hunt-monster-therva=Mushkusshu
+hunt-monster-vangal=Gwyllgrim
+hunt-monster-zotzit=Zotzma
+hunt-monster-dragon=Kulshedra
+hunt-monster-knifer=Baron Glubbla

@@ -1,0 +1,1165 @@
+; *****************************
+; Menus and Hints
+; *****************************
+
+; *****************************
+; Battle Commands
+; *****************************
+; Used to build other strings
+command-action-used			=This will use your action for the turn.
+
+; Commands
+command-attack				=Attack
+command-attack-desc			=Deals 1x {0} damage with your equipped weapon.
+command-move				=Move
+command-move-desc			=Move on the map (limited by your movement value). You may still take action afterwards if you haven't done so already.
+command-end					=End
+command-end-desc			=End your turn right away. If you end your turn without taking an action, your next turn will come slightly faster. Moving has no impact on this.
+command-open				=Open
+command-open-desc			=Open a nearby chest. {command-action-used}
+command-gather				=Gather
+command-gather-desc			=Gather a nearby resource. {command-action-used}
+command-doublecast			=Double Cast
+command-doublecast-desc		=Allows you to use two spells in one turn.
+command-doublecast-weak-desc=Allows you to use two spells at 75% power each in one turn.
+command-item				=Item
+command-item-desc			=Use an item. Item counts are shared amongst the team and are refilled for free to their maximum value after each battle.
+command-climb				=Climb
+command-climb-desc			=Use a nearby ladder. {command-action-used}
+command-doorclimb			=Enter
+command-doorclimb-desc		=Use a nearby passageway/entrance. {command-action-used}
+command-activate			=Activate
+command-activate-desc		=Activate a nearby device. {command-action-used}
+
+; *****************************
+; All purpose and special terms
+; *****************************
+cancel		=Cancel
+confirm		=Confirm
+; only translate the inside the quotes for those
+textcomma	=", "
+textcolon	=": "
+gender-male		=Male
+gender-female	=Female
+; Level (as in, character is level 99)
+generic-level	=Level
+generic-unknown	=???
+generic-unknown2=??
+
+
+; *****************************
+; Selected character Infobox and targetbox
+; *****************************
+; Battle TargetBox
+
+; Back Attack, Side Attack, Front Attack
+battle-elemental-res	=RESISTANCES
+battle-attack			=Attack
+battle-back				=Back
+battle-side				=Side
+battle-front			=Front
+battle-noflank			=No Flank
+battle-exp				=Exp
+battle-levelup			=Level Up!
+battle-begin			=Begin!
+battle-victory			=Victory
+battle-defeat			=Defeat
+battle-game-over		=Game Over
+battle-rewards			=Rewards
+battle-stolen			=Stolen
+battle-miss				=MISS
+
+battle-death-tutorial1	=One of your allies has fallen! Fallen allies will be available again next battle, although they will have sustained an {injury}.{newline}An {injury} will drop all their stats by {color=term}{0}%{color=base} until it wears off. It will wear off after they rest for a full battle (meaning, they need to remain on the sidelines and can't participate in the battle).
+battle-death-tutorial2	=Allies can also be revived in combat using spells and items, although they will still receive an {injury} at the end of combat regardless and could receive more {injuries} if they fall again.{newline}Please note that {hero} will not receive an {injury} if she falls in combat.
+
+; helper desc for X button
+battle-desc-gather		=A character can gather a {resource} from this tile. {resource} points respawn at the start of each battle.
+battle-desc-treasure	=A character can get loot from the treasure on this tile.
+battle-desc-climb		=A character can instantly move to tile {0} from this point, although doing so will use their turn's action.
+battle-desc-pit			=After moving to this tile, the character will instantly be transported to tile {0} if it is unoccupied.
+battle-desc-safezone	=This is one of the escape points.
+battle-desc-ancient		=A character can gather the {ancient-bone} that {necro} needs from this tile.
+battle-desc-blocked		=This tile is blocked and characters may not stand there.
+battle-desc-trapdoor	=This suspicious trapdoor might just contain reinforcements. Anyone standing on it when it's meant to open will prevent it.
+
+; Video
+video-skip		=Skip the video?
+
+; rewards
+battle-r-total	=Total For All Participants
+
+; Spaces are needed for alignment
+battle-r-base		="  Map Completion"
+; Hero Never Falls bonus
+battle-r-herobonus	="  {0} Never Falls Bonus"
+; Bonus
+battle-r-bonus		="  Special Bonus"
+
+; Benched Units
+battle-r-benched	=Total For All Benched Units
+
+battle-r-vicarious	=Vicarious Learning
+
+; earned 50% bonus ap!
+battle-r-mvp		=earned {0}% bonus {ap}!
+; Cursed Shield's curse is lifted! It becomes Special Shield Name!
+battle-cursed-shield	={0}'s curse is lifted! It becomes {1}!
+battle-injuries			=Injuries:
+
+; Inflict: status effect, Grant: status effect, Remove: status effect, Extend: status effect
+battle-inflict		=Inflict:
+battle-grant		=Grant:
+battle-remove		=Remove:
+battle-extend		=Extend:
+battle-unknown		={generic-unknown}:
+battle-transfer		=Transfer:
+
+infobox-ally		=Ally
+infobox-enemy		=Enemy
+infobox-guest		=Guest
+infobox-leader		=Leader
+infobox-level		=Lv.
+infobox-deployed	=Deployed
+infobox-exp			=Exp.
+infobox-status-immunities	={Debuff} Immunities
+infobox-weapon-desc-element	=Deals {elem} damage to the target.
+infobox-weapon-desc-onhit	={status-chance-negative}
+infobox-abilities-known		={Abilities} known
+infobox-element-resistance	=Resistances
+
+abilities-class-opener		={Abilities} of the {0} {jobterm}.
+
+; Use to form words like <monstername> Essence: "Vangal Essence"
+class-essence	=Essence
+class-essences	=Essences
+; This is how the words are joined. {0} is the monster name. {1} is the essence.
+; eg: {0} {1} -> Vangal Essence
+; eg: {1} de {0} -> Essence de Vangal
+class-essence-name		={0} {1}
+; Vangal AP
+classe-essence-ap-bonus	={0} AP
+
+; When countering, shows: "Counter: AbilityName". {0} is the ability name
+spell-name-counter-sentence	=Counter: {0}
+
+; *****************************
+; Items
+; *****************************
+; Weapons
+gear-Sword		=Sword
+gear-Dagger		=Dagger
+gear-Scythe		=Scythe
+gear-Maul		=Maul
+gear-Bow		=Bow
+gear-Gun		=Gun
+gear-Spear		=Spear
+gear-Axe		=Axe
+gear-Staff		=Staff
+gear-Mace		=Mace
+gear-Rapier		=Rapier
+gear-Rod		=Rod
+gear-Crossbow	=Crossbow
+
+; Armors
+gear-Robe		=Robe
+gear-LightArmor	=Light Armor
+gear-HeavyArmor	=Heavy Armor
+gear-Hat		=Hat
+gear-LightHelmet=Light Helmet
+gear-HeavyHelmet=Heavy Helmet
+gear-Shield		=Shield
+
+; Groups
+gear-group-chest	=Chest Armor
+gear-group-head		=Head Armor
+gear-group-shield	=Shield
+
+; Accs
+gear-Accessories	=Accessories
+
+; Generic
+weapon	=Weapon
+allmp	=ALL
+learn-all =Learn All
+learn-all-tuto=You can use the "{learn-all}" option to learn all the {abilities} in a {class} at once. It will only be shown if you have enough {ap} to learn everything on the current {class}.
+
+; *****************************
+; Menus
+; *****************************
+; Title
+title-continue	=Continue
+title-newgame	=New Game
+title-load		=Load Game
+title-options	=Options
+title-compendium=Help Compendium
+title-credits	=Credits
+title-patchnotes=Patch Notes
+title-quit		=Quit
+title-select	=Select
+title-switch-profile	=Switch Profile
+title-newgamePlus={title-newgame}+
+
+title-gamepad1	="Press Any Key / "
+title-gamepad1-console="Press "
+title-gamepad2	=" to start."
+title-gamepad3	=(A Gamepad is recommended.)
+title-no-user   =<None>
+
+; Save/load
+savemenu-load-title	=Select Data to load.
+savemenu-save-title	=Select slot to save Data.
+savemenu-save-newfile	=Empty.
+savemenu-save-corrupted	=Corrupted File.
+savemenu-load-slot		=Slot #
+savemenu-load-level		={generic-level}
+savemenu-load-troops	=Troops
+savemenu-load-chapter	=Scene
+savemenu-load-time		=Time
+savemenu-load-autosave	=Autosave #
+savemenu-save-confirm	=Overwrite Data?{newline}Are you sure you want to overwrite the Data on this file?
+savemenu-save-success	=Saved!{newline}Data was saved successfully.
+savemenu-save-error		=Error.{newline}An error happened. Data was not saved correctly and is corrupted.
+savemenu-save-nospace	=Error.{newline}There wasn't enough space available. Data was not saved.
+savemenu-load-error		=Error.{newline}Save Data is corrupted and was not loaded.
+savemenu-delete-confirm	=Delete Data?{newline}Are you sure you want to delete this file? The data will be lost forever.
+savemenu-delete-error	=Error.{newline}Some unknown error happened, Data was not deleted.
+savemenu-game-cleared	=Cleared
+;savemenu-load-error-dlc=The save file cannot be read as it was created from a version of the game with access to DLC that isn't included in this version of the game.
+; Options
+options-list-warning		=Only available from the Title Screen.
+; Video
+options-list-optionVideo     =Video
+options-list-optionVideo-desc=Change video settings, such as resolution. {options-list-warning}
+; Graphics
+options-list-optionGraphics     =Graphics
+options-list-optionGraphics-desc=Change graphical settings.
+; sound
+options-list-optionSound		=Sound
+options-list-optionSound-desc	=Change sound settings, such as volume.
+; Gameplay
+options-list-optionGameplay		=Gameplay
+options-list-optionGameplay-desc=Change various gameplay options, such as tutorial hints, etc.
+; Keys remapping
+options-list-optionKeys			=KB Key Bindings
+options-list-optionKeys-desc	=Remap the keyboard keys layout.
+; Language
+options-list-optionLanguage		=Language
+options-list-optionLanguage-desc=Change the game language. {options-list-warning}
+
+; loading text
+loading-text=Loading...
+saving-text=Saving...
+
+;Sound Options
+options-sound-master     	=Master Volume
+options-sound-master-desc	=Set the master volume.
+options-sound-bg     		=Music Volume
+options-sound-bg-desc		=Set the music volume.
+options-sound-sfx     		=SFX Volume
+options-sound-sfx-desc		=Set the sound effects volume.
+options-sound-ui     		=UI SFX Volume
+options-sound-ui-desc		=Set the UI effects volume.
+options-sound-ambient     	=Ambient SFX Volume
+options-sound-ambient-desc	=Set the Ambient effects volume.
+options-sound-default		=Default
+options-sound-default-desc	=Reset all sound settings to their default values.
+
+; Gameplay options
+options-gameplay-typeAB			=Use Type A/B
+options-gameplay-type0			=Type A
+options-gameplay-type1			=Type B
+options-gameplay-typeAB-desc	=While moving the cursor on the battle map in combat with the {controller-term} or Keyboard, Type A/B have a different diagonal direction.
+options-gameplay-typeAB-desc-consoles	=While moving the cursor on the battle map in combat with the {controller-term}, Type A/B have a different diagonal direction.
+options-gameplay-usestick		=Enable Left {controller-stick-term}
+options-gameplay-usestick-desc	=Allows the left {controller-stick-term} to be used in map movements as well as the {controller-dpad-term}. Most people didn't enjoy using the left {controller-stick-term} as much, so we disabled it to encourage {controller-dpad-term} use, but if you REALLY want to use it...
+options-gameplay-mapscroll		=Map Scroll Speed
+options-gameplay-mapscroll-desc	=Change the mouse scrolling speed on battle maps.
+options-gameplay-noresetrstick     	=Keep Page
+options-gameplay-noresetrstick-desc	=When this is set to NO, in combat, when showing the information panel for a different character, the selected information page will reset to the default one every time. When set to YES, it will remember the current selected page. Default is NO.
+options-gameplay-tutorials			=Tutorial Hints
+options-gameplay-tutorials-desc		=Shows one-time tutorial hints at various points in the game.
+options-gameplay-background			=Run in Background
+options-gameplay-background-desc	=The game will keep running when you tab out. This is useful mainly for streamers. Most people would rather this be off in general.
+options-gameplay-telemetry-out		=No Telemetry
+options-gameplay-telemetry-out-desc	=Opt out of telemetry. All data collected is completely anonymous and is centered around improving the balance of the game. We gather information about which classes/abilities are used more, which maps are giving players trouble, etc.
+options-gameplay-spellspeed     	=Abilities Speed %
+options-gameplay-spellspeed-desc	=Set the abilities animations speed during combat (100% is default). This will play the visuals faster, so it will degrade the overall quality somewhat.
+options-gameplay-walkspeed     		=Walk Speed %
+options-gameplay-walkspeed-desc		=Set the walk animations speed during combat (100% is default). This will play the visuals faster, so it will degrade the overall quality somewhat.
+options-gameplay-speedsound     	=Speed Sound
+options-gameplay-speedsound-desc	=When set to Yes, and abilities are sped up, the sound will speed up to match the visuals (better timing, higher pitched sound). When set to No, the sound will play at regular speed (better sound, worse timing).
+options-gameplay-gamepadicons     	=Gamepad Icons
+options-gameplay-gamepadicons-desc	=Select the icons style to be used for the gamepad. Auto will try to use the correctly detected icons.
+
+; Options for gamepad icons
+options-gameplay-gamepadicons-0	=Auto
+options-gameplay-gamepadicons-1	=Xbox 360
+options-gameplay-gamepadicons-2	=Xbox One
+options-gameplay-gamepadicons-3	=Ps4
+options-gameplay-gamepadicons-4	=Steam
+options-gameplay-gamepadicons-5 =Switch
+
+options-gameplay-invertbuttons		=Invert Buttons
+options-gameplay-invertbuttons-desc	=Invert the {Confirm} and {Cancel} buttons.
+
+; Graphics options
+options-graphics-fullscreen-option1=Borderless
+options-graphics-fullscreen-option2=Exclusive
+
+options-graphics-fullscreen     	=Full Screen
+options-graphics-fullscreen-desc	=Use fullscreen mode or windowed mode (we recommend {options-graphics-fullscreen-option1}).
+options-graphics-vsync     			=VSync
+options-graphics-vsync-desc			=Use vertical sync. Recommended to YES.
+options-graphics-cage-cursor     	=Cage Cursor
+options-graphics-cage-cursor-desc	=Lock cursor inside game screen (only useful when using multiple monitors).
+options-graphics-resolution     	=Resolution
+options-graphics-resolution-desc	=Choose the desired screen resolution. We recommend 1920x1080 if possible.
+options-pix-perfect-desc			=When using a smaller vertical resolution than 1050, turning this to YES will 'zoom in' on the maps so that the pixels are rendered perfectly (not scaled down). Turning this to NO will show the default amount of map space, but sprites won't be rendered perfectly (they will be scaled down). This has no impact on any resolution >=1080.
+options-graphics-pixelperfectBattle =Pixel Perfect (Battle)
+options-graphics-pixelperfectMenu   =Pixel Perfect (Menu)
+options-graphics-pixelperfectWM     =Pixel Perfect (World Map)
+
+options-graphics-apply     		=Apply
+options-graphics-apply-desc		=Apply your changes.
+options-graphics-apply-confirm	=Are you sure you want to keep the current settings?{newline}Reverting in {0}.
+options-graphics-leave			=You have unsaved changes.{newline}Do you want to leave and discard changes?
+options-graphics-wm-speed      	=Worldmap Scroll Speed
+options-graphics-wm-speed-desc 	=The speed at which the worldmap will scroll.
+options-graphics-wm-speed2     	=Worldmap {controller-term} Speed
+options-graphics-wm-speed2-desc	=The speed at which the {controller-term} cursor moves on the worldmap.
+
+; Custom data Loading errors
+options-error-general			=We had an error with custom data!
+options-error-file				=Parsing XML for file: {0}
+options-error-ability			=Malformed ability name: {0}
+options-error-ability-parent	=Parent job for ability not found: {0}
+
+; Language Options
+options-language-list     	=Language
+options-language-list-desc	=Change your selected language.
+
+; In Game System Menu
+systemmenu-title	=System
+systemmenu-title2	=Options
+; Save option
+systemmenu-option0	=Save
+; load option
+systemmenu-option1	=Load
+; config option
+systemmenu-option2	={title-options}
+systemmenu-option3	={title-compendium}
+; Go back to title option
+systemmenu-option4	=Quit To Title
+; Exit game fully
+systemmenu-option5	=Exit Game
+
+; Main Menu
+mainmenu-option-equipment	=Equipment
+mainmenu-option-abilities	=Abilities
+mainmenu-option-classchange	={jobterm} Change
+mainmenu-option-crafting	=Crafting
+mainmenu-option-status		=Status
+mainmenu-option-sortunits	=Sort Units
+mainmenu-option-dismiss		=Dismiss
+
+; Lists
+equip-list-item		=Item
+equip-list-equipped	=Worn
+equip-list-held		=Held
+equip-list-empty	=Empty
+equip-list-new		=New
+equip-list-Current	=Current
+
+;Sort Menu
+sort-option0	=Unit Number
+sort-option1	={generic-level}
+sort-option2	=HP
+sort-option3	=MP
+sort-option4	=Attack
+sort-option5	=Defense
+sort-option6	=Mind
+sort-option7	=Resistance
+sort-option8	=Movement
+sort-option9	=Jump
+sort-option10	=Critical Rate
+sort-option11	=Speed
+sort-option12	=Injury
+sort-option13	=Manual Sort
+
+; Equip Menu
+equipmenu-element	=Element:
+equipmenu-range		=Range:
+equipmenu-onhit		=On Hit
+equipmenu-buffs		=Buffs
+equipmenu-vert		={textcomma}Vert.
+equipmenu-res		=Resistances:
+equipmenu-injury	=Injury
+equipmenu-injury-death=Disabled
+
+; Class change Menu
+classmenu-requires			=Requires:
+classmenu-nonstory			=Non-Story
+classmenu-badge-once		=" (once)"
+
+classmenu-show-abilities	=Show {abilities}
+classmenu-growth			=Growth
+
+; Abilities Menu
+; Base
+abilities-info-custom	=Custom
+abilities-info-current	=From Class
+; Set
+abilities-list-0		=Set {Abilities}
+; Learn
+abilities-list-1		=Learn {Abilities}
+abilities-learn-master	=Master
+abilities-learn-learned	=Learned
+abilities-learn-apcost	={AP} Cost:
+abilities-desc-mp		={mp}
+abilities-desc-range	=Range
+abilities-desc-area		=Area
+abilities-desc-shape	=Shape
+abilities-desc-type		=Type
+abilities-learn-class-mastered=A {class} was mastered! A permanent bonus has been applied to this character.
+abilities-learn-mastery-bonus=Mastery Bonus
+; versus
+abilities-desc-targets	=VS
+abilities-desc-range-self=Self
+abilities-desc-single	=Single
+abilities-desc-line		=Lateral Line
+abilities-desc-vline	=Line
+abilities-desc-cross	=Cross
+abilities-desc-all-ally		=All Allies
+abilities-desc-all-enemies	=All Enemies
+abilities-desc-all			=Everyone
+abilities-desc-charge	=Charge
+abilities-desc-cone		=Cone
+abilities-desc-square	=Square
+; to list that a spell uses your weapon range
+abilities-range-wp			=Wp
+abilities-desc-targets-def	=Def
+abilities-desc-targets-mdef	=Res
+abilities-desc-targets-none	=None
+abilities-too-many			={0} Abilities
+
+ability-menu-extra-info=
+; basic abilities slot descriptions for when nothing is equipped
+abilities-desc-slot-0	=You can select a {subjob} for this slot. {ability-menu-extra-info}
+abilities-desc-slot-1	=You can select an optional {passive} for this slot if you know one.
+abilities-desc-slot-2	=You can select an optional {passive} for this slot if you know one.
+abilities-desc-slot-3	=You can select an optional {counter} for this slot if you know one.
+abilities-desc-slot-4	=
+abilities-desc-slot-5	=Once you learn your current {job}'s {passive} #1, it will automatically be used.
+abilities-desc-slot-6	=Once you learn your current {job}'s {passive} #2, it will automatically be used.
+
+; Crafting
+craftingmenu-list-gear			=Gear
+
+craftingmenu-list-items-desc		=Upgrade your battle {items} to get higher potency and more uses per battle.
+craftingmenu-list-gear-desc			=Craft rare and powerful equipment.
+craftingmenu-list-gadgets-desc		=Craft new gadgets that can be used by characters using the {GADG-Ability} {ability}.
+craftingmenu-list-special-desc		=Craft Badges that can be used to unlock secret {jobterms}.
+craftingmenu-list-ingredients-desc	=View crafting recipes for a specific {resource}.
+craftingmenu-list-done			=Done!
+craftingmenu-list-Ok			=Ready!
+craftingmenu-list-tier			=Tier
+craftingmenu-list-needed		=Need
+craftingmenu-list-owned			=Own
+craftingmenu-list-title-type	=Type
+;Ready/Amount
+craftingmenu-list-title-count-left=Rdy
+craftingmenu-list-title-count-right=Amt
+craftingmenu-list-title-count	={craftingmenu-list-title-count-left}/{craftingmenu-list-title-count-right}
+
+; eg: 3x Items
+craftingmenu-list-count	=x
+craftingmenu-desc-uses	=Uses
+craftingmenu-desc-power	=Power
+
+craftingmenu-title-recipes		=Recipes
+craftingmenu-title-categories	=Categories
+craftingmenu-types-gear			=Gear
+
+craftingmenu-types-item			={Item}
+craftingmenu-types-gadget		={Gadget}
+craftingmenu-types-badge		={Badge}
+craftingmenu-types-ingredient	={resource}
+
+
+; Hire Menu
+; When no option is available for a selection or none is selected
+hiremenu-none			=None
+hiremenu-levelcost		=Level / Cost:
+hiremenu-level			=Level:
+hiremenu-job			={jobterm}
+hiremenu-gender			=Sex:
+hiremenu-hint-Randomize	=Randomize
+hiremenu-hint-default	=Default
+hiremenu-skintone		=Skintone:
+hiremenu-face			=Face:
+hiremenu-EyeColor		=Eye Color:
+hiremenu-Hairstyle		=Hairstyle:
+hiremenu-Color			=Color:
+hiremenu-FacialHair		=Facial Hair
+hiremenu-Headwear		=Headwear
+hiremenu-UseClassHat	=Use {jobterm} hat:
+hiremenu-UseClassOutfit	=Use {jobterm} outfit:
+hiremenu-Accessory		=Accessory:
+hiremenu-Outfit			=Outfit:
+hiremenu-NameInput		=Name Input
+hiremenu-Portrait		=Portrait:
+hiremenu-Finish			=Finish
+hiremenu-newrecruit		=New Recruit
+hiremenu-oldrecruit		=Customize Character
+hiremenu-recruit		=Recruit
+hiremenu-changeappearance=Change Appearance
+hiremenu-resetstats		=Reset Level
+hiremenu-leave			=Leave
+hiremenu-confirm-hire		=Hire this recruit for {0} {currency}?{newline}(Remember to equip your new recruit before combat!)
+hiremenu-confirm-nogold		=You don't have enough {currency}!
+hiremenu-input-name			=Input name...
+hiremenu-input-name-prompt	=Please name this character:
+hiremenu-randomize-name		=Random
+hiremenu-confirm-reset		=Reset this character to a level 1 {1} for {0} {currency}?{newline}This will reset their stats and exp to level 1, but will leave their {ap} untouched.
+
+hiremenu-resetstats-nogold	={hiremenu-confirm-nogold}
+
+; Store
+storemenu-buy			=Buy
+storemenu-sell			=Sell
+storemenu-fitting-room	=Try & Buy
+storemenu-total			=Total
+storemenu-price			=Price
+storemenu-amount		=Amount
+
+; Worldmap
+wm-command-shop			=Shop
+wm-command-guild		=Guild
+wm-command-training		=Patrol
+wm-command-trainings	=Patrols
+patrol={wm-command-training}
+patrols={wm-command-trainings}
+wm-command-explore		=Explore
+wm-command-arena		=Arena
+wm-command-tournament	=Tourney
+wm-command-tournament-info	={wm-command-tournament} Info
+wm-command-arena-info	={wm-command-arena} Info
+wm-command-tournament-title	=Participate in the Tournament?
+wm-command-character-event	=Event
+wm-patrol-desc			=Enemy Levels:
+wm-navigation-cycle		=Prev/Next Map
+
+; Arena
+arena-collect		=End your current attempt at the Tournament and collect your winnings: {0}?
+
+; Help System
+help-message		=Help Screen
+
+
+; Difficulty Settings
+difficulty-preset-title		=Difficulty Presets
+difficulty-preset-0     	=Casual
+difficulty-preset-0-desc	=If you want mostly to focus on the story and not worry overmuch about winning encounters, this is the mode for you.
+difficulty-preset-1     	=Beginner
+difficulty-preset-1-desc	=This is the recommended mode if you are new to tactical RPGs, or just haven't played one in a while.
+difficulty-preset-2     	=Veteran
+difficulty-preset-2-desc	=This is the default setting. It is recommended for players with a solid amount of experience playing Tactical RPGs. WARNING: this mode can be fairly difficult and might not be for everyone!
+difficulty-preset-3     	=Hard
+difficulty-preset-3-desc	=If you want things to be a little harder. The biggest difference is that it will be harder to out-level the enemies and they will be a little stronger than you at a comparable level.
+difficulty-preset-4     	=Very Hard
+difficulty-preset-4-desc	=This should be a fairly good challenge. The enemies will always scale with your level and will have access to the full complement of items. They might even get them earlier than you, if you're leveling a lot.
+difficulty-preset-5     	=Custom
+difficulty-preset-5-desc	=This lets you customize the individual options exactly as you want them.
+
+difficulty-injurystyle-title	=Injury System
+difficulty-injurystyle-0     	=None
+difficulty-injurystyle-0-desc	=There are no penalties when a character falls in combat. This is not recommended unless you feel things are just too hard.
+difficulty-injurystyle-1     	=AP Malus
+difficulty-injurystyle-1-desc	=When a character falls in combat, they will earn less {AP} at the end of the battle. Falling multiple times will further reduce that amount. This is a good alternative to the regular {injury} system if you really don't want to ever bench anyone.
+difficulty-injurystyle-2     	=Default
+difficulty-injurystyle-2-desc	=This is the default {injury} system. When a character falls in combat, they will have a penalty to all their stats until they rest for a full battle. Resting means you won't deploy them during an encounter. This setting encourages the player to create a few substitute units.
+difficulty-injurystyle-3     	=Permanent
+difficulty-injurystyle-3-desc	={Injuries} are permanent and will never heal. Each {injury} will give the character -{injury-perm-penalty}% to a random stat. This is only recommended if you want a greater challenge.
+difficulty-injurystyle-4     	=Permadeath
+difficulty-injurystyle-4-desc	={Injuries} are permanent and give -{injury-perm-penalty}% to a random stat. Once a character has gotten {injury-perm-max} {injuries}, they will be unable to participate in combat anymore. Story characters (other than the main character) are not exempt from this. Most people should probably not use this option.
+
+difficulty-randomnumbers-title	=Random Numbers
+difficulty-randomnumbers-0		=Default
+difficulty-randomnumbers-0-desc	=The game uses a simple 1-100 roll, just like rolling a d100. This is roughly as “true” of a random system as you can get in a video game.
+difficulty-randomnumbers-1		=Weighted
+difficulty-randomnumbers-1-desc	=The game will use a randomizing system that's more in the player's favor.
+
+difficulty-levelscaling-title	=Enemies Level Scaling
+difficulty-levelscaling-0     	=Default
+difficulty-levelscaling-0-desc	=This is the recommended setting. Each map has a minimum and maximum level range for enemies, so they will try to keep up with your level. But if you're struggling, you could raise your level to pass theirs and thus overpower your foes.
+difficulty-levelscaling-1     	=Max Up
+difficulty-levelscaling-1-desc	=Each map has a minimum and maximum level range for enemies, but the maximum range is increased by {scaling-maxup}%, so it will be harder for you to pass their level. This is a good option if you tend to run a lot of optional battles and want to make sure the enemies have a chance to keep up with you.
+difficulty-levelscaling-2     	=No Max
+difficulty-levelscaling-2-desc	=Each map has a minimum level for enemies, but they will always scale with your level, with no maximum. This is a good option if you want to level as much as you want and never worry about the enemies being too low level. But it means you can't ever overpower them with raw levels either.
+
+difficulty-powerlevel-title		=Raw Stats Scaling
+difficulty-powerlevel-0     	=-25% Stats
+difficulty-powerlevel-0-desc	=Enemies will have -25% to their stats ({ATK}, {MND}, {DEF}, {RES}) . This should make things quite a bit easier.
+difficulty-powerlevel-1     	=-10% Stats
+difficulty-powerlevel-1-desc	=Enemies will have -10% to their stats ({ATK}, {MND}, {DEF}, {RES}). This should make things easier.
+difficulty-powerlevel-2     	=-5% Stats
+difficulty-powerlevel-2-desc	=Enemies will have -5% to their stats ({ATK}, {MND}, {DEF}, {RES}). If you want that small extra edge.
+difficulty-powerlevel-3     	=Default
+difficulty-powerlevel-3-desc	=Enemies will have the stats a character of their level would normally have. For the most part, these are the same stats you would have if you'd leveled your character in their current class almost exclusively.
+difficulty-powerlevel-4     	=+5% Stats
+difficulty-powerlevel-4-desc	=Enemies will have +5% to their stats ({ATK}, {MND}, {DEF}, {RES}). If you want things a little harder.
+difficulty-powerlevel-5     	=+10% Stats
+difficulty-powerlevel-5-desc	=Enemies will have +10% to their stats ({ATK}, {MND}, {DEF}, {RES}). If you want things harder.
+difficulty-powerlevel-6     	=+15% Stats
+difficulty-powerlevel-6-desc	=Enemies will have +15% to their stats ({ATK}, {MND}, {DEF}, {RES}). If you want to prove you can beat the AI soundly.
+difficulty-powerlevel-7     	=+25% Stats
+difficulty-powerlevel-7-desc	=Enemies will have +25% to their stats ({ATK}, {MND}, {DEF}, {RES}). If you want to prove you can beat the AI soundly.
+difficulty-powerlevel-8     	=+35% Stats
+difficulty-powerlevel-8-desc	=Enemies will have +35% to their stats ({ATK}, {MND}, {DEF}, {RES}). If you want to prove you can beat the AI soundly.
+difficulty-powerlevel-9     	=+50% Stats
+difficulty-powerlevel-9-desc	=Enemies will have +50% to their stats ({ATK}, {MND}, {DEF}, {RES}). It's probably not a good idea to use this. Encounters won't be properly balanced in general.
+difficulty-powerlevel-10     	=+75% Stats
+difficulty-powerlevel-10-desc	=Enemies will have +75% to their stats ({ATK}, {MND}, {DEF}, {RES}). It's probably not a good idea to use this. Encounters won't be properly balanced in general.
+
+difficulty-extraenemies-term	=Extra
+difficulty-extraenemies-title	=Added Enemies
+difficulty-extraenemies-0     	=Default
+difficulty-extraenemies-0-desc	=You will face the regular amount of enemies. The game was primarily balanced around these encounters.
+difficulty-extraenemies-1     	=Extra
+difficulty-extraenemies-1-desc	=Some maps will have extra enemies (usually 1 more).
+difficulty-extraenemies-1-desc2	=Some maps will have extra enemies (usually 1-2 more).
+difficulty-extraenemies-2     	={difficulty-specialenemies-term}
+difficulty-extraenemies-2-desc	={difficulty-extraenemies-1-desc2} {difficulty-specialenemies-1-desc}
+
+difficulty-specialenemies-term	=Elite
+difficulty-specialenemies-title =Elite Enemies
+difficulty-specialenemies-0		=No
+difficulty-specialenemies-0-desc=The game will use the default enemies.
+difficulty-specialenemies-1     =Yes
+difficulty-specialenemies-1-desc=In some encounters, one or more enemies will be replaced by a special version of the enemy, with more abilities. This a different and more interesting way to raise the difficulty than simply increasing enemy stats.
+
+difficulty-revives-common		=Enemies will sometimes revive other fallen enemies. They have decreasing odds of doing so the more often a target has died.
+difficulty-revives-title		=Enemies use Revive
+difficulty-revives-0			=None
+difficulty-revives-0-desc		=Enemies will never revive other fallen enemies (unless it's part of the encounter).
+difficulty-revives-1			=Less
+difficulty-revives-1-desc		={difficulty-revives-common} They have a very low maximum amount of times they can do this per battle.
+difficulty-revives-2			=Default
+difficulty-revives-2-desc		={difficulty-revives-common} They have a low maximum amount of times they can do this per battle.
+difficulty-revives-3			=More
+difficulty-revives-3-desc		={difficulty-revives-common} They have a high maximum amount of times they can do this per battle. This could lead to significantly lengthier battles if you're not careful.
+
+difficulty-itemusage-title		=Enemies have Items
+difficulty-itemusage-0     		=None
+difficulty-itemusage-0-desc		=Enemies will not have access to any items, although they will still start with a stockpile of items so you can steal from them as normal.
+difficulty-itemusage-1     		=Default
+difficulty-itemusage-1-desc		=Enemies will have access to a small stockpile of items. In general, they will have less than you, but might have access to higher tiers faster than you if you're leveling faster than normal. This is the recommended option.
+difficulty-itemusage-2     		=Many
+difficulty-itemusage-2-desc		=Enemies will have access to as many items as you do, although they might have access to higher tiers faster than you if you're leveling faster than normal. This is more challenging.
+
+difficulty-itemfrequency-title	=Enemies use Items
+difficulty-itemfrequency-0		=Less
+difficulty-itemfrequency-0-desc	=Enemies will have a low chance of making use of items when they need them.
+difficulty-itemfrequency-1		=Default
+difficulty-itemfrequency-1-desc	=Enemies will have a good chance of making use of items when they need them.
+difficulty-itemfrequency-2		=More
+difficulty-itemfrequency-2-desc	=Enemies will make use of items when they need them.
+
+difficulty-extragear-title		=Enemies Gear
+difficulty-extragear-0     		=Less
+difficulty-extragear-0-desc		=Enemies will have 1 less piece gear than normal on average. This should make things fairly easier, while being more randomized than simply dropping their stats by a set amount.
+difficulty-extragear-1     		=Default
+difficulty-extragear-1-desc		=Enemies will have a fair amount of gear on their person. They usually won't grab all the accessories they can, but they should otherwise mostly wear as much as they can once the story picks up.
+difficulty-extragear-2     		=More
+difficulty-extragear-2-desc		=Enemies will have 1 more piece of gear than normal on average. This should make things a bit harder.
+difficulty-extragear-3     		=Full
+difficulty-extragear-3-desc		=Enemies will fill every equipment slot they can. This means they'll wear as much gear as they can and fill the rest with various accessories. This might increase the challenge in unforeseen ways at times.
+
+difficulty-enemyskills-title	=Enemies Passives/Counter
+difficulty-enemyskills-0		=Less
+difficulty-enemyskills-0-desc	=Enemies will have a chance of spawning without passives or counters, even if they are high enough level.
+difficulty-enemyskills-1		=Default
+difficulty-enemyskills-1-desc	=Enemies will always spawn with passives and counters if their level is high enough.
+
+difficulty-message	=Don't worry overmuch about these settings as you will be able to change them in-game from the {hint-equip-units} (while not in combat).
+start-game			=Start Game
+
+
+newgameplus-option-0		={AP} and {Classes}
+newgameplus-option-0-desc	=All units will keep their current {AP} and unlocked {classes}. Story units will only rejoin once the story is advanced enough.
+
+newgameplus-option-1		=Enemies {Abilities}
+newgameplus-option-1-desc	=Enemies will ignore the regular {generic-level} restrictions for their {abilities}. This is recommended if carrying over the characters' {AP} and {classes}.
+
+newgameplus-option-2		=Recruits
+newgameplus-option-2-desc	=All non-story recruits will carry over and be available from the very start of the game.
+
+newgameplus-option-3		={term-loots}
+newgameplus-option-3-desc	=All previous {term-loots} will carry over.
+
+newgameplus-option-4		={Badges}
+newgameplus-option-4-desc	=All owned {badges} will carry over.
+
+newgameplus-option-5		={Items} Tiers
+newgameplus-option-5-desc	=All {items} will carry over their current crafted levels.
+
+newgameplus-option-6		={GP}
+newgameplus-option-6-desc	=All {gpandip} will carry over.
+
+newgameplus-option-7		=Levels
+newgameplus-option-7-desc	=All units will keep their current {generic-level}. Story units will only rejoin once the story is advanced enough. It is recommended to use "{difficulty-levelscaling-2}" for the difficulty setting "{difficulty-levelscaling-title}", otherwise enemies' levels will be too low.
+
+newgameplus-option-8		=Enemies' Levels
+newgameplus-option-8-desc	=This will set "{difficulty-levelscaling-title}" to "{difficulty-levelscaling-2}" in the Difficulty Options for you, although the value can still be changed from the Difficulty Options as normal.
+
+newgameplus-option-9		=Gear
+newgameplus-option-9-desc	=All previous gear will carry over. Also, stores will sell the best gear possible from the start of the game.
+
+newgameplus-option-10		=Enemies' Gear
+newgameplus-option-10-desc	=Enemies will have access to all gear tiers. This is to help enemies' gear keep up with the player's, if using the previous option.
+
+; *****************************
+; Hints
+; *****************************
+; Navigation hints
+hint-battle-main-a	=Select Command
+hint-battle-main-b	=Free Navigation
+hint-battle-main-b2	={cancel}
+hint-battle-main-b3	={hint-generic-back}
+hint-details-button	=Details
+hint-details		={hint-details-button} (Hold)
+hint-details1		=Show {hint-details-button} (Hold)
+hint-generic-backout=Back Out
+hint-generic-back	=Back
+hint-generic-help	=Help
+
+hint-battle-find	=Find Current
+hint-battle-targetselect-a	=Select Target
+hint-battle-targetselect-a2	={confirm}
+hint-battle-targetselect-b	={cancel}
+
+hint-battle-freemovement-a	=Show Movement
+hint-battle-freemovement-b	={cancel}
+hint-battle-freemovement-b2	=Hide Movement
+hint-battle-freemovement-all=Show All Movements
+hint-battle-freemovement-all2=Hide All Movements
+
+hint-battle-move-a	=Move
+hint-battle-move-b	={cancel}
+
+hint-battle-over	=Back To World Map
+hint-battle-over-arena	=Next Round!
+
+hint-battle-options	=Options
+
+hint-battle-target	=Show Target
+
+; Save/Load menu
+hint-savemenu-load-confirm	=Load
+hint-savemenu-save-confirm	=Save
+hint-savemenu-cancel		={cancel}
+hint-savemenu-delete		=Delete
+
+; Battle Start
+hint-objective		=Objective
+hint-units-placed	=Units Placed
+hint-battle-start	=Battle Start
+hint-remove			=Remove
+hint-equip-units	={hint-wm-menu}
+hint-allies			=Allies
+hint-allies-placement=Next Ally
+hint-showfoes		=Show Foes
+hint-foes			=Foes
+hint-place-unit		=Place Unit
+hint-ally-zone		=Ally Zone
+
+; Main Menu
+hint-mainmenu-a		=Select Units
+hint-mainmenu-b		=Exit Menu
+hint-mainmenu-y		=View Inventory
+hint-mainmenu-hire-a=Select Unit
+hint-mainmenu-hire-b={cancel}
+hint-mainmenu-start	=Difficulty Settings
+
+; Crafting
+hint-crafting-a		=Select Category
+hint-crafting-x		=Sort
+hint-crafting-sort0	=Default
+hint-crafting-sort1	=Ready!
+hint-crafting-craft-a=Craft
+
+; Sort Menu
+hint-sortmenu-sort			=Sort
+hint-sortmenu-reversesort	=Reverse Sort
+hint-sortmenu-selectchr		=Select Character
+hint-sortmenu-manualdone	=Done
+hint-sortmenu-selectconfirm	=Confirm Position
+hint-sortmenu-selectcancel	={cancel}
+
+; Equip Menu
+; Change entry
+hint-equipmenu-a		=Change
+hint-equipmenu-x		=Remove
+hint-equipmenu-y		=Optimize
+hint-equipmenu-y-shop	=Reset Changes
+hint-equipmenu-lr		=Switch Character
+hint-equipmenu-list-leftright=Change Type
+hint-equipmenu-list-LTRT=Change Page
+hint-equipmenu-list-A	=Select
+hint-equipmenu-list-B	={hint-generic-backout}
+
+; Store
+hint-store-up		=Change by 1
+hint-store-side		=Change by 10
+
+; Abilities
+hint-abilities-desc-rightstick=Ability Description
+
+
+; Classes
+hint-changeclass-change-class	=Change {jobterm}
+hint-learnability-change		={hint-changeclass-change-class}
+
+hint-genericlist-a	=Select Action
+hint-genericlist-b	={hint-generic-backout}
+
+hint-hiremenu-viewlist	=View List
+
+; Options
+hint-option-change-setting	=Change Setting
+hint-option-change-setting10=Change Setting by 10x
+
+; World map
+hint-wm-move	=Travel To Area
+hint-wm-enter	=Enter Area
+hint-wm-options	=Options
+hint-wm-menu	=Troops Menu
+hint-wm-movemap	=Pan Map
+hint-wm-center	=Center On Leader
+
+; Worldmap
+worldmap-desc-treasures		=Treasures Opened:
+worldmap-desc-gatherables	=Gatherables:
+
+; *****************************
+; Key Remapping
+; *****************************
+Remap-A		=Confirm (also <sprite name="icon-button-mouseleft">)
+Remap-B		=Cancel/Back (also <sprite name="icon-button-mouseright">)
+Remap-X		=Options/Misc
+Remap-Y		=Units Menu
+Remap-Up	=Up
+Remap-Left	=Left
+Remap-Down	=Down
+Remap-Right	=Right
+Remap-Start	=System Menu
+Remap-Back	=Help
+Remap-LB	=Prev
+Remap-RB	=Next
+Remap-LT	=Page Up in Lists (also <sprite name="icon-button-mousewheelup">)
+Remap-RT	=Page Down in Lists (also <sprite name="icon-button-mousewheeldown">)
+Remap-Up2	=Info Panel Up
+Remap-Down2	=Info Panel Down
+Remap-Left2	=Info Panel Prev Page
+Remap-Right2=Info Panel Next Page
+Remap-rstick=Find Unit (while placing)
+
+Remap-TitleLeft		=Gamepad Key/Function
+Remap-TitleRight	=Key #1
+Remap-TitleRight2	=Key #2
+
+Remap-HotKey		=Hotkey
+
+Remap-TipA	=Remap Key
+Remap-TipB	=Back
+Remap-TipX	=Reset to Default
+Remap-TipY	=Delete Key
+
+Remap-Instructions	=You can remap all keys here to anything you want (other than left and right mouse buttons). Keep in mind that you'll probably be using the mouse a lot more than the keys for most input. Any missing entry will be highlighted in red.
+Remap-Warning		=That key was already in use by entry {0}.{newline}This will unbind the previous entry. Proceed?
+Remap-Confirm-Reset	=This will reset all keys to their default value.{newline}Proceed?
+Remap-Wait			=Press the Key you would like to use for {0}.
+
+shop-merchant		=Merchant
+shop-guildmaster	=Guild Master
+
+; *****************************
+; Popups
+; *****************************
+controller-xb1=controller
+controller-ps4=DUALSHOCK®4 wireless controller
+controller-switch=Joy-Con™
+controller-other=gamepad
+
+controller-stick-xb1=analog stick
+controller-stick-ps4=stick
+controller-stick-switch=stick
+controller-stick-other=stick
+
+patchstring1-xb1=right {controller-stick-term}
+patchstring1-ps4=right {controller-stick-term}
+patchstring1-switch=right {controller-stick-term}
+patchstring1-other=buttons shown in the bottom-right corner of the information panel
+patchstring2-other=buttons shown on the right side of the information panel
+
+patchstring-click1-xb1=press
+patchstring-click1-ps4=click
+patchstring-click1-switch=press
+patchstring-click1-other=press
+
+controller-dpad-xb1=D-pad
+controller-dpad-ps4=directional buttons
+controller-dpad-switch=directional buttons
+controller-dpad-other=D-pad
+
+patchstring3-xb1=
+patchstring3-ps4=
+patchstring3-switch=
+patchstring3-other=You can import your own portrait into the game (information is provided in the game's main folder about the process).
+
+popup-warning	=Warning
+popup-yes		=Yes
+popup-no		=No
+popup-ok		=OK
+popup-arena-no	=Keep fighting
+popup-arena-yes	=Retire
+popup-error-noteam		=You need at least one unit deployed before you can head into battle!
+popup-warning-not-full	=You are heading into battle with an incomplete roster!{newline}Is this really what you want?
+popup-warning-injury	=Proceed with an injured unit?{newline}They will not recover from their injury while deployed and will have lowered attributes!
+popup-dismiss			=Do you really want to permanently remove this unit from your roster?{newline}(All their equipment will be returned to your stock).
+popup-roster-confirm	=Proceed with these units?
+popup-skip-cutscene		=Are you sure you want to skip this cutscene?
+
+popup-nogamepad			=The {controller-term} is disconnected. Please connect a {controller-term} and press the {button-confirm} button.
+popup-signed-off		=You will not be able to save or load until you sign-in again with the same profile.
+popup-signed-off-xb1	=You will not be able to save or load until you sign-in again with the profile: {0}.
+popup-signedin			=You must be signed-in before you can play.
+
+popup-change-jobs-warning		=You will not be able to switch back to your previous {jobterm} until you meet the requirements.{newline}Are you sure you want to proceed?
+popup-change-jobs-done-monster	={Jobterm} changed!
+popup-change-jobs-done			={Jobterm} changed!{newline}Equipment was updated!
+popup-change-passive			=New {passive-trait} changed equipment requirements.{newline}Equipment was updated!
+popup-change-jobs-warning-badge	=You are about to use a {0} ({2} owned) to change to a special {jobterm}.{newline}This will consume the {0} and permanently open up the {1} {jobterm} for THIS character only. Proceed?
+
+popup-equip-optimize-confirm	=Optimize will change all the gear you have equipped on this character.{newline}Are you certain you want to proceed?
+popup-equip-reset-confirm		=This will restore the original equipment of the character.{newline}Are you certain you want to proceed?
+
+popup-equip-passive-fail		=You have no unused {0} you can equip right now.{newline}Learn new ones by spending {ap} in the {abilities-list-1} section.
+
+popup-really-patrol				=Patrol this area?
+popup-really-arena				=Fight in the arena?
+popup-really-battle				=Enter battle?
+
+popup-shop-leave-fitting		=Are you happy with your purchases?
+popup-shop-leave-nogold			=You don't have enough {currency} to finalize this purchase!
+popup-shop-leave-confirm		=Confirm Purchases
+popup-shop-leave-cancel			=Cancel Purchases
+popup-shop-leave-stay			=Continue Shopping
+
+popup-learn-ability-connector	=" and "
+popup-learn-ability				=Learn {0}?
+
+; example: Level 4 Wizard attained! Alchemystic Class has been unlocked!
+popup-learn-unlocked		=Level {0} {1} attained!{newline}{2} {jobterm} has been unlocked!
+; example: Level 3 Mercenary attained! Rogue and Knight Jobs have been unlocked!
+popup-learn-unlocked-multi	=Level {0} {1} attained!{newline}{2} {jobterms} have been unlocked!
+; example: Gathered enough essences! Vangal Class has been unlocked!
+popup-learn-unlock-bzil		=Gathered enough {class-essences}! {0} {jobterm} has been unlocked!
+popup-learn-unlock-bzil-multi=Gathered enough {class-essences}! {0} {jobterms} have been unlocked!
+
+; Item crafted popup: You now have access to Potion Tier 1!
+popup-crafted-item		=You now have access to {color=item}{0}{color=base} {1}!
+; You cratted a Longsword!
+popup-crafted-other		=You crafted a {color=item}{0}{color=base}!
+popup-crafted-toomany	=You are already carrying the maximum amount of {color=item}{0}{color=base}!
+popup-crafted-confirm	=Craft a {color=item}{0}{color=base}?
+
+; Tutorial about deployment
+popup-tutorial-deployment			={color=term}Deployment:{color=base}{newline}In this phase, you can decide which allies you want to join the battle.{newline}You can place characters on the glowing cyan tiles until the unit limit has been reached ({color=term}shown in the top-left corner of the screen{color=base}).{newline}{newline}Sometimes, specific characters will automatically join the battle and cannot be removed.
+popup-tutorial-deployment2-mouse	={popup-tutorial-deployment2-nomouse} When using a mouse, you can also click on those icons to activate them.{newline}The left mouse button acts as the {color=term}{Confirm}{color=base} key and the right button as the {color=term}{Cancel}{color=base} key.
+popup-tutorial-deployment2-nomouse	={color=term}Controls:{color=base}{newline}At all times, {color=term}the bottom-right of the screen{color=base} contains a list of buttons you can currently use.
+popup-tutorial-deployment3			={color=term}Help:{color=base}{newline}At most times in the game, you can {patchstring-click1-term} the {color=term}{button-help}{color=base} button to enter the help screen, where you can get information about relevant things shown on screen.{newline}{newline}Lastly, you can disable these tutorials in the {color=term}Options{color=base}, although it is not recommended to do so for new players.
+
+; Tutorial about Bandit Kawa
+popup-tutorial-bandit-kawa1			=You've found an elusive {Bandit-kawa}! They make a living supplying other bandits and running various shady deals, so it's best to take them down. You will occasionally run into them during {patrols}.
+popup-tutorial-bandit-kawa2			=If you manage to defeat them, they will drop precious {components}. But, they will try to flee the battlefield within a few turns, so you'd best hurry.
+
+; Tutorial about Zotzit
+popup-tutorial-zotzit1				=You've encountered a {zot-title}! These odd creatures will sometimes show up during a {patrol}.{newline}{newline}They are very adept at evading attacks and tend to escape from battle after a few turns. But if you manage to defeat one, you'll receive a sizable amount of bonus {ap} after battle!
+
+; Tutorial about using your AP Warning
+popup-tutorial-abilities			=Your characters have been accruing {ap} (Ability Points) from your victories. You can use these points to learn new {spells}, {skills} and {abilities} for your characters, which will make them a lot more useful during battles.{newline}Check out the {mainmenu-option-abilities} section in the {hint-wm-menu} to do so!
+
+; Tutorial about crafting
+popup-tutorial-crafting1			=This is the crafting menu. Here, you can use {Components} that you've collected to create or upgrade items.{newline}The "{color=term}{craftingmenu-list-title-count-left}{color=base}" column shows how many recipes you can successfully create with your current stock of {Components}.
+popup-tutorial-crafting2			=Whenever you obtain a new {Component}, new recipes may become available, so it's a good idea to check this menu after battle!
+
+; Tutorial about the player refusing to recruit troops - last warning.
+popup-tutorial-recruit0				=It seems you haven't recruited a 6th member for your team yet.{newline}The game's balance assumes you have at least 6 units and subsequent battles will be VERY difficult if you don't.
+popup-tutorial-recruit1				=We strongly recommend you visit the {wm-command-guild} from the world map (select {illuster} city on the world map, then the {wm-command-guild} command in the list).{newline}Once in there, recruit a new ally.
+
+; Basic Tutorial about battles
+popup-tutorial-battlebasic0			=In {color=story}Fell Seal: Arbiter's Mark{color=base}, combat is turn-based. Every unit will get an individual turn, where they can {color=term}move{color=base} and/or take an {color=term}action{color=base} (in any order). You can see the global turn order at the top of the screen.
+popup-tutorial-battlebasic1			={color=term}Movement:{color=base}{newline}A unit can move up to a maximum amount of tiles every turn, shown by their movement range (the <sprite name=icon-stats-move> icon).{newline}That movement is also restricted by terrain, and units can only reach tiles that are within their vertical movement range (shown by the <sprite name=icon-stats-jump> icon). The height of a tile is shown in the {color=term}top-left corner of the screen{color=base}.
+popup-tutorial-battlebasic2			={color=term}Action:{color=base}{newline}A unit can take a single {color=term}action{color=base} every turn. The list of all their possible actions will be shown every turn for you to choose from. Actions include everything that isn't your movement, such as attacking, using an {ability}, opening a chest, etc.
+
+popup-tutorial-sideattacks1			=Attacks from the sides deal more damage than from the front, and attacks from the back deal even more damage. Taking advantage of this mechanic will be crucial to victory.
+popup-tutorial-sideattacks2			=At the end of your turn, you'll get to select your character's facing. Try not to show your back to your enemies, as they will also deal more damage from the sides and the back!
+
+popup-no-trops-menu=You will not be able to access the {hint-wm-menu} for this encounter.
+
+; Items tutorial
+popup-tutorial-items0			={color=term}Items:{color=base}{newline}In combat, any character can use {items}, simply by selecting the Items Command in their actions list.
+popup-tutorial-items1			=You will notice {items} have a count next to them. That count is the maximum amount that can be used in any single battle and is shared across the whole team.
+popup-tutorial-items2			={color=term}At the start of every battle{color=base}, Item counts are {color=term}automatically refilled to their maximum amount for free{color=base}, so don't hold back on using them as needed.
+
+popup-counter-unlocked			=You've learned a {Counter} {Ability}! Remember to equip it in the {abilities-list-0} menu.
+popup-passive-unlocked			=You've learned a {Passive} {Ability}! Known {Passive} {Abilities} from your current {Class} are automatically equipped, but you can also choose two {Passives} from other {Classes} in the {abilities-list-0} menu, if you've learned some.
+
+popup-confirm-quit				=Are you sure you want to quit?{newline}Any unsaved progress will be lost!
+
+popup-gear-all-used				=All these pieces of equipment are already equipped by someone else!
+popup-recruit-too-many			=You have reached the maximum number of units of {0}!{newline}You'll have to dismiss some existing units before recruiting new ones.
+
+; Tutorial about resetting character level
+popup-tutorial-reset-level1		=From this screen, you can select a character and reset their level to 1. This will reset their stats as a level 1 of their current class and leave their {AP} intact.
+popup-tutorial-reset-level2		=The main reason to do this is if you're trying to level the character in a very specific combination of classes for their stats growth and you feel you've "messed it up".
+popup-tutorial-reset-level3		=In general, it is NOT recommended to reset a character to level 1.{newline}Resetting {hero}'s level will influence the level of other story characters you encounter during the game, which could lead to difficult encounters.
+
+; New Ability flag tutorial
+popup-tutorial-new-ability1		=When one of your characters has earned enough AP to purchase an {ability}, the <sprite name="icon-ability-ready"> icon will be shown over their feet. If the icon is moving, it means you can learn a new {ability} since you last checked them.
+
+; Tutorial about pages in the info box
+popup-tutorial-infoboxpages1	=You can quickly access a lot more information about any unit on their information panel.{newline}{newline}The information panel has multiple pages, and each one will showcase a different set of useful information, including status, {skills}, equipment, resistances, and more.
+popup-tutorial-infoboxpages2	=For some of the pages, you can show even more information by looking at individual entries and seeing their description.
+
+popup-received-outfit			=You can now use the outfit {0} when customizing the visual appearance of a character!
+
+; Various tutorials
+popup-ability-equip-tutorial1	=On top of the regular {abilities} a unit has access to through their current {jobterm}, they can also select a secondary set of {abilities} taken from any other {jobterm} they have access to.
+popup-ability-equip-tutorial2	=You'll automatically use the 2 {passive-traits} that your current {jobterm} provides (after you unlock them), and you can also select up to 2 {passive-traits} and 1 {counter} from any of those you know.
+popup-ability-equip-tutorial3	=Don't be afraid to experiment and create a unique unit that suits your own playstyle!
+
+popup-ability-learn-tutorial1	=You can learn new {abilities} for {jobterms} you have access to. You will need to spend {ap} to learn {abilities}.
+popup-ability-learn-tutorial2	={ap} will be earned for your current selected {jobterm} (and NOT your {subjobterm}) through participating in combat. Characters not in combat will receive a smaller portion of the {ap} earned by those in combat. Additionally, everyone will learn a small amount of {ap} for classes their allies are using through the {battle-r-vicarious} bonus.
+
+popup-class-change-tutorial1	=You can change your unit's current {jobterm} to any {jobterm} you currently have access to for that unit. New {jobterms} will become available as you learn more {abilities} from your current {jobterms}. You can change as many times as you want, so feel free to experiment!
+popup-menu-tutorial1			=From this menu, you can manage your units, including changing their equipment, {jobterms}, {abilities}, etc. You can also access crafting, check your {items}, sort your units and many more options (look at the bottom right of the screen to see all the options). Explore away!
+popup-equip-tutorial1			=You can change your unit's equipped gear here. Each unit has 6 slots to work with. Unless you have special {abilities} that influence what you can equip (like {ASSA-P2} or {MERC-P1}, for example), you can equip 1 weapon, 1 body piece, 1 hat piece, 1 shield (for certain {classes}) and as many accessories as you can fit.
+
+popup-customize-unit1			=You can change the visual appearance of units in this section. By using the left/right arrows on any category, you can quickly change its value, or select the row (click on the row text with the mouse or hit the confirm button) to view a list of possible options.
+popup-customize-unit-console1	=You can change the visual appearance of units in this section. By using the {controller-dpad-term} on any category you can quickly change its value, or select the row (press the {button-confirm} button when highlighting a row text) to view a list of possible options.
+popup-customize-unit2			={patchstring3-other}
+
+popup-lowres					=If you find that you can't see as much of the map as you'd like, you can go into the "Options - Graphics" and change the "{options-graphics-pixelperfectBattle}" option to NO.{newline}This will scale the screen so you see the same amount as you would in a higher resolution, but the sprites won't be as crisp.
+
+popup-details-reminder			=You can see the escape zone (and many other points of interest on most maps) by pressing the {button-details} button during your turn.
+popup-details-reminder-again	=You can see the target zone for delayed attacks by pressing the {button-details} button during your turn.
+
+popup-save-in-between-battles	=Would you like to save your progress?{newline}{newline}It might be wise to save on a different slot, just in case, since you will resume at the start of the next battle, rather than on the world map with this save data.
+
+popup-telemetry					=The game will send anonymous data about {color=term}errors and about classes and abilities usage{color=base}.{newline}{newline}We're a small team, and this information helps us to find and resolve issues more rapidly, as well as balance the game better.{newline}{newline}The information is entirely anonymous. You will be able to change this setting from the Options as well. Will you allow the game to send anonymous data?
+popup-clear-save				=Would you like to save your progress? This will create a save file with the Clear flag on, from right before your battle with {themaw}.
+
+; ***************************************************
+; Extras - No need to translate
+battle-rewards-ability-points={ability-points}
+
+infobox-counter				={Counter}
+infobox-passive-trait		={passive-trait}
+infobox-passive-traits		={passive-traits}
+
+hint-store-confirm	={confirm}
+hint-store-cancel	={cancel}
+
+craftingmenu-list-items			={Items}
+craftingmenu-list-gadgets		={Gadgets}
+craftingmenu-list-special		={Badges}
+craftingmenu-list-ingredients	={resources}
+
+options-graphics-pixelperfectBattle-desc	={options-pix-perfect-desc}
+options-graphics-pixelperfectMenu-desc		={options-pix-perfect-desc}
+options-graphics-pixelperfectWM-desc		={options-pix-perfect=desc}
+
+classmenu-equipment			={mainmenu-option-equipment}
+classmenu-passive-traits	={infobox-passive-traits}
+classmenu-level				={generic-level}
+classmenu-list-separator	={textcomma}
+classmenu-unknown			={generic-unknown}
+
+purchase-soundtrack1=Jan Morgenstern
+purchase-soundtrack2=(Soundtrack available for purchase at janmorgenstern.com)
+
+AI-menu-option-preset0={abilities-info-custom}
+AI-menu-option-preset1={AI-menu-option0}
+AI-menu-option-preset2={AI-menu-option1}
+AI-menu-option-preset3={AI-menu-option2}
+AI-menu-option-preset4={AI-menu-option3}
+AI-menu-option-preset5={AI-menu-option4}
+AI-menu-option-preset1-desc={AI-menu-option0-desc}
+AI-menu-option-preset2-desc={AI-menu-option1-desc}
+AI-menu-option-preset3-desc={AI-menu-option2-desc}
+AI-menu-option-preset4-desc={AI-menu-option3-desc}
+AI-menu-option-preset5-desc={AI-menu-option4-desc}
+
+game-name=Fell Seal: Arbiter's Mark
+
+
+dlc1-name=Missions and Monsters
+dlc1-installed=INSTALLED
+dlc1-not-installed=Purchase now.
+savemenu-load-error-dlc=The save file cannot be read as it was created from a version of the game with access to DLC ({dlc1-name}) that isn't included in this version of the game.
+
+turn-ready=Turn:
+
+unequip-all=Unequip Everyone
+unequip-all-confirm=This will remove all gear from every single unit on your roster. Are you certain?
+
+; {0} is a class name (eg. Vangal)
+reward-new-portraits	=New {0} portraits available at the Guild!
+reward-new-colors		=New {0} color available at the Guild!
+
+patrols-tutorial0=You can use the {color=term}{wm-command-training}{color=base} command to enter battle in the area you're visiting. This will let you earn extra {exp} and {ap} to strengthen your units.{newline}Please note this is completely optional and you do not need to run any {wm-command-trainings} to finish the game, although it might be more difficult that way, depending on the difficulty settings.
+patrols-tutorial1=Each node on the world map has multiple different encounters. Please note the {color=term}Enemy Levels{color=base} section on the screen when selecting a {wm-command-training}.{newline}This range represents the minimum and maximum levels enemies on that zone will have. If you're not comfortable with the levels, it might be wise to attempt a battle in a different area.
+patrols-tutorial2=The level range of each zone will adjust as the story progresses, so you can always find a mix of zones above and below your units' levels. The first 5 zones will remain fairly low-level throughout the game to always provide a fallback area to go to.
+
+injury-prevent=(Prevents character from getting {injuries}).
+Penumbral-Mastery=Penumbral Mastery
+
+dialogue-kyrie-passive={Hero} has unlocked the "{Penumbral-Mastery}" {Ability}!
+
+wp-axe-drains-hp=(Drains {hp} when using a {regular-attack})
+
+dialogue-yates-passive=While delving deeper into the mysteries of the {acc-ring-16}, {necro} has learned to be even more effective with his powerful magics.<page>{necro} has learned the {Penumbral-Mastery} passive!
+
+; (all debuffs except X)
+negative-except=all {debuffs} except
+positive-except=all {buffs} except
+
+; Auto-battle work
+systemmenu-option6=Player Units AI
+AI-menu-selection=Change AI
+AI-Menu-selection-desc=Changes the AI used by the character. {AI-menu-option0} is the default recommended value, where you control the unit. Other options will have the unit be automatically controlled by the AI.
+AI-menu-option0=Manual
+AI-menu-option0-desc=You control the unit yourself.
+AI-menu-option1=Damage Dealer
+AI-menu-option1-desc=The unit will focus on dealing damage to enemies.
+AI-menu-option2=Healer
+AI-menu-option2-desc=The unit will focus on healing and buffing allies.
+AI-menu-option3=Guardian
+AI-menu-option3-desc=The unit will attempt to protect weaker allies if possible and otherwise do its best to be effective.
+AI-menu-option4=Do Nothing
+AI-menu-option4-desc=The unit will stand in place and do absolutely nothing.
+
+; Difficulty about drowning
+difficulty-drowning-title	=Enemies use Drowning
+difficulty-drowning-0		=Default
+difficulty-drowning-0-desc	=Enemies will attempt to drown the player's units most of the time if it would be possible for them to do so (a unit that cannot swim that gets pushed or teleported into water will drown, dealing all their {hp} in damage). Please note drowning units is a basic mechanic and has many forms of counter-play.
+difficulty-drowning-1		=Only Bosses
+difficulty-drowning-1-desc	=Only bosses with abilities centered around drowning units will attempt to drown the player's units. Regular enemies will never specificially attempt to drown the player (you might still get pushed into water by accident, but it will be very unlikely).
+difficulty-drowning-2		=Always
+difficulty-drowning-2-desc	=If an enemy could drown a player unit, it will always favor it, as long as it's the best action the AI deems it could take.
+
+ai-controlled=AI
+
+no-effect=No effect

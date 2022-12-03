@@ -10,6 +10,7 @@ import { characters, characters as fakeCharacters } from "@fixtures/characters";
 import { testDb } from "@utils/infra/testDb.js";
 import { newAppResult } from "@utils/result/Result.js";
 import { importJobsAndSkills } from "assets/importGameData";
+import { importTranslations } from "assets/importTranslations";
 import { v4 as uuid } from "uuid";
 import jobsGameData from "../../assets/gameData/jobs.gdata";
 import skillsGameData from "../../assets/gameData/skills.gdata";
@@ -64,10 +65,5 @@ const migrate = () => {
 
   testDb.jobs = importJobsAndSkills();
 
-  testDb.translations = {
-    fr: {
-      ...translation_skills_fr,
-    },
-    en: {},
-  };
+  testDb.translations = importTranslations();
 };

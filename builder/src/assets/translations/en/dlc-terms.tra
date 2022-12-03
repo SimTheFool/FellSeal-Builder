@@ -1,0 +1,16 @@
+; General
+company-points-long=Influence Points
+company-points=IP
+mission=Mission
+missions=Missions
+experience-points=Experience Points
+; Variants are the name of special classes that monsters can equip. They are "variant monsters" classes.
+variant=Variant
+variants=Variants
+upgrade=Upgrade
+upgrades=Upgrades
+ip={company-points}
+gpandip={currency} and {ip}
+
+pet-effect				=Pet Effect
+pet-effects				={pet-effect}s

@@ -5,6 +5,7 @@ import getTsConfig from "./getTsConfig.js";
 import getEntryPoints from "./getEntryPoints.js";
 import translationPlugin from "./translationPlugin.js";
 import gameDataPlugin from "./gameDataPlugin.js";
+import importGlobPlugin from "esbuild-plugin-import-glob";
 
 const args = yargs(hideBin(process.argv))
   .option("tsconfig", {
@@ -35,7 +36,7 @@ const getBuildConfig = async () => {
         args.platform === "node" &&
         "import { createRequire as topLevelCreateRequire } from 'module';\n const require = topLevelCreateRequire(import.meta.url);",
     },
-    plugins: [translationPlugin, gameDataPlugin],
+    plugins: [importGlobPlugin.default(), translationPlugin, gameDataPlugin],
   };
 };
 

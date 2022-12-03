@@ -1,0 +1,152 @@
+; Global terms
+jobterm			=Class
+jobterms		=Classes
+subjobterm		=Subclass
+subjobterms		=Subclasses
+
+critical-hit	=Critical Hit
+critical-hits	=Critical Hits
+human			=Human
+humans			=Humans
+monster			=Monster
+monsters		=Monsters
+kawa			=Kawa
+kawas			=Kawas
+bzil			=Bzil
+bzils			=Bzils
+injury			=Injury
+injuries		=Injuries
+chest			=Chest
+
+element			=Element
+elements		=Elements
+ability-points	=Ability Points
+AP				=AP
+exp				=EXP
+gadget			=Gadget
+gadgets			=Gadgets
+badge			=Badge
+badges			=Badges
+crafting		=Crafting
+
+skill			=Skill
+skills			=Skills
+spell			=Spell
+spells			=Spells
+ability			=Ability
+abilities		=Abilities
+special			=Special
+
+regular-attack			=Regular Attack
+regular-attacks			=Regular Attacks
+regular-melee-attack	=Regular Melee Attack
+regular-ranged-attack	=Regular Ranged Attack
+critical-hp				=Critical
+passive					=Passive
+passives				=Passives
+counter					=Counter
+counters				=Counters
+passive-trait			=Passive Ability
+passive-traits			=Passive Abilities
+
+; Stats
+hp			=HP
+mp			=MP
+
+movement	=Movement
+jump		=Jump
+action		=Action
+
+; Base stats
+atk			=ATK
+mnd			=MND
+def			=DEF
+res			=RES
+eva			=EVA
+spd			=SPD
+
+; Negative-Effects
+
+negative-Berserk	=Berserk
+negative-Charm		=Charm
+
+negative-ATKdn		=ATK {term-arrow-down}
+negative-MNDdn		=MND {term-arrow-down}
+negative-DEFdn		=DEF {term-arrow-down}
+negative-RESdn		=RES {term-arrow-down}
+negative-all		=all {debuffs}
+negative-weaken		={weaken-spell}
+negative-poison		={poison-spell}
+negative-bleed		={bleed-spell}
+negative-Blind		={blind-spell}
+negative-Slow		={slow-spell}
+negative-Mute		={mute-spell}
+negative-Cripple	={cripple-spell}
+negative-Sleep		={sleep-spell}
+negative-Root		={root-spell}
+
+negative-exhaust	=Exhausted
+negative-exhausted={negative-exhaust}
+
+; Positive-Effects
+positive-ATKUp		=ATK {term-arrow-up}
+positive-MNDUp		=MND {term-arrow-up}
+positive-DEFUp		=DEF {term-arrow-up}
+positive-RESUp		=RES {term-arrow-up}
+positive-CRITUp		=CRIT {term-arrow-up}
+positive-AdaptAegis	=Elemental Aegis
+positive-Thorns		={thorns-spell}
+positive-Haste		={haste-spell}
+positive-Renew		={renew-spell}
+positive-Rebirth	={rebirth-spell}
+positive-Mirage		={mirage-spell}
+positive-Barrier	={barrier-spell}
+positive-DarkBarrier={darkbarrier-spell}
+positive-focus		={focus-spell}
+positive-boon		={boon-spell}
+positive-AdaptEvade =Adaptive Evasion
+positive-halloweddmg={SMED-P1}
+
+positive-all		=all {buffs}
+
+positive-fleetoffoot={fleetoffoot-spell}
+positive-quicken	={quicken-spell}
+positive-cleave		={cleave-spell}
+
+; Elements
+element-physical	=Physical
+element-none		=Magical
+
+
+; ***************************************************
+; Extras - No need to translate
+job				={jobterm}
+subjob			={subjobterm}
+class			={jobterm}
+classes			={jobterms}
+subclass		={subjobterm}
+subclasses		={subjobterms}
+currency		={term-currency}
+gp				={currency}
+gpandip			={currency}
+resource		={term-loot}
+resources		={term-loots}
+component		={resource}
+components		={resources}
+
+item			={term-item}
+items			={term-items}
+
+element-water		={spell-element-water}
+element-fire		={spell-element-fire}
+element-earth		={spell-element-earth}
+element-thunder		={spell-element-thunder}
+element-dark		={spell-element-dark}
+element-holy		={spell-element-holy}
+
+positive-Water		={spell-element-water}+
+positive-Fire		={spell-element-fire}+
+positive-Earth		={spell-element-earth}+
+positive-Thunder	={spell-element-thunder}+
+positive-Dark		={spell-element-dark}+
+positive-Holy		={spell-element-holy}+

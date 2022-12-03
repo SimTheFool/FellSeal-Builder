@@ -1,0 +1,113 @@
+; Global terms
+herorank	=Captain
+heroranks	=Captains
+herotitle	={herorank}
+herotitles	={heroranks}
+guest		=Guest
+guests		=Guests
+
+; Descriptions stuff for consistency
+buff-cap	=Buff
+buffs-cap	=Buffs
+buff		=buff
+buffs		=buffs
+debuff		=debuff
+debuffs		=debuffs
+debuffs-cap =Debuffs
+
+term-arrow-up		=↑
+term-arrow-down		=↓
+
+; Extra stuff
+word-gathering	=Gathering
+key-item		=Key Item
+
+
+; Special names for NPCs
+; Name/Titles/Special
+name-guardsman		=Guardsman
+name-guardsman1		=Guardsman 1
+name-guardsman2		=Guardsman 2
+Name-OldSoldier		=Ancient Soldier
+name-GhostLady		=Lady Anquine
+name-ArenaMaster	=Arena Master
+name-Tutorial		=Tutorial
+name-bandit1		=Bandit 1
+name-bandit2		=Bandit 2
+name-Voice			=Voice
+name-hireling		=Hireling
+name-gossip			=Gossip
+name-gossip2		=Dandy Gossip
+name-gossip-suspicious	=Suspicious Gossip
+name-gossip-shady	=Shady Gossip
+name-oldman			=Old Man
+name-merchant		=Merchant
+name-conan			=The Librarian
+
+; Story Names
+name-kawa-evil		=Grim Eye
+name-kawa-elder1	=Elder
+name-kawa-elder2	=Younger Elder
+name-kawa-elder3	=Eldest Elder
+name-bzil-elder		=Elder Bzirr
+
+name-hero			=Kyrie
+name-partner		=Reiner
+name-apprentice		=Anadine
+name-Necro			=Yates
+name-GoodArbiter	=Bzaro
+name-KawaMerchant	=Somier
+name-Hunter			=Katja
+name-BanditLeader1	=Mercier
+name-ArbiterLeader1	=Dolman
+name-RebelLeader	=Raife
+name-lord			=Alphonse
+name-RebelLeaderPrevious=Clyde
+name-Mentor 		=Sylvia
+name-partnerwife 	=Alicia
+name-kairu 			=Kairu
+name-immortal1		=Quintus
+name-immortal2		=Primus
+name-immortal3		=Tertia
+name-immortal4		=Quarta
+name-immortal5		=Secunda
+name-immortal6		=Sekstus
+name-immortal7		=Septimus
+
+name-virgil=Virgil
+name-lana=Lana
+
+name-viscera1		=Pustula Sinistra
+name-viscera2		=Pustula Dextra
+name-anima			=Anima
+name-torshaa		=Torshaa the Tower
+name-cave05-lady	=Enidana
+name-tomb01-dog		=Anoup
+
+; Pure names (probably shouldn't be translated.)
+name-marked			=Draxl
+name-temple02-leader=Antoine
+name-worm1			=Muduur
+name-worm2			=Gunduin
+name-worm-queen		=Shamir-Dura
+name-morrigan		=Morgaine
+
+
+; Map Objectives
+objective-defeatall				=Defeat all foes!
+objective-defeatleader			=Defeat the leader!
+objective-defeat-x				=Defeat {0}!
+objective-endure				=Endure as long as needed!
+objective-extra-must-survive	={0} must survive!
+objective-retrieve-bone			=Retrieve the {ancient-bone}!
+objective-reach-crystal			=Reach the Crystal with everyone!
+objective-reach-crystal-count	=Defeat {0} enemies and then reach the Crystal with everyone!
+objective-escape				=Escape to the safe area!
+objective-escape-turns			=Escape to the safe area within {1} turns.
+objective-survive-ambush		=Survive the ambush!
+
+objective-endure-survive		={objective-endure} {objective-extra-must-survive}
+objective-defeatall-survive		={objective-defeatall} {objective-extra-must-survive}
+objective-escape-turns-survive	={objective-escape-turns} {objective-extra-must-survive}
+objective-tournament			={objective-defeatall} Round {0}.
+objective-survive-ambush-kyrie	={objective-survive-ambush} {objective-extra-must-survive}

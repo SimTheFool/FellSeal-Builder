@@ -1,0 +1,29 @@
+; Names and specials
+rakkerjak		={RAK-01-Title}
+niwot 			={NIW-01-Title}
+bzzerk			={BOL-01-Title}
+tangrel			={TAN-01-Title}
+vangal-colored	={VAN-01-Title}
+ercinee			={PHO-01-Title}
+blardger		={BLA-01-Title}
+arpia			={HAR-01-Title}
+therva			={THE-01-Title}
+malcubus		={MAL-01-Title}
+samurai			={SAMU-Title}
+samurais		={SAMU-Title-plural}
+bulldrake		={BUL-99-Title}
+pektite			={PEK-99-Title}
+zotzit			={zot-01-title}
+
+; Plural versions of regular monster names.
+rakkerjaks		={rakkerjak}s
+niwots			={niwot}s
+bzzerks			={bzzerk}s
+tangrels		={tangrel}s
+arpias			={arpia}s
+ercinees		={ercinee}s
+bulldrakes		={bulldrake}s
+pektites 		={pektite}s
+zotzits			={zotzit}s
+
+arbiter-female	=Arbiter

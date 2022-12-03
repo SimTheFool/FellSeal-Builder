@@ -1,0 +1,211 @@
+; **** Ingredients ************
+
+; Ingredients
+; A
+ing-00-name =Snakebite Oil
+ing-00-names=Snakebite Oil
+ing-00-desc =A corrosive liquid with alchemical properties.
+
+; B
+ing-01-name =Shellac Powder
+ing-01-names=Shellac Powder
+ing-01-desc =A glossy resinous powder produced by insects.
+
+; C
+ing-02-name =Ammoniac Gum
+ing-02-names=Ammoniac Gum
+ing-02-desc =An acrid and foul-smelling plant resin that is used to make bitter medicine.
+
+; D
+ing-03-name =Catalyst
+ing-03-names=Catalysts
+ing-03-desc =A component that spurs on chemical reactions.
+
+; E
+ing-04-name =Cobbleweed Pod
+ing-04-names=Cobbleweed Pods
+ing-04-desc =A rock-like seed pod that bleeds a milky latex.
+
+; F
+ing-05-name =Distilled Water
+ing-05-names=Distilled Water
+ing-05-desc =The clearest of water, devoid of impurities.
+
+; G
+ing-06-name =Aloe Leaf
+ing-06-names=Aloe Leaves
+ing-06-desc =A fleshy, juice-filled leaf with many useful properties.
+
+; H
+ing-07-name =Mycoleather
+ing-07-names=Mycoleather
+ing-07-desc =A surprisingly sturdy and pliable vegetal leather made from mushroom caps.
+
+; J
+ing-08-name =Jammy Fruit
+ing-08-names=Jammy Fruits
+ing-08-desc =A fruit with flesh like jelly. Messy, yet deliciously sweet.
+
+; K
+ing-09-name =Sinewdle Fruit
+ing-09-names=Sinewdle Fruits
+ing-09-desc =A tough, inedible fruit with fibrous pulp, perfect for making thread.
+
+; L
+ing-10-name =Meteorite
+ing-10-names=Meteorites
+ing-10-desc =A shooting star fallen to earth, this cratered metal has otherworldly properties.
+
+; M
+ing-11-name =Dragonsblood Sap
+ing-11-names=Dragonsblood Sap
+ing-11-desc =A crimson liquid with the color and consistency of fresh blood.
+
+; O
+ing-12-name =Energized Crystal
+ing-12-names=Energized Crystals
+ing-12-desc =A crystal that sparks with limitless power.
+
+; Q
+ing-13-name =Angel Tears
+ing-13-names=Angel Tears
+ing-13-desc =A boon to soldiers everywhere, this flower blooms on battlefields and glows with a protective, healing light.
+
+; R
+ing-14-name =Dormant Crystal
+ing-14-names=Dormant Crystals
+ing-14-desc =A dull gray crystal with hidden power brimming just below the surface.
+
+; S
+ing-15-name =Coronal Plume
+ing-15-names=Coronal Plumes
+ing-15-desc =A purple, crown-emblazoned feather that represents the right to rule.
+
+; T
+ing-16-name =Cold Iron
+ing-16-names=Cold Iron
+ing-16-desc =Rare and difficult to work, this metal has many mystical properties.
+
+; U
+ing-17-name =Dark Core
+ing-17-names=Dark Cores
+ing-17-desc =An ancient phylactery that houses dark energies.
+
+; V
+ing-18-name =Quality Thread
+ing-18-names=Quality Threads
+ing-18-desc =A fine silk thread used in high-quality priests' garments.
+
+; Y
+ing-19-name =Adamant Ingot
+ing-19-names=Adamant Ingots
+ing-19-desc =A priceless legendary metal. Anything crafted of this metal will be of truly remarkable quality.
+
+; Z
+ing-20-name =Aegisite Ingot
+ing-20-names=Aegisite Ingots
+ing-20-desc =A metal with impressive deflective properties.
+
+; AB
+ing-21-name =Demon Leather
+ing-21-names=Demon Leather
+ing-21-desc =A skin worn by demon slayers, it repels the creatures of the dark.
+
+; AC
+ing-22-name =Platinum Thread
+ing-22-names=Platinum Threads
+ing-22-desc =This most precious of threads is used in the weaving of garments that transcend the limits of beauty.
+
+; AD
+ing-23-name =Mythical Leather
+ing-23-names=Mythical Leather
+ing-23-desc =Leather from a legendary creature, still brimming with its power.
+
+; AE
+ing-24-name =Diamond Thread
+ing-24-names=Diamond Threads
+ing-24-desc =An exceedingly resilient thread that never breaks down.
+
+; AF
+ing-25-name =Gold Thread
+ing-25-names=Gold Threads
+ing-25-desc =A fine chain of gold for making magic amulets.
+
+; AG
+ing-26-name =Godwood
+ing-26-names=Godwood
+ing-26-desc =Wood from the legendary godtree, used for making weapons that focus the wielder's strength to deific levels.
+
+; Special
+; Tarnished Locket
+ing-27-name	=Tarnished Locket
+ing-27-names=Tarnished Lockets
+ing-27-desc	=This old locket has seen better days. It would need to be restored to be of any use.
+
+
+; **** Badges ************
+; Helper
+badg-allows-access	=Allows a non-story unit to access the
+; Badges
+badg-00-name=Bone Crest
+badg-00-desc={badg-allows-access} {SMED-Title} {jobterm}.
+
+badg-01-name=Lord Crest
+badg-01-desc={badg-allows-access} {LORD-Title} {jobterm}, a male martial {jobterm}.
+
+badg-02-name=Princess Crest
+badg-02-desc={badg-allows-access} {PRIN-Title} {jobterm}, a female magic-user {jobterm}.
+
+badg-03-name=Lunar Crest
+badg-03-desc={badg-allows-access} {WERE-Title} {jobterm}.
+
+badg-04-name=Blood Crest
+badg-04-desc={badg-allows-access} {VAMP-Title} {jobterm}.
+
+badg-05-name=Phylactery
+badg-05-desc={badg-allows-access} {LICH-Title} {jobterm}.
+
+
+; **** Key Items ************
+; Don't add key items to the game through mods. It will not work correctly as those are rely on special code most of the time.
+; Helper
+key-henge		=Henge Fragment
+key-henges		=Henge Fragments
+key-henge-desc	=This mysterious stone looks like a piece of a bigger ensemble.
+key-boss		=Energy Fragment
+key-obelisk		=Obelisk Clue
+
+; Key Items
+key-00-name={key-henge} 1
+key-00-desc={key-henge-desc}
+
+key-01-name={key-henge} 2
+key-01-desc={key-henge-desc}
+
+key-02-name={key-henge} 3
+key-02-desc={key-henge-desc}
+
+key-03-name={key-henge} 4
+key-03-desc={key-henge-desc}
+
+key-04-name={key-boss}
+key-04-desc={key-henge-desc}
+
+key-05-name=Medallion
+key-05-desc=This is the original catalyst used to summon {ancient-beast} into {worldname}.
+
+
+; Obelisk key items.
+key-06-name={key-obelisk} 1
+key-07-name={key-obelisk} 2
+key-08-name={key-obelisk} 3
+key-09-name={key-obelisk} 4
+key-10-name={key-obelisk} 5
+key-11-name={key-obelisk} 6
+key-12-name={key-obelisk} 7
+key-13-name={key-obelisk} 8
+
+key-obelisk-desc=To those seeking access to the treasures of our old clan, make your way to the site of our most glorious and fated battle. 13 days it lasted and a mighty struggle it was, leaving the fields barren and sulfurous. Once the trip made, take your feet to the twin coordinates therein. Use our treasure wisely, that no 13 others have to suffer our fate.
+
+key-14-name={key-boss}
+key-14-desc=A fragment taken from {ancient-beast}.

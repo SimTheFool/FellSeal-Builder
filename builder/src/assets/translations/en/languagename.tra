@@ -1,0 +1,4 @@
+; This should be the name of the language. Please note that special fonts (like Chinese, etc) are not loaded at this point, so you'll have to write "Chinese" in roman letters here.
+name=English
+; This here can contain a special font name to be loaded. Current list of special fonts: chinese
+font=

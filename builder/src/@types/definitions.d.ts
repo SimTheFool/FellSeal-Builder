@@ -1,5 +1,5 @@
 declare module "*.tra" {
-  const tra: Record<string, string>;
+  const tra: Record<string, string>[];
   export default tra;
 }
 declare module "*jobs.gdata" {

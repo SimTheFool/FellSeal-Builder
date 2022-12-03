@@ -1,0 +1,66 @@
+; Main categories
+credits-devteam				=Dev Team
+credits-publisherteam		=Publisher
+
+credits-game-design			=Game/Systems Design
+credits-map-design			=Map Design
+credits-encounter-design	=Encounters Design
+credits-programming			=Programming
+credits-lead-artist			=Lead Artist
+credits-sound				=Sound Effects
+credits-music				=Music Composer
+credits-story				=Story
+
+; Sub Categories
+credits-art-portraits		=Portraits
+credits-art-maps			=Maps
+credits-art-spells			=Visual Effects
+credits-art-sprites			=Sprites
+credits-art-ui				=UI
+credits-art-characterdesign	=Character Design
+credits-art-monsterdesign	=Creature Design
+credits-art-intromovie		=Movie
+credits-art					=Art
+
+credits-extra-design		=Additional Design
+credits-extra-character		=Additional Character Design
+credits-writing-desc		=Equipment Descriptions
+
+credits-programming-extra	=Abilities XML System
+
+credits-writing				=Dialogue Writing
+credits-character-writing	=Character Events Writing
+credits-events				=Cutscenes Design & Scripting
+
+credits-manual-layout		=Manual Layout
+credits-manual-art			=Manual Art
+
+credits-thanks				=Special Thanks
+credits-thanks-steam		=Forums Moderator
+
+credits-backers				=Backers
+credits-backers-bronze		=Bronze Backers
+credits-backers-silver		=Silver Backers
+credits-backers-gold		=Gold Backers
+credits-backers-platinum	=Platinum Backers
+
+credits-1c-title			=1C Entertainment
+credits-1c-ceo				=CEO
+credits-1c-loc				=Localization Producer
+credits-1c-title2			=1C Publishing EU
+credits-1c-managing			=Managing Director
+credits-1c-business			=Business Development Director
+credits-1c-producer			=Producer
+credits-1c-managing2		=Publishing Managers
+credits-1c-managing3		=Project Managers
+credits-1c-marketing		=Marketing and PR
+
+credits-loc-team			=QLOC S.A.
+credits-1c-loc-title		=Localization by: {credits-loc-team}
+credits-1c-loc-manager		=General Manager
+credits-1c-loc-business		=Business Development Director
+credits-1c-loc-director		=Director of Quality Assurance
+credits-1c-loc-qa			=QA Compliance Managers
+credits-1c-loc-qa2			=QA Lab Managers
+credits-1c-loc-qa3			=QA Training Manager
+credits-1c-loc-it			=IT Manager

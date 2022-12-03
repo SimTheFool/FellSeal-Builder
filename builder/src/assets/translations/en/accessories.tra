@@ -1,0 +1,128 @@
+; **********************
+; Accessories
+; **********************
+; Boots
+acc-boot-00		=Toad Boots
+acc-boot-00-desc=A witch's footwear, helpful to get out of quicksand.
+
+acc-boot-01		=Running Treads
+acc-boot-01-desc=Athletic shoes to increase sprinting abilities.
+
+acc-boot-02		=Impala Boots
+acc-boot-02-desc=Stylish, but not as fast or powerful as you'd think.
+
+acc-boot-03		=Wayfarer Treads
+acc-boot-03-desc=A polyvalent sporting shoe, good for a variety of activities. 
+
+acc-boot-04		=Jet Boots
+acc-boot-04-desc=Boots with rocket engines attached. Useful but dangerous.
+
+acc-boot-05		=Gremlin Treads
+acc-boot-05-desc=Shoes that make their wearers so quick they become harder to hit.
+
+acc-boot-06		=Plainwalkers
+acc-boot-06-desc=Footwear ideal for long treks.
+
+acc-boot-07		=Hover Boots
+acc-boot-07-desc=Magical boots that let their users walk on air.
+
+acc-boot-08		=Riftwalkers
+acc-boot-08-desc=A single step can carry the wearer a yard or a mile.
+
+acc-boot-09		=Flippers
+acc-boot-09-desc=Footwear with long webbing, to turn anyone into a seasoned swimmer.
+
+
+;****************
+; Rings
+acc-ring-00		=Pure Band
+acc-ring-00-desc=A kale-green ring, to help eliminate toxins.
+
+acc-ring-01		=Shining Band
+acc-ring-01-desc=A glowing ring to help with vision troubles.
+
+acc-ring-02		=Clarity Band
+acc-ring-02-desc=A sunset-colored ring, to calm emotions.
+
+acc-ring-03		=Oath Band
+acc-ring-03-desc=A topaz ring, to reinforce loyalty.
+
+acc-ring-04		=Sapphire Earring
+acc-ring-04-desc=This sapphire earring protects against many common ailments.
+
+acc-ring-05		=Phoenix Band
+acc-ring-05-desc=A signet in the shape of the eternal phoenix bird.
+
+acc-ring-06		=Ruby Earring
+acc-ring-06-desc=This ruby earring protects from exotic maladies.
+
+acc-ring-07		=Amethyst Earring
+acc-ring-07-desc=An amethyst earring to ward off all ailments.
+
+acc-ring-08		=Energy Locket
+acc-ring-08-desc=A pendant charged with magical power.
+
+acc-ring-09		=Battle Locket
+acc-ring-09-desc=An amulet to enhance combat abilities.
+
+acc-ring-10		=Zephyr Locket
+acc-ring-10-desc=A pendant that grants the wearer the swiftness of the wind.
+
+acc-ring-11		=Shield Locket
+acc-ring-11-desc=A defensive charm.
+
+acc-ring-12		=Mirror Locket
+acc-ring-12-desc=A carcanet which protects from curses and hexes.
+
+acc-ring-13     =Glasses
+acc-ring-13-desc=A simple pair of glasses. They let the wearer see things better (+{accbonus} accuracy).
+
+acc-ring-14     =Vigil Band
+acc-ring-14-desc=A garnet ring, to keep one alert.
+
+acc-ring-15     =Power Locket
+acc-ring-15-desc=An amulet that converts speed to raw power.
+
+acc-ring-16		=Ancient Locket
+acc-ring-16-desc=An ancient family heirloom. Anyone wearing it swears they can hear soft whispers from it. {injury-prevent}
+
+;****************
+; Gloves
+acc-glove-00		=Demi-Gauntlet
+acc-glove-00-desc	=Finger guards to avoid unlucky wounds.
+
+acc-glove-01		=Gauntlet
+acc-glove-01-desc	=Heavy hand protection, also useful for the occasional sucker punch.
+
+acc-glove-02		=Wizard Glove
+acc-glove-02-desc	=An elegant glove, covered in mystical sigils.
+
+acc-glove-03		=Sharp Gauntlet
+acc-glove-03-desc	=A gauntlet covered in blades, to both protect the wearer from cuts and help them target weak points.
+
+acc-glove-04		=Plate Glove
+acc-glove-04-desc	=Extremely heavy hand armor favored by knights.
+
+acc-glove-05		=Exo Gauntlet
+acc-glove-05-desc	=Gloves made from the skin of a strange creature.
+
+acc-glove-06		=Battle Claw
+acc-glove-06-desc	=A metal claw enhanced with a variety of enchantments.
+
+acc-glove-07		=Gigas Fist
+acc-glove-07-desc	=The gauntlet of a powerful oni.
+
+acc-glove-08		=Arcane Glove
+acc-glove-08-desc	=Spider silk gloves dyed with the blood of fairies.
+
+acc-glove-09		=Drake Talon
+acc-glove-09-desc	=The claws of a vicious raptor.
+
+acc-glove-10		=Bandit's Glove
+acc-glove-10-desc	=These gloves are famous amongst bandits as a means to get rich quicker (2x more {gp} with {ROGU-A1}).
+
+acc-glove-11     	=Throwing Glove
+acc-glove-11-desc	=These gloves allow one to throw items farther (+1 to item usage range).
+
+acc-glove-12	 	=Old Letter
+acc-glove-12-desc	=Beloved, may the locket you bear, symbol of our love, protect you during the hard times ahead. Return safely to me!

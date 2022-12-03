@@ -1,0 +1,191 @@
+; *****************************
+; Help Messages
+; *****************************
+; used in other strings
+injury-base-desc=An {injury} will lower all stats ({ATK}, {MND}, {DEF}, {RES}) of the unit until it sits out enough battles.
+
+help-guest		=Faction
+help-guest-desc	=Faction this character belongs to, such as Ally, Enemy or Guest.
+help-name		=Name
+help-name-desc	=The name of this character.
+help-level		=Level
+help-level-desc	=The level of the character. This represents the overall strength and knowledge of this unit.
+help-exp		=Experience Points
+help-exp-desc	=The amount of experience points the character has accrued for his current level. Upon reaching 100 points, the unit will gain a level and the current experience points will reset to 0.
+
+help-hp			=Health Points ({HP})
+help-hp-desc	=The current and maximum {HP} of the character. When the current {HP} reaches 0, this character will fall in battle.{newline}When a character falls in battle, they will sustain an {Injury} after you complete the battle. {injury-base-desc}
+help-mp			=Mana Points ({MP})
+help-mp-desc	=The current and maximum {MP} of the character. Unless using special {abilities}, a character will start the battle with 0 {MP} and will automatically recover {mprecovery} {MP} each turn. {MP} is needed to use various {abilities}.
+
+help-portrait				=Portrait
+help-portrait-desc-base   	=The character's portrait. Story characters have their own unique portraits, but you can select a custom portrait for your regular troops from the {wm-command-guild}
+help-portrait-desc-console	={help-portrait-desc-base}.
+help-portrait-desc        	={help-portrait-desc-base} (either from the provided portraits options, or by adding custom portraits of your own).
+
+help-battle-commands		=Battle Commands
+help-battle-commands-desc	=This list of commands represents the actions you can take on this character's turn.{newline}Each turn, you can take a movement on the map ({command-move}) and take an action ({command-attack}/{command-Open}/{command-Gather}), in any order you wish. You can also end your turn without taking a move or an action by choosing {command-End} when you're done.
+help-units-left			=Units left to deploy
+help-units-left-desc	=This is the number of units deployed out of the maximum number of units this map will allow you to deploy.
+help-height				=Height and Position
+help-height-desc		=The position of this tile on the map as well as its height. Most units can only jump up or down a certain height.
+help-battle-turns		=Turn Order
+help-battle-turns-desc	=This bar shows the coming turns of all battle participants. Portraits with a blue border are your allies and those with a red border are your enemies.
+help-currentclass		={jobterm} combination
+help-currentclass-desc	=The current {jobterm} and {subjobterm} the character is using. The {subjobterm} comes from the secondary {abilities} set that the character has selected.
+
+; Stats
+help-stats-0		=Attack ({ATK})
+help-stats-0-desc	=Attack represents the physical prowess of a character in terms of the magnitude of their attacks and {abilities}. {regular-attacks} and most martial {abilities} have their damage (or healing) based on the {atk} score. For {abilities} that use {atk} for their damage, their description will mention it.
+help-stats-1		=Defense ({DEF})
+help-stats-1-desc	=Defense represents the character's resilience to physical damage. The higher the {def}, the less damage will be received from any attacks that target the {def} score, which is most physical attacks.
+help-stats-2		=Mind ({MND})
+help-stats-2-desc	=Mind represents the magical prowess of a character in terms of the magnitude of their attacks and {abilities}. Most magical {abilities} have their damage (or healing) based on the {mnd} score. For {abilities} that use {mnd} for their damage, their description will mention it.
+help-stats-3		=Resistance ({RES})
+help-stats-3-desc	=Resistance represents the character's resilience to magical damage. The higher the {res}, the less damage will be received from any attacks that target the {res} score, which is most magical attacks.
+help-stats-4		=Speed ({SPD})
+help-stats-4-desc	=Speed represents the character's speed in combat. The higher the value, the faster a character's turn will come again in combat. A high enough speed might yield more turns during battle than a character with a lower speed would get.
+help-stats-5		=Evasion ({EVA})
+help-stats-5-desc	=Evasion represents the character's ability to completely evade any incoming offensive action (including {abilities} and {regular-attacks}). Your {eva} score is based on your current {class} and your equipment. In general, all characters have (100 - Target's {eva})% chance to hit a target. This means that unless a target is stacking {eva}, your chance to hit should be high (usually around 95-99%), but also that stacking {eva} can be a powerful means of avoiding damage. Evasion caps at {eva-cap}%.
+
+; Elements
+help-elements		=Elemental resistance
+help-elements-desc	=Each icon represents a different element ({element-water}, {element-fire}, {element-earth}, {element-thunder}, {element-dark}, {element-holy}). A character will take lessened or increased damage based on their resistance. Positive resistances mean less damage taken and negative resistances mean more damage taken.
+
+; Status
+help-status-all			=Status Immunities
+help-status-all-desc	=Characters can be affected by various {debuffs} that will weaken them during combat. The colored icons represent the character's immunity to that effect, and a grayed-out icon means the unit is not immune to it.
+
+; Helper strings
+help-status-mental-extranote	=(A unit can only have one of {negative-berserk}, {negative-sleep}, or {negative-charm})
+help-status-mental-remove		=If the character receives damage, this {debuff} will be removed
+help-status-mute-extranote		=(each {ability} will mention its type in its description box)
+; Row 0
+help-status-0-0-desc	=Deals damage based on max {hp} every turn. Unit won't be brought below 1 {hp} from this effect.
+help-status-0-1-desc	={help-status-0-0-desc}
+help-status-0-2-desc	=Reduces the unit's accuracy drastically.
+help-status-0-3-desc	=Prevents the unit from using the {command-move} command.
+help-status-0-4-desc	=Prevents the unit from using {spells} {help-status-mute-extranote}.
+; Row 1
+help-status-1-0-desc	=Prevents the unit from using {skills} {help-status-mute-extranote}.
+help-status-1-1-desc	=The unit is asleep and will skip their turn until they wake up. {help-status-mental-remove}. {help-status-mental-extranote}.
+help-status-1-2-desc	=Unit will mindlessly attack the nearest target, be they friend or foe. {help-status-mental-extranote}.
+help-status-1-3-desc	=Unit will take actions that benefit the Charmer's team. {help-status-mental-remove}. {help-status-mental-extranote}.
+help-status-1-4-desc	=Unit will have its turn come slower than usual.
+; Row 2
+help-status-2-0-desc	=Reduces the attack score of the afflicted unit.
+help-status-2-1-desc	=Reduces the mind score of the afflicted unit.
+help-status-2-2-desc	=Reduces the defense score of the afflicted unit.
+help-status-2-3-desc	=Reduces the resistance score of the afflicted unit.
+help-status-2-4-desc	=Any normal healing applied to the afflicted unit will be reduced to 0.
+
+
+; Helpers
+help-deal-more-dmg	=will deal increased damage with that element
+help-a-unit-with	=A unit with
+; Positive status
+help-posstatus-ATKUp-desc		=Increases the attack score of the unit.
+help-posstatus-MNDUp-desc		=Increases the mind score of the unit.
+help-posstatus-DEFUp-desc		=Increases the defense score of the unit.
+help-posstatus-RESUp-desc		=Increases the resistance score of the unit.
+help-posstatus-CRITUp-desc		=Increases the unit's chance to score a {critical-hit}.
+help-posstatus-Thorns-desc		={help-a-unit-with} {positive-Thorns} will automatically reflect some damage back (as {element-physical} damage) when taking damage (from any source).
+help-posstatus-Haste-desc		={help-a-unit-with} {positive-haste} will get its turn faster.
+help-posstatus-Renew-desc		={help-a-unit-with} {positive-renew} will regain some {hp} every turn.
+help-posstatus-Rebirth-desc		={help-a-unit-with} {positive-rebirth} will automatically come back to life after falling in combat.
+help-posstatus-Mirage-desc		={help-a-unit-with} {positive-mirage} will automatically evade the next offensive damaging action taken against them.
+help-posstatus-Barrier-desc		={help-a-unit-with} {positive-barrier} will automatically evade the next offensive status effect placed on them.
+help-posstatus-AdaptAegis-desc	={help-a-unit-with} {positive-adaptaegis} will have higher resistance to the last {element} they were attacked with.
+help-posstatus-fleetoffoot-desc	={help-a-unit-with} {positive-fleetoffoot} will have increased movement of +1.
+help-posstatus-darkbarrier-desc ={help-a-unit-with} {positive-darkbarrier} will have higher resistance to all {elements} except {element-holy-icon}{spell-element-holy}.
+help-posstatus-boon-desc		={help-a-unit-with} {positive-boon} will have a guaranteed {critical-hit} on the next action they take. This will remove {positive-boon}.
+help-posstatus-focus-desc		={help-a-unit-with} {positive-focus} will deal 2x damage on the next action they take. This will remove {positive-focus}.
+help-posstatus-AdaptEvade-desc  ={help-a-unit-with} {positive-adaptevade} will automatically evade any offensive actions of the last type that hit it (either {spells}, {skills} or {regular-attacks}).
+help-posstatus-halloweddmg-desc	={help-a-unit-with} {positive-halloweddmg} will deal bonus damage on the next action they take. This will remove {positive-halloweddmg}.
+
+help-posstatus-Water-desc		={help-a-unit-with} {positive-water} {help-deal-more-dmg}.
+help-posstatus-Fire-desc		={help-a-unit-with} {positive-fire} {help-deal-more-dmg}.
+help-posstatus-Earth-desc		={help-a-unit-with} {positive-earth} {help-deal-more-dmg}.
+help-posstatus-Thunder-desc		={help-a-unit-with} {positive-thunder} {help-deal-more-dmg}.
+help-posstatus-Dark-desc		={help-a-unit-with} {positive-dark} {help-deal-more-dmg}.
+help-posstatus-Holy-desc		={help-a-unit-with} {positive-holy} {help-deal-more-dmg}.
+help-posstatus-quicken-desc		={positive-quicken} will grant the unit an immediate turn.
+
+
+; Injury
+help-injury			=Injury
+help-injury-desc	=The character suffers from an {injury}. Resting the character (going into a battle without fielding this unit) will get rid of the {injury}. Healing more {injuries} requires more resting time. {injury-base-desc}
+
+; Movements/etc
+help-movement		=Movement
+help-movement-desc	=The amount of spaces the character can move in a single turn during combat. When moving, the height of spaces also restricts a unit's movements, not just their movement value.
+help-jump			=Jump
+help-jump-desc		=The height a character can jump up or down when moving to an adjacent tile. If the height difference between the current tile and the destination tile is bigger than the unit's {help-jump} value, movement will not be possible.
+help-critical		=Critical Chance
+help-critical-desc	=Critical Chance represents the character's chance of landing a {critical-hit} on a target. {critical-hits} by default do 50% more damage and will automatically apply any {debuff} that the attack might have. Your {critical-hit} chance is based on your current {class} and equipment. Normally, only {regular-attacks} can become {critical-hits}, but with a special {passive}, {abilities} could also get a {critical-hit}.
+help-swim			=Swimming
+help-swim-desc		=The character is able to swim, which allows them to move onto water and poisonous water tiles. They will deal lessened damage and receive more damage while swimming. While swimming, a character can't open treasures or gather {resources}.
+help-fly			=Fly/Burrow/Teleport
+help-fly-desc		=The character is able to displace themselves instantly to their destination, without walking on any tiles in between. This allows them to ignore the heights of tiles, and they won't trigger traps that aren't on the destination itself.
+help-float			=Hovering
+help-float-desc		=The character is hovering above ground, which allows them to hover over any liquid surface, as well as ignore any ground traps.
+
+; Gear
+help-gear				=Equipment
+help-gear-desc			=The character's equipped gear. Each character can equip up to 6 different pieces of gear. You may fill the 6 slots as you wish, although there are basic restrictions (only 1 head piece, 1 body piece, etc).
+help-equip-current		=Currently equipped.
+help-equip-current-desc	=The information about the piece of gear currently equipped in the selected slot.
+
+; Info box skill page
+help-info-class			=Active {jobterm} or {subjobterm}.
+help-info-class-desc	=The {abilities} you have access to for this {jobterm}. You have access to these {abilities} during combat.
+
+; Info box passive page
+help-info-counter		=Equipped {Counter} {Ability}
+help-info-counter-desc	=This is the {counter} {ability} the character is currently using. {counters} trigger on various conditions, usually centered around taking damage.
+help-info-passive		=Equipped {passive-traits}
+help-info-passive-desc	=This is the list of {passive-traits} the character has equipped currently. You can freely select 2 {passive-traits} from all those you know and you can have up to 2 provided by your current {jobterm}, assuming you have learned them.
+
+
+
+; ***************************************************
+; Extras - No need to translate
+; Status alt names for ease of use.
+help-status-poison-desc		={help-status-0-0-desc}
+help-status-bleed-desc		={help-status-0-1-desc}
+help-status-blind-desc		={help-status-0-2-desc}
+help-status-root-desc		={help-status-0-3-desc}
+help-status-mute-desc		={help-status-0-4-desc}
+
+help-status-cripple-desc	={help-status-1-0-desc}
+help-status-sleep-desc		={help-status-1-1-desc}
+help-status-berserk-desc	={help-status-1-2-desc}
+help-status-charm-desc		={help-status-1-3-desc}
+help-status-slow-desc		={help-status-1-4-desc}
+
+help-status-atkdn-desc		={help-status-2-0-desc}
+help-status-mnddn-desc		={help-status-2-1-desc}
+help-status-defdn-desc		={help-status-2-2-desc}
+help-status-resdn-desc		={help-status-2-3-desc}
+help-status-weaken-desc		={help-status-2-4-desc}
+
+help-status-exhaust-desc=The character can't have the {quicken-spell} {spell} casted on them until {negative-exhausted} wears off. {negative-exhausted} cannot be dispelled or shortened by any means. The {quicken-spell} {counter} ignores this {debuff}.
+help-status-exhausted-desc={help-status-exhaust-desc}
+
+help-status-0-0			={negative-poison}
+help-status-0-1			={negative-bleed}
+help-status-0-2			={negative-blind}
+help-status-0-3			={negative-root}
+help-status-0-4			={negative-mute}
+
+help-status-1-0			={negative-cripple}
+help-status-1-1			={negative-sleep}
+help-status-1-2			={negative-berserk}
+help-status-1-3			={negative-charm}
+help-status-1-4			={negative-slow}
+
+help-status-2-0			={negative-atkdn}
+help-status-2-1			={negative-mnddn}
+help-status-2-2			={negative-defdn}
+help-status-2-3			={negative-resdn}
+help-status-2-4			={negative-weaken}

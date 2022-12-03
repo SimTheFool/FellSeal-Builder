@@ -1,0 +1,521 @@
+; Materials
+mat-mythril		=teorite
+mat-mythril-cap	=Teorite
+mat-steel		=steel
+mat-steel-cap	=Steel
+mat-silver		=silver
+mat-silver-cap	=Silver
+mat-gold		=gold
+mat-gold-cap	=Gold
+mat-golden		=golden
+mat-golden-cap  =Golden
+mat-ebony		=ebony
+mat-ebony-cap	=Ebony
+mat-leather		=leather
+mat-leather-cap =Leather
+mat-bronze		=bronze
+mat-bronze-cap	=Bronze
+
+; **********************
+; Weapons
+; **********************
+; Swords
+wp-sword-00			=Shortsword
+wp-sword-00-desc	=A soldier's truest friend.
+
+wp-sword-01			=Longsword
+wp-sword-01-desc	=A blade for a valorous knight.
+
+wp-sword-02			={mat-silver-cap} Sword
+wp-sword-02-desc	=A ceremonial sword blessed by a venerable priest.
+
+wp-sword-03			=Toothed Sword
+wp-sword-03-desc	=A gruesome weapon capable of inflicting horrific wounds.
+
+wp-sword-04			={mat-mythril-cap} Sword
+wp-sword-04-desc	=Forged from the purest {mat-mythril}, sharp enough to slice spells apart.
+
+wp-sword-05			=Icebrand
+wp-sword-05-desc	=A blade quenched in the coldest currents of the ocean.
+
+wp-sword-06			=Flamebrand
+wp-sword-06-desc	=A sword forged in the heat of a volcano.
+
+wp-sword-07			=Stonebrand
+wp-sword-07-desc	=A sword honed on the hardest of diamonds.
+
+wp-sword-08			=Boltbrand
+wp-sword-08-desc	=A lightning bolt hammered into the shape of a sword.
+
+wp-sword-09			=Enhancer
+wp-sword-09-desc	=An oversized athame to help focus magical powers.
+
+wp-sword-10			={mat-ebony-cap} Sword
+wp-sword-10-desc	=A sword as black as night to tame the darkness.
+
+wp-sword-11			=Guardian Sword
+wp-sword-11-desc	=A weapon covered in protective runes.
+
+wp-sword-12			=Dendrite Sword
+wp-sword-12-desc	=A crystalline blade that dissipates holy magic.
+
+wp-sword-13			=Singing Sword
+wp-sword-13-desc	=Its eerie whistling keeps its user awake at night.
+
+wp-sword-14			=Excalibur
+wp-sword-14-desc	=The holiest of swords will heal all wounds over time.
+
+wp-sword-15			=Eternias
+wp-sword-15-desc	=The strongest, deadliest of all swords.
+
+wp-sword-16			=Soul Eater
+wp-sword-16-desc	=A diabolical weapon that feeds its wielder's lust for power.
+
+
+; *****************
+; Dagger
+wp-dagger-00		=Dagger
+wp-dagger-00-desc	=A utilitarian knife for cooking, crafting, and the occasional killing.
+
+wp-dagger-01		=Hidden Knife
+wp-dagger-01-desc	=An assassin's last resort.
+
+wp-dagger-02		=Dirk
+wp-dagger-02-desc	=A duelist's poniard, ideal for targeting vulnerable spots.
+
+wp-dagger-07		=Kunai
+wp-dagger-07-desc	=An exotic knife able to cripple almost any opponent.
+
+wp-dagger-04		=Tongueslicer
+wp-dagger-04-desc	=A torturer's blade, meant to cut someone's screams short.
+
+wp-dagger-05		={mat-mythril-cap} Dagger
+wp-dagger-05-desc	=A blade pure enough to parry curses.
+
+wp-dagger-06		=Main Gauche
+wp-dagger-06-desc	=An offhand weapon used to parry blows.
+
+wp-dagger-03		={mat-ebony-cap} Dagger
+wp-dagger-03-desc	=A black wood knife, to cut through the night.
+
+wp-dagger-08		=Janbiya
+wp-dagger-08-desc	=A short curved blade, fast and cruel.
+
+wp-dagger-09		=Flash Knife
+wp-dagger-09-desc	=A light knife that flickers faster than the eye can see.
+
+wp-dagger-10		=Worm Tooth
+wp-dagger-10-desc	=The tooth of a venomous worm.
+
+wp-dagger-11		=Dendrite Knife
+wp-dagger-11-desc	=A knife of green crystal that inhibits blood clotting.
+
+wp-dagger-12		=Dragon's Nail
+wp-dagger-12-desc	=The claw of a great dragon. A single cut from this will kill anyone in time.
+
+
+; *****************
+; Axe
+wp-axe-00		=Axe
+wp-axe-00-desc	=A simple woodcutter's axe.
+
+wp-axe-01		=Battleaxe
+wp-axe-01-desc	=A heavy {mat-steel} axe built to cleave through mail and flesh alike.
+
+wp-axe-02		={mat-silver-cap} Axe
+wp-axe-02-desc	=A blessed axe made of {mat-silver}, to hunt creatures of the night.
+
+wp-axe-03		=Chopper
+wp-axe-03-desc	=A deceptively powerful hatchet.
+
+wp-axe-04		={mat-mythril-cap} Axe
+wp-axe-04-desc	=A {mat-mythril} adze able to hack enchantments apart.
+
+wp-axe-05		=Blood Axe
+wp-axe-05-desc	=Used to behead vampires long ago, it now steals the life of its victims {wp-axe-drains-hp}.
+
+wp-axe-06		=Marauder Axe
+wp-axe-06-desc	=A tribal weapon, used to destroy fortifications.
+
+wp-axe-07		=Ornate Axe
+wp-axe-07-desc	=A gilded axe inlaid with gaudy jewels. Surprisingly efficient.
+
+wp-axe-08		=Dark Reign
+wp-axe-08-desc	=A demonic axe that feeds upon the darkness.
+
+wp-axe-09		=Executioner
+wp-axe-09-desc	=An oversized axe to slay criminals in one blow.
+
+wp-axe-10		=Cry Havoc
+wp-axe-10-desc	=As light as a feather, as powerful as a titan's maul.
+
+
+; *****************
+; Rapier
+wp-rapier-00		=Fleuret
+wp-rapier-00-desc	=A gentleman's weapon, more for show than for battle {wp-crossbow-extra}.
+
+wp-rapier-01		=Rapier
+wp-rapier-01-desc	=A bravo's dueling sabre {wp-crossbow-extra}.
+
+wp-rapier-02		={mat-silver-cap} Rapier
+wp-rapier-02-desc	=A blade of metal so pure that it cleanses its user's blood {wp-crossbow-extra}.
+
+wp-rapier-03		=Shining Rapier
+wp-rapier-03-desc	=A rapier so brilliant that even blind men can see it {wp-crossbow-extra}.
+
+wp-rapier-04		={mat-mythril-cap} Rapier
+wp-rapier-04-desc	=Stylish enough to inspire banter from the shyest warriors {wp-crossbow-extra}.
+
+wp-rapier-05		=Poise
+wp-rapier-05-desc	=Even the most savage brutes look dignified with this blade {wp-crossbow-extra}.
+
+wp-rapier-06		=Joyeuse
+wp-rapier-06-desc	=A rapier as exuberant as the wildest revel {wp-crossbow-extra}.
+
+wp-rapier-07		=Monarch
+wp-rapier-07-desc	=An emperor's sabre of office {wp-crossbow-extra}.
+
+wp-rapier-08		=Del Chliss
+wp-rapier-08-desc	=A magical foil that drains strength with a mere touch {wp-crossbow-extra}.
+
+
+; *****************
+; Spear
+wp-spear-00			=Spear
+wp-spear-00-desc	=A standard military pike.
+
+wp-spear-01			=Boar Spear
+wp-spear-01-desc	=A broad-bladed hunting spear to bring down big game.
+
+wp-spear-02			={mat-silver-cap} Spear
+wp-spear-02-desc	=A spear decorated with {mat-silver} filigree.
+
+wp-spear-03			=Icespike
+wp-spear-03-desc	=A pike infused with the bite of arctic winds.
+
+wp-spear-04			=Flamespike
+wp-spear-04-desc	=A pike consumed with the hunger of a raging fire.
+
+wp-spear-05			=Stonespike
+wp-spear-05-desc	=A pike that can cause the very earth to quake.
+
+wp-spear-06			=Boltspike
+wp-spear-06-desc	=A pike endowed with the fury of a lightning storm.
+
+wp-spear-07			={mat-mythril-cap} Spear
+wp-spear-07-desc	=A {mat-mythril} spear to pierce through baneful hexes.
+
+wp-spear-08			=Lance
+wp-spear-08-desc	=A heavy cavalry lance.
+
+wp-spear-09			=Partisan
+wp-spear-09-desc	=A spear with defensive protrusions to aid in parrying.
+
+wp-spear-10			=Heavy Lance
+wp-spear-10-desc	=An oversized lance for ceremonial and intimidation purposes.
+
+wp-spear-11			=Godray
+wp-spear-11-desc	=An awe-inspiring weapon that makes its wielder steadfast.
+
+
+; *****************
+; Scythe
+scythe-bonus-desc	=Increases {critical-hit} damage by {scytheCritBonus}%.
+
+wp-scythe-00		=Plow
+wp-scythe-00-desc	=A peasant's tool, scorned by real warriors. {scythe-bonus-desc}
+
+wp-scythe-01		=Scythe
+wp-scythe-01-desc	=A scythe built for battle. {scythe-bonus-desc}
+
+wp-scythe-02		={mat-silver-cap} Scythe
+wp-scythe-02-desc	=A {mat-silver}-bladed scythe to hack the undead apart. {scythe-bonus-desc}
+
+wp-scythe-03		=Crimson Scythe
+wp-scythe-03-desc	=Stained by the blood of its victims, this scythe has a dark past. {scythe-bonus-desc}
+
+wp-scythe-04		={mat-mythril-cap} Scythe
+wp-scythe-04-desc	=This {mat-mythril} scythe will sweep spells away. {scythe-bonus-desc}
+
+wp-scythe-05		=Fauchard
+wp-scythe-05-desc	=A long-bladed polearm. {scythe-bonus-desc}
+
+wp-scythe-06		=Energy Scythe
+wp-scythe-06-desc	=A magical staff bearing a blade of pure energy. {scythe-bonus-desc}
+
+wp-scythe-07		=Kamaitachi
+wp-scythe-07-desc	=An exotic weapon designed to rip flesh from bone. {scythe-bonus-desc}
+
+wp-scythe-08		=Day's Harvest
+wp-scythe-08-desc	=This strange weapon inflicts surprisingly deep cuts. {scythe-bonus-desc}
+
+wp-scythe-09		=Reaper
+wp-scythe-09-desc	=This glowing scythe cuts through the darkness to find its prey. {scythe-bonus-desc}
+
+
+; *****************
+; Mace
+wp-mace-00			=Mace
+wp-mace-00-desc		=A wooden cudgel to break bones.
+
+wp-mace-01			=Thumper
+wp-mace-01-desc		=A lightweight morningstar.
+
+wp-mace-02			={mat-silver-cap} Mace
+wp-mace-02-desc		=A mace inscribed with {mat-silver} runes granting resistance against poison.
+
+wp-mace-03			=Battlemace
+wp-mace-03-desc		=A spiked mace used mainly by soldiers.
+
+wp-mace-04			=Energy Mace
+wp-mace-04-desc		=A mace glowing with mystical power.
+
+wp-mace-05			={mat-mythril-cap} Mace
+wp-mace-05-desc		=A {mat-mythril} mace able to crush enemy magicks.
+
+wp-mace-06			=Holy Mace
+wp-mace-06-desc		=A blessed mace destined to obliterate evil.
+
+wp-mace-07			=Goedendag
+wp-mace-07-desc		=A spiked club to ensure your enemies don't have a great day.
+
+wp-mace-08			=Pernach
+wp-mace-08-desc		=A flanged mace to smash through heavy armor and defensive enchantments.
+
+wp-mace-09			=Skullcrusher
+wp-mace-09-desc		=A vicious morningstar with particularly sharp spikes.
+
+wp-mace-10			=God's Messenger
+wp-mace-10-desc		=A glorious scepter, lighter than a feather.
+
+
+; *****************
+; Maul
+wp-maul-00		=Maul
+wp-maul-00-desc	=A heavy mining hammer.
+
+wp-maul-01		=Sledge
+wp-maul-01-desc	=A blacksmith's favorite tool.
+
+wp-maul-02		={mat-silver-cap} Maul
+wp-maul-02-desc	=A maul of solid {mat-silver}.
+
+wp-maul-03		=High Striker
+wp-maul-03-desc	=A regal hammer used only by the strongest combatants.
+
+wp-maul-04		={mat-mythril-cap} Maul
+wp-maul-04-desc	=A {mat-mythril} hammer used to forge other {mat-mythril} weapons.
+
+wp-maul-05		=Gada
+wp-maul-05-desc	=A blunt spherical mace used by ancient warriors.
+
+wp-maul-06		=Pestilence
+wp-maul-06-desc	=A weapon imbued with many curses.
+
+wp-maul-07		=Clockwork Hammer
+wp-maul-07-desc	=A curious hammer enhanced by a mysterious mechanism.
+
+wp-maul-08		=Flattener
+wp-maul-08-desc	=An oversized executioner's maul.
+
+wp-maul-09		=Bonecrusher
+wp-maul-09-desc	=A gigantic hammer made from the bones of a god.
+
+
+; *****************
+; Gun
+wp-gun-00		=Flintlock
+wp-gun-00-desc	=A primitive but efficient firearm.
+
+wp-gun-01		=Boomstick
+wp-gun-01-desc	=It's got a walnut stock, cobalt blue {mat-steel}, and a hair trigger.
+
+wp-gun-02		={mat-silver-cap} Gun
+wp-gun-02-desc	=A modern weapon for the modern wizard.
+
+wp-gun-03		=Nail Gun
+wp-gun-03-desc	=A specialty weapon to nail enemies to the ground.
+
+wp-gun-04		=Hand Cannon
+wp-gun-04-desc	=A ridiculously large handgun for men with something to prove.
+
+wp-gun-05		={mat-mythril-cap} Gun
+wp-gun-05-desc	=A {mat-mythril} revolver able to shoot spells down.
+
+wp-gun-06		=Long Barrel
+wp-gun-06-desc	=The long-barreled pistol of a crime lord.
+
+wp-gun-07		=Banshee
+wp-gun-07-desc	=A handgun with a particularly loud report.
+
+wp-gun-08		=Hell Muzzle
+wp-gun-08-desc	=An extremely powerful revolver but with a lower effective range.
+
+wp-gun-09		=Infinity
+wp-gun-09-desc	=A sharpshooter's weapon with extreme range.
+
+
+; *****************
+; Bow
+wp-bow-00		=Shortbow
+wp-bow-00-desc	=A horseman's bow.
+
+wp-bow-01		=Longbow
+wp-bow-01-desc	=A yew bow as tall as a man.
+
+wp-bow-02		={mat-silver-cap} Bow
+wp-bow-02-desc	=A bow etched with {mat-silver} engravings, humming with magical power.
+
+wp-bow-03		=Composite Bow
+wp-bow-03-desc	=A powerful bow made of horn and wood.
+
+wp-bow-04		={mat-mythril-cap} Bow
+wp-bow-04-desc	=A {mat-mythril} bow that wards off enemy magic.
+
+wp-bow-05		=Mach Bow
+wp-bow-05-desc	=A light bow with an amazing rate of fire.
+
+wp-bow-06		=True Flight
+wp-bow-06-desc	=An enchanted recurve bow able to shoot almost as far as a gun.
+
+wp-bow-07		=Warbow
+wp-bow-07-desc	=A military bow for elite archers.
+
+wp-bow-08		=Yoichi Bow
+wp-bow-08-desc	=A bow that uses barbed arrows to inflict horrible wounds.
+
+wp-bow-09		=Dominance
+wp-bow-09-desc	=A fearsome weapon with arrows that always seek the heart.
+
+
+; *****************
+; Crossbow
+wp-crossbow-extra=(+{accbonus} accuracy)
+wp-crossbow-00		=Crossbow
+wp-crossbow-00-desc	=A simple hunting weapon {wp-crossbow-extra}.
+
+wp-crossbow-01		=Heavy Crossbow
+wp-crossbow-01-desc	=A crank-operated battle crossbow {wp-crossbow-extra}.
+
+wp-crossbow-02		=Ice Crossbow
+wp-crossbow-02-desc	=A magical crossbow that shoots icicles {wp-crossbow-extra}.
+
+wp-crossbow-03		={mat-silver-cap} Crossbow
+wp-crossbow-03-desc	=A heavy crossbow with {mat-silver} inlays {wp-crossbow-extra}.
+
+wp-crossbow-04		=Fire Crossbow
+wp-crossbow-04-desc	=A light crossbow with bolts that turn into meteors {wp-crossbow-extra}.
+
+wp-crossbow-05		=Auto Crossbow
+wp-crossbow-05-desc	=The trademark weapon of an ancient king, it fires a volley of bolts {wp-crossbow-extra}.
+
+wp-crossbow-06		={mat-mythril-cap} Crossbow
+wp-crossbow-06-desc	=A {mat-mythril} crossbow that protects against baneful magic {wp-crossbow-extra}.
+
+wp-crossbow-07		=Earth Crossbow
+wp-crossbow-07-desc	=A light crossbow that fires hard granite bolts {wp-crossbow-extra}.
+
+wp-crossbow-08		=Thunder Crossbow
+wp-crossbow-08-desc	=A crossbow that shoots lightning bolts {wp-crossbow-extra}.
+
+wp-crossbow-09		=Quarreller
+wp-crossbow-09-desc	=An {mat-ebony} crossbow with bolts that drive their target insane {wp-crossbow-extra}.
+
+wp-crossbow-10		=Aerolus
+wp-crossbow-10-desc	=A crossbow made entirely of {mat-steel}, granting it unrivaled power {wp-crossbow-extra}.
+
+wp-crossbow-11		=William's
+wp-crossbow-11-desc	=A marksman's weapon with unbelievable accuracy {wp-crossbow-extra}.
+
+
+; *****************
+; Staff
+wp-staff-extra		=(Increases the range of Ranged {spells} by 1.)
+
+wp-staff-00			=Wood Staff
+wp-staff-00-desc	=Just a regular wooden stick.
+
+wp-staff-01			=White Staff
+wp-staff-01-desc	=A staff carved out of pure alabaster, blessed by a very vocal priest. {wp-staff-extra}
+
+wp-staff-02			={mat-silver-cap} Staff
+wp-staff-02-desc	=A straight staff with a {mat-silver} headpiece. {wp-staff-extra}
+
+wp-staff-03			=Healing Staff
+wp-staff-03-desc	=A staff that heals wounds with a mere touch. {wp-staff-extra}
+
+wp-staff-04			=Heavy Staff
+wp-staff-04-desc	=An ornate quarterstaff. {wp-staff-extra}
+
+wp-staff-05			={mat-mythril-cap} Staff
+wp-staff-05-desc	=A staff forged out of {mat-mythril} to manipulate magical forces. {wp-staff-extra}
+
+wp-staff-06			={mat-gold-cap} Staff
+wp-staff-06-desc	=A gaudy staff with {mat-golden} decorations. {wp-staff-extra}
+
+wp-staff-07			=Black Staff
+wp-staff-07-desc	=A charred wood staff of unknown origin. {wp-staff-extra}
+
+wp-staff-08			=Gatekeeper
+wp-staff-08-desc	=The staff of office of the warden of the underworld. {wp-staff-extra}
+
+wp-staff-09			=Maligenii
+wp-staff-09-desc	=The preferred implement of archmages. {wp-staff-extra}
+
+wp-staff-10			=Godsleg
+wp-staff-10-desc	=Carved out of the femur of a forgotten god. {wp-staff-extra}
+
+
+; *****************
+; Rod
+wp-rod-00		=Rod
+wp-rod-00-desc	=A yard-long brass pole.
+
+wp-rod-01		=Ancient Rod
+wp-rod-01-desc	=The scepter of a long-dead emperor.
+
+wp-rod-02		={mat-silver-cap} Rod
+wp-rod-02-desc	=A thick {mat-silver} wand.
+
+wp-rod-03		=Water Rod
+wp-rod-03-desc	=A rod decorated with deep blue sapphires, said to bolster one's {element-water-icon}{element-water} affinity.
+
+wp-rod-04		=Fire Rod
+wp-rod-04-desc	=A rod adorned with blood-red rubies, said to bolster one's {element-fire-icon}{element-fire} affinity.
+
+wp-rod-05		=Earth Rod
+wp-rod-05-desc	=A rod studded with shards of marble, said to bolster one's {element-earth-icon}{element-earth} affinity.
+
+wp-rod-06		=Thunder Rod
+wp-rod-06-desc	=A rod covered in yellow topaz, said to bolster one's {element-thunder-icon}{element-thunder} affinity.
+
+wp-rod-07		={mat-mythril-cap} Rod
+wp-rod-07-desc	=An elaborate baton forged out of {mat-mythril}.
+
+wp-rod-08		={mat-ebony-cap} Rod
+wp-rod-08-desc	=The scepter of a detested tyrant, said to bolster one's {element-dark-icon}{element-dark} affinity.
+
+wp-rod-09		=Jeweled Rod
+wp-rod-09-desc	=A {mat-golden} rod topped with a fist-sized diamond.
+
+wp-rod-10		=Heavy Rod
+wp-rod-10-desc	=A thick baton of solid {mat-steel}, heavier than many maces.
+
+wp-rod-11		=Glacier Rod
+wp-rod-11-desc	=A shard of sapphire decorated with snowflake carvings.
+
+wp-rod-12		=Blazing Rod
+wp-rod-12-desc	=Liquid magma kept in scepter form by complex alchemical processes.
+
+wp-rod-13		=Quake Rod
+wp-rod-13-desc	=A delicate marble scepter, much heavier than it should be.
+
+wp-rod-14		=Surge Rod
+wp-rod-14-desc	=A lightning rod still crackling with the power of a summer storm.
+
+wp-rod-15		=Void Rod
+wp-rod-15-desc	=A scepter enameled with regal colors.
+
+wp-rod-16		=Prism Rod
+wp-rod-16-desc	=A rod of solid {mat-gold}, with a headpiece assembled out of all sorts of gems.
