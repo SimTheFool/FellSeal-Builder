@@ -184,7 +184,7 @@ const SkillDetail = ({
     const originSkill = skill.hash ? skillsByHash?.[skill.hash] : undefined;
     const finalSkill = originSkill?.likeHash
       ? skillsByHash?.[originSkill?.likeHash]
-      : skill;
+      : originSkill;
     return finalSkill;
   }, [skillsByHash, skill]);
   return (
@@ -229,7 +229,10 @@ const SkillDetail = ({
           textAlign: "center",
         })}
       >
-        {finalSkill && t(finalSkill?.description)}
+        {finalSkill &&
+          t(finalSkill?.description, {
+            ...skill,
+          })}
       </Box>
     </Box>
   );

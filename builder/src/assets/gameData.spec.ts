@@ -12,6 +12,9 @@ test("should get skills", (t) => {
 
   const lichA1 = skills_gamedata.find((s) => s.hash === "lich-a1");
   assert.equal(lichA1?.likeHash, "anat-a1");
+
+  const mercP2 = skills_gamedata.find((s) => s.hash === "merc-p2");
+  assert.equal(mercP2?.power, "25");
 });
 
 test("should get jobs", (t) => {

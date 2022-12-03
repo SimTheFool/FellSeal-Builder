@@ -20,6 +20,10 @@ test("should get all fr translations", (t) => {
 });
 
 test("should get all en translations", (t) => {
+  assert.equal(
+    en["merc-p2-desc"],
+    "$t(increase-character-opener) base maximum $t(hp) value by {{power}}%."
+  );
   assert.equal(en["knig-p1"], "No Flank");
   assert.equal(en["knig-a7"], "One for All");
   assert.equal(
