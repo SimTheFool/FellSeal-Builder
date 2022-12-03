@@ -9,6 +9,7 @@ import {
 import { characters, characters as fakeCharacters } from "@fixtures/characters";
 import { testDb } from "@utils/infra/testDb.js";
 import { newAppResult } from "@utils/result/Result.js";
+import { importJobsAndSkills } from "assets/importGameData";
 import { v4 as uuid } from "uuid";
 import jobsGameData from "../../assets/gameData/jobs.gdata";
 import skillsGameData from "../../assets/gameData/skills.gdata";
@@ -61,40 +62,7 @@ const migrate = () => {
     ...c,
   }));
 
-  const skillsByHash = skillsGameData.reduce((acc, skill) => {
-    const { hash } = skill;
-    return {
-      ...acc,
-      [hash]: skill,
-    };
-  }, {} as Record<Skill["hash"], Skill>);
-
-  const jobs: Job[] = jobsGameData.map((job) => {
-    const { actives, passives, counters } = job.skills.reduce(
-      (acc, hash) => {
-        const skill = skillsByHash[hash];
-        const skillTypeLabel = `${skill.type}s` as `${Skill["type"]}s`;
-        return {
-          ...acc,
-          [skillTypeLabel]: [...acc[skillTypeLabel], skill],
-        };
-      },
-      { actives: [], passives: [], counters: [] } as {
-        actives: ActiveSkill[];
-        passives: PassiveSkill[];
-        counters: CounterSkill[];
-      }
-    );
-
-    return {
-      ...job,
-      actives,
-      passives,
-      counters,
-    };
-  });
-
-  testDb.jobs = jobs;
+  testDb.jobs = importJobsAndSkills();
 
   testDb.translations = {
     fr: {
