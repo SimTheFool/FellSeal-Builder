@@ -19,7 +19,10 @@ export default {
         .replace(/^([^=]*)$/gm, "") // Remove non trads line
         .replace(/([\r\s\n]+)$/g, "") // Delete final empty lines
         .replace(/"/g, '\\"') // Escape double quote
-        .replace(/({(power|power2)})/g, "{$1}") // put i18n format for interpolation translation
+        .replace(
+          /({(power|power2|power3|powerratio|power2ratio|power3ratio)})/g,
+          "{$1}"
+        ) // put i18n format for interpolation translation
         .replace(/(?!{)?{([A-Za-z0-9-]*)}(?!})/g, "$t($1)") // put i18n format for recursive translations
         .replace(/[;\s]*([A-Za-z0-9-]+)[;\s]*=((?!").+)/gm, '\n"$1": "$2",') // Parse to json string
         .replace(/([A-Za-z]+-[A-Za-z0-9-]*)/g, (x) => x.toLowerCase()) // replace uppercased keys
