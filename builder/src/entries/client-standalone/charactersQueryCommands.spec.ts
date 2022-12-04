@@ -132,7 +132,6 @@ test("should delete character from id", async (t) => {
 });
 
 test("should patch character from id", async (t) => {
-  t.runOnly(true);
   const idToPatch = "001" as Character["id"];
   const { queries, commands } = newClient();
   const waitForRefetch1 = waitForOccurence(queries, 1);
@@ -146,3 +145,14 @@ test("should patch character from id", async (t) => {
   assert.equal(found?.name, "Docto");
   assert.equal(found?.ability, "assa");
 });
+
+/* test("should create standard character", async (t) => {
+  const { queries, commands } = newClient();
+  const waitForRefetch1 = waitForOccurence(queries, 1);
+  commands.addNewStandardCharacter();
+  const characters = await waitForRefetch1;
+
+  const found = characters.find((c) => c.type === "standard");
+  assert.ok(found !== undefined);
+});
+ */

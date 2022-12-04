@@ -26,17 +26,17 @@ type SkillInputProps = {
 export const PassivesSkillInput = (
   props: Omit<SkillInputProps, "options" | "maxOptions" | "maxOptionMessage">
 ) => {
-  const { jobs } = useBuilder();
+  const { standardJobs } = useBuilder();
   const passivesOptions = useMemo(
     () =>
-      jobs &&
-      Object.values(jobs).flatMap(({ passives, ...job }) =>
+      standardJobs &&
+      Object.values(standardJobs).flatMap(({ passives, ...job }) =>
         passives.map((passive) => ({
           ...passive,
           jobHash: job.hash,
         }))
       ),
-    [jobs]
+    [standardJobs]
   );
 
   const maxOptionsMessage = (max: number, current: number): ReactNode => (
@@ -63,17 +63,17 @@ export const PassivesSkillInput = (
 export const CounterSkillInput = (
   props: Omit<SkillInputProps, "options" | "maxOptions" | "maxOptionMessage">
 ) => {
-  const { jobs } = useBuilder();
+  const { standardJobs } = useBuilder();
   const counterOptions = useMemo(
     () =>
-      jobs &&
-      Object.values(jobs).flatMap(({ counters, ...job }) =>
+      standardJobs &&
+      Object.values(standardJobs).flatMap(({ counters, ...job }) =>
         counters.map((counter) => ({
           ...counter,
           jobHash: job.hash,
         }))
       ),
-    [jobs]
+    [standardJobs]
   );
 
   const maxOptionsMessage = useCallback(

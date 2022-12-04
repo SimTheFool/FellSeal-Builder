@@ -39,7 +39,7 @@ export const JobInput = ({
   const changeAbility = (newAbility: CharacterAbility) =>
     setValue({ job: newAbility === job ? ability : job, ability: newAbility });
 
-  const { jobs } = useBuilder();
+  const { standardJobs } = useBuilder();
   const [inspectedhash, setInspectedHash] = useState(job);
 
   useEffect(() => {
@@ -82,7 +82,7 @@ export const JobInput = ({
             flexWrap: enoughHeight ? "wrap" : "nowrap",
           })}
         >
-          {jobs?.map(({ hash, title }) => (
+          {standardJobs?.map(({ hash, title }) => (
             <JobOption
               id={hash}
               title={title}

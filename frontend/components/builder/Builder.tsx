@@ -24,6 +24,7 @@ type BuilderContext = {
   jobsByHash?: Record<Job["hash"], Job>;
   skillsByHash?: Record<Skill["hash"], Skill>;
   jobs?: Job[];
+  standardJobs?: Job[];
   jobsError?: AppErrors<string>;
 };
 const builderContext = createContext<BuilderContext>({});
@@ -44,12 +45,14 @@ export const BuilderProvider = ({ children }: { children: JSX.Element }) => {
   );
 
   const [jobs, jobsError] = useBuilderQuery(queries.getAllJobs)();
-
+  const [standardJobs, standardJobsError] = useBuilderQuery(queries.getJobs)([
+    "character",
+    "story",
+    "badge",
+  ]);
   const jobsByHash = useMemo(() => jobs && keyBy(jobs, (j) => j.hash), [jobs]);
 
   const [skills, skillsError] = useBuilderQuery(queries.getAllSkills)();
-
-  console.log(skills?.find((s) => s.hash === "lord-p1"));
 
   const skillsByHash = useMemo(
     () => skills && keyBy(skills, (s) => s.hash),
@@ -74,6 +77,7 @@ export const BuilderProvider = ({ children }: { children: JSX.Element }) => {
         charactersError,
         jobsByHash,
         jobs,
+        standardJobs,
         jobsError,
         skillsByHash,
       }}
