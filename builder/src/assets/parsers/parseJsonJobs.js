@@ -4,15 +4,21 @@ export default (jsonJobs) => {
     const hash = j.ClassName.toLowerCase();
 
     const jobType =
-      j.PlayerJob === false
+      j.trueMonsterClass === true
         ? "monster"
+        : j.variantClass === true
+        ? "monsterVariant"
         : j.ClassName.match(/^.*-99$/)
         ? "bzil"
-        : j.noVicariousGiven === true && j.OnlyForNonStory === true
+        : j.PlayerJob !== false &&
+          j.noVicariousGiven === true &&
+          j.OnlyForNonStory === true
         ? "badge"
-        : j.noVicariousGiven === true
+        : j.PlayerJob !== false && j.noVicariousGiven === true
         ? "story"
-        : "character";
+        : j.PlayerJob !== false
+        ? "character"
+        : "n/a";
 
     const skillHashes = j?.learnables
       ? j?.learnables.Tier.flatMap((t) => t.SkillTile).flatMap(
@@ -28,5 +34,5 @@ export default (jsonJobs) => {
       skills: skillHashes.map((s) => s.toLowerCase()),
     };
   });
-  return jobs;
+  return jobs.filter((j) => j.type !== "n/a");
 };

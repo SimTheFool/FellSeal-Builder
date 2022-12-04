@@ -11,7 +11,13 @@ export type Job = {
   type: JobType;
 };
 
-export type JobType = "character" | "story" | "badge" | "bzil" | "monster";
+export type JobType =
+  | "character"
+  | "story"
+  | "badge"
+  | "bzil"
+  | "monster"
+  | "monsterVariant";
 
 export const newJob = (
   hash: string,

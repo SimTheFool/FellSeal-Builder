@@ -1,7 +1,9 @@
 import assert from "node:assert";
 import test from "node:test";
 import jobs_gamedata from "./gameData/jobs.gdata";
+import dlc_jobs_gamedata from "./gameData/dlc-jobs.gdata";
 import skills_gamedata from "./gameData/skills.gdata";
+import dlc_skills_gamedata from "./gameData/dlc-skills.gdata";
 
 test("should get skills", (t) => {
   const knigA1 = skills_gamedata.find((s) => s.hash === "knig-a1");
@@ -37,4 +39,21 @@ test("should get jobs", (t) => {
   assert.ok(knig?.skills.includes("knig-p2"));
   assert.ok(knig?.skills.includes("knig-c1"));
   assert.equal(knig?.type, "character");
+});
+
+test("should get dlc jobs", (t) => {
+  const samu = dlc_jobs_gamedata.find((j) => j.hash === "samu");
+  assert.equal(samu?.hash, "samu");
+  assert.equal(samu?.title, "samu-title");
+  assert.equal(samu?.description, "samu-desc");
+  assert.ok(samu?.skills.includes("samu-a1"));
+  assert.equal(samu?.type, "character");
+});
+
+test("should get dlc skills", (t) => {
+  const samuA1 = dlc_skills_gamedata.find((s) => s.hash === "samu-p1");
+  assert.equal(samuA1?.hash, "samu-p1");
+  assert.equal(samuA1?.name, "samu-p1");
+  assert.equal(samuA1?.description, "samu-p1-desc");
+  assert.equal(samuA1?.type, "passive");
 });

@@ -1,0 +1,2298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XMLJobs Version="1.0.2">
+  <jobs>
+    <Job ClassName="SAMU" WeaponsType="kfSword" ArmorType="kfHeavyArmor kfHeavyHelmet kfShield" BonusEvasion="5" BonusCrit="3" BaseMove="4" BaseJump="2" CanSwim="false" SpeedGrowth="1.03" BaseSpeed="105" Hat="samurai" OutfitM="samuraiarmor" OutfitF="samuraiarmor">
+      <StatsGrowth Values="4.75 3 3.5 3.12" />
+      <HealthGrowth Values="7.5 2" />
+      <BaseStats Values="45 37 35 37" />
+      <HealthBase Values="87 19" />
+      <requirements>
+        <UnlockingRequirement ClassHash="KNIG" Level="5" />
+        <UnlockingRequirement ClassHash="RANG" Level="4" />
+        <UnlockingRequirement ClassHash="SAMU" Level="-3" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>SAMU-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>SAMU-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>SAMU-A4</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>SAMU-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>SAMU-A6</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>SAMU-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>SAMU-A7</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>SAMU-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>SAMU-A8</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="350">
+            <AbilityHash>SAMU-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="300">
+            <AbilityHash>SAMU-A5</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery atk="5" spd="2" crit="2" />
+    </Job>
+    <Job ClassName="WRAN" WeaponsType="kfDagger kfSpear kfBow" ArmorType="kfLightArmor kfLightHelmet kfShield" BonusCrit="2" BaseMove="4" SpeedGrowth="1.17" BaseSpeed="106.67" Hat="coonskin" OutfitM="healer2" OutfitF="healer2">
+      <StatsGrowth Values="3.75 3.75 3.5 3.75" />
+      <HealthGrowth Values="7.5 2" />
+      <BaseStats Values="43 42 39.5 38.5" />
+      <HealthBase Values="80 12" />
+      <requirements>
+        <UnlockingRequirement ClassHash="KNIG" Level="3" />
+        <UnlockingRequirement ClassHash="HEAL" Level="3" />
+        <UnlockingRequirement ClassHash="WRAN" Level="-3" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>WRAN-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>WRAN-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>WRAN-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>WRAN-C1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>WRAN-A6</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>WRAN-A7</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>WRAN-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>WRAN-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>WRAN-P2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>WRAN-A9</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>WRAN-A5</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>WRAN-A8</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="5" mp="5" mnd="2" />
+    </Job>
+    <Job ClassName="BEAS" WeaponsType="kfMaul kfAxe kfMace" ArmorType="kfLightArmor kfHeavyArmor kfLightHelmet kfHeavyHelmet kfShield" BonusEvasion="2" BonusCrit="2" BaseJump="2" CanSwim="false" SpeedGrowth="0.9" BaseSpeed="101.67" Hat="beastmaster" OutfitM="gladiatorarmor" OutfitF="gladiatorarmor">
+      <StatsGrowth Values="3.75 4 3.75 4" />
+      <HealthGrowth Values="8 2.5" />
+      <BaseStats Values="42 43 41.5 42.5" />
+      <HealthBase Values="88 16" />
+      <requirements>
+        <UnlockingRequirement ClassHash="MERC" Level="5" />
+        <UnlockingRequirement ClassHash="RANG" Level="5" />
+        <UnlockingRequirement ClassHash="HEAL" Level="4" />
+        <UnlockingRequirement ClassHash="BEAS" Level="-3" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>BEAS-A15</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>BEAS-P2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>BEAS-A17</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>BEAS-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>BEAS-A20</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>BEAS-C1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>BEAS-A19</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>BEAS-A21</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>BEAS-A16</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="300">
+            <AbilityHash>BEAS-A18</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery mnd="3" def="5" res="5" />
+    </Job>
+    <Job ClassName="VAR-AER" BonusEvasion="2" BaseMove="0" BaseJump="0" CanSwim="false" CanFly="true" SpeedGrowth="0" BaseSpeed="0" variantClass="true" SpawnRestrictions="kfNoJetBoots kfNoLootZotzit" SpawnLevel="16" SpawnStory="24" Hat="AER">
+      <requirements>
+        <UnlockingRequirement ClassHash="BASE" Level="6" />
+        <UnlockingRequirement ClassHash="BADG-10" Level="-1" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>WORK-VARIANTBASE</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>VAR-AER-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-AER-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-AER-P2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-AER-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>VAR-AER-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery atk="3" mnd="3" spd="4" eva="1" />
+    </Job>
+    <Job ClassName="VAR-ALP" BonusEvasion="0" BaseMove="0" BaseJump="0" CanSwim="false" SpeedGrowth="0" BaseSpeed="0" variantClass="true" SpawnLevel="11" Hat="ALP">
+      <StatsGrowth Values="2.5 2.5 2.5 2.5" />
+      <requirements>
+        <UnlockingRequirement ClassHash="BASE" Level="4" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>WORK-VARIANTBASE</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>VAR-ALP-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>VAR-ALP-A1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>VAR-ALP-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-ALP-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>VAR-ALP-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="4" atk="2" def="5" spd="2" crit="2" />
+    </Job>
+    <Job ClassName="VAR-CEL" BonusEvasion="0" BaseMove="0" BaseJump="0" CanSwim="false" SpeedGrowth="0" BaseSpeed="0" variantClass="true" SpawnRestrictions="kfNoLootZotzit kfNoDemons" SpawnLevel="21" Hat="CEL">
+      <VariantImmunities>kfPoison kfBerserk kfCharm</VariantImmunities>
+      <StatsGrowth Values="0 0 0 5" />
+      <requirements>
+        <UnlockingRequirement ClassHash="VAR-AER" Level="3" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>WORK-VARIANTBASE</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-CEL-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-CEL-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-CEL-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>VAR-CEL-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="225">
+            <AbilityHash>VAR-CEL-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery mp="6" atk="4" mnd="4" res="4" holy="5" />
+    </Job>
+    <Job ClassName="VAR-CLO" BonusEvasion="0" BaseMove="0" BaseJump="1" CanSwim="false" SpeedGrowth="0" BaseSpeed="0" variantClass="true" CountAsHealer="1" SpawnLevel="18" Hat="CLO">
+      <StatsGrowth Values="0 5 0 5" />
+      <HealthGrowth Values="7.5 0" />
+      <requirements>
+        <UnlockingRequirement ClassHash="VAR-ALP" Level="4" />
+        <UnlockingRequirement ClassHash="VAR-THO" Level="2" />
+        <UnlockingRequirement ClassHash="GADG" Level="-5" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>WORK-VARIANTBASE</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>VAR-CLO-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-CLO-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-CLO-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-CLO-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>VAR-CLO-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="7" atk="3" def="5" res="3" />
+    </Job>
+    <Job ClassName="VAR-COR" BonusEvasion="0" BaseMove="0" BaseJump="0" CanSwim="false" BaseSpeed="0" variantClass="true" SpawnLevel="21" SpawnStory="15" Hat="COR">
+      <VariantImmunities>kfSleep kfCharm kfSlow</VariantImmunities>
+      <VariantHatFixup data="BLA" />
+      <StatsGrowth Values="5 0 0 0" />
+      <HealthGrowth Values="5 0" />
+      <requirements>
+        <UnlockingRequirement ClassHash="VAR-HRN" Level="3" />
+        <UnlockingRequirement ClassHash="VAR-COR" Level="-3" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>WORK-VARIANTBASE</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>VAR-COR-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-COR-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>VAR-COR-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>VAR-COR-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-COR-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="5" atk="4" mnd="3" dark="3" />
+    </Job>
+    <Job ClassName="VAR-DFT" BonusEvasion="0" BaseMove="0" BaseJump="0" CanSwim="false" SpeedGrowth="5" BaseSpeed="0" variantClass="true" SpawnRestrictions="kfNoLootZotzit kfNoRandom" SpawnLevel="21" Hat="DFT">
+      <VariantSpawnsOn data="HAR,BLA,KAW,MAL,DAA" />
+      <requirements>
+        <UnlockingRequirement ClassHash="VAR-DFT" Level="-3" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>WORK-VARIANTBASE</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>VAR-DFT-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-DFT-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-DFT-P2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>VAR-DFT-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>VAR-DFT-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="3" mp="3" atk="3" mnd="3" spd="3" />
+    </Job>
+    <Job ClassName="VAR-DRE" BonusEvasion="0" BaseMove="0" BaseJump="0" CanSwim="false" SpeedGrowth="0" BaseSpeed="0" variantClass="true" SpawnRestrictions="kfNoLootZotzit kfSpawnsSubRolls" SpawnLevel="20" Hat="DRE">
+      <StatsGrowth Values="2.5 5 2.5 2.5" />
+      <variantAccRestriction data="VAR-DRF,VAR-DRT,VAR-DRW" />
+      <requirements>
+        <UnlockingRequirement ClassHash="VAR-MYS" Level="4" />
+        <UnlockingRequirement ClassHash="VAR-VEN" Level="6" />
+        <UnlockingRequirement ClassHash="BADG-14" Level="-1" />
+        <UnlockingRequirement ClassHash="VAR-DRF" Level="-6" />
+        <UnlockingRequirement ClassHash="VAR-DRT" Level="-6" />
+        <UnlockingRequirement ClassHash="VAR-DRW" Level="-6" />
+        <UnlockingRequirement ClassHash="variant-req-no-drake|var-drake-title" Level="-7" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>WORK-VARIANTBASE</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>VAR-DRE-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-DRE-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-DRE-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>VAR-DRE-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>VAR-DRE-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery atk="4" mnd="4" def="4" res="4" elem="4" />
+    </Job>
+    <Job ClassName="VAR-DRF" BonusEvasion="0" BaseMove="0" BaseJump="0" CanSwim="false" SpeedGrowth="0" BaseSpeed="0" variantClass="true" SpawnRestrictions="kfNoLootZotzit kfSpawnAsSubRoll" SpawnLevel="16" Hat="DRF">
+      <StatsGrowth Values="5 2.5 2.5 2.5" />
+      <variantAccRestriction data="VAR-DRE,VAR-DRT,VAR-DRW" />
+      <requirements>
+        <UnlockingRequirement ClassHash="VAR-MYS" Level="4" />
+        <UnlockingRequirement ClassHash="VAR-VEN" Level="6" />
+        <UnlockingRequirement ClassHash="BADG-14" Level="-1" />
+        <UnlockingRequirement ClassHash="VAR-DRE" Level="-6" />
+        <UnlockingRequirement ClassHash="VAR-DRT" Level="-6" />
+        <UnlockingRequirement ClassHash="VAR-DRW" Level="-6" />
+        <UnlockingRequirement ClassHash="variant-req-no-drake|var-drake-title" Level="-7" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>WORK-VARIANTBASE</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>VAR-DRF-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-DRF-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-DRF-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>VAR-DRF-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>VAR-DRF-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery atk="4" mnd="4" def="4" res="4" elem="4" />
+    </Job>
+    <Job ClassName="VAR-DRT" BonusEvasion="0" BaseMove="0" BaseJump="0" CanSwim="false" SpeedGrowth="0" BaseSpeed="0" variantClass="true" SpawnRestrictions="kfNoLootZotzit kfSpawnAsSubRoll" SpawnLevel="16" Hat="DRT">
+      <StatsGrowth Values="2.5 2.5 5 2.5" />
+      <variantAccRestriction data="VAR-DRE,VAR-DRF,VAR-DRW" />
+      <requirements>
+        <UnlockingRequirement ClassHash="VAR-MYS" Level="4" />
+        <UnlockingRequirement ClassHash="VAR-VEN" Level="6" />
+        <UnlockingRequirement ClassHash="BADG-14" Level="-1" />
+        <UnlockingRequirement ClassHash="VAR-DRE" Level="-6" />
+        <UnlockingRequirement ClassHash="VAR-DRF" Level="-6" />
+        <UnlockingRequirement ClassHash="VAR-DRW" Level="-6" />
+        <UnlockingRequirement ClassHash="variant-req-no-drake|var-drake-title" Level="-7" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>WORK-VARIANTBASE</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>VAR-DRT-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-DRT-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-DRT-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>VAR-DRT-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>VAR-DRT-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery atk="4" mnd="4" def="4" res="4" elem="4" />
+    </Job>
+    <Job ClassName="VAR-DRW" BonusEvasion="0" BaseMove="0" BaseJump="0" CanSwim="false" SpeedGrowth="0" BaseSpeed="0" variantClass="true" SpawnRestrictions="kfNoLootZotzit kfSpawnAsSubRoll" SpawnLevel="16" Hat="DRW">
+      <StatsGrowth Values="2.5 2.5 2.5 5" />
+      <variantAccRestriction data="VAR-DRE,VAR-DRF,VAR-DRT" />
+      <requirements>
+        <UnlockingRequirement ClassHash="VAR-MYS" Level="4" />
+        <UnlockingRequirement ClassHash="VAR-VEN" Level="6" />
+        <UnlockingRequirement ClassHash="BADG-14" Level="-1" />
+        <UnlockingRequirement ClassHash="VAR-DRE" Level="-6" />
+        <UnlockingRequirement ClassHash="VAR-DRF" Level="-6" />
+        <UnlockingRequirement ClassHash="VAR-DRT" Level="-6" />
+        <UnlockingRequirement ClassHash="variant-req-no-drake|var-drake-title" Level="-7" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>WORK-VARIANTBASE</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>VAR-DRW-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-DRW-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-DRW-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>VAR-DRW-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>VAR-DRW-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery atk="4" mnd="4" def="4" res="4" elem="4" />
+    </Job>
+    <Job ClassName="VAR-FEL" BonusEvasion="0" BaseMove="0" BaseJump="0" CanSwim="false" VariantSpriteLock="true" SpeedGrowth="5" BaseSpeed="0" variantClass="true" SpawnRestrictions="kfNoLootZotzit kfNoRandom" SpawnLevel="90" Hat="FEL">
+      <StatsGrowth Values="5 5 5 5" />
+      <HealthGrowth Values="5 5" />
+      <requirements>
+        <UnlockingRequirement ClassHash="VAR-TYR" Level="4" />
+        <UnlockingRequirement ClassHash="VAR-SHA" Level="4" />
+        <UnlockingRequirement ClassHash="VAR-COR" Level="4" />
+        <UnlockingRequirement ClassHash="BADG-13" Level="-1" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>WORK-VARIANTBASE</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>VAR-FEL-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>VAR-FEL-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>VAR-FEL-A1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="300">
+            <AbilityHash>VAR-FEL-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="350">
+            <AbilityHash>VAR-FEL-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="4" atk="5" mnd="5" />
+    </Job>
+    <Job ClassName="VAR-FER" BonusEvasion="0" BaseMove="0" BaseJump="0" CanSwim="false" SpeedGrowth="0" BaseSpeed="0" variantClass="true" SpawnLevel="14" Hat="FER">
+      <StatsGrowth Values="7.5 0 0 0" />
+      <requirements>
+        <UnlockingRequirement ClassHash="BASE" Level="6" />
+        <UnlockingRequirement ClassHash="BADG-08" Level="-1" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>WORK-VARIANTBASE</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>VAR-FER-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>VAR-FER-C1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-FER-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>VAR-FER-A1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-FER-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="5" atk="5" mnd="3" />
+    </Job>
+    <Job ClassName="VAR-GUA" BonusEvasion="0" BaseMove="0" BaseJump="0" CanSwim="false" SpeedGrowth="0" BaseSpeed="0" variantClass="true" SpawnLevel="7" Hat="GUA">
+      <VariantImmunities>kfBerserk kfCharm</VariantImmunities>
+      <StatsGrowth Values="0 5 0 5" />
+      <requirements>
+        <UnlockingRequirement ClassHash="BASE" Level="5" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>WORK-VARIANTBASE</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>VAR-GUA-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-GUA-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-GUA-P2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-GUA-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>VAR-GUA-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="9" def="5" res="4" elem="2" />
+    </Job>
+    <Job ClassName="VAR-HRN" BonusEvasion="0" BaseMove="0" BaseJump="0" CanSwim="false" SpeedGrowth="0" BaseSpeed="0" variantClass="true" SpawnLevel="17" Hat="HRN">
+      <StatsGrowth Values="7.5 0 0 0" />
+      <requirements>
+        <UnlockingRequirement ClassHash="VAR-FER" Level="4" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>WORK-VARIANTBASE</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>VAR-HRN-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-HRN-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-HRN-P2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-HRN-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>VAR-HRN-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="5" atk="3" def="5" res="2" crit="3" />
+    </Job>
+    <Job ClassName="VAR-MYC" BonusEvasion="0" BaseMove="0" BaseJump="0" CanSwim="false" SpeedGrowth="0" BaseSpeed="0" variantClass="true" SpawnLevel="16" Hat="MYC">
+      <VariantImmunities>kfPoison kfBleed</VariantImmunities>
+      <StatsGrowth Values="0 0 7.5 7.5" />
+      <HealthGrowth Values="5 0" />
+      <requirements>
+        <UnlockingRequirement ClassHash="VAR-SKE" Level="4" />
+        <UnlockingRequirement ClassHash="VAR-VEN" Level="3" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>WORK-VARIANTBASE</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>VAR-MYC-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>VAR-MYC-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-MYC-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-MYC-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>VAR-MYC-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery mnd="6" def="5" spd="3" />
+    </Job>
+    <Job ClassName="VAR-MYS" BonusEvasion="0" BaseMove="0" BaseJump="0" CanSwim="false" SpeedGrowth="0" BaseSpeed="0" variantClass="true" SpawnLevel="10" Hat="MYS">
+      <StatsGrowth Values="0 0 7.5 0" />
+      <requirements>
+        <UnlockingRequirement ClassHash="VAR-GUA" Level="4" />
+        <UnlockingRequirement ClassHash="VAR-SYL" Level="3" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>WORK-VARIANTBASE</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>VAR-MYS-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-MYS-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>VAR-MYS-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>VAR-MYS-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>VAR-MYS-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery mp="7" mnd="7" def="3" res="6" holy="2" />
+    </Job>
+    <Job ClassName="VAR-SCO" BonusEvasion="3" BaseMove="0" BaseJump="1" SpeedGrowth="7.5" BaseSpeed="0" variantClass="true" SpawnLevel="7" Hat="SCO">
+      <VariantImmunities>kfRoot</VariantImmunities>
+      <VariantHatFixup data="BLA" />
+      <requirements>
+        <UnlockingRequirement ClassHash="VAR-DFT" Level="4" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>WORK-VARIANTBASE</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>VAR-SCO-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>VAR-SCO-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-SCO-A1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="225">
+            <AbilityHash>VAR-SCO-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-SCO-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery mp="4" atk="3" spd="4" eva="2" />
+    </Job>
+    <Job ClassName="VAR-SHA" BonusEvasion="5" BaseMove="0" BaseJump="0" CanSwim="false" CanShadowStep="true" VariantSprite="2" SpeedGrowth="5" BaseSpeed="0" variantClass="true" SpawnRestrictions="kfNoLootZotzit kfNoRiftWalkers" SpawnLevel="26" SpawnStory="25" Hat="SHA">
+      <VariantImmunities>kfBlind</VariantImmunities>
+      <requirements>
+        <UnlockingRequirement ClassHash="VAR-SCO" Level="3" />
+        <UnlockingRequirement ClassHash="VAR-SKE" Level="3" />
+        <UnlockingRequirement ClassHash="" Level="-8" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>WORK-VARIANTBASE</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>VAR-SHA-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>VAR-SHA-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>VAR-SHA-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>VAR-SHA-P2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>VAR-SHA-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery mp="4" atk="4" def="5" res="4" crit="4" dark="2" />
+    </Job>
+    <Job ClassName="VAR-SKE" BonusEvasion="0" BaseMove="0" BaseJump="0" CanSwim="false" SpeedGrowth="0" BaseSpeed="0" variantClass="true" SpawnRestrictions="kfNoLootZotzit kfNoUndead" SpawnLevel="7" Hat="SKE">
+      <VariantImmunities>kfPoison kfBleed kfSleep kfCharm</VariantImmunities>
+      <VariantHatFixup data="BLA" />
+      <StatsGrowth Values="0 5 0 2.5" />
+      <HealthGrowth Values="10 0" />
+      <requirements>
+        <UnlockingRequirement ClassHash="BASE" Level="4" />
+        <UnlockingRequirement ClassHash="BADG-07" Level="-1" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>WORK-VARIANTBASE</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>VAR-SKE-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>VAR-SKE-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>VAR-SKE-A1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-SKE-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>VAR-SKE-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="6" atk="3" def="4" dark="5" />
+    </Job>
+    <Job ClassName="VAR-SPE" BonusEvasion="5" BaseMove="1" BaseJump="0" CanSwim="false" VariantSprite="1" SpeedGrowth="10" BaseSpeed="0" variantClass="true" SpawnLevel="24" Hat="SPE">
+      <VariantImmunities>kfSlow</VariantImmunities>
+      <requirements>
+        <UnlockingRequirement ClassHash="VAR-DFT" Level="4" />
+        <UnlockingRequirement ClassHash="VAR-FER" Level="3" />
+        <UnlockingRequirement ClassHash="VAR-AER" Level="2" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>WORK-VARIANTBASE</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>VAR-SPE-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-SPE-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-SPE-C1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="225">
+            <AbilityHash>VAR-SPE-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>VAR-SPE-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery atk="2" spd="5" eva="2" />
+    </Job>
+    <Job ClassName="VAR-SYL" BonusEvasion="0" BaseMove="0" BaseJump="0" CanSwim="false" SpeedGrowth="0" BaseSpeed="0" variantClass="true" CountAsHealer="1" SpawnLevel="7" Hat="SYL">
+      <VariantHatFixup data="BLA" />
+      <StatsGrowth Values="0 0 7.5 0" />
+      <HealthGrowth Values="0 7.5" />
+      <requirements>
+        <UnlockingRequirement ClassHash="BASE" Level="5" />
+        <UnlockingRequirement ClassHash="VAR-SYL" Level="-3" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>WORK-VARIANTBASE</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>VAR-SYL-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-SYL-A1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-SYL-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>VAR-SYL-P2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-SYL-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery mp="7" mnd="8" res="6" holy="3" />
+    </Job>
+    <Job ClassName="VAR-THO" BonusEvasion="0" BonusCrit="5" BaseMove="0" BaseJump="0" CanSwim="false" SpeedGrowth="0" BaseSpeed="0" variantClass="true" SpawnLevel="14" Hat="THO">
+      <StatsGrowth Values="0 7.5 0 7.5" />
+      <requirements>
+        <UnlockingRequirement ClassHash="VAR-SYL" Level="3" />
+        <UnlockingRequirement ClassHash="VAR-GUA" Level="3" />
+        <UnlockingRequirement ClassHash="BADG-09" Level="-1" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>WORK-VARIANTBASE</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>VAR-THO-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>VAR-THO-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-THO-P2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-THO-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>VAR-THO-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="5" atk="3" def="4" res="4" elem="3" />
+    </Job>
+    <Job ClassName="VAR-TYR" BonusEvasion="0" BaseMove="0" BaseJump="0" CanSwim="false" SpeedGrowth="0" BaseSpeed="0" variantClass="true" SpawnLevel="28" Hat="TYR">
+      <VariantHatFixup data="BLA" />
+      <StatsGrowth Values="7.5 0 5 0" />
+      <HealthGrowth Values="10 0" />
+      <requirements>
+        <UnlockingRequirement ClassHash="VAR-ALP" Level="6" />
+        <UnlockingRequirement ClassHash="VAR-SCO" Level="4" />
+        <UnlockingRequirement ClassHash="BADG-11" Level="-1" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>WORK-VARIANTBASE</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-TYR-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-TYR-C1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-TYR-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-TYR-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>VAR-TYR-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="6" atk="3" mnd="3" crit="3" />
+    </Job>
+    <Job ClassName="VAR-WRD" BonusEvasion="0" BaseMove="0" BaseJump="0" CanSwim="false" SpeedGrowth="0" BaseSpeed="0" variantClass="true" CountAsHealer="1.25" SpawnLevel="26" Hat="WRD">
+      <VariantImmunities>kfWeaken</VariantImmunities>
+      <StatsGrowth Values="0 7.5 10 7.5" />
+      <HealthGrowth Values="7.5 0" />
+      <requirements>
+        <UnlockingRequirement ClassHash="VAR-MYC" Level="4" />
+        <UnlockingRequirement ClassHash="VAR-MYS" Level="4" />
+        <UnlockingRequirement ClassHash="BADG-12" Level="-1" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>WORK-VARIANTBASE</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-WRD-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-WRD-C1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>VAR-WRD-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>VAR-WRD-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="400">
+            <AbilityHash>VAR-WRD-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="4" mp="4" mnd="5" res="5" elem="3" />
+    </Job>
+    <Job ClassName="VAR-VEN" BonusEvasion="0" BaseMove="0" BaseJump="0" CanSwim="false" SpeedGrowth="0" BaseSpeed="0" variantClass="true" SpawnLevel="7" Hat="VEN">
+      <VariantImmunities>kfPoison</VariantImmunities>
+      <StatsGrowth Values="2.5 0 0 0" />
+      <requirements>
+        <UnlockingRequirement ClassHash="BASE" Level="4" />
+        <UnlockingRequirement ClassHash="BADG-06" Level="-1" />
+      </requirements>
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>WORK-VARIANTBASE</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>VAR-VEN-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>VAR-VEN-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAR-VEN-P2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>VAR-VEN-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>VAR-VEN-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="5" atk="3" mnd="3" res="3" elem="2" />
+    </Job>
+    <Job ClassName="DAA-98" trueMonsterClass="true" useTextFrom="DAA-01">
+      <trueMonsterExtraPortraits data="Portrait-Monster-ArchafflictorHunt|portraits-hunt-11,Portrait-Monster-ArchafflictorNew|portraits-hunt-11" />
+      <trueMonsterExtraSprites data="ArchafflictorHunt|portraits-hunt-11" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>DAA-98-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>DAA-98-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>DAA-98-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>DAA-98-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>DAA-98-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>DAA-98-A4</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="140">
+            <AbilityHash>DAA-98-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery mp="5" atk="5" mnd="5" res="3" dark="5" />
+    </Job>
+    <Job ClassName="HAR-98" trueMonsterClass="true" useTextFrom="HAR-01">
+      <trueMonsterExtraPortraits data="Portrait-Monster-ArpiaHunt|portraits-hunt-1,Portrait-Monster-ArpiaNew|portraits-hunt-1" />
+      <trueMonsterExtraSprites data="ArpiaHuntHeadless[ArpiaHuntHead|portraits-hunt-1" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>HAR-98-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>HAR-98-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>HAR-98-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>HAR-98-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>HAR-98-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>HAR-98-C1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="225">
+            <AbilityHash>HAR-98-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery atk="3" mnd="3" res="5" spd="3" eva="1" crit="2" />
+    </Job>
+    <Job ClassName="BLA-98" trueMonsterClass="true" useTextFrom="BLA-01">
+      <trueMonsterExtraPortraits data="Portrait-Monster-BlardgerHunt|portraits-hunt-3,Portrait-Monster-BlardgerNew|portraits-hunt-3" />
+      <trueMonsterExtraSprites data="BlardgerHuntEyes[BlardgerHuntHairPiece|portraits-hunt-3" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>BLA-98-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>BLA-98-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>BLA-98-P2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>BLA-98-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>BLA-98-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>BLA-98-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="325">
+            <AbilityHash>BLA-98-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="5" atk="10" def="5" />
+    </Job>
+    <Job ClassName="BUL0-98" trueMonsterClass="true" useTextFrom="BUL-01">
+      <trueMonsterExtraPortraits data="Portrait-Monster-BulldrakePolarHunt|portraits-hunt-7,Portrait-Monster-BulldrakePolarNew|portraits-hunt-7" />
+      <trueMonsterExtraSprites data="bulldrakehunt|portraits-hunt-7" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>BUL0-98-A2</AbilityHash>
+            <AbilityHash>BUL0-98-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>BUL0-98-A1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>BUL0-98-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>BUL0-98-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>BUL0-98-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>BUL0-98-A4</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="300">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="5" mp="5" mnd="5" res="5" elem="5" />
+    </Job>
+    <Job ClassName="BUL1-98" trueMonsterClass="true" useTextFrom="BUL-11">
+      <trueMonsterExtraPortraits data="Portrait-Monster-BulldrakePolarHunt|portraits-hunt-7,Portrait-Monster-BulldrakePolarNew|portraits-hunt-7" />
+      <trueMonsterExtraSprites data="bulldrakehunt|portraits-hunt-7" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>BUL1-98-A2</AbilityHash>
+            <AbilityHash>BUL1-98-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>BUL1-98-A1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>BUL1-98-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>BUL1-98-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>BUL1-98-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>BUL1-98-A4</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="300">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="5" mp="5" mnd="5" res="5" elem="5" />
+    </Job>
+    <Job ClassName="BUL2-98" trueMonsterClass="true" useTextFrom="BUL-21">
+      <trueMonsterExtraPortraits data="Portrait-Monster-BulldrakePolarHunt|portraits-hunt-7,Portrait-Monster-BulldrakePolarNew|portraits-hunt-7" />
+      <trueMonsterExtraSprites data="bulldrakehunt|portraits-hunt-7" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>BUL2-98-A2</AbilityHash>
+            <AbilityHash>BUL2-98-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>BUL2-98-A1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>BUL2-98-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>BUL2-98-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>BUL2-98-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>BUL2-98-A4</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="300">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="5" mp="5" mnd="5" res="5" elem="5" />
+    </Job>
+    <Job ClassName="BUL3-98" trueMonsterClass="true" useTextFrom="BUL-31">
+      <trueMonsterExtraPortraits data="Portrait-Monster-BulldrakePolarHunt|portraits-hunt-7,Portrait-Monster-BulldrakePolarNew|portraits-hunt-7" />
+      <trueMonsterExtraSprites data="bulldrakehunt|portraits-hunt-7" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>BUL3-98-A2</AbilityHash>
+            <AbilityHash>BUL3-98-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>BUL3-98-A1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>BUL3-98-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>BUL3-98-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>BUL3-98-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>BUL3-98-A4</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="300">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="5" mp="5" mnd="5" res="5" elem="5" />
+    </Job>
+    <Job ClassName="BOL-98" trueMonsterClass="true" useTextFrom="BOL-01">
+      <trueMonsterExtraPortraits data="Portrait-Monster-BzzerkHunt|portraits-hunt-2,Portrait-Monster-BzzerkNew|portraits-hunt-2" />
+      <trueMonsterExtraSprites data="BzzerkHunt|portraits-hunt-2" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>BOL-98-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>BOL-98-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>BOL-98-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>BOL-98-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>BOL-98-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>BOL-98-A4</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>BOL-98-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="8" atk="5" def="10" />
+    </Job>
+    <Job ClassName="DAO-98" trueMonsterClass="true" useTextFrom="DAO-01">
+      <trueMonsterExtraPortraits data="Portrait-Monster-DaodrennerHunt|portraits-hunt-5,Portrait-Monster-DaodrennerNew|portraits-hunt-5" />
+      <trueMonsterExtraSprites data="daodrennerhunt|portraits-hunt-5" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>DAO-98-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>DAO-98-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>DAO-98-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>DAO-98-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>DAO-98-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>DAO-98-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>DAO-98-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="5" mp="5" atk="3" mnd="5" res="5" />
+    </Job>
+    <Job ClassName="PHO-98" trueMonsterClass="true" useTextFrom="PHO-01">
+      <trueMonsterExtraPortraits data="Portrait-Monster-ErcineeHunt|portraits-hunt-1,Portrait-Monster-ErcineeNew|portraits-hunt-1" />
+      <trueMonsterExtraSprites data="ercineehunt|portraits-hunt-1" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>PHO-98-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>PHO-98-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>PHO-98-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>PHO-98-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="225">
+            <AbilityHash>PHO-98-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>PHO-98-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>PHO-98-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="5" mp="5" atk="3" mnd="5" holy="5" />
+    </Job>
+    <Job ClassName="HRV-98" trueMonsterClass="true" useTextFrom="HRV-01">
+      <trueMonsterExtraPortraits data="Portrait-Monster-HarvesterHunt|portraits-hunt-11,Portrait-Monster-HarvesterNew|portraits-hunt-11" />
+      <trueMonsterExtraSprites data="harvesterhunt|portraits-hunt-11" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>HRV-98-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>HRV-98-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>HRV-98-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>HRV-98-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>HRV-98-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>HRV-98-A4</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="450">
+            <AbilityHash>HRV-98-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery atk="5" spd="3" crit="2" dark="5" />
+    </Job>
+    <Job ClassName="HHU-98" VariantSpriteMode="1" trueMonsterClass="true" useTextFrom="HHU-01">
+      <trueMonsterExtraPortraits data="Portrait-Monster-Helhund1New|portraits-hunt-10,Portrait-Monster-Helhund2New|portraits-hunt-10,Portrait-Monster-Helhund3New|portraits-hunt-10,Portrait-Monster-Helhund3Hunt|portraits-hunt-10" />
+      <trueMonsterExtraSprites data="HelhundAAHunt|portraits-hunt-10,HelhundABHunt|portraits-hunt-10,HelhundACHunt|portraits-hunt-10" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>HHU-98-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>HHU-98-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>HHU-98-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>HHU-98-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>HHU-98-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>HHU-98-A4</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="300">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>HHU-98-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="10" atk="5" mnd="2" res="3" />
+    </Job>
+    <Job ClassName="KAW-98" trueMonsterClass="true" useTextFrom="KAW-01">
+      <trueMonsterExtraPortraits data="Portrait-Monster-KawaHunt|portraits-hunt-9,Portrait-Monster-KawaNew|portraits-hunt-9" />
+      <trueMonsterExtraSprites data="kawared|,kawahunt|portraits-hunt-9" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>KAW-98-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>KAW-98-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>KAW-98-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>KAW-98-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>KAW-98-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>KAW-98-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>KAW-98-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery mp="5" def="5" res="3" spd="3" eva="3" />
+    </Job>
+    <Job ClassName="MAL-98" trueMonsterClass="true" useTextFrom="MAL-01">
+      <trueMonsterExtraPortraits data="Portrait-Monster-MalcubusHunt|portraits-hunt-4,Portrait-Monster-MalcubusNew|portraits-hunt-4" />
+      <trueMonsterExtraSprites data="malcubushunt|portraits-hunt-4" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>MAL-98-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>MAL-98-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>MAL-98-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>MAL-98-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>MAL-98-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>MAL-98-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="275">
+            <AbilityHash>MAL-98-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery mp="5" mnd="5" res="5" eva="1" dark="5" />
+    </Job>
+    <Job ClassName="NIW-98" trueMonsterClass="true" useTextFrom="NIW-01">
+      <trueMonsterExtraPortraits data="Portrait-Monster-NiwotHunt|portraits-hunt-1,Portrait-Monster-NiwotNew|portraits-hunt-1" />
+      <trueMonsterExtraSprites data="niwothunt|portraits-hunt-1" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>NIW-98-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>NIW-98-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>NIW-98-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>NIW-98-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>NIW-98-A4</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>NIW-98-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="250">
+            <AbilityHash>NIW-98-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery mp="10" mnd="10" def="3" res="3" />
+    </Job>
+    <Job ClassName="PEK0-98" VariantSpriteMode="2" trueMonsterClass="true" useTextFrom="PEK-01">
+      <trueMonsterExtraPortraits data="Portrait-Monster-PektiteWaterHunt|portraits-hunt-8,Portrait-Monster-PektiteWaterNew|portraits-hunt-8" />
+      <trueMonsterExtraSprites data="pektiteWaterHunt|portraits-hunt-8" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>PEK0-98-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>PEK0-98-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>PEK0-98-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>PEK0-98-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>PEK0-98-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>PEK0-98-A4</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>PEK0-98-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery mp="5" mnd="10" res="5" elem="5" />
+    </Job>
+    <Job ClassName="PEK1-98" VariantSpriteMode="2" trueMonsterClass="true" useTextFrom="PEK-11">
+      <trueMonsterExtraPortraits data="Portrait-Monster-PektiteFireHunt|portraits-hunt-8,Portrait-Monster-PektiteFireNew|portraits-hunt-8" />
+      <trueMonsterExtraSprites data="PektiteFireHunt|portraits-hunt-8" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>PEK1-98-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>PEK1-98-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>PEK1-98-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>PEK1-98-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>PEK1-98-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>PEK1-98-A4</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>PEK1-98-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery mp="5" mnd="10" res="5" elem="5" />
+    </Job>
+    <Job ClassName="PEK2-98" VariantSpriteMode="2" trueMonsterClass="true" useTextFrom="PEK-21">
+      <trueMonsterExtraPortraits data="Portrait-Monster-PektiteEarthHunt|portraits-hunt-8,Portrait-Monster-PektiteEarthNew|portraits-hunt-8" />
+      <trueMonsterExtraSprites data="PektiteEarthHunt|portraits-hunt-8" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>PEK2-98-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>PEK2-98-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>PEK2-98-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>PEK2-98-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>PEK2-98-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>PEK2-98-A4</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>PEK2-98-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery mp="5" mnd="10" res="5" elem="5" />
+    </Job>
+    <Job ClassName="PEK3-98" VariantSpriteMode="2" trueMonsterClass="true" useTextFrom="PEK-31">
+      <trueMonsterExtraPortraits data="Portrait-Monster-PektiteLightningHunt|portraits-hunt-8,Portrait-Monster-PektiteLightningNew|portraits-hunt-8" />
+      <trueMonsterExtraSprites data="PektiteLightningHunt|portraits-hunt-8" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>PEK3-98-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>PEK3-98-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>PEK3-98-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>PEK3-98-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>PEK3-98-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>PEK3-98-A4</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>PEK3-98-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery mp="5" mnd="10" res="5" elem="5" />
+    </Job>
+    <Job ClassName="RAK-98" trueMonsterClass="true" useTextFrom="RAK-01">
+      <trueMonsterExtraPortraits data="Portrait-Monster-RakkerjakHunt|portraits-hunt-6,Portrait-Monster-RakkerjakNew|portraits-hunt-6" />
+      <trueMonsterExtraSprites data="RakkerjakHunt|portraits-hunt-6" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>RAK-98-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>RAK-98-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>RAK-98-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>RAK-98-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>RAK-98-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="275">
+            <AbilityHash>RAK-98-A4</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>RAK-98-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery atk="6" spd="4" crit="3" />
+    </Job>
+    <Job ClassName="TAN-98" trueMonsterClass="true" useTextFrom="TAN-01">
+      <trueMonsterExtraPortraits data="Portrait-Monster-TangrelHunt|portraits-hunt-10,Portrait-Monster-TangrelNew|portraits-hunt-10" />
+      <trueMonsterExtraSprites data="TangrelHunt|portraits-hunt-10" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>TAN-98-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>TAN-98-P1</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>TAN-98-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>TAN-98-A3</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>TAN-98-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>TAN-98-P2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>TAN-98-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="8" def="10" res="5" />
+    </Job>
+    <Job ClassName="THE-98" trueMonsterClass="true" useTextFrom="THE-01">
+      <trueMonsterExtraPortraits data="Portrait-Monster-ThervaHunt|portraits-hunt-0,Portrait-Monster-ThervaNew|portraits-hunt-0" />
+      <trueMonsterExtraSprites data="ThervaHunt|portraits-hunt-0" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>THE-98-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>THE-98-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>THE-98-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>THE-98-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>THE-98-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>THE-98-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="225">
+            <AbilityHash>THE-98-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery mp="5" atk="3" mnd="5" res="5" holy="5" />
+    </Job>
+    <Job ClassName="VAN-98" trueMonsterClass="true" useTextFrom="VAN-01">
+      <trueMonsterExtraPortraits data="Portrait-Monster-VangalHunt|portraits-hunt-0,Portrait-Monster-VangalNew|portraits-hunt-0" />
+      <trueMonsterExtraSprites data="VangalHunt|portraits-hunt-0" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>VAN-98-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="125">
+            <AbilityHash>VAN-98-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="175">
+            <AbilityHash>VAN-98-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>VAN-98-A2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>VAN-98-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>VAN-98-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="250">
+            <AbilityHash>VAN-98-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery hp="10" atk="3" spd="2" />
+    </Job>
+    <Job ClassName="ZOT-98" trueMonsterClass="true" useTextFrom="ZOT-01">
+      <trueMonsterExtraPortraits data="Portrait-Monster-ZotzitHunt|portraits-hunt-12,Portrait-Monster-ZotzitNew|portraits-hunt-12" />
+      <trueMonsterExtraSprites data="ZotzitHunt|portraits-hunt-12" />
+      <learnables>
+        <Tier>
+          <SkillTile Cost="0">
+            <AbilityHash>ZOT-98-A1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="150">
+            <AbilityHash>ZOT-98-A2</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="150">
+            <AbilityHash>ZOT-98-C1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="175">
+            <AbilityHash>ZOT-98-A3</AbilityHash>
+          </SkillTile>
+          <SkillTile Cost="200">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="225">
+            <AbilityHash>ZOT-98-A4</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>ZOT-98-P1</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="300">
+            <AbilityHash>WORK-TIERUP</AbilityHash>
+          </SkillTile>
+        </Tier>
+        <Tier>
+          <SkillTile Cost="200">
+            <AbilityHash>ZOT-98-P2</AbilityHash>
+          </SkillTile>
+        </Tier>
+      </learnables>
+      <Mastery atk="5" spd="5" eva="2" />
+    </Job>
+    <Job ClassName="CHI-01" ArmorType="kfNone" BaseMove="0" BaseJump="1.5" CanSwim="false" SpeedGrowth="0.83" BaseSpeed="96.67" PlayerJob="false">
+      <StatsGrowth Values="0.5 3 3 3" />
+      <HealthGrowth Values="4 1" />
+      <BaseStats Values="50 60 60 60" />
+      <HealthBase Values="50 1" />
+    </Job>
+  </jobs>
+</XMLJobs>

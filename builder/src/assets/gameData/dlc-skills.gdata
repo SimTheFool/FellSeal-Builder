@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XMLAbilities>
+  <active>
+    <Ability HashName="SAMU-A4" Name="Spirit Bow" MpCost="6" MinRange="1" Range="5" RangeHeight="10" Power="0.5" DmgSource="kMAtk" SpellType="kSkill" AddNegativeEffects="kfDefDown kfMDefDown" AddNegativeEffectsBaseChance="100" />
+    <Ability HashName="SAMU-A1" Name="Overreach" MpCost="6" MinRange="1" Power="1.2" Element="kWeapon" SpecialEffect="kDefDownSelf" SpecialEffect2="kIsTreatedAsRegularAttack" SpellType="kSkill" />
+    <Ability HashName="SAMU-A2" Name="Meditate" MpCost="8" Range="0" RangeHeight="5" Power2="0.6" Element="kNone" DmgType="kHealing" DmgSource="kMAtk" SpecialEffect="kUsesPower2PerDebuffRemoved" ExtraFlags="kEvasion0Self" RemoveNegativeEffects="kfAll" />
+    <Ability HashName="SAMU-A6" Name="Wind Spirit" MpCost="8" Range="0" ZoneHeight="2" Size="5" Power="0.35" Shape="kCross" SpellType="kSkill" ExtraFlags="kIgnoreSelfAsTarget" AddNegativeEffects="kfCripple" AddNegativeEffectsBaseChance="100" />
+    <Ability HashName="SAMU-A7" Name="Restless Spirit" MpCost="6" MinRange="1" Range="1" RangeHeight="1.5" Power="0.7" SpecialEffect="kIgnoreDefense" SpecialEffect2="kMDefDownSelf" SpellType="kSkill" />
+    <Ability HashName="SAMU-A3" Name="Finisher" MpCost="20" MinRange="1" Power="2.4" Element="kWeapon" SpecialEffect="kAtkDownSelf" SpecialEffect2="kIsTreatedAsRegularAttack" SpellType="kSkill" />
+    <Ability HashName="SAMU-A5" Name="Spirit Sword" MpCost="14" MinRange="1" Range="1" RangeHeight="2" Power="2.6" DmgSource="kMAtk" SpecialEffect="kMAtkDownSelf" SpellType="kSkill" />
+    <Ability HashName="SAMU-A8" Name="Adrenaline" MpCost="4" MinRange="1" Power="0.5" Power3="0.5" SpecialEffect="kBleedSelf" SpecialEffect2="kIsTreatedAsRegularAttack" SpellType="kSkill" ExtraFlags="kGivesQuickTurnFrowPower3" />
+    <Ability HashName="WRAN-A1" Name="Tame" MpCost="6" MinRange="1" Range="1" RangeHeight="2" Power="0.5" Element="kNone" SpecialEffect="kMonsterTame" SpecialEffect2="kPerfectAccuracy" SpellType="kSkill" ExtraFlags="kNoAIUse kNoFF kIgnoreSides kIgnoresCover kOnlyWorksOnMonsters" />
+    <Ability HashName="WRAN-A2" Name="Tag Team" MpCost="16" MinRange="1" Range="3" RangeHeight="2" Element="kNone" DmgType="kHealing" SpecialEffect="kMonsterTagTeam" SpellType="kSkill" ExtraFlags="kNoAIUse kCannotTargetWater kNoFF kOnlyWorksOnMonsters" HasExtraBox="kBenchedMonsters" />
+    <Ability HashName="WRAN-A3" Name="Frenzy!" MpCost="12" MinRange="1" Range="0" RangeHeight="1" Shape="kAllAllies" DmgType="kHealing" SpellType="kSkill" ExtraFlags="kOnlyWorksOnMonsters" RemovePositiveEffects="kfMAtkUp" AddPositiveEffects="kfAtkUp" />
+    <Ability HashName="WRAN-A4" Name="Calm..." MpCost="12" MinRange="1" Range="0" RangeHeight="1" Shape="kAllAllies" DmgType="kHealing" SpellType="kSkill" ExtraFlags="kOnlyWorksOnMonsters" RemovePositiveEffects="kfAtkUp" AddPositiveEffects="kfMAtkUp" />
+    <Ability HashName="WRAN-A5" Name="Attack!" MpCost="12" MinRange="1" Range="0" RangeHeight="1" Shape="kAllAllies" DmgType="kHealing" SpecialEffect="kTriggerAttack" SpellType="kSkill" ExtraFlags="kIgnoreSelfAsTarget kOnlyWorksOnMonsters" />
+    <Ability HashName="WRAN-A6" Name="Heel!" MpCost="8" MinRange="1" Range="4" RangeHeight="4" Power2="1" Power3="2" Element="kNone" SpecialEffect="kTeleportOther" SpecialEffect2="kPerfectAccuracy" ExtraFlags="kNoAIUse kIgnoresCover kIgnoreSmartCast kOnlyWorksOnMonsters" HasExtraBox="kSecondTargetingEmptyGroundNoWater" />
+    <Ability HashName="WRAN-A7" Name="Beast Whisperer" MpCost="16" MinRange="1" Range="3" RangeHeight="2" SpecialEffect2="kMindControl" SpellType="kSkill" ExtraFlags="kOnlyWorksOnMonsters" AddNegativeEffects="kfCharm" AddNegativeEffectsBaseChance="75" />
+    <Ability HashName="WRAN-A8" Name="Quicken Monster" EffectHash="GAMB-A6" MpCost="10" MinRange="1" Range="3" RangeHeight="3" DmgType="kHealing" SpecialEffect="kQuicken" SpellType="kSkill" ExtraFlags="kOnlyWorksOnMonsters" AddNegativeEffects="kfNoQuicken" AddNegativeEffectsBaseChance="100" />
+    <Ability HashName="WRAN-A9" Name="Hunt" MpCost="10" MinRange="1" Power="1.5" Power2="1" Element="kWeapon" SpecialEffect="kDamageReducedToNonMonsters" SpecialEffect2="kIsTreatedAsRegularAttack" SpellType="kSkill" />
+    <Ability HashName="BEAS-A1" Name="Arpia Guttersnipe" MpCost="8" MinRange="1" Range="2" RangeHeight="2" SpecialEffect="kFourthCurrentHealth" SpellType="kNothing" ExtraFlags="kCountsAsDisplacement">
+      <PetEffect PetHash="petarpia" Monster="HAR" Special="kFreshDebuff kBleedBonus" Element="kNone" DmgType="kMagical" DmgSource="kMAtk" AddNegativeEffects="kfPoison" AddNegativeEffectsBaseChance="65" />
+    </Ability>
+    <Ability HashName="BEAS-A2" Name="Blardger Brat" MpCost="8" MinRange="1" Range="1" RangeHeight="1.5" Power="1.3" SpellType="kNothing">
+      <PetEffect PetHash="petblardger" Monster="BLA" Power="0.2" />
+    </Ability>
+    <Ability HashName="BEAS-A3" Name="Bulldrake Pup" MpCost="6" Range="0" RangeHeight="5" ZoneHeight="2" Size="3" Power="0.75" Shape="kSquare" Element="kWater" DmgType="kMagical" DmgSource="kMAtk" SpellType="kNothing" ExtraFlags="kIgnoreSelfAsTarget">
+      <PetEffect PetHash="petbulldrake" Monster="BUL" Special="kSquareShape" Element="kNone" DmgType="kNone" DmgSource="kMAtk" />
+    </Ability>
+    <Ability HashName="BEAS-A4" Name="Bzzerk Grubling" MpCost="8" MinRange="1" Range="1" RangeHeight="2" Power="0.9" SpecialEffect="kDefUpSelf" SpellType="kNothing">
+      <PetEffect PetHash="petbzzerk" Monster="BOL" Power="0.25" DmgSource="kDef" />
+    </Ability>
+    <Ability HashName="BEAS-A5" Name="Daodrenner Kit" MpCost="8" Range="0" RangeHeight="5" ZoneHeight="2" Size="3" Power="0.75" Shape="kCross" Element="kNone" DmgType="kHealing" DmgSource="kMAtk" SpellType="kNothing">
+      <PetEffect PetHash="petdaodrenner" Monster="DAO" Power="0.15" Element="kNone" DmgType="kHealing" DmgSource="kAtkMixed" />
+    </Ability>
+    <Ability HashName="BEAS-A6" Name="Ercinee Kindling" MpCost="8" MinRange="1" Range="3" RangeHeight="3" Power="0.9" Element="kHoly" SpecialEffect="kRenewSelf" SpellType="kNothing">
+      <PetEffect PetHash="petercinee" Monster="PHO" Power="0.2" Element="kNone" DmgType="kHealing" DmgSource="kMAtk" />
+    </Ability>
+    <Ability HashName="BEAS-A7" Name="Helhund Hellion" MpCost="8" MinRange="2" Range="2" RangeHeight="2.5" Power="0.9" PosStyle="kLine" Element="kFire" SpecialEffect="kReversePunt" SpellType="kNothing">
+      <PetEffect PetHash="pethelhund" Monster="HHU" Power="0.15" DmgSource="kAtkMixed" />
+    </Ability>
+    <Ability HashName="BEAS-A8" Name="Niwot Piccolo" MpCost="10" Range="0" RangeHeight="5" ZoneHeight="2.5" Size="3" Power="0.5" Shape="kCross" Element="kNone" DmgType="kHealing" DmgSource="kMAtk" SpellType="kNothing" AddPositiveEffects="kfBarrier">
+      <PetEffect PetHash="petniwot" Monster="NIW" Special="kSummonPet" Element="kNone" DmgType="kNone" DmgSource="kMAtk" />
+    </Ability>
+    <Ability HashName="BEAS-A9" Name="Pektite Dollop" MpCost="8" MinRange="1" Range="2" RangeHeight="5" ZoneHeight="3" Size="3" Power="0.9" Shape="kCross" Element="kThunder" DmgType="kMagical" DmgSource="kMAtk" SpellType="kNothing" ExtraFlags="kIgnoreSelfAsTarget">
+      <PetEffect PetHash="petpektite" Monster="PEK" Power="0.2" Element="kNone" DmgType="kMagical" DmgSource="kMAtk" />
+    </Ability>
+    <Ability HashName="BEAS-A10" Name="Rakkerjak Polliwog" MpCost="8" MinRange="1" Range="1" RangeHeight="5" ZoneHeight="2" Power="0.9" SpecialEffect2="kGrantCritUpToSelf" SpellType="kNothing">
+      <PetEffect PetHash="petrakkerjak" Monster="RAK" Special="kBleedBonus" Element="kEarth" AddNegativeEffects="kfBleed" AddNegativeEffectsBaseChance="65" />
+    </Ability>
+    <Ability HashName="BEAS-A11" Name="Tangrel Puggle" MpCost="8" MinRange="1" Range="1" RangeHeight="2" ZoneHeight="1.5" Size="2" Power="0.65" Shape="kCone" SpellType="kNothing" AddNegativeEffects="kfSlow" AddNegativeEffectsBaseChance="65">
+      <PetEffect PetHash="pettangrel" Monster="TAN" Power="0.15" Element="kNone" DmgSource="kAtkMixed" />
+    </Ability>
+    <Ability HashName="BEAS-A12" Name="Therva Whelp" MpCost="8" MinRange="1" Range="1" RangeHeight="2" Size="3" Power="0.75" Shape="kVLine" Element="kNone" DmgType="kMagical" DmgSource="kMAtk" SpecialEffect="kHealAndDmg" SpellType="kNothing" ExtraFlags="kIgnoreSmartCast">
+      <PetEffect PetHash="pettherva" Monster="THE" Power="5" Special="kIsMpDamage kFixedDamage" Element="kNone" DmgType="kNone" DmgSource="kMAtk" />
+    </Ability>
+    <Ability HashName="BEAS-A13" Name="Vangal Cub" MpCost="6" MinRange="1" Range="1" RangeHeight="5" ZoneHeight="2" Power="0.95" DmgSource="kAtkMixed" SpellType="kNothing">
+      <PetEffect PetHash="petvangal" Monster="VAN" Power="0.17" Element="kNone" DmgType="kHealing" />
+    </Ability>
+    <Ability HashName="BEAS-A14" Name="Zotzit Caltrop" MpCost="8" Range="0" RangeHeight="1.5" Size="3" Power="0.85" Shape="kCross" SpellType="kNothing" ExtraFlags="kIgnoreSelfAsTarget">
+      <PetEffect PetHash="petzotzit" Monster="ZOT" Power="0.18" DmgSource="kAtkMixed" />
+    </Ability>
+    <Ability HashName="BEAS-A15" Name="Dismiss - Heal" MpCost="6" Range="4" RangeHeight="5" Power2="0.65" Element="kNone" DmgType="kHealing" DmgSource="kMAtk" SpecialEffect2="kPetDismissAndDamageUpPerPower2" />
+    <Ability HashName="BEAS-A16" Name="Dismiss - Glomp" MpCost="16" Range="0" RangeHeight="1" Power2="0.35" Shape="kAllAllies" Element="kNone" DmgType="kHealing" DmgSource="kMAtk" SpecialEffect2="kPetDismissAndDamageUpPerPower2" />
+    <Ability HashName="BEAS-A17" Name="Dismiss - Attack" MpCost="8" Range="4" RangeHeight="5" Power2="0.7" SpecialEffect2="kPetDismissAndDamageUpPerPower2" SpellType="kSkill" />
+    <Ability HashName="BEAS-A18" Name="Dismiss - Swarm" MpCost="18" Range="0" RangeHeight="1" Power2="0.45" Shape="kAllEnemies" SpecialEffect2="kPetDismissAndDamageUpPerPower2" SpellType="kSkill" ExtraFlags="kIgnoreSides" />
+    <Ability HashName="BEAS-A19" Name="Dismiss - Revive" MpCost="14" MinRange="1" Range="3" RangeHeight="1" Power2="0.3" Element="kNone" DmgType="kHealing" DmgSource="kMAtk" SpecialEffect="kRevive" SpecialEffect2="kPetDismissAndDamageUpPerPower2" ExtraFlags="kTargetsGround kCannotTargetWater" HasExtraBox="kDeadPeople" />
+    <Ability HashName="BEAS-A20" Name="Dismiss - Empower" MpCost="4" Range="4" RangeHeight="5" Power2="1" Element="kNone" DmgType="kHealing" DmgSource="kMAtk" SpecialEffect="kRandomBuffPerPower2" SpecialEffect2="kPetDismiss" />
+    <Ability HashName="BEAS-A21" Name="Dismiss - Burrow" MpCost="8" MinRange="1" Range="2" RangeHeight="3" Size="3" Power2="0.5" Shape="kSquare" Element="kEarth" SpecialEffect="kRangeUpPerPetDamageUpPerPower2" SpecialEffect2="kPetDismiss" SpellType="kSkill" ExtraFlags="kTargetsGround kIgnoreSelfAsTarget kCannotTargetWater kIgnoreSides kGroundNeedsTarget kStoreDestination" />
+    <Ability HashName="VAR-AER-A1" Name="Swoop" MpCost="8" MinRange="4" Range="4" RangeHeight="5" ZoneHeight="1.5" Size="4" Power="0.8" Shape="kVLineReverse" PosStyle="kLine" SpellType="kSkill" ExtraFlags="kTargetsGround kIgnoreSelfAsTarget kCannotTargetWater kGroundNeedsTarget kStoreDestination" />
+    <Ability HashName="VAR-AER-A2" Name="Whirlwind" MpCost="10" Range="0" RangeHeight="0" ZoneHeight="2" Size="5" Power="0.9" Shape="kCross" Element="kThunder" DmgType="kMagical" DmgSource="kMAtk" SpecialEffect="kDisplaceAllTargetsInRadius" ExtraFlags="kIgnoreSelfAsTarget" />
+    <Ability HashName="VAR-ALP-A1" CopyFrom="MERC-A3" />
+    <Ability HashName="VAR-ALP-A2" CopyFrom="MERC-A4" />
+    <Ability HashName="WORK-VICTORYDANCE" Name="" Range="0" RangeHeight="5" ZoneHeight="2" Size="3" Power2="1" Power3="2" Shape="kCross" Element="kNone" DmgType="kMagical" DmgSource="kMAtk" SpecialEffect="kSmartRandomBuffAndDebuffPerPower2To3" ExtraFlags="kIgnoreSides kIsSystem" AddNegativeEffectsBaseChance="100" />
+    <Ability HashName="VAR-CEL-A1" CopyFrom="MARK-A9" />
+    <Ability HashName="VAR-CEL-A2" Name="White Blade" MpCost="14" MinRange="1" Range="1" RangeHeight="1.5" Size="2" Power="1" Shape="kVLine" Element="kHoly" DmgSource="kAtkMixed" AddNegativeEffects="kfBlind" AddNegativeEffectsBaseChance="55" />
+    <Ability HashName="VAR-CLO-A1" Name="Repairs" MpCost="14" Range="2" RangeHeight="5" Power="0.45" Element="kNone" DmgType="kHealing" DmgSource="kMAtk" SpecialEffect="kHealingPercentage" />
+    <Ability HashName="VAR-CLO-A2" CopyFrom="KNIG-A6" />
+    <Ability HashName="VAR-COR-A1" CopyFrom="DEMK-A5" />
+    <Ability HashName="VAR-COR-A2" Name="Frenzied Blows" MpCost="14" MinRange="1" Power="1.45" SpecialEffect="kBerserkSelf" SpecialEffect2="kIsTreatedAsRegularAttack" SpellType="kSkill" />
+    <Ability HashName="VAR-DFT-A1" CopyFrom="ROGU-A2" />
+    <Ability HashName="VAR-DFT-A2" CopyFrom="MERC-A5" />
+    <Ability HashName="VAR-DRE-A1" Name="&lt;sprite name=&quot;icon-element-earth&quot;&gt;Infusion" EffectHash="WARM-A5" MpCost="12" MinRange="1" Power="1" Power2="0.8" StringArg="WORK-INFUSION-EARTH" Element="kEarth" DmgType="kMagical" DmgSource="kMAtk" ExtraFlags="kNoAIUse" HasExtraBox="kInfusedEdgeAuto" />
+    <Ability HashName="WORK-INFUSION-EARTH" Name="" Range="1" RangeHeight="5" Power="0.8" Element="kEarth" DmgType="kMagical" DmgSource="kMAtk" ExtraFlags="kIsSystem" />
+    <Ability HashName="VAR-DRE-A2" Name="Gastric Acid &lt;sprite name=&quot;icon-element-earth&quot;&gt;" MinRange="1" Range="3" RangeHeight="3" Power="0.35" Element="kEarth" DmgType="kMagical" DmgSource="kMAtk" SpecialEffect="kDrainMp" SpellType="kSkill" />
+    <Ability HashName="VAR-DRF-A1" Name="&lt;sprite name=&quot;icon-element-fire&quot;&gt;Infusion" EffectHash="WARM-A5" MpCost="12" MinRange="1" Power="1" Power2="0.8" StringArg="WORK-INFUSION-FIRE" Element="kFire" DmgType="kMagical" DmgSource="kMAtk" ExtraFlags="kNoAIUse" HasExtraBox="kInfusedEdgeAuto" />
+    <Ability HashName="WORK-INFUSION-FIRE" Name="" Range="1" RangeHeight="5" Power="0.8" Element="kFire" DmgType="kMagical" DmgSource="kMAtk" ExtraFlags="kIsSystem" />
+    <Ability HashName="VAR-DRF-A2" Name="Gastric Acid &lt;sprite name=&quot;icon-element-fire&quot;&gt;" MinRange="1" Range="3" RangeHeight="3" Power="0.35" Element="kFire" DmgType="kMagical" DmgSource="kMAtk" SpecialEffect="kDrainMp" SpellType="kSkill" />
+    <Ability HashName="VAR-DRT-A1" Name="&lt;sprite name=&quot;icon-element-electric&quot;&gt;Infusion" EffectHash="WARM-A5" MpCost="12" MinRange="1" Power="1" Power2="0.8" StringArg="WORK-INFUSION-THUNDER" Element="kThunder" DmgType="kMagical" DmgSource="kMAtk" ExtraFlags="kNoAIUse" HasExtraBox="kInfusedEdgeAuto" />
+    <Ability HashName="WORK-INFUSION-THUNDER" Name="" Range="1" RangeHeight="5" Power="0.8" Element="kThunder" DmgType="kMagical" DmgSource="kMAtk" ExtraFlags="kIsSystem" />
+    <Ability HashName="VAR-DRT-A2" Name="Gastric Acid &lt;sprite name=&quot;icon-element-electric&quot;&gt;" MinRange="1" Range="3" RangeHeight="3" Power="0.35" Element="kThunder" DmgType="kMagical" DmgSource="kMAtk" SpecialEffect="kDrainMp" SpellType="kSkill" />
+    <Ability HashName="VAR-DRW-A1" Name="&lt;sprite name=&quot;icon-element-water&quot;&gt;Infusion" EffectHash="WARM-A5" MpCost="12" MinRange="1" Power="1" Power2="0.8" StringArg="WORK-INFUSION-WATER" Element="kWater" DmgType="kMagical" DmgSource="kMAtk" ExtraFlags="kNoAIUse" HasExtraBox="kInfusedEdgeAuto" />
+    <Ability HashName="WORK-INFUSION-WATER" Name="" Range="1" RangeHeight="5" Power="0.8" Element="kWater" DmgType="kMagical" DmgSource="kMAtk" ExtraFlags="kIsSystem" />
+    <Ability HashName="VAR-DRW-A2" Name="Gastric Acid &lt;sprite name=&quot;icon-element-water&quot;&gt;" MinRange="1" Range="3" RangeHeight="3" Power="0.35" Element="kWater" DmgType="kMagical" DmgSource="kMAtk" SpecialEffect="kDrainMp" SpellType="kSkill" />
+    <Ability HashName="VAR-FEL-A1" Name="Dreadmaw" EffectHash="MAW-01-A1" MpCost="16" Range="3" Size="3" Power="0.5" Shape="kCross" SpecialEffect="kStealBuffsRegularOdds" SpellType="kSkill" ExtraFlags="kIgnoreSelfAsTarget" AddNegativeEffects="kfPoison kfBlind kfSleep" AddNegativeEffectsBaseChance="50" RemovePositiveEffects="kfAll" />
+    <Ability HashName="VAR-FEL-A2" Name="Luussa" EffectHash="EKA-01-A1" MpCost="24" MinRange="1" Range="3" RangeHeight="5" Size="3" Power="1.15" Shape="kCross" Element="kNone" DmgType="kMagical" DmgSource="kMAtk" SpecialEffect="kDrainHp" ExtraFlags="kIgnoreSelfAsTarget" AddNegativeEffects="kfBerserk" AddNegativeEffectsBaseChance="50" />
+    <Ability HashName="VAR-FER-A1" CopyFrom="WERE-A3" />
+    <Ability HashName="VAR-FER-A2" CopyFrom="WERE-A6" />
+    <Ability HashName="VAR-GUA-A1" CopyFrom="KNIG-A2" />
+    <Ability HashName="VAR-GUA-A2" CopyFrom="ROGU-A5" />
+    <Ability HashName="VAR-HRN-A1" Name="Bull Rush" MpCost="8" MinRange="1" Range="1" RangeHeight="1.5" ZoneHeight="1.5" Size="6" Power="0.75" Shape="kCharge" SpecialEffect="kPunt" SpellType="kSkill" ExtraFlags="kIgnoresCover" />
+    <Ability HashName="VAR-HRN-A2" CopyFrom="UND-02-A2" />
+    <Ability HashName="VAR-MYC-A1" Name="Scatterspore" MinRange="1" Range="4" RangeHeight="3" Element="kNone" DmgType="kNone" SpecialEffect="kWildCardsDebuff" SpellType="kSkill" AddNegativeEffectsBaseChance="100" />
+    <Ability HashName="VAR-MYC-A2" Name="Slumberspore" MpCost="12" MinRange="1" Range="1" RangeHeight="2.5" ZoneHeight="2" Size="2" Power="0.35" Shape="kCone" DmgSource="kAtkMixed" SpellType="kSkill" AddNegativeEffects="kfSleep" AddNegativeEffectsBaseChance="75" />
+    <Ability HashName="VAR-MYS-A1" CopyFrom="EKA-01-A4" />
+    <Ability HashName="VAR-MYS-A2" CopyFrom="ALCH-A9" />
+    <Ability HashName="VAR-SCO-A1" Name="Hindering Hit" MpCost="8" MinRange="1" Range="3" RangeHeight="3" Power="0.65" SpellType="kSkill" AddNegativeEffects="kfSlow" AddNegativeEffectsBaseChance="100" />
+    <Ability HashName="VAR-SCO-A2" CopyFrom="RANG-A2" />
+    <Ability HashName="VAR-SHA-A1" CopyFrom="WERE-A4" />
+    <Ability HashName="VAR-SHA-A2" CopyFrom="BHUN-A4" />
+    <Ability HashName="VAR-SKE-A1" Name="Soul Suck" CopyFrom="VAMP-A5" />
+    <Ability HashName="VAR-SKE-A2" CopyFrom="UND-03-A3" />
+    <Ability HashName="VAR-SPE-A1" Name="Momentum" MinRange="1" Range="1" RangeHeight="1.5" Power="1" Element="kWeapon" DmgSource="kSpd" SpecialEffect2="kIsTreatedAsRegularAttack" SpellType="kSkill" />
+    <Ability HashName="VAR-SPE-A2" CopyFrom="GAMB-A6" />
+    <Ability HashName="VAR-SYL-A1" CopyFrom="HEAL-A3" />
+    <Ability HashName="VAR-SYL-A2" Name="Salve Sprout" MpCost="6" Range="7" RangeHeight="5" Power="0.5" Power3="0.33" Element="kNone" DmgType="kHealing" DmgSource="kMAtk" ExtraFlags="kGivesQuickTurnFrowPower3" />
+    <Ability HashName="VAR-THO-A1" Name="Thornstrike" MpCost="8" MinRange="1" Power="1" Element="kWeapon" SpecialEffect="kThornSelf" SpecialEffect2="kIsTreatedAsRegularAttack" SpellType="kSkill" />
+    <Ability HashName="VAR-THO-A2" CopyFrom="KNIG-A3" />
+    <Ability HashName="VAR-TYR-A1" Name="Intimidate" MpCost="14" MinRange="1" Range="0" RangeHeight="1" Shape="kAll" SpecialEffect="kBypassCounters" SpellType="kSkill" ExtraFlags="kIgnoreSelfAsTarget" AddNegativeEffects="kfSleep" AddNegativeEffectsBaseChance="65" />
+    <Ability HashName="VAR-TYR-A2" Name="Dominate" MpCost="16" MinRange="1" Range="2" RangeHeight="5" Power="0.7" Element="kEarth" DmgType="kMagical" DmgSource="kAtkMixed" AddNegativeEffects="kfCharm" AddNegativeEffectsBaseChance="75" />
+    <Ability HashName="VAR-WRD-A1" Name="Breath of Life" MpCost="28" MinRange="1" Range="2" RangeHeight="2" Power="0.75" Element="kNone" DmgType="kHealing" DmgSource="kMAtk" SpecialEffect="kRevive" ExtraFlags="kTargetsGround kCannotTargetWater" HasExtraBox="kDeadPeople" AddPositiveEffects="kfRebirth" />
+    <Ability HashName="VAR-WRD-A2" Name="Healstorm" MpCost="24" Range="0" RangeHeight="1" Power="0.6" Power3="1" IntArg="7" Shape="kAllAllies" Element="kNone" DmgType="kHealing" DmgSource="kMAtk" SpecialEffect2="kScaleWithProximity" />
+    <Ability HashName="VAR-VEN-A1" Name="Dark Breath" MpCost="16" MinRange="1" Range="1" Size="2" Power="0.85" Shape="kCone" Element="kDark" SpellType="kSkill" AddNegativeEffects="kfWeaken" AddNegativeEffectsBaseChance="50" />
+    <Ability HashName="VAR-VEN-A2" Name="Snake Eyes" MpCost="18" MinRange="1" Range="1" Size="3" Power="0.33" Shape="kCone" SpecialEffect="kDelayOnFacingCaster" SpellType="kSkill" />
+    <Ability HashName="WORK-COUNTERPUNT" Name="" EffectHash="TAN-01-A1" MinRange="1" Range="1" RangeHeight="1" Power="1" SpecialEffect="kPunt" SpellType="kSkill" ExtraFlags="kIsSystem" />
+    <Ability HashName="DAA-98-A1" Name="Vilerot" CopyFrom="DAA-01-A1" />
+    <Ability HashName="DAA-98-A2" Name="Miasma" CopyFrom="FELL-A6" />
+    <Ability HashName="DAA-98-A3" Name="Infestation" CopyFrom="SND-01-A3" />
+    <Ability HashName="DAA-98-A4" CopyFrom="DAA-03-A4" />
+    <Ability HashName="HAR-98-A1" Name="Poison" CopyFrom="UTIL-A5" />
+    <Ability HashName="HAR-98-A4" Name="Grubby Talons" CopyFrom="HAR-01-A4" />
+    <Ability HashName="HAR-98-A3" Name="Skyjack" CopyFrom="HAR-02-A3" />
+    <Ability HashName="HAR-98-A2" CopyFrom="HAR-03-A2" />
+    <Ability HashName="BLA-98-A1" Name="Whirling Blow" CopyFrom="REAV-A3" />
+    <Ability HashName="BLA-98-A3" Name="Focus" CopyFrom="GUNN-A1" />
+    <Ability HashName="BLA-98-A2" Name="Snack Stash" CopyFrom="BLA-02-A2" />
+    <Ability HashName="BLA-98-A4" CopyFrom="BLA-03-A4" />
+    <Ability HashName="BUL0-98-A2" Name="Water Breath" CopyFrom="BUL-01-A2" />
+    <Ability HashName="BUL0-98-A1" Name="Rest Up" CopyFrom="BUL-01-A1" />
+    <Ability HashName="BUL0-98-A3" Name="Flowing Flourish" CopyFrom="TEMP-A1" />
+    <Ability HashName="BUL0-98-A4" CopyFrom="BUL-03-A4" />
+    <Ability HashName="BUL1-98-A2" Name="Fire Breath" CopyFrom="BUL-11-A2" />
+    <Ability HashName="BUL1-98-A1" Name="Rest Up" CopyFrom="BUL-01-A1" />
+    <Ability HashName="BUL1-98-A3" Name="Blazing Flourish" CopyFrom="TEMP-A2" />
+    <Ability HashName="BUL1-98-A4" CopyFrom="BUL-13-A4" />
+    <Ability HashName="BUL2-98-A2" Name="Earth Breath" CopyFrom="BUL-21-A2" />
+    <Ability HashName="BUL2-98-A1" Name="Rest Up" CopyFrom="BUL-01-A1" />
+    <Ability HashName="BUL2-98-A3" Name="Earthen Flourish" CopyFrom="TEMP-A3" />
+    <Ability HashName="BUL2-98-A4" CopyFrom="BUL-23-A4" />
+    <Ability HashName="BUL3-98-A2" Name="Thunder Breath" CopyFrom="BUL-31-A2" />
+    <Ability HashName="BUL3-98-A1" Name="Rest Up" CopyFrom="BUL-01-A1" />
+    <Ability HashName="BUL3-98-A3" Name="Thundering Flourish" CopyFrom="TEMP-A4" />
+    <Ability HashName="BUL3-98-A4" CopyFrom="BUL-33-A4" />
+    <Ability HashName="BOL-98-A1" Name="Siege Ram" CopyFrom="BOL-01-A1" />
+    <Ability HashName="BOL-98-A2" Name="Reckless Blow" EffectHash="BOL-02-A2" CopyFrom="REAV-A4" />
+    <Ability HashName="BOL-98-A3" CopyFrom="BOL-03-A3" />
+    <Ability HashName="BOL-98-A4" Name="Earth Burst" EffectHash="BOL-03-A4" CopyFrom="WARM-A8" />
+    <Ability HashName="DAO-98-A1" Name="Holy Chant" CopyFrom="BLAD-A2" />
+    <Ability HashName="DAO-98-A2" Name="Alicorn" CopyFrom="DAO-02-A2" />
+    <Ability HashName="DAO-98-A3" CopyFrom="DAO-03-A3" />
+    <Ability HashName="DAO-98-A4" CopyFrom="DAO-03-A4" />
+    <Ability HashName="PHO-98-A1" Name="Sacred Bolt" CopyFrom="PHO-01-A1" />
+    <Ability HashName="PHO-98-A2" Name="Kamikaze" CopyFrom="PHO-02-A2" />
+    <Ability HashName="PHO-98-A3" Name="Final Chant" CopyFrom="PHO-02-A3" />
+    <Ability HashName="PHO-98-A4" CopyFrom="PHO-03-A4" />
+    <Ability HashName="HRV-98-A1" Name="Barbed Blades" CopyFrom="HRV-01-A1" />
+    <Ability HashName="HRV-98-A2" Name="Spearvault" CopyFrom="HRV-02-A2" />
+    <Ability HashName="HRV-98-A3" Name="Whetstone" CopyFrom="HRV-02-A3" />
+    <Ability HashName="HRV-98-A4" Name="Blood Trophy" CopyFrom="WERE-A7" />
+    <Ability HashName="HHU-98-A2" Name="Pick Off" CopyFrom="HHU-01-A2" />
+    <Ability HashName="HHU-98-A1" Name="Firescourge" CopyFrom="HHU-01-A1" />
+    <Ability HashName="HHU-98-A3" Name="Avernaal" CopyFrom="SMED-A3" />
+    <Ability HashName="HHU-98-A4" Name="Quetzalcoatl" CopyFrom="SMED-A4" />
+    <Ability HashName="KAW-98-A1" Name="Swarm Strike" CopyFrom="KAW-01-A1" />
+    <Ability HashName="KAW-98-A2" Name="Meatshield" CopyFrom="KAW-02-A2" />
+    <Ability HashName="KAW-98-A3" Name="Boomerang Bounce" CopyFrom="KAW-02-A3" />
+    <Ability HashName="KAW-98-A4" CopyFrom="KAW-03-A4" />
+    <Ability HashName="MAL-98-A1" Name="Sedate" CopyFrom="MAL-01-A1" />
+    <Ability HashName="MAL-98-A2" Name="Dark II" CopyFrom="ANAT-A3" />
+    <Ability HashName="MAL-98-A3" Name="Phantasm" CopyFrom="MAL-02-A3" />
+    <Ability HashName="MAL-98-A4" CopyFrom="MAL-03-A4" />
+    <Ability HashName="NIW-98-A1" Name="Ultrasonic Hammer" CopyFrom="NIW-01-A1" />
+    <Ability HashName="NIW-98-A2" Name="Sonic Boom" CopyFrom="NIW-02-A2" />
+    <Ability HashName="NIW-98-A4" CopyFrom="NIW-03-A4" />
+    <Ability HashName="NIW-98-A3" CopyFrom="NIW-03-A3" />
+    <Ability HashName="PEK0-98-A1" Name="Water I" CopyFrom="WIZA-A1" />
+    <Ability HashName="PEK0-98-A2" Name="Water II" CopyFrom="WIZA-A5" />
+    <Ability HashName="PEK0-98-A3" Name="Coalesce" CopyFrom="PEK-02-A3" />
+    <Ability HashName="PEK0-98-A4" CopyFrom="PEK-03-A4" />
+    <Ability HashName="PEK1-98-A1" Name="Fire I" CopyFrom="WIZA-A2" />
+    <Ability HashName="PEK1-98-A2" Name="Fire II" CopyFrom="WIZA-A6" />
+    <Ability HashName="PEK1-98-A3" Name="Coalesce" CopyFrom="PEK-02-A3" />
+    <Ability HashName="PEK1-98-A4" Name="Focus Fire" CopyFrom="PEK-03-A4" />
+    <Ability HashName="PEK2-98-A1" Name="Earth I" CopyFrom="WIZA-A3" />
+    <Ability HashName="PEK2-98-A2" Name="Earth II" CopyFrom="WIZA-A7" />
+    <Ability HashName="PEK2-98-A3" Name="Coalesce" CopyFrom="PEK-02-A3" />
+    <Ability HashName="PEK2-98-A4" Name="Focus Fire" CopyFrom="PEK-03-A4" />
+    <Ability HashName="PEK3-98-A1" Name="Thunder I" CopyFrom="WIZA-A4" />
+    <Ability HashName="PEK3-98-A2" Name="Thunder II" CopyFrom="WIZA-A8" />
+    <Ability HashName="PEK3-98-A3" Name="Coalesce" CopyFrom="PEK-02-A3" />
+    <Ability HashName="PEK3-98-A4" Name="Focus Fire" CopyFrom="PEK-03-A4" />
+    <Ability HashName="RAK-98-A1" Name="Sneak Attack" CopyFrom="ROGU-A6" />
+    <Ability HashName="RAK-98-A2" Name="Flip Kick" CopyFrom="RAK-02-A2" />
+    <Ability HashName="RAK-98-A3" Name="Rusty Stab" CopyFrom="RAK-02-A3" />
+    <Ability HashName="RAK-98-A4" CopyFrom="RAK-03-A4" />
+    <Ability HashName="TAN-98-A1" Name="Tail Flail" CopyFrom="TAN-01-A1" />
+    <Ability HashName="TAN-98-A3" Name="Defensive Hit" CopyFrom="TAN-02-A3" />
+    <Ability HashName="TAN-98-A2" Name="Reflective Coating" CopyFrom="TAN-02-A2" />
+    <Ability HashName="TAN-98-A4" CopyFrom="TAN-03-A4" />
+    <Ability HashName="THE-98-A1" Name="Zohl Beam" CopyFrom="THE-01-A1" />
+    <Ability HashName="THE-98-A2" Name="Throat Jab" CopyFrom="THE-02-A2" />
+    <Ability HashName="THE-98-A3" CopyFrom="THE-03-A3" />
+    <Ability HashName="THE-98-A4" CopyFrom="THE-03-A4" />
+    <Ability HashName="VAN-98-A1" Name="Snapback" CopyFrom="VAN-02-A1" />
+    <Ability HashName="VAN-98-A2" Name="Lick Wounds" CopyFrom="VAN-02-A2" />
+    <Ability HashName="VAN-98-A3" CopyFrom="VAN-03-A3" />
+    <Ability HashName="VAN-98-A4" Name="Stunning Strike" CopyFrom="MERC-A7" />
+    <Ability HashName="ZOT-98-A1" CopyFrom="ZOT-99-A1" />
+    <Ability HashName="ZOT-98-A2" Name="Mirage" EffectHash="ZOT-01-A2" CopyFrom="ASSA-A2" />
+    <Ability HashName="ZOT-98-A3" Name="Emboldening Chant" CopyFrom="BLAD-A4" />
+    <Ability HashName="ZOT-98-A4" Name="Rain of Spines" CopyFrom="ZOT-02-A4" />
+  </active>
+  <passive>
+    <Ability HashName="SAMU-P1" Name="Razor Wind" AddsNonRemovableEffects2="kRazorWind" />
+    <Ability HashName="SAMU-P2" Name="Unbreakable Spirit" AddsNonRemovableEffects3="kfDebuffsIncreaseAtkMnd" />
+    <Ability HashName="WRAN-P1" Name="Owner's Pride" AddsNonRemovableEffects3="kfSpeedBonusOnAllyMonsterDeath kfSpeedBonusOnAllyMonsterKill" />
+    <Ability HashName="WRAN-P2" Name="Skirmish" AddsNonRemovableEffects2="kfSkirmish" />
+    <Ability HashName="BEAS-P1" CopyFrom="VAR-GUA-P2" />
+    <Ability HashName="BEAS-P2" Name="Serenity" AddsNonRemovableEffects2="kfMpPerDispel" />
+    <Ability HashName="VAR-AER-P1" CopyFrom="GUNN-P2" />
+    <Ability HashName="VAR-AER-P2" Name="Harrier" AddsNonRemovableEffects2="kHarrier" />
+    <Ability HashName="VAR-ALP-P1" Name="Victory Dance" AddsNonRemovableEffects2="kfVictoryDance" />
+    <Ability HashName="VAR-ALP-P2" Name="Challenger" AddsNonRemovableEffects2="kfChallenger" />
+    <Ability HashName="VAR-CEL-P1" Name="Penumbral Mastery" AddsNonRemovableEffects2="kPenumbralMastery" />
+    <Ability HashName="VAR-CEL-P2" Name="Hallowed Body II" AddsNonRemovableEffects2="kfHallowedBody2" />
+    <Ability HashName="VAR-CLO-P1" CopyFrom="SAMU-P2" />
+    <Ability HashName="VAR-CLO-P2" Name="Juggernaut" AddsNonRemovableEffects2="kfJuggernaut" />
+    <Ability HashName="VAR-COR-P1" Name="Lash Out" AddsNonRemovableEffects2="kfLashOut" />
+    <Ability HashName="VAR-COR-P2" Name="Equilibrium" AddsNonRemovableEffects1="kfHpPerDispel" />
+    <Ability HashName="VAR-DFT-P1" Name="Tool User" AddsNonRemovableEffects1="kfAutoloot" />
+    <Ability HashName="VAR-DFT-P2" CopyFrom="GAMB-P2" />
+    <Ability HashName="VAR-DRE-P1" Name="Breath Weapon" ZoneHeight="1.5" Size="2" Shape="kCone" AddsNonRemovableEffects2="kfBreathWeapon" />
+    <Ability HashName="VAR-DRE-P2" CopyFrom="SMED-P1" />
+    <Ability HashName="VAR-DRF-P1" CopyFrom="VAR-DRE-P1" />
+    <Ability HashName="VAR-DRF-P2" CopyFrom="SMED-P1" />
+    <Ability HashName="VAR-DRT-P1" CopyFrom="VAR-DRE-P1" />
+    <Ability HashName="VAR-DRT-P2" CopyFrom="SMED-P1" />
+    <Ability HashName="VAR-DRW-P1" CopyFrom="VAR-DRE-P1" />
+    <Ability HashName="VAR-DRW-P2" CopyFrom="SMED-P1" />
+    <Ability HashName="VAR-FEL-P1" Name="Shed Skin" AddsNonRemovableEffects1="kTransferDebuffsWhenWearOff kTransferBuffsWhenWearOff" />
+    <Ability HashName="VAR-FEL-P2" CopyFrom="LICH-P1" />
+    <Ability HashName="VAR-FER-P1" Name="Vicious Criticals" AddNegativeEffects="kfPoison kfBleed" AddsNonRemovableEffects1="kfMagicCrit kfCritSkills kfOnCritAddNegative" />
+    <Ability HashName="VAR-FER-P2" CopyFrom="BHUN-P1" />
+    <Ability HashName="VAR-GUA-P1" CopyFrom="BLAD-P2" />
+    <Ability HashName="VAR-GUA-P2" Name="Rampart" AddsNonRemovableEffects2="kfRampart" />
+    <Ability HashName="VAR-HRN-P1" CopyFrom="ROGU-P2" />
+    <Ability HashName="VAR-HRN-P2" Name="Mauler" AddsNonRemovableEffects2="kfMauler" />
+    <Ability HashName="VAR-MYC-P1" Name="Opportunist II" AddsNonRemovableEffects2="kfOpportunist2" />
+    <Ability HashName="VAR-MYC-P2" CopyFrom="ALCH-P2" />
+    <Ability HashName="VAR-MYS-P1" Name="Far Sight" AddsNonRemovableEffects2="kfFarSight" />
+    <Ability HashName="VAR-MYS-P2" CopyFrom="GADG-P2" />
+    <Ability HashName="VAR-SCO-P1" CopyFrom="WRAN-P2" />
+    <Ability HashName="VAR-SCO-P2" CopyFrom="GUNN-P1" />
+    <Ability HashName="VAR-SHA-P1" Name="Ethereal Touch" AddsNonRemovableEffects2="kfEtherialTouch" />
+    <Ability HashName="VAR-SHA-P2" Name="Telekinesis" AddsNonRemovableEffects2="kfTelekinesis" />
+    <Ability HashName="VAR-SKE-P1" Name="Sap Power" AddsNonRemovableEffects2="kfRegularAttacksDispel" />
+    <Ability HashName="VAR-SKE-P2" Name="Devour" AddsNonRemovableEffects2="kfDevour" />
+    <Ability HashName="VAR-SPE-P1" CopyFrom="GAMB-P1" />
+    <Ability HashName="VAR-SPE-P2" Name="Auto-Haste" AddPositiveEffects="kfHaste" AddsNonRemovableEffects1="kfPermanentPositive" />
+    <Ability HashName="VAR-SYL-P1" Name="Healing Touch" AddPositiveEffects="kfRenew" AddsNonRemovableEffects2="kfHealingTouch" />
+    <Ability HashName="VAR-SYL-P2" CopyFrom="KNIG-P2" />
+    <Ability HashName="VAR-THO-P1" Name="Retaliation" AddsNonRemovableEffects2="kfRetaliation" />
+    <Ability HashName="VAR-THO-P2" Name="Hallowed Bulwark" AddsNonRemovableEffects2="kfHallowedBulkwark" />
+    <Ability HashName="VAR-TYR-P1" Name="Strong &amp; Steadfast" AddsNonRemovableEffects2="kfSturdyBody kfSteadfast" />
+    <Ability HashName="VAR-TYR-P2" Name="Presence" AddsNonRemovableEffects2="kfPresence" />
+    <Ability HashName="VAR-WRD-P1" Name="Mana Font II" AddsNonRemovableEffects2="kfMpStroll2" />
+    <Ability HashName="VAR-WRD-P2" CopyFrom="DRUI-P2" />
+    <Ability HashName="VAR-VEN-P1" Name="Venom" AddNegativeEffects="kfPoison" AddsNonRemovableEffects2="kfVenomTouch" />
+    <Ability HashName="VAR-VEN-P2" CopyFrom="UTIL-P1" />
+    <Ability HashName="DAA-98-P1" Name="Plaguebearer" CopyFrom="SND-01-P1" />
+    <Ability HashName="DAA-98-P2" Name="Economy" CopyFrom="SORC-P1" />
+    <Ability HashName="HAR-98-P1" Name="Opportunist" CopyFrom="HAR-02-P1" />
+    <Ability HashName="HAR-98-P2" Name="Boon" CopyFrom="WIZA-P2" />
+    <Ability HashName="BLA-98-P1" Name="Into the Fray" CopyFrom="REAV-P2" />
+    <Ability HashName="BLA-98-P2" Name="Know Weakness" CopyFrom="BLA-02-P2" />
+    <Ability HashName="BUL0-98-P1" Name="Somniloquy" CopyFrom="BUL-01-P1" />
+    <Ability HashName="BUL0-98-P2" Name="Smart Casting" CopyFrom="WIZA-P1" />
+    <Ability HashName="BUL1-98-P1" Name="Somniloquy" CopyFrom="BUL-11-P1" />
+    <Ability HashName="BUL1-98-P2" Name="Smart Casting" CopyFrom="WIZA-P1" />
+    <Ability HashName="BUL2-98-P1" Name="Somniloquy" CopyFrom="BUL-21-P1" />
+    <Ability HashName="BUL2-98-P2" Name="Smart Casting" CopyFrom="WIZA-P1" />
+    <Ability HashName="BUL3-98-P1" Name="Somniloquy" CopyFrom="BUL-31-P1" />
+    <Ability HashName="BUL3-98-P2" Name="Smart Casting" CopyFrom="WIZA-P1" />
+    <Ability HashName="BOL-98-P1" Name="Stampede" CopyFrom="BOL-01-P1" />
+    <Ability HashName="BOL-98-P2" Name="Bloodlust" CopyFrom="REAV-P1" />
+    <Ability HashName="DAO-98-P1" Name="Mana Font" CopyFrom="HEAL-P2" />
+    <Ability HashName="DAO-98-P2" Name="Auto-Renew" CopyFrom="DAO-02-P2" />
+    <Ability HashName="PHO-98-P2" Name="Auto-Rebirth" CopyFrom="PHO-02-P2" />
+    <Ability HashName="PHO-98-P1" CopyFrom="PHO-03-P1" />
+    <Ability HashName="HRV-98-P1" Name="Blood Mark" CopyFrom="HRV-01-P1" />
+    <Ability HashName="HRV-98-P2" CopyFrom="HRV-03-P2" />
+    <Ability HashName="HHU-98-P1" Name="Eruptor" CopyFrom="HHU-02-P1" />
+    <Ability HashName="HHU-98-P2" Name="Impetus" CopyFrom="DEM-01-P2" />
+    <Ability HashName="KAW-98-P1" AddsNonRemovableEffects1="kfAutoloot" />
+    <Ability HashName="KAW-98-P2" CopyFrom="KAW-03-P2" />
+    <Ability HashName="MAL-98-P1" Name="Malice" CopyFrom="FELL-P1" />
+    <Ability HashName="MAL-98-P2" CopyFrom="MAL-03-P2" />
+    <Ability HashName="NIW-98-P1" Name="Versatile" CopyFrom="FELL-P2" />
+    <Ability HashName="NIW-98-P2" Name="Blessed One" CopyFrom="HEAL-P1" />
+    <Ability HashName="PEK0-98-P1" Name="Amorphous" CopyFrom="PEK-01-P1" />
+    <Ability HashName="PEK0-98-P2" Name="Elemental Mastery" CopyFrom="WARM-P1" />
+    <Ability HashName="PEK1-98-P1" Name="Amorphous" CopyFrom="PEK-01-P1" />
+    <Ability HashName="PEK1-98-P2" Name="Elemental Mastery" CopyFrom="WARM-P1" />
+    <Ability HashName="PEK2-98-P1" Name="Amorphous" CopyFrom="PEK-01-P1" />
+    <Ability HashName="PEK2-98-P2" Name="Elemental Mastery" CopyFrom="WARM-P1" />
+    <Ability HashName="PEK3-98-P1" Name="Amorphous" CopyFrom="PEK-01-P1" />
+    <Ability HashName="PEK3-98-P2" Name="Elemental Mastery" CopyFrom="WARM-P1" />
+    <Ability HashName="RAK-98-P1" Name="Submariner" CopyFrom="RAK-02-P1" />
+    <Ability HashName="RAK-98-P2" Name="Execute" CopyFrom="VAMP-P2" />
+    <Ability HashName="TAN-98-P1" Name="Health Expert" CopyFrom="MERC-P2" />
+    <Ability HashName="TAN-98-P2" CopyFrom="TAN-03-P2" />
+    <Ability HashName="THE-98-P2" Name="Focused Rage" CopyFrom="DEMK-P2" />
+    <Ability HashName="THE-98-P1" Name="Perfect Focus" CopyFrom="GADG-P1" />
+    <Ability HashName="VAN-98-P1" Name="Fortitude" CopyFrom="UTIL-P2" />
+    <Ability HashName="VAN-98-P2" CopyFrom="VAN-03-P2" />
+    <Ability HashName="ZOT-98-P1" Name="Shifting Target" CopyFrom="ZOT-02-P1" />
+    <Ability HashName="ZOT-98-P2" Name="Evasion Up" CopyFrom="RANG-P2" />
+    <Ability HashName="CHI-01-P1" CopyFrom="KNIG-P1" />
+    <Ability HashName="BONU-P3" CopyFrom="VAR-COR-P2" />
+    <Ability HashName="BONU-P4" CopyFrom="VAR-FER-P1" />
+    <Ability HashName="BONU-P5" CopyFrom="HAR-02-P1" />
+    <Ability HashName="BONU-P6" CopyFrom="VAR-ALP-P1" />
+  </passive>
+  <counter>
+    <Ability HashName="SAMU-C1" Name="Critical: Focus" AddPositiveEffects="kfFocus" GivesCounter="kCriticalDefendAndFocus" />
+    <Ability HashName="WRAN-C1" Name="Might" AddPositiveEffects="kfAtkUp kfMAtkUp" GivesCounter="kAtkMndUp" />
+    <Ability HashName="BEAS-C1" Name="Loyal Friends" GivesCounter="kSummonPet" />
+    <Ability HashName="VAR-AER-C1" CopyFrom="TEMP-C1" />
+    <Ability HashName="VAR-ALP-C1" CopyFrom="BLAD-C1" />
+    <Ability HashName="VAR-CEL-C1" CopyFrom="FELL-C1" />
+    <Ability HashName="VAR-CLO-C1" CopyFrom="UTIL-C1" />
+    <Ability HashName="VAR-COR-C1" CopyFrom="DEMK-C1" />
+    <Ability HashName="VAR-DFT-C1" Name="Shove" GivesCounter="kShove" />
+    <Ability HashName="VAR-DRE-C1" Name="Pierce" EffectHash="COUNTER-PIERCE" AddNegativeEffects="kfDefDown kfMDefDown" GivesCounter="kOffensiveCounterWithDebuff" />
+    <Ability HashName="VAR-DRF-C1" CopyFrom="VAR-DRE-C1" />
+    <Ability HashName="VAR-DRT-C1" CopyFrom="VAR-DRE-C1" />
+    <Ability HashName="VAR-DRW-C1" CopyFrom="VAR-DRE-C1" />
+    <Ability HashName="VAR-FEL-C1" CopyFrom="GUNN-C1" />
+    <Ability HashName="VAR-FER-C1" CopyFrom="ANAT-C1" />
+    <Ability HashName="VAR-GUA-C1" Name="Vanguard" GivesCounter="kVanguard" />
+    <Ability HashName="VAR-HRN-C1" CopyFrom="BHUN-C1" />
+    <Ability HashName="VAR-MYC-C1" CopyFrom="SORC-C1" />
+    <Ability HashName="VAR-MYS-C1" CopyFrom="ALCH-C1" />
+    <Ability HashName="VAR-SCO-C1" CopyFrom="SAMU-C1" />
+    <Ability HashName="VAR-SHA-C1" CopyFrom="RANG-C1" />
+    <Ability HashName="VAR-SKE-C1" CopyFrom="REAV-C1" />
+    <Ability HashName="VAR-SPE-C1" CopyFrom="MARK-C1" />
+    <Ability HashName="VAR-SYL-C1" CopyFrom="HEAL-C1" />
+    <Ability HashName="VAR-THO-C1" CopyFrom="LORD-C1" />
+    <Ability HashName="VAR-TYR-C1" CopyFrom="WRAN-C1" />
+    <Ability HashName="VAR-WRD-C1" Name="Tap Out" GivesCounter="kTapOut" />
+    <Ability HashName="VAR-VEN-C1" CopyFrom="LICH-C1" />
+    <Ability HashName="DAA-98-C1" Name="Adaptive Aegis" CopyFrom="DAA-01-C1" />
+    <Ability HashName="HAR-98-C1" CopyFrom="HAR-03-C1" />
+    <Ability HashName="BLA-98-C1" Name="Thrash" CopyFrom="BLA-02-C1" />
+    <Ability HashName="BUL0-98-C1" Name="Haste" CopyFrom="WARM-C1" />
+    <Ability HashName="BUL1-98-C1" Name="Haste" CopyFrom="WARM-C1" />
+    <Ability HashName="BUL2-98-C1" Name="Haste" CopyFrom="WARM-C1" />
+    <Ability HashName="BUL3-98-C1" Name="Haste" CopyFrom="WARM-C1" />
+    <Ability HashName="BOL-98-C1" CopyFrom="BOL-03-C1" />
+    <Ability HashName="DAO-98-C1" Name="Critical: Quicken" CopyFrom="PEDD-C1" />
+    <Ability HashName="PHO-98-C1" Name="Turnabout" CopyFrom="PHO-01-C1" />
+    <Ability HashName="HRV-98-C1" Name="Counterattack" CopyFrom="MERC-C1" />
+    <Ability HashName="HHU-98-C1" Name="Pounce" CopyFrom="HHU-02-C1" />
+    <Ability HashName="KAW-98-C1" Name="Steal" CopyFrom="KAW-01-C1" />
+    <Ability HashName="MAL-98-C1" Name="Critical: Mirage" CopyFrom="ASSA-C1" />
+    <Ability HashName="NIW-98-C1" Name="Magic" CopyFrom="WIZA-C1" />
+    <Ability HashName="PEK0-98-C1" Name="Adaptive Affinity" CopyFrom="DRUI-C1" />
+    <Ability HashName="PEK1-98-C1" Name="Adaptive Affinity" CopyFrom="DRUI-C1" />
+    <Ability HashName="PEK2-98-C1" Name="Adaptive Affinity" CopyFrom="DRUI-C1" />
+    <Ability HashName="PEK3-98-C1" Name="Adaptive Affinity" CopyFrom="DRUI-C1" />
+    <Ability HashName="RAK-98-C1" Name="Fleet of Foot" CopyFrom="GAMB-C1" />
+    <Ability HashName="TAN-98-C1" Name="Scar Tissue" CopyFrom="TAN-01-C1" />
+    <Ability HashName="THE-98-C1" Name="Absorb Mana" CopyFrom="GADG-C1" />
+    <Ability HashName="VAN-98-C1" Name="Thorns" CopyFrom="KNIG-C1" />
+    <Ability HashName="ZOT-98-C1" Name="Adaptive Evasion" CopyFrom="ZOT-01-C1" />
+  </counter>
+</XMLAbilities>
